@@ -191,10 +191,8 @@ let tradingViewGraphAutomation = new Project("Trading View Graph Automation", ""
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 // reportWebVitals();
 
-const HomePage = () => {
-    return (
-        <h1> Hi! </h1>
-    )
-}
+const HomePage = () => (
+    <div> Hi </div>
+)
 
 export default HomePage;
