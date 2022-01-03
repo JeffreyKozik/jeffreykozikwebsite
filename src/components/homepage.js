@@ -174,19 +174,27 @@ let tradingViewGraphAutomation = new Project("Trading View Graph Automation", ""
 //     )
 // }
 
-const HomePage = () => (
-    <>
-        <h1 id="jeffrey_kozik"> Jeffrey Kozik </h1>
-        <div class="container" id="selection_div">
-            // {generateOptions("categories", categoryArray)}
-            // {generateOptions("tags", tagArray)}
-        </div>
-    </>
-)
+// const HomePage = () => (
+//     <>
+//         <h1 id="jeffrey_kozik"> Jeffrey Kozik </h1>
+//         <div class="container" id="selection_div">
+//             {generateOptions("categories", categoryArray)}
+//             {generateOptions("tags", tagArray)}
+//         </div>
+//     </>
+// )
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 // reportWebVitals();
+
+const HomePage = () => (
+    <>
+        <h1 id="jeffrey_kozik"> Jeffrey Kozik </h1>
+        <div class="container" id="selection_div">
+        </div>
+    </>
+)
 
 export default HomePage;
