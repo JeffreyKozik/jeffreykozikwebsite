@@ -175,15 +175,13 @@ let tradingViewGraphAutomation = new Project("Trading View Graph Automation", ""
 // }
 
 const HomePage = () => (
-    return (
-        <>
-            <h1 id="jeffrey_kozik"> Jeffrey Kozik </h1>
-            <div class="container" id="selection_div">
-                // {generateOptions("categories", categoryArray)}
-                // {generateOptions("tags", tagArray)}
-            </div>
-        </>
-    );
+    <>
+        <h1 id="jeffrey_kozik"> Jeffrey Kozik </h1>
+        <div class="container" id="selection_div">
+            // {generateOptions("categories", categoryArray)}
+            // {generateOptions("tags", tagArray)}
+        </div>
+    </>
 )
 
 // If you want to start measuring performance in your app, pass a function
