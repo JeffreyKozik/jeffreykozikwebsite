@@ -169,7 +169,6 @@ function generateOptions(selectId, array){
         options.push({value: array[i].name, label: array[i].name});
     }
     return(
-        <div></div>
         <Select closeMenuOnSelect={false} components={animatedComponents} isMulti options={options} multiple/>
     )
 }
