@@ -31,7 +31,10 @@ import HomePage from "../components/homepage"
 // )
 
 const IndexPage = () => (
-    <HomePage/>
+    <Layout>
+        <Seo title="Home" />
+        <HomePage/>
+    </Layout>
 )
 
 export default IndexPage
