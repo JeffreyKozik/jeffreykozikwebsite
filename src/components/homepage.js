@@ -163,24 +163,24 @@ let iosExtensionUnicart = new Project("iOS Extension Unicart", "", "", "", "");
 let seoBrowserExtension = new Project("SEO Browser Extension", "", "", "", "");
 let tradingViewGraphAutomation = new Project("Trading View Graph Automation", "", "", "", "");
 
-function generateOptions(selectId, array){
-    let options = []
-    for(let i = 0; i < array.length; i++){
-        options.push({value: array[i].name, label: array[i].name});
-    }
-    return(
-        <div></div>
-        // <Select closeMenuOnSelect={false} components={animatedComponents} isMulti options={options} multiple/>
-    )
-}
+// function generateOptions(selectId, array){
+//     let options = []
+//     for(let i = 0; i < array.length; i++){
+//         options.push({value: array[i].name, label: array[i].name});
+//     }
+//     return(
+//         <div></div>
+//         <Select closeMenuOnSelect={false} components={animatedComponents} isMulti options={options} multiple/>
+//     )
+// }
 
 function HomePage(){
     return (
         <>
             <h1 id="jeffrey_kozik"> Jeffrey Kozik </h1>
             <div class="container" id="selection_div">
-                {generateOptions("categories", categoryArray)}
-                {generateOptions("tags", tagArray)}
+                // {generateOptions("categories", categoryArray)}
+                // {generateOptions("tags", tagArray)}
             </div>
         </>
     );
