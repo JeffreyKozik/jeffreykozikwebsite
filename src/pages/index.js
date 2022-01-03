@@ -31,7 +31,8 @@ import HomePage from "../components/homepage"
 // )
 
 const IndexPage = () => (
-    <div> Hi </div>
+    // <div> Hi </div>
+    <HomePage/>
 )
 
 export default IndexPage
