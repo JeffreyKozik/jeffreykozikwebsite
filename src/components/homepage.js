@@ -4,9 +4,9 @@ import './homepage.css';
 // import App from './App';
 // import reportWebVitals from './reportWebVitals';
 
-// import Select from 'react-select'
-// import makeAnimated from 'react-select/animated'
-// const animatedComponents = makeAnimated();
+import Select from 'react-select'
+import makeAnimated from 'react-select/animated'
+const animatedComponents = makeAnimated();
 
 let categoryArray = [];
 class Category{
@@ -163,38 +163,38 @@ let iosExtensionUnicart = new Project("iOS Extension Unicart", "", "", "", "");
 let seoBrowserExtension = new Project("SEO Browser Extension", "", "", "", "");
 let tradingViewGraphAutomation = new Project("Trading View Graph Automation", "", "", "", "");
 
-// function generateOptions(selectId, array){
-//     let options = []
-//     for(let i = 0; i < array.length; i++){
-//         options.push({value: array[i].name, label: array[i].name});
-//     }
-//     return(
-//         <div></div>
-//         <Select closeMenuOnSelect={false} components={animatedComponents} isMulti options={options} multiple/>
-//     )
-// }
+function generateOptions(selectId, array){
+    let options = []
+    for(let i = 0; i < array.length; i++){
+        options.push({value: array[i].name, label: array[i].name});
+    }
+    return(
+        <div></div>
+        <Select closeMenuOnSelect={false} components={animatedComponents} isMulti options={options} multiple/>
+    )
+}
 
-// const HomePage = () => (
-//     <>
-//         <h1 id="jeffrey_kozik"> Jeffrey Kozik </h1>
-//         <div class="container" id="selection_div">
-//             {generateOptions("categories", categoryArray)}
-//             {generateOptions("tags", tagArray)}
-//         </div>
-//     </>
-// )
+const HomePage = () => (
+    <>
+        <h1 id="jeffrey_kozik"> Jeffrey Kozik </h1>
+        <div class="container" id="selection_div">
+            {generateOptions("categories", categoryArray)}
+            {generateOptions("tags", tagArray)}
+        </div>
+    </>
+)
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 // reportWebVitals();
 
-const HomePage = () => (
-    <>
-        <h1 id="jeffrey_kozik"> Jeffrey Kozik </h1>
-        <div class="container" id="selection_div">
-        </div>
-    </>
-)
+// const HomePage = () => (
+//     <>
+//         <h1 id="jeffrey_kozik"> Jeffrey Kozik </h1>
+//         <div class="container" id="selection_div">
+//         </div>
+//     </>
+// )
 
 export default HomePage;
