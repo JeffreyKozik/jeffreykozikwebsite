@@ -8,7 +8,7 @@ module.exports = {
   plugins: [
     `react-select`,
     `gatsby-plugin-react-helmet`,
-    // `gatsby-plugin-image`,
+    `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
