@@ -1,7 +1,7 @@
 import * as React from "react"
 
-const HarryPotterGame = () => (
-    <div> Harry Potter Game </div>
+const TrickOrTag = () => (
+    <div> Trick or Tag </div>
 )
 
-export default HarryPotterGame
+export default TrickOrTag

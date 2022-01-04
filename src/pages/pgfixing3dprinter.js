@@ -1,7 +1,7 @@
 import * as React from "react"
 
-const HarryPotterGame = () => (
-    <div> Harry Potter Game </div>
+const PgFixing3DPrinter = () => (
+    <div> P&G Fixing 3D Printer </div>
 )
 
-export default HarryPotterGame
+export default PgFixing3DPrinter

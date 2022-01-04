@@ -1,7 +1,9 @@
 import * as React from "react"
 
-const HarryPotterGame = () => (
-    <div> Harry Potter Game </div>
+const ComputerVisionToMeasureRinsabilityComponent = () => (
+    <>
+    <div> Computer Vision to Measure Rinsability Component </div>
+    </>
 )
 
-export default HarryPotterGame
+export default ComputerVisionToMeasureRinsabilityComponent

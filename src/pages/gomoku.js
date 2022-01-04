@@ -1,7 +1,7 @@
 import * as React from "react"
 
-const HarryPotterGame = () => (
-    <div> Harry Potter Game </div>
+const Gomoku = () => (
+    <div> Gomoku </div>
 )
 
-export default HarryPotterGame
+export default Gomoku

@@ -1,7 +1,9 @@
 import * as React from "react"
 
-const HarryPotterGame = () => (
-    <div> Harry Potter Game </div>
+const Circumvent2FASeleniumComponent = () => (
+    <>
+    <div> Circumvent 2FA Selenium </div>
+    </>
 )
 
-export default HarryPotterGame
+export default Circumvent2FASeleniumComponent

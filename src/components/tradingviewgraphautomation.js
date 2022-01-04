@@ -1,7 +1,9 @@
 import * as React from "react"
 
-const HarryPotterGame = () => (
-    <div> Harry Potter Game </div>
+const TradingViewGraphAutomationComponent = () => (
+    <>
+    <div> Trading View Graph Automation </div>
+    </>
 )
 
-export default HarryPotterGame
+export default TradingViewGraphAutomationComponent

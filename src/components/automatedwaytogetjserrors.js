@@ -1,7 +1,9 @@
 import * as React from "react"
 
-const HarryPotterGame = () => (
-    <div> Harry Potter Game </div>
+const AutomatedWayToGetJsErrorsComponent = () => (
+    <>
+    <div> Automated Way to Get JS Errors </div>
+    </>
 )
 
-export default HarryPotterGame
+export default AutomatedWayToGetJsErrorsComponent

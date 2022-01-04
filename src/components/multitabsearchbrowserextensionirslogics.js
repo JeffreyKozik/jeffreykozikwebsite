@@ -1,7 +1,9 @@
 import * as React from "react"
 
-const HarryPotterGame = () => (
-    <div> Harry Potter Game </div>
+const MultitabSearchBrowserExtensionIRSLogicsComponent = () => (
+    <>
+    <div> Multitab Search Browser Extension IRS Logics </div>
+    </>
 )
 
-export default HarryPotterGame
+export default MultitabSearchBrowserExtensionIRSLogicsComponent

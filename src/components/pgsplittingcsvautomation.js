@@ -1,7 +1,9 @@
 import * as React from "react"
 
-const HarryPotterGame = () => (
-    <div> Harry Potter Game </div>
+const PgSplittingCSVAutomationComponent = () => (
+    <>
+    <div> P&G Splitting CSV Automation </div>
+    </>
 )
 
-export default HarryPotterGame
+export default PgSplittingCSVAutomationComponent

@@ -1,7 +1,7 @@
 import * as React from "react"
 
-const HarryPotterGame = () => (
-    <div> Harry Potter Game </div>
+const RSA = () => (
+    <div> RSA </div>
 )
 
-export default HarryPotterGame
+export default RSA
