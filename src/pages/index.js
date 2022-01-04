@@ -35,8 +35,13 @@ const IndexPage = () => (
     <HomePage/>
 )
 
+
 export default IndexPage
 
 /*
-    Okay
+    Okay:
+    1. Projects
+    2. Accounts
+    3. Blogs
+    4.
 */
