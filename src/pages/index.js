@@ -31,7 +31,7 @@ import HomePage from "../components/homepage"
 // )
 
 const IndexPage = () => (
-    </>
+    <>
     <Seo title="Home" />
     <HomePage/>
     </>
