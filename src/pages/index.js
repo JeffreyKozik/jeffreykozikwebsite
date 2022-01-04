@@ -36,3 +36,7 @@ const IndexPage = () => (
 )
 
 export default IndexPage
+
+/*
+    Okay
+*/
