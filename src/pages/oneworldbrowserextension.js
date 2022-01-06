@@ -1,5 +1,5 @@
 import * as React from "react"
-// import "node_modules/video-react/dist/video-react.css"
+import "gatsby-starter-default/node_modules/video-react/dist/video-react.css"
 import { Player } from 'video-react';
 
 const OneWorldBrowserExtension = () => (
@@ -7,8 +7,8 @@ const OneWorldBrowserExtension = () => (
         <div> One World Browser Extension </div>
         <Player
             playsInline
-            poster="/assets/poster.png"
-            src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"
+            poster="images/gatsby-icon.png"
+            src="images/1world.mp4"
         />
     </>
 )
