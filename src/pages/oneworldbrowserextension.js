@@ -7,8 +7,8 @@ const OneWorldBrowserExtension = () => (
         <div> One World Browser Extension </div>
         <Player
             playsInline
-            poster="images/gatsby-icon.png"
-            src="images/1world.mp4"
+            poster="../images/gatsby-icon.png"
+            src="../images/1world.mp4"
         />
     </>
 )
