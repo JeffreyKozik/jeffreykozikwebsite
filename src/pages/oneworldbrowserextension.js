@@ -1,5 +1,5 @@
 import * as React from "react"
-import "gatsby-starter-default/node_modules/video-react/dist/video-react.css"
+import "../node_modules/video-react/dist/video-react.css"
 import { Player } from 'video-react';
 
 const OneWorldBrowserExtension = () => (
