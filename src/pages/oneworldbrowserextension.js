@@ -6,7 +6,7 @@ const OneWorldBrowserExtension = () => (
     <>
         <div> One World Browser Extension </div>
         <video controls>
-            <source src="../images/1world.mp4">
+            <source src="gatsby-starter-default/src/images/1world.mp4">
         </video>
     </>
 )
