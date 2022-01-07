@@ -21,6 +21,12 @@ import TextField from '@mui/material/TextField'
 let consumptionOptions = ["1", "2", "3"];
 let supplyChainOptions = ["1", "2", "3"];
 
+function generateOptions(animatedComponents, optionsArray){
+    return(
+        <Select closeMenuOnSelect={false} components={animatedComponents} options={optionsArray}/>
+    )
+}
+
 const OneWorldBrowserExtension = () => (
     <>
         <head>
@@ -48,11 +54,11 @@ const OneWorldBrowserExtension = () => (
                     <TableRow>
                         <TableCell><TextField id="standard-basic" placeholder="Apples..." variant="standard" /></TableCell>
                         <TableCell align="right"><TextField id="standard-basic" placeholder="$10..." variant="standard" /></TableCell>
-                        <TableCell align="right"><Select closeMenuOnSelect={false} components={animatedComponentsConsumption} isMulti options={consumptionOptions} multiple/></TableCell>
-                        <TableCell align="right"><Select closeMenuOnSelect={false} components={animatedComponentsSupplyChain} isMulti options={supplyChainOptions} multiple/></TableCell>
+                        <TableCell align="right">{generateOptions(animatedComponentsConsumption, consumptionOptions)}</TableCell>
+                        <TableCell align="right">{generateOptions(animatedComponentsSupplyChain, supplyChainOptions)}</TableCell>
                     </TableRow>
                     <TableRow>
-                        <TableCell><button type="button"> + </button></TableCell>
+                        <button type="button"> + </button>
                     </TableRow>
                 </TableBody>
               </Table>
