@@ -23,7 +23,7 @@ let supplyChainOptions = ["1", "2", "3"];
 
 function generateOptions(animatedComponents, optionsArray){
     let options = []
-    for(let i = 0; i < array.length; i++){
+    for(let i = 0; i < optionsArray.length; i++){
         options.push({value: optionsArray[i], label: optionsArray[i]});
     }
     return(
@@ -61,9 +61,10 @@ const OneWorldBrowserExtension = () => (
                         <TableCell align="right">{generateOptions(animatedComponentsConsumption, consumptionOptions)}</TableCell>
                         <TableCell align="right">{generateOptions(animatedComponentsSupplyChain, supplyChainOptions)}</TableCell>
                     </TableRow>
-                    <TableRow>
-                        <button type="button"> + </button>
+                    <TableRow id="add_row">
+                        <button class="add_row_button" type="button"> + </button>
                     </TableRow>
+                    <button class="add_row_button" type="button"> + </button>
                 </TableBody>
               </Table>
             </TableContainer>
