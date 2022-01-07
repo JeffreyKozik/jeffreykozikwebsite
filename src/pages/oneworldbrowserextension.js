@@ -3,6 +3,14 @@ import demoVideo from "../images/1world.mp4";
 import "../page_styling/oneworldbrowserextension.css"
 import Seo from "../components/seo"
 
+import Select from 'react-select'
+import makeAnimated from 'react-select/animated'
+const animatedComponentsConsumption = makeAnimated();
+const animatedComponentsSupplyChain = makeAnimated();
+
+let consumptionOptions = []
+let supplyChainOptions = []
+
 const OneWorldBrowserExtension = () => (
     <>
         <Seo title="One World Browser Extension" />
@@ -14,16 +22,19 @@ const OneWorldBrowserExtension = () => (
         </div>
         <table>
             <tr>
-                <th>heading1</th>
-                <th> heading2 </th>
+                <th> Name </th>
+                <th> Cost </th>
+                <th> Consumption Category </th>
+                <th> Supply Chain Category </th>
             </tr>
             <tr>
-                <td> column 1 </td>
-                <td> column 2 </td>
+                <td> <textarea placeholder="Apples..."> </textarea> </td>
+                <td> <textarea placeholder="$10..."> </textarea> </td>
+                <td> <Select closeMenuOnSelect={false} components={animatedComponentsConsumption} isMulti options={consumptionOptions} multiple/> </td>
+                <td> <Select closeMenuOnSelect={false} components={animatedComponentsSupplyChain} isMulti options={supplyChainOptions} multiple/> </td>
             </tr>
             <tr>
-                <td> column 1 </td>
-                <td> column 2 </td>
+                <button type="button"> + </button>
             </tr>
         </table>
         <p>
