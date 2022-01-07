@@ -16,8 +16,10 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
-let consumptionOptions = []
-let supplyChainOptions = []
+import TextField from '@mui/material/TextField'
+
+let consumptionOptions = ["1", "2", "3"];
+let supplyChainOptions = ["1", "2", "3"];
 
 const OneWorldBrowserExtension = () => (
     <>
@@ -32,8 +34,8 @@ const OneWorldBrowserExtension = () => (
                     <source src={demoVideo} type="video/mp4"></source>
                 </video>
             </div>
-            <TableContainer component={Paper}>
-              <Table sx={{ minWidth: 650 }} aria-label="simple table">
+            <TableContainer component={Paper} class="one_world_container">
+              <Table sx={{ minWidth: 650 }} aria-label="simple table" id="one_world_table">
                 <TableHead>
                   <TableRow>
                     <TableCell>Name</TableCell>
@@ -44,8 +46,8 @@ const OneWorldBrowserExtension = () => (
                 </TableHead>
                 <TableBody>
                     <TableRow>
-                        <TableCell><textarea placeholder="Apples..."> </textarea></TableCell>
-                        <TableCell align="right"><textarea placeholder="$10..."> </textarea></TableCell>
+                        <TableCell><TextField id="standard-basic" label="Apples..." variant="standard" /></TableCell>
+                        <TableCell align="right"><TextField id="standard-basic" label="$10..." variant="standard" /></TableCell>
                         <TableCell align="right"><Select closeMenuOnSelect={false} components={animatedComponentsConsumption} isMulti options={consumptionOptions} multiple/></TableCell>
                         <TableCell align="right"><Select closeMenuOnSelect={false} components={animatedComponentsSupplyChain} isMulti options={supplyChainOptions} multiple/></TableCell>
                     </TableRow>
@@ -55,24 +57,7 @@ const OneWorldBrowserExtension = () => (
                 </TableBody>
               </Table>
             </TableContainer>
-            <table>
-                <tr>
-                    <th> Name </th>
-                    <th> Cost </th>
-                    <th> Consumption Category </th>
-                    <th> Supply Chain Category </th>
-                </tr>
-                <tr>
-                    <td> <textarea placeholder="Apples..."> </textarea> </td>
-                    <td> <textarea placeholder="$10..."> </textarea> </td>
-                    <td> <Select closeMenuOnSelect={false} components={animatedComponentsConsumption} isMulti options={consumptionOptions} multiple/> </td>
-                    <td> <Select closeMenuOnSelect={false} components={animatedComponentsSupplyChain} isMulti options={supplyChainOptions} multiple/> </td>
-                </tr>
-                <tr>
-                    <button type="button"> + </button>
-                </tr>
-            </table>
-            <p>
+            <p class="description">
                 The One World Browser Extension is used in conjunction with a Square Business account to
             </p>
         </body>
