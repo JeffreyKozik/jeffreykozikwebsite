@@ -61,16 +61,12 @@ const OneWorldBrowserExtension = () => (
                         <TableCell align="right">{generateOptions(animatedComponentsConsumption, consumptionOptions)}</TableCell>
                         <TableCell align="right">{generateOptions(animatedComponentsSupplyChain, supplyChainOptions)}</TableCell>
                     </TableRow>
-                    <TableRow id="add_row">
-                        <button class="add_row_button" type="button"> + </button>
-                    </TableRow>
-                    <button class="add_row_button" type="button"> + </button>
                 </TableBody>
-                <button class="add_row_button" type="button"> + </button>
               </Table>
-              <button class="add_row_button" type="button"> + </button>
             </TableContainer>
-            <button class="add_row_button" type="button"> + </button>
+            <div class="one_world_container">
+                <button class="add_row_button" type="button"> + </button>
+            </div>
             <p class="description">
                 The One World Browser Extension is used in conjunction with a Square Business account to
             </p>
