@@ -8,6 +8,14 @@ import makeAnimated from 'react-select/animated'
 const animatedComponentsConsumption = makeAnimated();
 const animatedComponentsSupplyChain = makeAnimated();
 
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import Paper from '@mui/material/Paper';
+
 let consumptionOptions = []
 let supplyChainOptions = []
 
@@ -20,6 +28,26 @@ const OneWorldBrowserExtension = () => (
                 <source src={demoVideo} type="video/mp4"></source>
             </video>
         </div>
+        <TableContainer component={Paper}>
+          <Table sx={{ minWidth: 650 }} aria-label="simple table">
+            <TableHead>
+              <TableRow>
+                <TableCell>Name</TableCell>
+                <TableCell align="right">Cost</TableCell>
+                <TableCell align="right">Consumption Category</TableCell>
+                <TableCell align="right">Supply Chain Category</TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+                <TableRow>
+                    <TableCell><textarea placeholder="Apples..."> </textarea></TableCell>
+                    <TableCell align="right"><textarea placeholder="$10..."> </textarea></TableCell>
+                    <TableCell align="right"><Select closeMenuOnSelect={false} components={animatedComponentsConsumption} isMulti options={consumptionOptions} multiple/></TableCell>
+                    <TableCell align="right"><Select closeMenuOnSelect={false} components={animatedComponentsSupplyChain} isMulti options={supplyChainOptions} multiple/></TableCell>
+                </TableRow>
+            </TableBody>
+          </Table>
+        </TableContainer>
         <table>
             <tr>
                 <th> Name </th>
