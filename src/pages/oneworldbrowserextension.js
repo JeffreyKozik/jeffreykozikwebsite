@@ -66,8 +66,11 @@ const OneWorldBrowserExtension = () => (
                     </TableRow>
                     <button class="add_row_button" type="button"> + </button>
                 </TableBody>
+                <button class="add_row_button" type="button"> + </button>
               </Table>
+              <button class="add_row_button" type="button"> + </button>
             </TableContainer>
+            <button class="add_row_button" type="button"> + </button>
             <p class="description">
                 The One World Browser Extension is used in conjunction with a Square Business account to
             </p>
