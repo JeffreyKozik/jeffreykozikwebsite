@@ -6,7 +6,7 @@ import Seo from "../components/seo"
 const OneWorldBrowserExtension = () => (
     <>
         <Seo title="One World Browser Extension" />
-        <h1 id="one_world_browser_extension_title"> One World Browser Extension </div>
+        <h1 id="one_world_browser_extension_title"> One World Browser Extension </h1>
         <div class="container">
             <video controls>
                 <source src={demoVideo} type="video/mp4"></source>
