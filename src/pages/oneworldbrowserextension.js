@@ -7,7 +7,7 @@ const OneWorldBrowserExtension = () => (
     <>
         <Seo title="One World Browser Extension" />
         <h1 id="one_world_browser_extension_title"> One World Browser Extension </h1>
-        <div class="container">
+        <div class="one_world_container">
             <video controls>
                 <source src={demoVideo} type="video/mp4"></source>
             </video>
