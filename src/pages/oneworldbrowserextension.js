@@ -12,7 +12,23 @@ const OneWorldBrowserExtension = () => (
                 <source src={demoVideo} type="video/mp4"></source>
             </video>
         </div>
-
+        <table>
+            <tr>
+                <th>heading1</th>
+                <th> heading2 </th>
+            </tr>
+            <tr>
+                <td> column 1 </td>
+                <td> column 2 </td>
+            </tr>
+            <tr>
+                <td> column 1 </td>
+                <td> column 2 </td>
+            </tr>
+        </table>
+        <p>
+            The One World Browser Extension is used in conjunction with a Square Business account to
+        </p>
     </>
 )
 
