@@ -40,14 +40,14 @@ const OneWorldBrowserExtension = () => (
                   <TableRow>
                     <TableCell>Name</TableCell>
                     <TableCell align="right">Cost</TableCell>
-                    <TableCell align="right">Consumption Category</TableCell>
-                    <TableCell align="right">Supply Chain Category</TableCell>
+                    <TableCell align="right">Consumption</TableCell>
+                    <TableCell align="right">Supply Chain</TableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>
                     <TableRow>
-                        <TableCell><TextField id="standard-basic" label="Apples..." variant="standard" /></TableCell>
-                        <TableCell align="right"><TextField id="standard-basic" label="$10..." variant="standard" /></TableCell>
+                        <TableCell><TextField id="standard-basic" placeholder="Apples..." variant="standard" /></TableCell>
+                        <TableCell align="right"><TextField id="standard-basic" placeholder="$10..." variant="standard" /></TableCell>
                         <TableCell align="right"><Select closeMenuOnSelect={false} components={animatedComponentsConsumption} isMulti options={consumptionOptions} multiple/></TableCell>
                         <TableCell align="right"><Select closeMenuOnSelect={false} components={animatedComponentsSupplyChain} isMulti options={supplyChainOptions} multiple/></TableCell>
                     </TableRow>
