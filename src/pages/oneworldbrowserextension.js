@@ -12,7 +12,6 @@ const OneWorldBrowserExtension = () => (
                 <source src={demoVideo} type="video/mp4"></source>
             </video>
         </div>
-        <p>
 
     </>
 )
