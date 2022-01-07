@@ -22,8 +22,12 @@ let consumptionOptions = ["1", "2", "3"];
 let supplyChainOptions = ["1", "2", "3"];
 
 function generateOptions(animatedComponents, optionsArray){
+    let options = []
+    for(let i = 0; i < array.length; i++){
+        options.push({value: optionsArray[i], label: optionsArray[i]});
+    }
     return(
-        <Select closeMenuOnSelect={false} components={animatedComponents} options={optionsArray}/>
+        <Select closeMenuOnSelect={false} components={animatedComponents} options={options}/>
     )
 }
 
