@@ -6,6 +6,8 @@ module.exports = {
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
   plugins: [
+    `@emotion/react`,
+    `@emotion/styled`,
     `@mui/material`,
     `redux`,
     `react-select`,
