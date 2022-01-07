@@ -45,6 +45,9 @@ const OneWorldBrowserExtension = () => (
                     <TableCell align="right"><Select closeMenuOnSelect={false} components={animatedComponentsConsumption} isMulti options={consumptionOptions} multiple/></TableCell>
                     <TableCell align="right"><Select closeMenuOnSelect={false} components={animatedComponentsSupplyChain} isMulti options={supplyChainOptions} multiple/></TableCell>
                 </TableRow>
+                <TableRow>
+                    <TableCell><button type="button"> + </button></TableCell>
+                </TableRow>
             </TableBody>
           </Table>
         </TableContainer>
