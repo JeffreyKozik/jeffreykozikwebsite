@@ -329,10 +329,10 @@ let consumptionOptions = [
 '12.5.3.5 Other payments for services',
 ];
 let supplyChainOptions = [
-'Agriculture products2',
+'Agriculture products',
 'Forestry products',
-'Fish products2',
-'Coal, lignite, peat3',
+'Fish products',
+'Coal, lignite, peat',
 'Crude petroleum and natural gas & Metal ores',
 'Other mining and quarrying products',
 'Mining support services',
@@ -459,33 +459,41 @@ const OneWorldBrowserExtension = () => (
                 <video controls id="one_world_video">
                     <source src={demoVideo} type="video/mp4"></source>
                 </video>
+                <TableContainer component={Paper}>
+                  <Table sx={{ minWidth: 650 }} aria-label="simple table" id="one_world_table">
+                    <TableHead>
+                      <TableRow>
+                        <TableCell>Name</TableCell>
+                        <TableCell align="right">Cost</TableCell>
+                        <TableCell align="right">Consumption</TableCell>
+                        <TableCell align="right">Supply Chain</TableCell>
+                      </TableRow>
+                    </TableHead>
+                    <TableBody>
+                        <TableRow>
+                            <TableCell><TextField id="standard-basic" placeholder="Apples..." variant="standard" /></TableCell>
+                            <TableCell align="right"><TextField id="standard-basic" placeholder="$10..." variant="standard" /></TableCell>
+                            <TableCell align="right">{generateOptions(animatedComponentsConsumption, consumptionOptions)}</TableCell>
+                            <TableCell align="right">{generateOptions(animatedComponentsSupplyChain, supplyChainOptions)}</TableCell>
+                        </TableRow>
+                    </TableBody>
+                  </Table>
+                </TableContainer>
+                <Button variant="text" class="add_row_button" type="button"> Add Row </Button>
+                <p class="description">
+                    The One World Browser Extension is used in conjunction with a Square Business account to easily offset a
+                    business's inventory carbon emissions. To see it in action feel free to enter data into the table above.
+
+                    The consumption categories and supply chain categories as well as the amount of CO2 emitted per dollar spent
+                    in each of those categories comes from publicly available data from the UK government (<a>https://www.gov.uk/government/statistics/uks-carbon-footprint</a>).
+
+                    Products are automatically categorized by using an Azure Function which utilizes the Bing API to search the name of the product
+                    and compare the words in the results with the words in the results of Bing searches for each of the categories via nltk and sklearn's TFIDF vectorization.
+                    Then the user is able to easily offset their carbon emissions using Patch.
+
+                    I've also tried approaches using Google Cloud's Google Cloud Function, Google Cloud Run (with Docker) and VADER.
+                </p>
             </div>
-            <TableContainer component={Paper} class="one_world_container">
-              <Table sx={{ minWidth: 650 }} aria-label="simple table" id="one_world_table">
-                <TableHead>
-                  <TableRow>
-                    <TableCell>Name</TableCell>
-                    <TableCell align="right">Cost</TableCell>
-                    <TableCell align="right">Consumption</TableCell>
-                    <TableCell align="right">Supply Chain</TableCell>
-                  </TableRow>
-                </TableHead>
-                <TableBody>
-                    <TableRow>
-                        <TableCell><TextField id="standard-basic" placeholder="Apples..." variant="standard" /></TableCell>
-                        <TableCell align="right"><TextField id="standard-basic" placeholder="$10..." variant="standard" /></TableCell>
-                        <TableCell align="right">{generateOptions(animatedComponentsConsumption, consumptionOptions)}</TableCell>
-                        <TableCell align="right">{generateOptions(animatedComponentsSupplyChain, supplyChainOptions)}</TableCell>
-                    </TableRow>
-                </TableBody>
-              </Table>
-            </TableContainer>
-            <div class="one_world_container">
-                <Button variant="contained" class="add_row_button" type="button"> Add Row </Button>
-            </div>
-            <p class="description">
-                The One World Browser Extension is used in conjunction with a Square Business account to
-            </p>
         </body>
     </>
 )
