@@ -451,9 +451,6 @@ const OneWorldBrowserExtension = () => (
     <>
         <head>
             <meta name="viewport" content="initial-scale=1, width=device-width"/>
-            <link rel="preconnect" href="https://fonts.googleapis.com">
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
         </head>
         <body>
             <Seo title="One World Browser Extension" />
