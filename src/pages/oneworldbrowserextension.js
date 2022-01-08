@@ -497,6 +497,7 @@ const OneWorldBrowserExtension = () => (
                     So really 0.01t should be offset in the video, not 0.13t. So offsetting $100 worth of apples (12.77 kg CO2) through the project chosen
                     on Patch would cost $0.13 not $1.27.
                 </p>
+                <object data="https://checkout.patch.io/che_prod_9d820f15d0b93ec15fc23694efb70726?amount=1000000"> <embed src="https://checkout.patch.io/che_prod_9d820f15d0b93ec15fc23694efb70726?amount=1000000"></embed></object>
             </div>
         </body>
     </>
