@@ -454,8 +454,8 @@ const OneWorldBrowserExtension = () => (
         </head>
         <body>
             <Seo title="One World Browser Extension" />
-            <h1 id="one_world_browser_extension_title"> One World Browser Extension </h1>
             <div class="one_world_container">
+                <h1 id="one_world_browser_extension_title"> One World Browser Extension </h1>
                 <video controls id="one_world_video">
                     <source src={demoVideo} type="video/mp4"></source>
                 </video>
@@ -479,7 +479,7 @@ const OneWorldBrowserExtension = () => (
                     </TableBody>
                   </Table>
                 </TableContainer>
-                <Button variant="text" class="add_row_button"> Add Row </Button>
+                <Button variant="text" id="add_row_button"> Add Row </Button>
                 <p class="description">
                     The One World Browser Extension is used in conjunction with a Square Business account to easily offset a
                     business's inventory carbon emissions. To see it in action feel free to enter data into the table above.
