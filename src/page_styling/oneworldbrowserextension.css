@@ -13,6 +13,10 @@
   align-self: left;
 }
 
+.subtitle {
+    color: grey;
+}
+
 #one_world_video{
     align-self: center;
     width: 100%;
