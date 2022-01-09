@@ -328,6 +328,10 @@ let consumptionOptions = [
 '12.5.3.4 TU and professional organisations',
 '12.5.3.5 Other payments for services',
 ];
+
+for(let i = 0; i < consumptionOptions.length; i++){
+    consumptionOptions[i] = consumptionOptions.replace(^/w/s/g, '')
+}
 let supplyChainOptions = [
 'Agriculture products',
 'Forestry products',
@@ -454,15 +458,15 @@ function createData(name, cost, consumption, supply_chain){
 let rows = [
     createData(<TextField id="standard-basic" placeholder="Apples..." variant="standard" />,
                <TextField id="standard-basic" placeholder="$10..." variant="standard" />,
-               generateOptions(animatedComponentsConsumption, consumptionOptions)},
-               generateOptions(animatedComponentsSupplyChain, supplyChainOptions)});
+               generateOptions(animatedComponentsConsumption, consumptionOptions),
+               generateOptions(animatedComponentsSupplyChain, supplyChainOptions));
 ]
 
 function addRowFunction(){
     rows.append(createData(<TextField id="standard-basic" placeholder="Apples..." variant="standard" />,
                 <TextField id="standard-basic" placeholder="$10..." variant="standard" />,
-                generateOptions(animatedComponentsConsumption, consumptionOptions)},
-                generateOptions(animatedComponentsSupplyChain, supplyChainOptions)}));
+                generateOptions(animatedComponentsConsumption, consumptionOptions),
+                generateOptions(animatedComponentsSupplyChain, supplyChainOptions)));
 }
 
 const OneWorldBrowserExtension = () => (
@@ -481,7 +485,7 @@ const OneWorldBrowserExtension = () => (
                     The One World Browser Extension is used in conjunction with a Square Business account to easily offset a
                     business's inventory carbon emissions. To see it in action feel free to enter data into the table below.
                 </p>
-                <TableContainer component={Paper}>
+                // <TableContainer component={Paper}>
                   <Table sx={{ minWidth: 650 }} aria-label="simple table" id="one_world_table">
                     <TableHead>
                       <TableRow>
@@ -508,7 +512,7 @@ const OneWorldBrowserExtension = () => (
                         ))}
                     </TableBody>
                   </Table>
-                </TableContainer>
+                // </TableContainer>
                 <Button onClick={addRowFunction} variant="text" id="add_row_button"> Add Row </Button>
                 <p class="description">
                     The consumption categories and supply chain categories as well as the amount of CO2 emitted per dollar spent
