@@ -329,9 +329,9 @@ let consumptionOptions = [
 '12.5.3.5 Other payments for services',
 ];
 
-for(let i = 0; i < consumptionOptions.length; i++){
-    consumptionOptions[i] = consumptionOptions.replace(/[^a-z]/g, '');
-}
+// for (let i = 0; i < consumptionOptions.length; i++){
+//     consumptionOptions[i] = consumptionOptions.replace(/[^a-zA-z]/g, '');
+// }
 let supplyChainOptions = [
 'Agriculture products',
 'Forestry products',
