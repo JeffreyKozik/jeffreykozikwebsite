@@ -12,7 +12,7 @@
 }
 
 #one_world_browser_extension_title {
-  text-align: left;
+  align-self: left;
 }
 
 #one_world_video{
@@ -29,4 +29,5 @@
 
 .description{
     width: 100%;
+    z-index: -1;
 }

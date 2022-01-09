@@ -459,6 +459,10 @@ const OneWorldBrowserExtension = () => (
                 <video controls id="one_world_video">
                     <source src={demoVideo} type="video/mp4"></source>
                 </video>
+                <p class="description">
+                    The One World Browser Extension is used in conjunction with a Square Business account to easily offset a
+                    business's inventory carbon emissions. To see it in action feel free to enter data into the table below.
+                </p>
                 <TableContainer component={Paper}>
                   <Table sx={{ minWidth: 650 }} aria-label="simple table" id="one_world_table">
                     <TableHead>
@@ -479,10 +483,6 @@ const OneWorldBrowserExtension = () => (
                     </TableBody>
                   </Table>
                 </TableContainer>
-                <p class="description">
-                    The One World Browser Extension is used in conjunction with a Square Business account to easily offset a
-                    business's inventory carbon emissions. To see it in action feel free to enter data into the table below.
-                </p>
                 <Button variant="text" id="add_row_button"> Add Row </Button>
                 <p class="description">
                     The consumption categories and supply chain categories as well as the amount of CO2 emitted per dollar spent
