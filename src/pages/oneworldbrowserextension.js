@@ -485,7 +485,7 @@ class OneWorldBrowserExtension extends React.Component {
         let offset_cost2 = <div>$0</div>;
 
         this.setState({
-            rows : this.state.rows.append(this.createData(name2, cost2, consumptionSelect2, supplyChainSelect2, co22, offset_cost2));
+            rows : this.state.rows.append(this.createData(name2, cost2, consumptionSelect2, supplyChainSelect2, co22, offset_cost2))
         });
     }
 
