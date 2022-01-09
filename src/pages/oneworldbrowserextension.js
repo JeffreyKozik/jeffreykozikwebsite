@@ -451,7 +451,7 @@ function generateOptions(animatedComponents, optionsArray){
     )
 }
 
-function createData(name, cost, consumption, supply_chain, ){
+function createData(name, cost, consumption, supply_chain){
     return {name, cost, consumption, supply_chain}
 }
 
