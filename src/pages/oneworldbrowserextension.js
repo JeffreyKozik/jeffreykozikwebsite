@@ -330,7 +330,7 @@ let consumptionOptions = [
 ];
 
 for(let i = 0; i < consumptionOptions.length; i++){
-    consumptionOptions[i] = consumptionOptions.replace(^/w/s/g, '')
+    consumptionOptions[i] = consumptionOptions.replace(/[^a-z]/g, '');
 }
 let supplyChainOptions = [
 'Agriculture products',
@@ -451,7 +451,7 @@ function generateOptions(animatedComponents, optionsArray){
     )
 }
 
-function createData(name, cost, consumption, supply_chain){
+function createData(name, cost, consumption, supply_chain, ){
     return {name, cost, consumption, supply_chain}
 }
 
@@ -506,8 +506,8 @@ const OneWorldBrowserExtension = () => (
                             <TableRow>
                                 <TableCell>{row.name}</TableCell>
                                 <TableCell>{row.cost}</TableCell>
-                                <TableCell>{row.consumption}</TableCell>
-                                <TableCell>{row.supply_chain}</TableCell>
+                                <TableCell class="select">{row.consumption}</TableCell>
+                                <TableCell class="select">{row.supply_chain}</TableCell>
                             </TableRow>
                         ))}
                     </TableBody>
@@ -528,7 +528,6 @@ const OneWorldBrowserExtension = () => (
                     So really 0.01t should be offset in the video, not 0.13t. So offsetting $100 worth of apples (12.77 kg CO2) through the project chosen
                     on Patch would cost $0.13 not $1.27.
                 </p>
-                <embed src="https://checkout.patch.io/che_prod_9d820f15d0b93ec15fc23694efb70726?amount=1000000"></embed>
             </div>
         </body>
     </>
