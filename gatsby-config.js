@@ -6,6 +6,9 @@ module.exports = {
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
   plugins: [
+    `@fortawesome/fontawesome-svg-core`,
+    `@fortawesome/free-solid-svg-icons`,
+    `@fortawesome/react-fontawesome`,
     `@emotion/react`,
     `@emotion/styled`,
     `@mui/material`,

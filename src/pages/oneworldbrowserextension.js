@@ -19,6 +19,9 @@ import Paper from '@mui/material/Paper';
 import TextField from '@mui/material/TextField'
 import Button from '@mui/material/Button';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
+
 let consumptionOptions = [
 '1.1.1.1 Rice',
 '1.1.1.2 Bread',
@@ -452,11 +455,12 @@ class OneWorldBrowserExtension extends React.Component {
         )
     }
 
+    createData(name, cost, consumption, supply_chain, CO2, offset_cost){
+        return {name, cost, consumption, supply_chain, CO2, offset_cost}
+    }
+
     constructor(props){
         super(props);
-        createData(name, cost, consumption, supply_chain, CO2, offset_cost){
-            return {name, cost, consumption, supply_chain, CO2, offset_cost}
-        }
 
         let consumptionSelect = this.generateOptions(animatedComponentsConsumption, consumptionOptions);
         let supplyChainSelect = this.generateOptions(animatedComponentsSupplyChain, supplyChainOptions);
@@ -528,7 +532,7 @@ class OneWorldBrowserExtension extends React.Component {
                                 <TableCell class="supplychainTable" align="right">{row.supply_chain}</TableCell>
                                 <TableCell class="CO2Table" align="right">{row.CO2}</TableCell>
                                 <TableCell class="offsetcostTable" align="right">{row.offset_cost}</TableCell>
-                                <TableCell class="deleteTable" align="right"><button onClick={deleteRowFunction} class="delete_row_button"> Delete </button></TableCell>
+                                <TableCell class="deleteTable" align="right"><FontAwesomeIcon class="delete_row_button" onClick={deleteRowFunction} icon={faTrashAlt} /></TableCell>
                             </TableRow>
                         ))}
                     </TableBody>
