@@ -447,6 +447,24 @@ function generateOptions(animatedComponents, optionsArray){
     )
 }
 
+function createData(name, cost, consumption, supply_chain){
+    return {name, cost, consumption, supply_chain}
+}
+
+let rows = [
+    createData(<TextField id="standard-basic" placeholder="Apples..." variant="standard" />,
+               <TextField id="standard-basic" placeholder="$10..." variant="standard" />,
+               generateOptions(animatedComponentsConsumption, consumptionOptions)},
+               generateOptions(animatedComponentsSupplyChain, supplyChainOptions)});
+]
+
+function addRowFunction(){
+    rows.append(createData(<TextField id="standard-basic" placeholder="Apples..." variant="standard" />,
+                <TextField id="standard-basic" placeholder="$10..." variant="standard" />,
+                generateOptions(animatedComponentsConsumption, consumptionOptions)},
+                generateOptions(animatedComponentsSupplyChain, supplyChainOptions)}));
+}
+
 const OneWorldBrowserExtension = () => (
     <>
         <head>
@@ -474,16 +492,24 @@ const OneWorldBrowserExtension = () => (
                       </TableRow>
                     </TableHead>
                     <TableBody>
-                        <TableRow>
-                            <TableCell><TextField id="standard-basic" placeholder="Apples..." variant="standard" /></TableCell>
-                            <TableCell align="right"><TextField id="standard-basic" placeholder="$10..." variant="standard" /></TableCell>
-                            <TableCell align="right">{generateOptions(animatedComponentsConsumption, consumptionOptions)}</TableCell>
-                            <TableCell align="right">{generateOptions(animatedComponentsSupplyChain, supplyChainOptions)}</TableCell>
-                        </TableRow>
+                        // <TableRow>
+                        //     <TableCell><TextField id="standard-basic" placeholder="Apples..." variant="standard" /></TableCell>
+                        //     <TableCell align="right"><TextField id="standard-basic" placeholder="$10..." variant="standard" /></TableCell>
+                        //     <TableCell align="right">{generateOptions(animatedComponentsConsumption, consumptionOptions)}</TableCell>
+                        //     <TableCell align="right">{generateOptions(animatedComponentsSupplyChain, supplyChainOptions)}</TableCell>
+                        // </TableRow>
+                        {rows.map((row) => (
+                            <TableRow>
+                                <TableCell>{row.name}</TableCell>
+                                <TableCell>{row.cost}</TableCell>
+                                <TableCell>{row.consumption}</TableCell>
+                                <TableCell>{row.supply_chain}</TableCell>
+                            </TableRow>
+                        ))}
                     </TableBody>
                   </Table>
                 </TableContainer>
-                <Button variant="text" id="add_row_button"> Add Row </Button>
+                <Button onClick={addRowFunction} variant="text" id="add_row_button"> Add Row </Button>
                 <p class="description">
                     The consumption categories and supply chain categories as well as the amount of CO2 emitted per dollar spent
                     in each of those categories comes from <a href="https://www.gov.uk/government/statistics/uks-carbon-footprint">publicly available data from the UK government</a>.
