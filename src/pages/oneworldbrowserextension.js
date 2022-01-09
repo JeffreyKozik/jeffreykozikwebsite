@@ -455,18 +455,23 @@ function createData(name, cost, consumption, supply_chain, ){
     return {name, cost, consumption, supply_chain}
 }
 
+let consumptionOptionsArray = generateOptions(animatedComponentsConsumption, consumptionOptions);
+let supplyChainArray = generateOptions(animatedComponentsSupplyChain, supplyChainOptions);
+
 let rows = [
     createData(<TextField id="standard-basic" placeholder="Apples..." variant="standard" />,
                <TextField id="standard-basic" placeholder="$10..." variant="standard" />,
-               generateOptions(animatedComponentsConsumption, consumptionOptions),
-               generateOptions(animatedComponentsSupplyChain, supplyChainOptions));
+               consumptionOptionsArray, supplyChainArray);
 ]
 
 function addRowFunction(){
+    let consumptionOptionsArray2 = generateOptions(animatedComponentsConsumption, consumptionOptions);
+    let supplyChainArray2 = generateOptions(animatedComponentsSupplyChain, supplyChainOptions);
+
     rows.append(createData(<TextField id="standard-basic" placeholder="Apples..." variant="standard" />,
                 <TextField id="standard-basic" placeholder="$10..." variant="standard" />,
-                generateOptions(animatedComponentsConsumption, consumptionOptions),
-                generateOptions(animatedComponentsSupplyChain, supplyChainOptions)));
+                consumptionOptionsArray2,
+                supplyChainArray2);
 }
 
 const OneWorldBrowserExtension = () => (
