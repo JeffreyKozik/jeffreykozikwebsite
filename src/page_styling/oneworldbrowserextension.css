@@ -16,13 +16,14 @@
 
 #subtitle {
     color: grey;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin-top: 0;
+    margin-bottom: 0;
     align-self: left;
 }
 
 #one_world_video{
     align-self: center;
+    margin-top: 0;
     width: 100%;
 }
 
