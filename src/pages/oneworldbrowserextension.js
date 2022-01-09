@@ -447,7 +447,7 @@ function generateOptions(animatedComponents, optionsArray){
         options.push({value: optionsArray[i], label: optionsArray[i]});
     }
     return(
-        <Select closeMenuOnSelect={false} components={animatedComponents} options={options}/>
+        <Select class="select" closeMenuOnSelect={false} components={animatedComponents} options={options}/>
     )
 }
 
@@ -501,25 +501,25 @@ const OneWorldBrowserExtension = () => (
                   <Table sx={{ minWidth: 650 }} aria-label="simple table" id="one_world_table">
                     <TableHead>
                       <TableRow>
-                        <TableCell>Name</TableCell>
-                        <TableCell align="right">Cost</TableCell>
-                        <TableCell align="right">Consumption</TableCell>
-                        <TableCell align="right">Supply Chain</TableCell>
-                        <TableCell align="right">CO2</TableCell>
-                        <TableCell align="right">Offset Cost</TableCell>
-                        <TableCell></TableCell>
+                        <TableCell class="nameTable">Name</TableCell>
+                        <TableCell class="costTable" align="right">Cost</TableCell>
+                        <TableCell class="consumptionTable" align="right">Consumption</TableCell>
+                        <TableCell class="supplychainTable" align="right">Supply Chain</TableCell>
+                        <TableCell class="CO2Table" align="right">CO2</TableCell>
+                        <TableCell class="offsetcostTable" align="right">Offset Cost</TableCell>
+                        <TableCell class="deleteTable"></TableCell>
                       </TableRow>
                     </TableHead>
                     <TableBody>
                         {rows.map((row) => (
                             <TableRow>
-                                <TableCell>{row.name}</TableCell>
-                                <TableCell>{row.cost}</TableCell>
-                                <TableCell class="select">{row.consumption}</TableCell>
-                                <TableCell class="select">{row.supply_chain}</TableCell>
-                                <TableCell>{row.CO2}</TableCell>
-                                <TableCell>{row.offset_cost}</TableCell>
-                                <TableCell><Button onClick={deleteRowFunction} variant="text" class="delete_row_button"> Delete </Button></TableCell>
+                                <TableCell class="nameTable">{row.name}</TableCell>
+                                <TableCell class="costTable">{row.cost}</TableCell>
+                                <TableCell class="consumptionTable">{row.consumption}</TableCell>
+                                <TableCell class="supplychainTable">{row.supply_chain}</TableCell>
+                                <TableCell class="CO2Table">{row.CO2}</TableCell>
+                                <TableCell class="offsetcostTable">{row.offset_cost}</TableCell>
+                                <TableCell class="deleteTable"><Button onClick={deleteRowFunction} variant="text" class="delete_row_button"> Delete </Button></TableCell>
                             </TableRow>
                         ))}
                     </TableBody>
