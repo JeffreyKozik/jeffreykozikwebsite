@@ -540,7 +540,7 @@ class OneWorldBrowserExtension extends React.Component {
                     </TableBody>
                   </Table>
                 </TableContainer>
-                <Button onClick={addRowFunction} variant="text" id="add_row_button"> Add Row </Button>
+                <Button onClick={this.addRowFunction} variant="text" id="add_row_button"> Add Row </Button>
                 <p class="description">
                     The consumption categories and supply chain categories as well as the amount of CO2 emitted per dollar spent
                     in each of those categories comes from <a href="https://www.gov.uk/government/statistics/uks-carbon-footprint">publicly available data from the UK government</a>.
