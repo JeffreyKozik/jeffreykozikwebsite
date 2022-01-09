@@ -19,8 +19,10 @@ import Paper from '@mui/material/Paper';
 import TextField from '@mui/material/TextField'
 import Button from '@mui/material/Button';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
+
+// <FontAwesomeIcon class="delete_row_button" onClick={deleteRowFunction} icon={faTrashAlt} />
 
 let consumptionOptions = [
 '1.1.1.1 Rice',
@@ -532,7 +534,7 @@ class OneWorldBrowserExtension extends React.Component {
                                 <TableCell class="supplychainTable" align="right">{row.supply_chain}</TableCell>
                                 <TableCell class="CO2Table" align="right">{row.CO2}</TableCell>
                                 <TableCell class="offsetcostTable" align="right">{row.offset_cost}</TableCell>
-                                <TableCell class="deleteTable" align="right"><FontAwesomeIcon class="delete_row_button" onClick={deleteRowFunction} icon={faTrashAlt} /></TableCell>
+                                <TableCell class="deleteTable" align="right"><button>Delete</button></TableCell>
                             </TableRow>
                         ))}
                     </TableBody>
