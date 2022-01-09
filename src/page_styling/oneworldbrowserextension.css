@@ -11,10 +11,13 @@
 
 #one_world_browser_extension_title {
   align-self: left;
+  margin-bottom: 0;
 }
 
-.subtitle {
+#subtitle {
     color: grey;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 #one_world_video{
@@ -35,6 +38,8 @@
 .description{
     align-self: center;
     width: 100%;
+    line-height: 1.8;
+    font-size: 1.25rem;
 }
 
 .nameTable{
