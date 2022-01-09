@@ -451,27 +451,30 @@ function generateOptions(animatedComponents, optionsArray){
     )
 }
 
-function createData(name, cost, consumption, supply_chain){
-    return {name, cost, consumption, supply_chain}
+function createData(name, cost, consumption, supply_chain, CO2, offset_cost){
+    return {name, cost, consumption, supply_chain, CO2, offset_cost}
 }
 
-let consumptionOptionsArray = generateOptions(animatedComponentsConsumption, consumptionOptions);
-let supplyChainArray = generateOptions(animatedComponentsSupplyChain, supplyChainOptions);
+let consumptionSelect = generateOptions(animatedComponentsConsumption, consumptionOptions);
+let supplyChainSelect = generateOptions(animatedComponentsSupplyChain, supplyChainOptions);
+let name = <TextField id="standard-basic" placeholder="Apples..." variant="standard" />;
+let cost = <TextField id="standard-basic" placeholder="$10..." variant="standard" />;
+let co2 = <div>0 kg</div>;
+let offset_cost = <div>$0</div>;
 
 let rows = [
-    createData(<TextField id="standard-basic" placeholder="Apples..." variant="standard" />,
-               <TextField id="standard-basic" placeholder="$10..." variant="standard" />,
-               consumptionOptionsArray, supplyChainArray);
+    createData(name, cost, consumptionSelect, supplyChainSelect, co2, offset_cost)
 ]
 
 function addRowFunction(){
-    let consumptionOptionsArray2 = generateOptions(animatedComponentsConsumption, consumptionOptions);
-    let supplyChainArray2 = generateOptions(animatedComponentsSupplyChain, supplyChainOptions);
+    let consumptionSelect2 = generateOptions(animatedComponentsConsumption, consumptionOptions);
+    let supplyChainSelect2 = generateOptions(animatedComponentsSupplyChain, supplyChainOptions);
+    let name2 = <TextField id="standard-basic" placeholder="Apples..." variant="standard" />;
+    let cost2 = <TextField id="standard-basic" placeholder="$10..." variant="standard" />;
+    let co22 = <div>0 kg</div>;
+    let offset_cost2 = <div>$0</div>;
 
-    rows.append(createData(<TextField id="standard-basic" placeholder="Apples..." variant="standard" />,
-                <TextField id="standard-basic" placeholder="$10..." variant="standard" />,
-                consumptionOptionsArray2,
-                supplyChainArray2);
+    rows.append(createData(name2, cost2, consumptionSelect2, supplyChainSelect2, co22, offset_cost2);
 }
 
 const OneWorldBrowserExtension = () => (
@@ -498,6 +501,8 @@ const OneWorldBrowserExtension = () => (
                         <TableCell align="right">Cost</TableCell>
                         <TableCell align="right">Consumption</TableCell>
                         <TableCell align="right">Supply Chain</TableCell>
+                        <TableCell align="right">CO2</TableCell>
+                        <TableCell align="right">Offset Cost</TableCell>
                       </TableRow>
                     </TableHead>
                     <TableBody>
@@ -513,6 +518,8 @@ const OneWorldBrowserExtension = () => (
                                 <TableCell>{row.cost}</TableCell>
                                 <TableCell class="select">{row.consumption}</TableCell>
                                 <TableCell class="select">{row.supply_chain}</TableCell>
+                                <TableCell class="select">{row.CO2}</TableCell>
+                                <TableCell class="select">{row.offset_cost}</TableCell>
                             </TableRow>
                         ))}
                     </TableBody>
