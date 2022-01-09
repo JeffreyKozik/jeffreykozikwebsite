@@ -474,7 +474,11 @@ function addRowFunction(){
     let co22 = <div>0 kg</div>;
     let offset_cost2 = <div>$0</div>;
 
-    rows.append(createData(name2, cost2, consumptionSelect2, supplyChainSelect2, co22, offset_cost2);
+    rows.append(createData(name2, cost2, consumptionSelect2, supplyChainSelect2, co22, offset_cost2));
+}
+
+function deleteRowFunction(){
+
 }
 
 const OneWorldBrowserExtension = () => (
@@ -503,7 +507,7 @@ const OneWorldBrowserExtension = () => (
                         <TableCell align="right">Supply Chain</TableCell>
                         <TableCell align="right">CO2</TableCell>
                         <TableCell align="right">Offset Cost</TableCell>
-                        // <TableCell></TableCell>
+                        <TableCell></TableCell>
                       </TableRow>
                     </TableHead>
                     <TableBody>
@@ -521,7 +525,7 @@ const OneWorldBrowserExtension = () => (
                                 <TableCell class="select">{row.supply_chain}</TableCell>
                                 <TableCell>{row.CO2}</TableCell>
                                 <TableCell>{row.offset_cost}</TableCell>
-                                // <TableCell
+                                <TableCell><Button onClick={deleteRowFunction} variant="text" class="delete_row_button"> Delete </Button></TableCell>
                             </TableRow>
                         ))}
                     </TableBody>
