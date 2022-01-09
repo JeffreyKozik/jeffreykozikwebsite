@@ -441,47 +441,56 @@ let supplyChainOptions = [
 'Services of households as employers of domestic personnel'
 ];
 
-function generateOptions(animatedComponents, optionsArray){
-    let options = []
-    for(let i = 0; i < optionsArray.length; i++){
-        options.push({value: optionsArray[i], label: optionsArray[i]});
+class OneWorldBrowserExtension extends React.Component {
+    function generateOptions(animatedComponents, optionsArray){
+        let options = []
+        for(let i = 0; i < optionsArray.length; i++){
+            options.push({value: optionsArray[i], label: optionsArray[i]});
+        }
+        return(
+            <Select class="select" closeMenuOnSelect={false} components={animatedComponents} options={options}/>
+        )
     }
+
+    constructor(props){
+        super(props);
+        function createData(name, cost, consumption, supply_chain, CO2, offset_cost){
+            return {name, cost, consumption, supply_chain, CO2, offset_cost}
+        }
+
+        let consumptionSelect = generateOptions(animatedComponentsConsumption, consumptionOptions);
+        let supplyChainSelect = generateOptions(animatedComponentsSupplyChain, supplyChainOptions);
+        let name = <TextField id="standard-basic" placeholder="Apples..." variant="standard" />;
+        let cost = <TextField id="standard-basic" placeholder="$10..." variant="standard" />;
+        let co2 = <div>0 kg</div>;
+        let offset_cost = <div>$0</div>;
+
+        this.state = {
+            rows : [
+                createData(name, cost, consumptionSelect, supplyChainSelect, co2, offset_cost)
+            ]
+        }
+    }
+
+    function addRowFunction(){
+        let consumptionSelect2 = generateOptions(animatedComponentsConsumption, consumptionOptions);
+        let supplyChainSelect2 = generateOptions(animatedComponentsSupplyChain, supplyChainOptions);
+        let name2 = <TextField id="standard-basic" placeholder="Apples..." variant="standard" />;
+        let cost2 = <TextField id="standard-basic" placeholder="$10..." variant="standard" />;
+        let co22 = <div>0 kg</div>;
+        let offset_cost2 = <div>$0</div>;
+
+        this.setState({
+            rows : this.state.rows.append(createData(name2, cost2, consumptionSelect2, supplyChainSelect2, co22, offset_cost2));
+        });
+    }
+
+    function deleteRowFunction(){
+
+    }
+
+    render(){
     return(
-        <Select class="select" closeMenuOnSelect={false} components={animatedComponents} options={options}/>
-    )
-}
-
-function createData(name, cost, consumption, supply_chain, CO2, offset_cost){
-    return {name, cost, consumption, supply_chain, CO2, offset_cost}
-}
-
-let consumptionSelect = generateOptions(animatedComponentsConsumption, consumptionOptions);
-let supplyChainSelect = generateOptions(animatedComponentsSupplyChain, supplyChainOptions);
-let name = <TextField id="standard-basic" placeholder="Apples..." variant="standard" />;
-let cost = <TextField id="standard-basic" placeholder="$10..." variant="standard" />;
-let co2 = <div>0 kg</div>;
-let offset_cost = <div>$0</div>;
-
-let rows = [
-    createData(name, cost, consumptionSelect, supplyChainSelect, co2, offset_cost)
-]
-
-function addRowFunction(){
-    let consumptionSelect2 = generateOptions(animatedComponentsConsumption, consumptionOptions);
-    let supplyChainSelect2 = generateOptions(animatedComponentsSupplyChain, supplyChainOptions);
-    let name2 = <TextField id="standard-basic" placeholder="Apples..." variant="standard" />;
-    let cost2 = <TextField id="standard-basic" placeholder="$10..." variant="standard" />;
-    let co22 = <div>0 kg</div>;
-    let offset_cost2 = <div>$0</div>;
-
-    rows.append(createData(name2, cost2, consumptionSelect2, supplyChainSelect2, co22, offset_cost2));
-}
-
-function deleteRowFunction(){
-
-}
-
-const OneWorldBrowserExtension = () => (
     <>
         <head>
             <meta name="viewport" content="initial-scale=1, width=device-width"/>
@@ -511,7 +520,7 @@ const OneWorldBrowserExtension = () => (
                       </TableRow>
                     </TableHead>
                     <TableBody>
-                        {rows.map((row) => (
+                        {this.state.rows.map((row) => (
                             <TableRow>
                                 <TableCell class="nameTable">{row.name}</TableCell>
                                 <TableCell class="costTable" align="right">{row.cost}</TableCell>
@@ -543,6 +552,7 @@ const OneWorldBrowserExtension = () => (
             </div>
         </body>
     </>
-)
+);
+}}
 
 export default OneWorldBrowserExtension
