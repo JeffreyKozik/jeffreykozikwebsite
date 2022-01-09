@@ -490,13 +490,13 @@ const OneWorldBrowserExtension = () => (
             <Seo title="One World Browser Extension" />
             <div class="one_world_container">
                 <h1 id="one_world_browser_extension_title"> One World Browser Extension </h1>
-                <video controls id="one_world_video">
-                    <source src={demoVideo} type="video/mp4"></source>
-                </video>
                 <p class="description">
                     The One World Browser Extension is used in conjunction with a Square Business account to easily offset a
                     business's inventory carbon emissions. To see it in action feel free to enter data into the table below.
                 </p>
+                <video controls id="one_world_video">
+                    <source src={demoVideo} type="video/mp4"></source>
+                </video>
                 <TableContainer component={Paper}>
                   <Table sx={{ minWidth: 650 }} aria-label="simple table" id="one_world_table">
                     <TableHead>
@@ -507,19 +507,19 @@ const OneWorldBrowserExtension = () => (
                         <TableCell class="supplychainTable" align="right">Supply Chain</TableCell>
                         <TableCell class="CO2Table" align="right">CO2</TableCell>
                         <TableCell class="offsetcostTable" align="right">Offset Cost</TableCell>
-                        <TableCell class="deleteTable"></TableCell>
+                        <TableCell class="deleteTable" align="right"></TableCell>
                       </TableRow>
                     </TableHead>
                     <TableBody>
                         {rows.map((row) => (
                             <TableRow>
                                 <TableCell class="nameTable">{row.name}</TableCell>
-                                <TableCell class="costTable">{row.cost}</TableCell>
-                                <TableCell class="consumptionTable">{row.consumption}</TableCell>
-                                <TableCell class="supplychainTable">{row.supply_chain}</TableCell>
-                                <TableCell class="CO2Table">{row.CO2}</TableCell>
-                                <TableCell class="offsetcostTable">{row.offset_cost}</TableCell>
-                                <TableCell class="deleteTable"><Button onClick={deleteRowFunction} variant="text" class="delete_row_button"> Delete </Button></TableCell>
+                                <TableCell class="costTable" align="right">{row.cost}</TableCell>
+                                <TableCell class="consumptionTable" align="right">{row.consumption}</TableCell>
+                                <TableCell class="supplychainTable" align="right">{row.supply_chain}</TableCell>
+                                <TableCell class="CO2Table" align="right">{row.CO2}</TableCell>
+                                <TableCell class="offsetcostTable" align="right">{row.offset_cost}</TableCell>
+                                <TableCell class="deleteTable" align="right"><Button onClick={deleteRowFunction} variant="text" class="delete_row_button"> Delete </Button></TableCell>
                             </TableRow>
                         ))}
                     </TableBody>
