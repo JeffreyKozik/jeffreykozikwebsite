@@ -519,7 +519,7 @@ const OneWorldBrowserExtension = () => (
                                 <TableCell class="supplychainTable" align="right">{row.supply_chain}</TableCell>
                                 <TableCell class="CO2Table" align="right">{row.CO2}</TableCell>
                                 <TableCell class="offsetcostTable" align="right">{row.offset_cost}</TableCell>
-                                <TableCell class="deleteTable" align="right"><Button onClick={deleteRowFunction} variant="text" class="delete_row_button"> Delete </Button></TableCell>
+                                <TableCell class="deleteTable" align="right"><button onClick={deleteRowFunction} class="delete_row_button"> Delete </button></TableCell>
                             </TableRow>
                         ))}
                     </TableBody>
