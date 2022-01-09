@@ -503,6 +503,7 @@ const OneWorldBrowserExtension = () => (
                         <TableCell align="right">Supply Chain</TableCell>
                         <TableCell align="right">CO2</TableCell>
                         <TableCell align="right">Offset Cost</TableCell>
+                        // <TableCell></TableCell>
                       </TableRow>
                     </TableHead>
                     <TableBody>
@@ -518,8 +519,9 @@ const OneWorldBrowserExtension = () => (
                                 <TableCell>{row.cost}</TableCell>
                                 <TableCell class="select">{row.consumption}</TableCell>
                                 <TableCell class="select">{row.supply_chain}</TableCell>
-                                <TableCell class="select">{row.CO2}</TableCell>
-                                <TableCell class="select">{row.offset_cost}</TableCell>
+                                <TableCell>{row.CO2}</TableCell>
+                                <TableCell>{row.offset_cost}</TableCell>
+                                // <TableCell
                             </TableRow>
                         ))}
                     </TableBody>
