@@ -490,7 +490,7 @@ class OneWorldBrowserExtension extends React.Component {
         let offset_cost2 = <div>$0</div>;
 
         this.setState({
-            rows : this.state.rows.append(this.createData(name2, cost2, consumptionSelect2, supplyChainSelect2, co22, offset_cost2))
+            rows : this.state.rows.push(this.createData(name2, cost2, consumptionSelect2, supplyChainSelect2, co22, offset_cost2))
         });
 
         console.log("this.state.rows: " + this.state.rows);
@@ -539,7 +539,7 @@ class OneWorldBrowserExtension extends React.Component {
                                 <TableCell class="supplychainTable" align="right">{row.supply_chain}</TableCell>
                                 <TableCell class="CO2Table" align="right">{row.CO2}</TableCell>
                                 <TableCell class="offsetcostTable" align="right">{row.offset_cost}</TableCell>
-                                <TableCell class="deleteTable" align="right"><FontAwesomeIcon icon={faTrashAlt} class="delete_row_button"/></TableCell>
+                                <TableCell class="deleteTable" align="right"><FontAwesomeIcon icon={faTrashAlt} id="delete_row_button"/></TableCell>
                             </TableRow>
                         ))}
                     </TableBody>
