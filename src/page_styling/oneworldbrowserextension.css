@@ -67,6 +67,11 @@
     width: 6%;
 }
 
+#delete_row_btton{
+    width: 50%;
+    height: 50%;
+}
+
 .select{
     z-index: 1;
 }
