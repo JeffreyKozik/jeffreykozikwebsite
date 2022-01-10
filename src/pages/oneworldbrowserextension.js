@@ -19,10 +19,8 @@ import Paper from '@mui/material/Paper';
 import TextField from '@mui/material/TextField'
 import Button from '@mui/material/Button';
 
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
-
-// <FontAwesomeIcon class="delete_row_button" onClick={deleteRowFunction} icon={faTrashAlt} />
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 
 let consumptionOptions = [
 '1.1.1.1 Rice',
@@ -489,6 +487,8 @@ class OneWorldBrowserExtension extends React.Component {
         this.setState({
             rows : this.state.rows.append(this.createData(name2, cost2, consumptionSelect2, supplyChainSelect2, co22, offset_cost2))
         });
+
+        console.log("this.state.rows: " + this.state.rows);
     }
 
     deleteRowFunction(){
@@ -534,7 +534,7 @@ class OneWorldBrowserExtension extends React.Component {
                                 <TableCell class="supplychainTable" align="right">{row.supply_chain}</TableCell>
                                 <TableCell class="CO2Table" align="right">{row.CO2}</TableCell>
                                 <TableCell class="offsetcostTable" align="right">{row.offset_cost}</TableCell>
-                                <TableCell class="deleteTable" align="right"><button>Delete</button></TableCell>
+                                <TableCell class="deleteTable" align="right"><FontAwesomeIcon icon={faTrashAlt} class="delete_row_button"/></TableCell>
                             </TableRow>
                         ))}
                     </TableBody>
@@ -543,14 +543,10 @@ class OneWorldBrowserExtension extends React.Component {
                 <Button onClick={this.addRowFunction} variant="text" id="add_row_button"> Add Row </Button>
                 <p class="description">
                     The consumption categories and supply chain categories as well as the amount of CO2 emitted per dollar spent
-                    in each of those categories comes from <a href="https://www.gov.uk/government/statistics/uks-carbon-footprint">publicly available data from the UK government</a>.
-                </p>
-                <p class="description">
+                    in each of those categories comes from <a href="https://www.gov.uk/government/statistics/uks-carbon-footprint">publicly available data from the UK government</a>.<br>
                     Products are automatically categorized by using an Azure Function which utilizes the Bing API to search the name of the product
                     and compare the words in the results with the words in the results of Bing searches for each of the categories via nltk and sklearn's TFIDF vectorization.
-                    Then the user is able to easily offset their carbon emissions using Patch. I've also tried approaches using Google Cloud's Google Cloud Function, Google Cloud Run (with Docker) and VADER.
-                </p>
-                <p class="description">
+                    Then the user is able to easily offset their carbon emissions using Patch. I've also tried approaches using Google Cloud's Google Cloud Function, Google Cloud Run (with Docker) and VADER.<br>
                     Note: in the video, there's a calculation error that has been corrected now. In the video I say 1t = 100kg but in fact 1t = 1000kg.
                     So really 0.01t should be offset in the video, not 0.13t. So offsetting $100 worth of apples (12.77 kg CO2) through the project chosen
                     on Patch would cost $0.13 not $1.27.
