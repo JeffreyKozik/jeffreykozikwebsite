@@ -462,8 +462,8 @@ class OneWorldBrowserExtension extends React.Component {
     constructor(props){
         super(props);
 
-        let consumptionSelect = this.generateOptions(animatedComponentsConsumption, consumptionOptions);
-        let supplyChainSelect = this.generateOptions(animatedComponentsSupplyChain, supplyChainOptions);
+        let consumptionSelect = generateOptions(animatedComponentsConsumption, consumptionOptions);
+        let supplyChainSelect = generateOptions(animatedComponentsSupplyChain, supplyChainOptions);
         let name = <TextField id="standard-basic" placeholder="Apples..." variant="standard" />;
         let cost = <TextField id="standard-basic" placeholder="$10..." variant="standard" />;
         let co2 = <div>0 kg</div>;
@@ -471,21 +471,21 @@ class OneWorldBrowserExtension extends React.Component {
 
         this.state = {
             rows : [
-                this.createData(name, cost, consumptionSelect, supplyChainSelect, co2, offset_cost)
+                createData(name, cost, consumptionSelect, supplyChainSelect, co2, offset_cost)
             ]
         }
     }
 
     addRowFunction(){
-        let consumptionSelect2 = this.generateOptions(animatedComponentsConsumption, consumptionOptions);
-        let supplyChainSelect2 = this.generateOptions(animatedComponentsSupplyChain, supplyChainOptions);
+        let consumptionSelect2 = generateOptions(animatedComponentsConsumption, consumptionOptions);
+        let supplyChainSelect2 = generateOptions(animatedComponentsSupplyChain, supplyChainOptions);
         let name2 = <TextField id="standard-basic" placeholder="Apples..." variant="standard" />;
         let cost2 = <TextField id="standard-basic" placeholder="$10..." variant="standard" />;
         let co22 = <div>0 kg</div>;
         let offset_cost2 = <div>$0</div>;
 
         this.setState({
-            rows : this.state.rows.append(this.createData(name2, cost2, consumptionSelect2, supplyChainSelect2, co22, offset_cost2))
+            rows : this.state.rows.append(createData(name2, cost2, consumptionSelect2, supplyChainSelect2, co22, offset_cost2))
         });
 
         console.log("this.state.rows: " + this.state.rows);
