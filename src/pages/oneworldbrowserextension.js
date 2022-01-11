@@ -526,7 +526,7 @@ class OneWorldBrowserExtension extends React.Component {
         let newRows = oldRows.push(nextRow);
 
         this.setState({
-            rows : Array.from(newRows);
+            rows : Array.from(newRows)
         });
 
         console.log("rows" + this.state.rows);
