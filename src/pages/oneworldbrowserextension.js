@@ -481,7 +481,9 @@ class OneWorldBrowserExtension extends React.Component {
         this.deleteRowFunction = this.deleteRowFunction.bind(this);
 
         let consumptionSelect = this.generateConsumptionOptions();
+        console.log("consumptionSelect: " + consumptionSelect);
         let supplyChainSelect = this.generateSupplyChainOptions();
+        console.log("supplyChainSelect: " + supplyChainSelect);
         let name = "";
         let cost = "";
         let co2 = 0;
