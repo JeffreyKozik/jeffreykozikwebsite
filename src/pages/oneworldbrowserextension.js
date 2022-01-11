@@ -445,13 +445,23 @@ let supplyChainOptions = [
 ];
 
 class OneWorldBrowserExtension extends React.Component {
-    generateOptions(animatedComponents, optionsArray){
+    generateConsumptionOptions(){
         let options = []
         for(let i = 0; i < optionsArray.length; i++){
             options.push({value: optionsArray[i], label: optionsArray[i]});
         }
         return(
-            <Select class="select" closeMenuOnSelect={false} components={animatedComponents} options={options}/>
+            <Select class="select" closeMenuOnSelect={false} components={animatedComponentsConsumption} options={consumptionOptions}/>
+        )
+    }
+
+    generateSupplyChainOptions(){
+        let options = []
+        for(let i = 0; i < optionsArray.length; i++){
+            options.push({value: optionsArray[i], label: optionsArray[i]});
+        }
+        return(
+            <Select class="select" closeMenuOnSelect={false} components={animatedComponentsSupplyChain} options={supplyChainOptions}/>
         )
     }
 
@@ -467,8 +477,8 @@ class OneWorldBrowserExtension extends React.Component {
         this.addRowFunction = this.addRowFunction.bind(this);
         this.deleteRowFunction = this.deleteRowFunction.bind(this);
 
-        let consumptionSelect = this.generateOptions(animatedComponentsConsumption, consumptionOptions);
-        let supplyChainSelect = this.generateOptions(animatedComponentsSupplyChain, supplyChainOptions);
+        let consumptionSelect = "";
+        let supplyChainSelect = "";
         let name = "";
         let cost = "";
         let co2 = 0;
@@ -491,8 +501,8 @@ class OneWorldBrowserExtension extends React.Component {
     }
 
     addRowFunction(){
-        let consumptionSelect2 = consumptionOptions[0];
-        let supplyChainSelect2 = supplyChainOptions[0];
+        let consumptionSelect2 = "";
+        let supplyChainSelect2 = "";
         let name2 = "";
         let cost2 = "";
         let co22 = "0 kg";
@@ -556,8 +566,8 @@ class OneWorldBrowserExtension extends React.Component {
                             <TableRow>
                                 <TableCell class="nameTable"><TextField id="standard-basic" placeholder="Apples..." variant="standard" value={row.name}/></TableCell>
                                 <TableCell class="costTable" align="right"><TextField id="standard-basic" placeholder="$10..." variant="standard" value={row.cost}/></TableCell>
-                                <TableCell class="consumptionTable" align="right">{row.consumption}</TableCell>
-                                <TableCell class="supplychainTable" align="right">{row.supply_chain}</TableCell>
+                                <TableCell class="consumptionTable" align="right">{this.generateConsumptionOptions}</TableCell>
+                                <TableCell class="supplychainTable" align="right">{this.generateSupplyChainOptions}</TableCell>
                                 <TableCell class="CO2Table" align="right"><div>{row.CO2} kg</div></TableCell>
                                 <TableCell class="offsetcostTable" align="right"><div>{row.offset_cost}</div></TableCell>
                                 <TableCell class="deleteTable" align="right"><FontAwesomeIcon icon={faTrashAlt} id="delete_row_button"/></TableCell>
