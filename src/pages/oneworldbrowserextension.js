@@ -445,13 +445,13 @@ let supplyChainOptions = [
 ];
 
 class OneWorldBrowserExtension extends React.Component {
-    generateOptions(animatedComponents, optionsArray, default){
+    generateOptions(animatedComponents, optionsArray){
         let options = []
         for(let i = 0; i < optionsArray.length; i++){
             options.push({value: optionsArray[i], label: optionsArray[i]});
         }
         return(
-            <Select class="select" closeMenuOnSelect={false} components={animatedComponents} options={options} defaultValue={default}/>
+            <Select class="select" closeMenuOnSelect={false} components={animatedComponents} options={options}/>
         )
     }
 
@@ -522,6 +522,10 @@ class OneWorldBrowserExtension extends React.Component {
 
     deleteRowFunction(){
 
+    }
+
+    offsetFunction(){
+        window.open("https://checkout.patch.io/che_prod_9d820f15d0b93ec15fc23694efb70726", "_blank")
     }
 
     render(){
