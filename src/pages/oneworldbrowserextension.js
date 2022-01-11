@@ -472,7 +472,8 @@ class OneWorldBrowserExtension extends React.Component {
     constructor(props){
         super(props);
 
-        this.generateOptions = this.generateOptions.bind(this);
+        this.generateConsumptionOptions = this.generateConsumptionOptions.bind(this);
+        this.generateSupplyChainOptions = this.generateSupplyChainOptions.bind(this);
         this.createData = this.createData.bind(this);
         this.addRowFunction = this.addRowFunction.bind(this);
         this.deleteRowFunction = this.deleteRowFunction.bind(this);
