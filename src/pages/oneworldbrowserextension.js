@@ -468,7 +468,7 @@ class OneWorldBrowserExtension extends React.Component {
     }
 
     createData(name, cost, consumption, supply_chain, co2, offset_cost){
-        return [name, cost, consumption, supply_chain, co2, offset_cost]
+        return {name, cost, consumption, supply_chain, co2, offset_cost}
     }
 
     constructor(props){
@@ -488,13 +488,13 @@ class OneWorldBrowserExtension extends React.Component {
         let offset_cost = "$0";
 
         let firstRow = this.createData(name, cost, consumptionSelect, supplyChainSelect, co2, offset_cost);
-        firstRow = Array.from(firstRow);
-        let rows = [firstRow];
+        // firstRow = Array.from(firstRow);
+        // let rows = [firstRow];
         // do this.createData save that to a variable
         // then do the split on that
 
         this.state = {
-            rows : Array.from(rows)
+            rows : [firstRow]
         }
 
         console.log("rows" + this.state.rows);
@@ -503,12 +503,12 @@ class OneWorldBrowserExtension extends React.Component {
 
         for(let i = 0; i < this.state.rows.length; i++){
             console.log("this.state.rows[" + i.toString(10) + "]" + this.state.rows[i]);
-            console.log("this.state.rows[" + i.toString(10) + "].name: " + this.state.rows[i][0]);
-            console.log("this.state.rows[" + i.toString(10) + "].cost: " + this.state.rows[i][1]);
-            console.log("this.state.rows[" + i.toString(10) + "].consumptionSelect: " + this.state.rows[i][2]);
-            console.log("this.state.rows[" + i.toString(10) + "].supplyChainSelect: " + this.state.rows[i][3]);
+            console.log("this.state.rows[" + i.toString(10) + "].name: " + this.state.rows[i].name);
+            console.log("this.state.rows[" + i.toString(10) + "].cost: " + this.state.rows[i].cost);
+            console.log("this.state.rows[" + i.toString(10) + "].consumptionSelect: " + this.state.rows[i].consumptionSelect);
+            console.log("this.state.rows[" + i.toString(10) + "].supplyChainSelect: " + this.state.rows[i].supplyChainSelect);
             // console.log("this.state.rows[" + i.toString(10) + "].co2: " + this.state.rows[i].co2.toString(10));
-            console.log("this.state.rows[" + i.toString(10) + "].offset_cost: " + this.state.rows[i][5]);
+            console.log("this.state.rows[" + i.toString(10) + "].offset_cost: " + this.state.rows[i].offset_cost);
         }
     }
 
@@ -520,26 +520,34 @@ class OneWorldBrowserExtension extends React.Component {
         let co22 = 0;
         let offset_cost2 = "$0";
 
-        let oldRows = Array.from(this.state.rows);
+        // let oldRows = Array.from(this.state.rows);
         let nextRow = this.createData(name2, cost2, consumptionSelect2, supplyChainSelect2, co22, offset_cost2);
-        nextRow = Array.from(nextRow);
-        let newRows = oldRows.push(nextRow);
+        // nextRow = Array.from(nextRow);
+        // let newRows = oldRows.push(nextRow);
+        //
+        // this.setState({
+        //     rows : Array.from(newRows)
+        // });
+
+        // this.setState(previousState => ({
+        //     myArray: [...previousState.myArray, 'new value']
+        // }));
 
         this.setState({
-            rows : Array.from(newRows)
-        });
+            rows: [this.state.rows, nextRow]
+        })
 
         console.log("rows" + this.state.rows);
         console.log("type of rows" + xtype(this.state.rows));
 
         for(let i = 0; i < this.state.rows.length; i++){
             console.log("this.state.rows[" + i.toString(10) + "]" + this.state.rows[i]);
-            console.log("this.state.rows[" + i.toString(10) + "].name: " + this.state.rows[i][0]);
-            console.log("this.state.rows[" + i.toString(10) + "].cost: " + this.state.rows[i][1]);
-            console.log("this.state.rows[" + i.toString(10) + "].consumptionSelect: " + this.state.rows[i][2]);
-            console.log("this.state.rows[" + i.toString(10) + "].supplyChainSelect: " + this.state.rows[i][3]);
+            console.log("this.state.rows[" + i.toString(10) + "].name: " + this.state.rows[i].name);
+            console.log("this.state.rows[" + i.toString(10) + "].cost: " + this.state.rows[i].cost);
+            console.log("this.state.rows[" + i.toString(10) + "].consumptionSelect: " + this.state.rows[i].consumptionSelect);
+            console.log("this.state.rows[" + i.toString(10) + "].supplyChainSelect: " + this.state.rows[i].supplyChainSelect);
             // console.log("this.state.rows[" + i.toString(10) + "].co2: " + this.state.rows[i].co2.toString(10));
-            console.log("this.state.rows[" + i.toString(10) + "].offset_cost: " + this.state.rows[i][5]);
+            console.log("this.state.rows[" + i.toString(10) + "].offset_cost: " + this.state.rows[i].offset_cost);
         }
     }
 
