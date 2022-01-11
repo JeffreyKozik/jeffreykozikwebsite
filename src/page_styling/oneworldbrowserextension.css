@@ -28,6 +28,10 @@
     width: 100%;
 }
 
+#one_world_table_container{
+    padding: 3%;
+}
+
 #one_world_table{
     align-self: center;
     width: 100%;

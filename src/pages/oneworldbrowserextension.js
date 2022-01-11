@@ -493,7 +493,14 @@ class OneWorldBrowserExtension extends React.Component {
             rows : this.state.rows.push(this.createData(name2, cost2, consumptionSelect2, supplyChainSelect2, co22, offset_cost2))
         });
 
-        console.log("this.state.rows: " + this.state.rows);
+        for(let i = 0; i < this.state.rows.length; i++){
+            console.log("this.state.rows[" + i + "].name: " + this.state.row[i].name);
+            console.log("this.state.rows[" + i + "].cost: " + this.state.row[i].cost);
+            console.log("this.state.rows[" + i + "].consumptionSelect: " + this.state.row[i].consumptionSelect);
+            console.log("this.state.rows[" + i + "].supplyChainSelect: " + this.state.row[i].supplyChainSelect);
+            console.log("this.state.rows[" + i + "].co2: " + this.state.row[i].co2);
+            console.log("this.state.rows[" + i + "].offset_cost: " + this.state.row[i].offset_cost);
+        }
     }
 
     deleteRowFunction(){
@@ -517,7 +524,7 @@ class OneWorldBrowserExtension extends React.Component {
                 <video controls id="one_world_video">
                     <source src={demoVideo} type="video/mp4"></source>
                 </video>
-                <TableContainer component={Paper}>
+                <TableContainer component={Paper} id="one_world_table_container">
                   <Table sx={{ minWidth: 650 }} aria-label="simple table" id="one_world_table">
                     <TableHead>
                       <TableRow>
