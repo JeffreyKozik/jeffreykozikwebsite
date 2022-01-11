@@ -479,6 +479,15 @@ class OneWorldBrowserExtension extends React.Component {
                 this.createData(name, cost, consumptionSelect, supplyChainSelect, co2, offset_cost)
             ]
         }
+
+        for(let i = 0; i < this.state.rows.length; i++){
+            console.log("this.state.rows[" + i + "].name: " + this.state.row[i].name);
+            console.log("this.state.rows[" + i + "].cost: " + this.state.row[i].cost);
+            console.log("this.state.rows[" + i + "].consumptionSelect: " + this.state.row[i].consumptionSelect);
+            console.log("this.state.rows[" + i + "].supplyChainSelect: " + this.state.row[i].supplyChainSelect);
+            console.log("this.state.rows[" + i + "].co2: " + this.state.row[i].co2);
+            console.log("this.state.rows[" + i + "].offset_cost: " + this.state.row[i].offset_cost);
+        }
     }
 
     addRowFunction(){
@@ -488,6 +497,14 @@ class OneWorldBrowserExtension extends React.Component {
         let cost2 = <TextField id="standard-basic" placeholder="$10..." variant="standard" />;
         let co22 = <div>0 kg</div>;
         let offset_cost2 = <div>$0</div>;
+        for(let i = 0; i < this.state.rows.length; i++){
+            console.log("this.state.rows[" + i + "].name: " + this.state.row[i].name);
+            console.log("this.state.rows[" + i + "].cost: " + this.state.row[i].cost);
+            console.log("this.state.rows[" + i + "].consumptionSelect: " + this.state.row[i].consumptionSelect);
+            console.log("this.state.rows[" + i + "].supplyChainSelect: " + this.state.row[i].supplyChainSelect);
+            console.log("this.state.rows[" + i + "].co2: " + this.state.row[i].co2);
+            console.log("this.state.rows[" + i + "].offset_cost: " + this.state.row[i].offset_cost);
+        }
 
         this.setState({
             rows : this.state.rows.push(this.createData(name2, cost2, consumptionSelect2, supplyChainSelect2, co22, offset_cost2))
