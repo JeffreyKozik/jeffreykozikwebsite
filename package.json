@@ -26,7 +26,8 @@
     "react-helmet": "^6.1.0",
     "react-select": "^5.2.1",
     "redux": "^4.1.2",
-    "video-react": "^0.14.1"
+    "video-react": "^0.14.1",
+    "xtypejs": "^0.7.1"
   },
   "devDependencies": {
     "eslint": "^7.32.0",

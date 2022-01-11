@@ -22,6 +22,8 @@ import Button from '@mui/material/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 
+import xtype from 'xtypejs'
+
 let consumptionOptions = [
 '1.1.1.1 Rice',
 '1.1.1.2 Bread',
@@ -495,7 +497,7 @@ class OneWorldBrowserExtension extends React.Component {
         }
 
         console.log("rows" + this.state.rows);
-        console.log("type of rows" + typeof(rows));
+        console.log("type of rows" + xtype(rows));
 
 
         for(let i = 0; i < this.state.rows.length; i++){
@@ -526,7 +528,7 @@ class OneWorldBrowserExtension extends React.Component {
         });
 
         console.log("rows" + this.state.rows);
-        console.log("type of rows" + typeof(rows));
+        console.log("type of rows" + xtype(rows));
 
         for(let i = 0; i < this.state.rows.length; i++){
             console.log("this.state.rows[" + i.toString(10) + this.state.rows[i]);

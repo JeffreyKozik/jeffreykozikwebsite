@@ -11702,6 +11702,11 @@
   "resolved" "https://registry.npmjs.org/xtend/-/xtend-4.0.2.tgz"
   "version" "4.0.2"
 
+"xtypejs@^0.7.1":
+  "integrity" "sha512-s7zpV5uduE+/iREPlWOXS5Gb0IpfSZ/dye0KS4XaVix7yftDkHHrqfznXx1tXZ3rbWksBiF3TcIxN6QrcU1eRQ=="
+  "resolved" "https://registry.npmjs.org/xtypejs/-/xtypejs-0.7.1.tgz"
+  "version" "0.7.1"
+
 "y18n@^4.0.0":
   "integrity" "sha512-JKhqTOwSrqNA1NY5lSztJ1GrBiUodLMmIZuLiDaMRJ+itFd+ABVE8XBjOvIWL+rSqNDC74LCSFmlb/U4UZ4hJQ=="
   "resolved" "https://registry.npmjs.org/y18n/-/y18n-4.0.3.tgz"
