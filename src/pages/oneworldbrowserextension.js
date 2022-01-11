@@ -485,10 +485,10 @@ class OneWorldBrowserExtension extends React.Component {
         let co2 = 0;
         let offset_cost = "$0";
 
+        let firstRow = this.createData(name, cost, consumptionSelect, supplyChainSelect, co2, offset_cost).split(',');
+
         this.state = {
-            rows : [
-                this.createData(name, cost, consumptionSelect, supplyChainSelect, co2, offset_cost).split(",")
-            ]
+            rows : [firstRow]
         }
 
         console.log("rows" + this.state.rows);
@@ -512,8 +512,11 @@ class OneWorldBrowserExtension extends React.Component {
         let co22 = 0;
         let offset_cost2 = "$0";
 
+        let nextRow = this.createData(name2, cost2, consumptionSelect2, supplyChainSelect2, co22, offset_cost2).split(',');
+        let newRows = this.state.rows.push(nextRow);
+
         this.setState({
-            rows : this.state.rows.push(this.createData(name2, cost2, consumptionSelect2, supplyChainSelect2, co22, offset_cost2))
+            rows : newRows
         });
 
         console.log("rows" + this.state.rows);
