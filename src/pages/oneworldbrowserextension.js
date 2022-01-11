@@ -6,8 +6,6 @@ import Seo from "../components/seo"
 
 import Select from 'react-select'
 import makeAnimated from 'react-select/animated'
-const animatedComponentsConsumption = makeAnimated();
-const animatedComponentsSupplyChain = makeAnimated();
 
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -27,6 +25,7 @@ import xtype from 'xtypejs'
 
 class OneWorldBrowserExtension extends React.Component {
     generateConsumptionOptions(){
+        const animatedComponentsConsumption = makeAnimated();
         let consumptionOptions = [
         '1.1.1.1 Rice',
         '1.1.1.2 Bread',
@@ -350,6 +349,7 @@ class OneWorldBrowserExtension extends React.Component {
     }
 
     generateSupplyChainOptions(){
+        const animatedComponentsSupplyChain = makeAnimated();
         let supplyChainOptions = [
         'Agriculture products',
         'Forestry products',
