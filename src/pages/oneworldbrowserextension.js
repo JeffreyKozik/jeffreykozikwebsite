@@ -497,7 +497,7 @@ class OneWorldBrowserExtension extends React.Component {
         }
 
         console.log("rows" + this.state.rows);
-        console.log("type of rows" + xtype(rows));
+        console.log("type of rows" + xtype(this.state.rows));
 
 
         for(let i = 0; i < this.state.rows.length; i++){
@@ -528,7 +528,7 @@ class OneWorldBrowserExtension extends React.Component {
         });
 
         console.log("rows" + this.state.rows);
-        console.log("type of rows" + xtype(rows));
+        console.log("type of rows" + xtype(this.state.rows));
 
         for(let i = 0; i < this.state.rows.length; i++){
             console.log("this.state.rows[" + i.toString(10) + this.state.rows[i]);
