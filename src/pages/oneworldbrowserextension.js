@@ -445,13 +445,13 @@ let supplyChainOptions = [
 ];
 
 class OneWorldBrowserExtension extends React.Component {
-    generateOptions(animatedComponents, optionsArray){
+    generateOptions(animatedComponents, optionsArray, default){
         let options = []
         for(let i = 0; i < optionsArray.length; i++){
             options.push({value: optionsArray[i], label: optionsArray[i]});
         }
         return(
-            <Select class="select" closeMenuOnSelect={false} components={animatedComponents} options={options}/>
+            <Select class="select" closeMenuOnSelect={false} components={animatedComponents} options={options} defaultValue={default}/>
         )
     }
 
@@ -467,12 +467,12 @@ class OneWorldBrowserExtension extends React.Component {
         this.addRowFunction = this.addRowFunction.bind(this);
         this.deleteRowFunction = this.deleteRowFunction.bind(this);
 
-        let consumptionSelect = this.generateOptions(animatedComponentsConsumption, consumptionOptions);
-        let supplyChainSelect = this.generateOptions(animatedComponentsSupplyChain, supplyChainOptions);
-        let name = <TextField id="standard-basic" placeholder="Apples..." variant="standard" />;
-        let cost = <TextField id="standard-basic" placeholder="$10..." variant="standard" />;
-        let co2 = <div>0 kg</div>;
-        let offset_cost = <div>$0</div>;
+        let consumptionSelect = consumptionOptions[0];
+        let supplyChainSelect = supplyChainOptions[0];
+        let name = "";
+        let cost = "";
+        let co2 = "0 kg";
+        let offset_cost = "$0";
 
         this.state = {
             rows : [
@@ -491,12 +491,12 @@ class OneWorldBrowserExtension extends React.Component {
     }
 
     addRowFunction(){
-        let consumptionSelect2 = this.generateOptions(animatedComponentsConsumption, consumptionOptions);
-        let supplyChainSelect2 = this.generateOptions(animatedComponentsSupplyChain, supplyChainOptions);
-        let name2 = <TextField id="standard-basic" placeholder="Apples..." variant="standard" />;
-        let cost2 = <TextField id="standard-basic" placeholder="$10..." variant="standard" />;
-        let co22 = <div>0 kg</div>;
-        let offset_cost2 = <div>$0</div>;
+        let consumptionSelect2 = consumptionOptions[0];
+        let supplyChainSelect2 = supplyChainOptions[0];
+        let name2 = "";
+        let cost2 = "";
+        let co22 = "0 kg";
+        let offset_cost2 = "$0";
         for(let i = 0; i < this.state.rows.length; i++){
             console.log("this.state.rows[" + i + "].name: " + this.state.row[i].name);
             console.log("this.state.rows[" + i + "].cost: " + this.state.row[i].cost);
@@ -557,12 +557,12 @@ class OneWorldBrowserExtension extends React.Component {
                     <TableBody>
                         {(this.state.rows).map((row) => (
                             <TableRow>
-                                <TableCell class="nameTable">{row.name}</TableCell>
-                                <TableCell class="costTable" align="right">{row.cost}</TableCell>
-                                <TableCell class="consumptionTable" align="right">{row.consumption}</TableCell>
-                                <TableCell class="supplychainTable" align="right">{row.supply_chain}</TableCell>
-                                <TableCell class="CO2Table" align="right">{row.CO2}</TableCell>
-                                <TableCell class="offsetcostTable" align="right">{row.offset_cost}</TableCell>
+                                <TableCell class="nameTable"><TextField id="standard-basic" placeholder="Apples..." variant="standard" value={row.name}/></TableCell>
+                                <TableCell class="costTable" align="right"><TextField id="standard-basic" placeholder="$10..." variant="standard" value={row.cost}/></TableCell>
+                                <TableCell class="consumptionTable" align="right">{this.generateOptions(animatedComponentsConsumption, consumptionOptions}</TableCell>
+                                <TableCell class="supplychainTable" align="right">{this.generateOptions(animatedComponentsSupplyChain, supplyChainOptions}</TableCell>
+                                <TableCell class="CO2Table" align="right"><div>{row.CO2}</div></TableCell>
+                                <TableCell class="offsetcostTable" align="right"><div>{row.offset_cost}</div></TableCell>
                                 <TableCell class="deleteTable" align="right"><FontAwesomeIcon icon={faTrashAlt} id="delete_row_button"/></TableCell>
                             </TableRow>
                         ))}
@@ -570,6 +570,7 @@ class OneWorldBrowserExtension extends React.Component {
                   </Table>
                 </TableContainer>
                 <Button onClick={this.addRowFunction} variant="text" id="add_row_button"> Add Row </Button>
+                <Button onClick={this.offsetFunction} variant="text" id="offset_row_button"> Offset CO2 </Button>
                 <p class="description">
                     The consumption categories and supply chain categories as well as the amount of CO2 emitted per dollar spent
                     in each of those categories comes from <a href="https://www.gov.uk/government/statistics/uks-carbon-footprint">publicly available data from the UK government</a>.

@@ -42,6 +42,11 @@
     width: 100%;
 }
 
+#offset_row_button{
+    align-self: center;
+    width: 100%;
+}
+
 .description{
     align-self: center;
     width: 100%;
@@ -71,7 +76,7 @@
     width: 6%;
 }
 
-#delete_row_btton{
+#delete_row_button{
     width: 50%;
     height: 50%;
 }
