@@ -485,7 +485,10 @@ class OneWorldBrowserExtension extends React.Component {
         let co2 = 0;
         let offset_cost = "$0";
 
-        let firstRow = this.createData(name, cost, consumptionSelect, supplyChainSelect, co2, offset_cost).split(',');
+        let firstRowString = this.createData(name, cost, consumptionSelect, supplyChainSelect, co2, offset_cost);
+        let firstRow = firstRowString.split(',');
+        // do this.createData save that to a variable
+        // then do the split on that
 
         this.state = {
             rows : [firstRow]
@@ -512,7 +515,8 @@ class OneWorldBrowserExtension extends React.Component {
         let co22 = 0;
         let offset_cost2 = "$0";
 
-        let nextRow = this.createData(name2, cost2, consumptionSelect2, supplyChainSelect2, co22, offset_cost2).split(',');
+        let nextRowString = this.createData(name2, cost2, consumptionSelect2, supplyChainSelect2, co22, offset_cost2);
+        let nextRow = nextRowString.split(',');
         let newRows = this.state.rows.push(nextRow);
 
         this.setState({
