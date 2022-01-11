@@ -593,12 +593,12 @@ class OneWorldBrowserExtension extends React.Component {
                     <TableBody>
                         {this.state.rows.map((row) =>
                             <TableRow>
-                                <TableCell class="one_world_nameTable"><TextField id="standard-basic" placeholder="Apples..." variant="standard" value={row[0]}/></TableCell>
-                                <TableCell class="one_world_costTable" align="right"><TextField id="standard-basic" placeholder="$10..." variant="standard" value={row[1]}/></TableCell>
-                                <TableCell class="one_world_consumptionTable" align="right">{row[2]}</TableCell>
-                                <TableCell class="one_world_supplychainTable" align="right">{row[3]}</TableCell>
-                                <TableCell class="one_world_CO2Table" align="right"><div>{row[4]} kg</div></TableCell>
-                                <TableCell class="one_world_offsetcostTable" align="right"><div>{row[5]}</div></TableCell>
+                                <TableCell class="one_world_nameTable"><TextField id="standard-basic" placeholder="Apples..." variant="standard" value={row.name}/></TableCell>
+                                <TableCell class="one_world_costTable" align="right"><TextField id="standard-basic" placeholder="$10..." variant="standard" value={row.cost}/></TableCell>
+                                <TableCell class="one_world_consumptionTable" align="right">{row.consumption}</TableCell>
+                                <TableCell class="one_world_supplychainTable" align="right">{row.supply_chain}</TableCell>
+                                <TableCell class="one_world_CO2Table" align="right"><div>{row.co2} kg</div></TableCell>
+                                <TableCell class="one_world_offsetcostTable" align="right"><div>{row.offset_cost}</div></TableCell>
                                 <TableCell class="one_world_deleteTable" align="right"><FontAwesomeIcon icon={faTrashAlt} id="delete_row_button"/></TableCell>
                             </TableRow>
                         )}
