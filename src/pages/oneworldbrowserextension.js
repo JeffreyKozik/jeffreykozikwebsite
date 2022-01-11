@@ -487,7 +487,7 @@ class OneWorldBrowserExtension extends React.Component {
 
         this.state = {
             rows : [
-                this.createData(name, cost, consumptionSelect, supplyChainSelect, co2, offset_cost)
+                this.createData(name, cost, consumptionSelect, supplyChainSelect, co2, offset_cost).split(",")
             ]
         }
 
@@ -509,7 +509,7 @@ class OneWorldBrowserExtension extends React.Component {
         let supplyChainSelect2 = "";
         let name2 = "";
         let cost2 = "";
-        let co22 = "0 kg";
+        let co22 = 0;
         let offset_cost2 = "$0";
 
         this.setState({
