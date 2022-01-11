@@ -481,12 +481,12 @@ class OneWorldBrowserExtension extends React.Component {
         }
 
         for(let i = 0; i < this.state.rows.length; i++){
-            console.log("this.state.rows[" + i.toString(10) + "].name: " + this.state.row[i].name);
-            console.log("this.state.rows[" + i.toString(10) + "].cost: " + this.state.row[i].cost);
-            console.log("this.state.rows[" + i.toString(10) + "].consumptionSelect: " + this.state.row[i].consumptionSelect);
-            console.log("this.state.rows[" + i.toString(10) + "].supplyChainSelect: " + this.state.row[i].supplyChainSelect);
-            console.log("this.state.rows[" + i.toString(10) + "].co2: " + this.state.row[i].co2);
-            console.log("this.state.rows[" + i.toString(10) + "].offset_cost: " + this.state.row[i].offset_cost);
+            console.log("this.state.rows.name: " + this.state.row[i].name);
+            console.log("this.state.rows.cost: " + this.state.row[i].cost);
+            console.log("this.state.rows.consumptionSelect: " + this.state.row[i].consumptionSelect);
+            console.log("this.state.row.supplyChainSelect: " + this.state.row[i].supplyChainSelect);
+            console.log("this.state.rows.co2: " + this.state.row[i].co2);
+            console.log("this.state.rows.offset_cost: " + this.state.row[i].offset_cost);
         }
     }
 
