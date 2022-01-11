@@ -467,26 +467,17 @@ class OneWorldBrowserExtension extends React.Component {
         this.addRowFunction = this.addRowFunction.bind(this);
         this.deleteRowFunction = this.deleteRowFunction.bind(this);
 
-        let consumptionSelect = consumptionOptions[0];
-        let supplyChainSelect = supplyChainOptions[0];
+        let consumptionSelect = this.generateOptions(animatedComponentsConsumption, consumptionOptions);
+        let supplyChainSelect = this.generateOptions(animatedComponentsSupplyChain, supplyChainOptions);
         let name = "";
         let cost = "";
-        let co2 = "0 kg";
+        let co2 = 0;
         let offset_cost = "$0";
 
         this.state = {
             rows : [
                 this.createData(name, cost, consumptionSelect, supplyChainSelect, co2, offset_cost)
             ]
-        }
-
-        for(let i = 0; i < this.state.rows.length; i++){
-            console.log("this.state.rows[" + i.toString(10) + "].name: " + this.state.rows[i].name);
-            console.log("this.state.rows[" + i.toString(10) + "].cost: " + this.state.rows[i].cost);
-            console.log("this.state.rows[" + i.toString(10) + "].consumptionSelect: " + this.state.rows[i].consumptionSelect);
-            console.log("this.state.rows[" + i.toString(10) + "].supplyChainSelect: " + this.state.rows[i].supplyChainSelect);
-            console.log("this.state.rows[" + i.toString(10) + "].co2: " + this.state.rows[i].co2);
-            console.log("this.state.rows[" + i.toString(10) + "].offset_cost: " + this.state.rows[i].offset_cost);
         }
     }
 
@@ -497,14 +488,6 @@ class OneWorldBrowserExtension extends React.Component {
         let cost2 = "";
         let co22 = "0 kg";
         let offset_cost2 = "$0";
-        for(let i = 0; i < this.state.rows.length; i++){
-            console.log("this.state.rows[" + i + "].name: " + this.state.row[i].name);
-            console.log("this.state.rows[" + i + "].cost: " + this.state.row[i].cost);
-            console.log("this.state.rows[" + i + "].consumptionSelect: " + this.state.row[i].consumptionSelect);
-            console.log("this.state.rows[" + i + "].supplyChainSelect: " + this.state.row[i].supplyChainSelect);
-            console.log("this.state.rows[" + i + "].co2: " + this.state.row[i].co2);
-            console.log("this.state.rows[" + i + "].offset_cost: " + this.state.row[i].offset_cost);
-        }
 
         this.setState({
             rows : this.state.rows.push(this.createData(name2, cost2, consumptionSelect2, supplyChainSelect2, co22, offset_cost2))
@@ -515,7 +498,7 @@ class OneWorldBrowserExtension extends React.Component {
             console.log("this.state.rows[" + i + "].cost: " + this.state.row[i].cost);
             console.log("this.state.rows[" + i + "].consumptionSelect: " + this.state.row[i].consumptionSelect);
             console.log("this.state.rows[" + i + "].supplyChainSelect: " + this.state.row[i].supplyChainSelect);
-            console.log("this.state.rows[" + i + "].co2: " + this.state.row[i].co2);
+            console.log("this.state.rows[" + i + "].co2: " + this.state.row[i].co2.toString(10));
             console.log("this.state.rows[" + i + "].offset_cost: " + this.state.row[i].offset_cost);
         }
     }
@@ -525,7 +508,8 @@ class OneWorldBrowserExtension extends React.Component {
     }
 
     offsetFunction(){
-        window.open("https://checkout.patch.io/che_prod_9d820f15d0b93ec15fc23694efb70726", "_blank")
+        // window.open("https://checkout.patch.io/che_prod_9d820f15d0b93ec15fc23694efb70726?amount=" + this.state.rows.co2, "_blank")
+        window.open("https://checkout.patch.io/che_prod_9d820f15d0b93ec15fc23694efb70726?amount=" + 100000, "_blank")
     }
 
     render(){
@@ -563,9 +547,9 @@ class OneWorldBrowserExtension extends React.Component {
                             <TableRow>
                                 <TableCell class="nameTable"><TextField id="standard-basic" placeholder="Apples..." variant="standard" value={row.name}/></TableCell>
                                 <TableCell class="costTable" align="right"><TextField id="standard-basic" placeholder="$10..." variant="standard" value={row.cost}/></TableCell>
-                                <TableCell class="consumptionTable" align="right">{this.generateOptions(animatedComponentsConsumption, consumptionOptions}</TableCell>
-                                <TableCell class="supplychainTable" align="right">{this.generateOptions(animatedComponentsSupplyChain, supplyChainOptions}</TableCell>
-                                <TableCell class="CO2Table" align="right"><div>{row.CO2}</div></TableCell>
+                                <TableCell class="consumptionTable" align="right">{row.consumption}</TableCell>
+                                <TableCell class="supplychainTable" align="right">{row.supply_chain}</TableCell>
+                                <TableCell class="CO2Table" align="right"><div>{row.CO2} kg</div></TableCell>
                                 <TableCell class="offsetcostTable" align="right"><div>{row.offset_cost}</div></TableCell>
                                 <TableCell class="deleteTable" align="right"><FontAwesomeIcon icon={faTrashAlt} id="delete_row_button"/></TableCell>
                             </TableRow>
