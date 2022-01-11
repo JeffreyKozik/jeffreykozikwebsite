@@ -535,7 +535,7 @@ class OneWorldBrowserExtension extends React.Component {
 
         this.setState(previousState => ({
             rows: [...previousState.rows, nextRow]
-        })
+        }));
 
         console.log("rows" + this.state.rows);
         console.log("type of rows" + xtype(this.state.rows));
