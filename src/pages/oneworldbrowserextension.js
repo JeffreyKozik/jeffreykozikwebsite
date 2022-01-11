@@ -489,11 +489,12 @@ class OneWorldBrowserExtension extends React.Component {
 
         let firstRow = this.createData(name, cost, consumptionSelect, supplyChainSelect, co2, offset_cost);
         firstRow = Array.from(firstRow);
+        let rows = [firstRow];
         // do this.createData save that to a variable
         // then do the split on that
 
         this.state = {
-            rows : [firstRow]
+            rows : Array.from(rows)
         }
 
         console.log("rows" + this.state.rows);
@@ -519,20 +520,20 @@ class OneWorldBrowserExtension extends React.Component {
         let co22 = 0;
         let offset_cost2 = "$0";
 
+        let oldRows = Array.from(this.state.rows);
         let nextRow = this.createData(name2, cost2, consumptionSelect2, supplyChainSelect2, co22, offset_cost2);
         nextRow = Array.from(nextRow);
-        let newRows = this.state.rows.push(nextRow);
-        newRows = Array.from(newRows);
+        let newRows = oldRows.push(nextRow);
 
         this.setState({
-            rows : newRows
+            rows : Array.from(newRows);
         });
 
         console.log("rows" + this.state.rows);
         console.log("type of rows" + xtype(this.state.rows));
 
         for(let i = 0; i < this.state.rows.length; i++){
-            console.log("this.state.rows[" + i.toString(10) + this.state.rows[i]);
+            console.log("this.state.rows[" + i.toString(10) + "]" + this.state.rows[i]);
             console.log("this.state.rows[" + i.toString(10) + "].name: " + this.state.rows[i][0]);
             console.log("this.state.rows[" + i.toString(10) + "].cost: " + this.state.rows[i][1]);
             console.log("this.state.rows[" + i.toString(10) + "].consumptionSelect: " + this.state.rows[i][2]);
