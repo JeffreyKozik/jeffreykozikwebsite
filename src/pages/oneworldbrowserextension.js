@@ -533,8 +533,8 @@ class OneWorldBrowserExtension extends React.Component {
         //     myArray: [...previousState.myArray, 'new value']
         // }));
 
-        this.setState({
-            rows: [this.state.rows, nextRow]
+        this.setState(previousState => ({
+            rows: [...previousState.rows, nextRow]
         })
 
         console.log("rows" + this.state.rows);
