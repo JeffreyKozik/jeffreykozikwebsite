@@ -495,10 +495,11 @@ class OneWorldBrowserExtension extends React.Component {
         }
 
         console.log("rows" + this.state.rows);
+        console.log("type of rows" + typeof(rows));
 
 
         for(let i = 0; i < this.state.rows.length; i++){
-            console.log("this.state.rows[" + i.toString(10) + this.state.rows[i]);
+            console.log("this.state.rows[" + i.toString(10) + "]" + this.state.rows[i]);
             console.log("this.state.rows[" + i.toString(10) + "].name: " + this.state.rows[i][0]);
             console.log("this.state.rows[" + i.toString(10) + "].cost: " + this.state.rows[i][1]);
             console.log("this.state.rows[" + i.toString(10) + "].consumptionSelect: " + this.state.rows[i][2]);
@@ -525,6 +526,7 @@ class OneWorldBrowserExtension extends React.Component {
         });
 
         console.log("rows" + this.state.rows);
+        console.log("type of rows" + typeof(rows));
 
         for(let i = 0; i < this.state.rows.length; i++){
             console.log("this.state.rows[" + i.toString(10) + this.state.rows[i]);
