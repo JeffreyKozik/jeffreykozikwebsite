@@ -450,8 +450,8 @@ let supplyChainOptions = [
 class OneWorldBrowserExtension extends React.Component {
     generateConsumptionOptions(){
         let options = []
-        for(let i = 0; i < optionsArray.length; i++){
-            options.push({value: optionsArray[i], label: optionsArray[i]});
+        for(let i = 0; i < consumptionOptions.length; i++){
+            options.push({value: consumptionOptions[i], label: consumptionOptions[i]});
         }
         return(
             <Select class="select" closeMenuOnSelect={false} components={animatedComponentsConsumption} options={consumptionOptions}/>
@@ -460,8 +460,8 @@ class OneWorldBrowserExtension extends React.Component {
 
     generateSupplyChainOptions(){
         let options = []
-        for(let i = 0; i < optionsArray.length; i++){
-            options.push({value: optionsArray[i], label: optionsArray[i]});
+        for(let i = 0; i < supplyChainOptions.length; i++){
+            options.push({value: supplyChainOptions[i], label: supplyChainOptions[i]});
         }
         return(
             <Select class="select" closeMenuOnSelect={false} components={animatedComponentsSupplyChain} options={supplyChainOptions}/>
