@@ -485,8 +485,8 @@ class OneWorldBrowserExtension extends React.Component {
         let co2 = 0;
         let offset_cost = "$0";
 
-        let firstRowString = this.createData(name, cost, consumptionSelect, supplyChainSelect, co2, offset_cost);
-        let firstRow = firstRowString.split(',');
+        let firstRow = this.createData(name, cost, consumptionSelect, supplyChainSelect, co2, offset_cost);
+        // let firstRow = firstRowString.split(',');
         // do this.createData save that to a variable
         // then do the split on that
 
@@ -498,6 +498,7 @@ class OneWorldBrowserExtension extends React.Component {
 
 
         for(let i = 0; i < this.state.rows.length; i++){
+            console.log("this.state.rows[" + i.toString(10) + this.state.rows[i]);
             console.log("this.state.rows[" + i.toString(10) + "].name: " + this.state.rows[i][0]);
             console.log("this.state.rows[" + i.toString(10) + "].cost: " + this.state.rows[i][1]);
             console.log("this.state.rows[" + i.toString(10) + "].consumptionSelect: " + this.state.rows[i][2]);
@@ -515,8 +516,8 @@ class OneWorldBrowserExtension extends React.Component {
         let co22 = 0;
         let offset_cost2 = "$0";
 
-        let nextRowString = this.createData(name2, cost2, consumptionSelect2, supplyChainSelect2, co22, offset_cost2);
-        let nextRow = nextRowString.split(',');
+        let nextRow = this.createData(name2, cost2, consumptionSelect2, supplyChainSelect2, co22, offset_cost2);
+        // let nextRow = nextRowString.split(',');
         let newRows = this.state.rows.push(nextRow);
 
         this.setState({
@@ -526,6 +527,7 @@ class OneWorldBrowserExtension extends React.Component {
         console.log("rows" + this.state.rows);
 
         for(let i = 0; i < this.state.rows.length; i++){
+            console.log("this.state.rows[" + i.toString(10) + this.state.rows[i]);
             console.log("this.state.rows[" + i.toString(10) + "].name: " + this.state.rows[i][0]);
             console.log("this.state.rows[" + i.toString(10) + "].cost: " + this.state.rows[i][1]);
             console.log("this.state.rows[" + i.toString(10) + "].consumptionSelect: " + this.state.rows[i][2]);
@@ -541,7 +543,7 @@ class OneWorldBrowserExtension extends React.Component {
 
     offsetFunction(){
         // window.open("https://checkout.patch.io/che_prod_9d820f15d0b93ec15fc23694efb70726?amount=" + this.state.rows.co2, "_blank")
-        window.open("https://checkout.patch.io/che_prod_9d820f15d0b93ec15fc23694efb70726?amount=" + 100000, "_blank")
+        window.open("https://checkout.patch.io/che_prod_9d820f15d0b93ec15fc23694efb70726?amount=" + this.state.rows.co2, "_blank")
     }
 
     render(){
