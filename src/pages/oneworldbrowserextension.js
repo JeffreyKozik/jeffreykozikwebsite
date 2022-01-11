@@ -501,6 +501,9 @@ class OneWorldBrowserExtension extends React.Component {
 
         console.log("rows" + this.state.rows);
         console.log("type of rows" + xtype(this.state.rows));
+        console.log("consumptionSelect: " + consumptionSelect);
+        console.log("supplyChainSelect: " + supplyChainSelect);
+
 
 
         for(let i = 0; i < this.state.rows.length; i++){
