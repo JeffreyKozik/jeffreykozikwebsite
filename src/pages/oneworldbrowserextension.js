@@ -491,6 +491,9 @@ class OneWorldBrowserExtension extends React.Component {
             ]
         }
 
+        console.log("rows" + this.state.rows);
+
+
         for(let i = 0; i < this.state.rows.length; i++){
             console.log("this.state.rows[" + i.toString(10) + "].name: " + this.state.rows[i][0]);
             console.log("this.state.rows[" + i.toString(10) + "].cost: " + this.state.rows[i][1]);
@@ -512,6 +515,8 @@ class OneWorldBrowserExtension extends React.Component {
         this.setState({
             rows : this.state.rows.push(this.createData(name2, cost2, consumptionSelect2, supplyChainSelect2, co22, offset_cost2))
         });
+
+        console.log("rows" + this.state.rows);
 
         for(let i = 0; i < this.state.rows.length; i++){
             console.log("this.state.rows[" + i.toString(10) + "].name: " + this.state.rows[i][0]);
