@@ -573,7 +573,7 @@ class OneWorldBrowserExtension extends React.Component {
                                 <TableCell class="offsetcostTable" align="right"><div>{row[5]}</div></TableCell>
                                 <TableCell class="deleteTable" align="right"><FontAwesomeIcon icon={faTrashAlt} id="delete_row_button"/></TableCell>
                             </TableRow>
-                        }
+                        )}
                     </TableBody>
                   </Table>
                 </TableContainer>
