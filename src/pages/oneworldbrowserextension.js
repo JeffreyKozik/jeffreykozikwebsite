@@ -481,12 +481,12 @@ class OneWorldBrowserExtension extends React.Component {
         }
 
         for(let i = 0; i < this.state.rows.length; i++){
-            console.log("this.state.rows[" + i + "].name: " + this.state.row[i].name);
-            console.log("this.state.rows[" + i + "].cost: " + this.state.row[i].cost);
-            console.log("this.state.rows[" + i + "].consumptionSelect: " + this.state.row[i].consumptionSelect);
-            console.log("this.state.rows[" + i + "].supplyChainSelect: " + this.state.row[i].supplyChainSelect);
-            console.log("this.state.rows[" + i + "].co2: " + this.state.row[i].co2.toString(10));
-            console.log("this.state.rows[" + i + "].offset_cost: " + this.state.row[i].offset_cost);
+            console.log("this.state.rows[" + i + "].name: " + this.state.rows[i].name);
+            console.log("this.state.rows[" + i + "].cost: " + this.state.rows[i].cost);
+            console.log("this.state.rows[" + i + "].consumptionSelect: " + this.state.rows[i].consumptionSelect);
+            console.log("this.state.rows[" + i + "].supplyChainSelect: " + this.state.rows[i].supplyChainSelect);
+            console.log("this.state.rows[" + i + "].co2: " + this.state.rows[i].co2.toString(10));
+            console.log("this.state.rows[" + i + "].offset_cost: " + this.state.rows[i].offset_cost);
         }
     }
 
@@ -503,12 +503,12 @@ class OneWorldBrowserExtension extends React.Component {
         });
 
         for(let i = 0; i < this.state.rows.length; i++){
-            console.log("this.state.rows[" + i + "].name: " + this.state.row[i].name);
-            console.log("this.state.rows[" + i + "].cost: " + this.state.row[i].cost);
-            console.log("this.state.rows[" + i + "].consumptionSelect: " + this.state.row[i].consumptionSelect);
-            console.log("this.state.rows[" + i + "].supplyChainSelect: " + this.state.row[i].supplyChainSelect);
-            console.log("this.state.rows[" + i + "].co2: " + this.state.row[i].co2.toString(10));
-            console.log("this.state.rows[" + i + "].offset_cost: " + this.state.row[i].offset_cost);
+            console.log("this.state.rows[" + i + "].name: " + this.state.rows[i].name);
+            console.log("this.state.rows[" + i + "].cost: " + this.state.rows[i].cost);
+            console.log("this.state.rows[" + i + "].consumptionSelect: " + this.state.rows[i].consumptionSelect);
+            console.log("this.state.rows[" + i + "].supplyChainSelect: " + this.state.rows[i].supplyChainSelect);
+            console.log("this.state.rows[" + i + "].co2: " + this.state.rows[i].co2.toString(10));
+            console.log("this.state.rows[" + i + "].offset_cost: " + this.state.rows[i].offset_cost);
         }
     }
 
