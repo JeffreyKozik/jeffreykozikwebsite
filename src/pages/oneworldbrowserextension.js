@@ -465,8 +465,8 @@ class OneWorldBrowserExtension extends React.Component {
         )
     }
 
-    createData(name, cost, consumption, supply_chain, CO2, offset_cost){
-        return {name, cost, consumption, supply_chain, CO2, offset_cost}
+    createData(name, cost, consumption, supply_chain, co2, offset_cost){
+        return [name, cost, consumption, supply_chain, co2, offset_cost]
     }
 
     constructor(props){
@@ -492,12 +492,12 @@ class OneWorldBrowserExtension extends React.Component {
         }
 
         for(let i = 0; i < this.state.rows.length; i++){
-            console.log("this.state.rows[" + i.toString(10) + "].name: " + this.state.rows[i].name);
-            console.log("this.state.rows[" + i.toString(10) + "].cost: " + this.state.rows[i].cost);
-            console.log("this.state.rows[" + i.toString(10) + "].consumptionSelect: " + this.state.rows[i].consumptionSelect);
-            console.log("this.state.rows[" + i.toString(10) + "].supplyChainSelect: " + this.state.rows[i].supplyChainSelect);
+            console.log("this.state.rows[" + i.toString(10) + "].name: " + this.state.rows[i][0]);
+            console.log("this.state.rows[" + i.toString(10) + "].cost: " + this.state.rows[i][1]);
+            console.log("this.state.rows[" + i.toString(10) + "].consumptionSelect: " + this.state.rows[i][2]);
+            console.log("this.state.rows[" + i.toString(10) + "].supplyChainSelect: " + this.state.rows[i][3]);
             // console.log("this.state.rows[" + i.toString(10) + "].co2: " + this.state.rows[i].co2.toString(10));
-            console.log("this.state.rows[" + i.toString(10) + "].offset_cost: " + this.state.rows[i].offset_cost);
+            console.log("this.state.rows[" + i.toString(10) + "].offset_cost: " + this.state.rows[i][5]);
         }
     }
 
@@ -514,12 +514,12 @@ class OneWorldBrowserExtension extends React.Component {
         });
 
         for(let i = 0; i < this.state.rows.length; i++){
-            console.log("this.state.rows[" + i.toString(10) + "].name: " + this.state.rows[i].name);
-            console.log("this.state.rows[" + i.toString(10) + "].cost: " + this.state.rows[i].cost);
-            console.log("this.state.rows[" + i.toString(10) + "].consumptionSelect: " + this.state.rows[i].consumptionSelect);
-            console.log("this.state.rows[" + i.toString(10) + "].supplyChainSelect: " + this.state.rows[i].supplyChainSelect);
+            console.log("this.state.rows[" + i.toString(10) + "].name: " + this.state.rows[i][0]);
+            console.log("this.state.rows[" + i.toString(10) + "].cost: " + this.state.rows[i][1]);
+            console.log("this.state.rows[" + i.toString(10) + "].consumptionSelect: " + this.state.rows[i][2]);
+            console.log("this.state.rows[" + i.toString(10) + "].supplyChainSelect: " + this.state.rows[i][3]);
             // console.log("this.state.rows[" + i.toString(10) + "].co2: " + this.state.rows[i].co2.toString(10));
-            console.log("this.state.rows[" + i.toString(10) + "].offset_cost: " + this.state.rows[i].offset_cost);
+            console.log("this.state.rows[" + i.toString(10) + "].offset_cost: " + this.state.rows[i][5]);
         }
     }
 
@@ -563,17 +563,17 @@ class OneWorldBrowserExtension extends React.Component {
                       </TableRow>
                     </TableHead>
                     <TableBody>
-                        {(this.state.rows).map((row) => (
+                        {this.state.rows.map((row) =>
                             <TableRow>
-                                <TableCell class="nameTable"><TextField id="standard-basic" placeholder="Apples..." variant="standard" value={row.name}/></TableCell>
-                                <TableCell class="costTable" align="right"><TextField id="standard-basic" placeholder="$10..." variant="standard" value={row.cost}/></TableCell>
+                                <TableCell class="nameTable"><TextField id="standard-basic" placeholder="Apples..." variant="standard" value={row[0]}/></TableCell>
+                                <TableCell class="costTable" align="right"><TextField id="standard-basic" placeholder="$10..." variant="standard" value={row[1]}/></TableCell>
                                 <TableCell class="consumptionTable" align="right">{this.generateConsumptionOptions}</TableCell>
                                 <TableCell class="supplychainTable" align="right">{this.generateSupplyChainOptions}</TableCell>
-                                <TableCell class="CO2Table" align="right"><div>{row.CO2} kg</div></TableCell>
-                                <TableCell class="offsetcostTable" align="right"><div>{row.offset_cost}</div></TableCell>
+                                <TableCell class="CO2Table" align="right"><div>{row[4]} kg</div></TableCell>
+                                <TableCell class="offsetcostTable" align="right"><div>{row[5]}</div></TableCell>
                                 <TableCell class="deleteTable" align="right"><FontAwesomeIcon icon={faTrashAlt} id="delete_row_button"/></TableCell>
                             </TableRow>
-                        ))}
+                        }
                     </TableBody>
                   </Table>
                 </TableContainer>
