@@ -481,8 +481,8 @@ class OneWorldBrowserExtension extends React.Component {
         this.addRowFunction = this.addRowFunction.bind(this);
         this.deleteRowFunction = this.deleteRowFunction.bind(this);
 
-        let consumptionSelect = "";
-        let supplyChainSelect = "";
+        let consumptionSelect = this.generateConsumptionOptions();
+        let supplyChainSelect = this.generateSupplyChainOptions();
         let name = "";
         let cost = "";
         let co2 = 0;
@@ -514,8 +514,8 @@ class OneWorldBrowserExtension extends React.Component {
     }
 
     addRowFunction(){
-        let consumptionSelect2 = "";
-        let supplyChainSelect2 = "";
+        let consumptionSelect2 = this.generateConsumptionOptions();
+        let supplyChainSelect2 = this.generateSupplyChainOptions();
         let name2 = "";
         let cost2 = "";
         let co22 = 0;
@@ -558,7 +558,7 @@ class OneWorldBrowserExtension extends React.Component {
 
     offsetFunction(){
         // window.open("https://checkout.patch.io/che_prod_9d820f15d0b93ec15fc23694efb70726?amount=" + this.state.rows.co2, "_blank")
-        window.open("https://checkout.patch.io/che_prod_9d820f15d0b93ec15fc23694efb70726?amount=" + this.state.rows.co2, "_blank")
+        window.open("https://checkout.patch.io/che_prod_9d820f15d0b93ec15fc23694efb70726?amount=" + this.state.rows[0].co2, "_blank")
     }
 
     render(){
