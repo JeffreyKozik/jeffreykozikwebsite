@@ -510,8 +510,8 @@ class OneWorldBrowserExtension extends React.Component {
             console.log("this.state.rows[" + i.toString(10) + "]" + this.state.rows[i]);
             console.log("this.state.rows[" + i.toString(10) + "].name: " + this.state.rows[i].name);
             console.log("this.state.rows[" + i.toString(10) + "].cost: " + this.state.rows[i].cost);
-            console.log("this.state.rows[" + i.toString(10) + "].consumptionSelect: " + this.state.rows[i].consumptionSelect);
-            console.log("this.state.rows[" + i.toString(10) + "].supplyChainSelect: " + this.state.rows[i].supplyChainSelect);
+            console.log("this.state.rows[" + i.toString(10) + "].consumptionSelect: " + this.state.rows[i].consumption);
+            console.log("this.state.rows[" + i.toString(10) + "].supplyChainSelect: " + this.state.rows[i].supply_chain);
             // console.log("this.state.rows[" + i.toString(10) + "].co2: " + this.state.rows[i].co2.toString(10));
             console.log("this.state.rows[" + i.toString(10) + "].offset_cost: " + this.state.rows[i].offset_cost);
         }
@@ -549,8 +549,8 @@ class OneWorldBrowserExtension extends React.Component {
             console.log("this.state.rows[" + i.toString(10) + "]" + this.state.rows[i]);
             console.log("this.state.rows[" + i.toString(10) + "].name: " + this.state.rows[i].name);
             console.log("this.state.rows[" + i.toString(10) + "].cost: " + this.state.rows[i].cost);
-            console.log("this.state.rows[" + i.toString(10) + "].consumptionSelect: " + this.state.rows[i].consumptionSelect);
-            console.log("this.state.rows[" + i.toString(10) + "].supplyChainSelect: " + this.state.rows[i].supplyChainSelect);
+            console.log("this.state.rows[" + i.toString(10) + "].consumptionSelect: " + this.state.rows[i].consumption);
+            console.log("this.state.rows[" + i.toString(10) + "].supplyChainSelect: " + this.state.rows[i].supply_chain);
             // console.log("this.state.rows[" + i.toString(10) + "].co2: " + this.state.rows[i].co2.toString(10));
             console.log("this.state.rows[" + i.toString(10) + "].offset_cost: " + this.state.rows[i].offset_cost);
         }
