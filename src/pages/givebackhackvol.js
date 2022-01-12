@@ -1,6 +1,7 @@
 import * as React from "react"
 import "../page_styling/pages.css"
 import Seo from "../components/seo"
+import socrates from "../images/welcomebackhacksocrates.png"
 
 const GiveBackHackVol = () => (
     <>
@@ -12,22 +13,20 @@ const GiveBackHackVol = () => (
             <div class="page_container">
                 <h1 class="page_title"> GiveBackHack Vol </h1>
                 <h3 class="page_subtitle">
-                    Myself along with two core teammates won "Best in Creativity" at the 12-hour WelcomeBackHack Hackthon at
-                    Case Western Reserve University during the Fall of 2019.
+                    Myself along with a team of developers and businesspeople jointly created a business model and a prototype for a
+                    volunteering website.
                 </h3>
                 <div class="page_video">
                     <img src={socrates} alt="Team has lots of his own canine."/>
                 </div>
                 <p class="page_description">
-                    We created a website brainteaser game. In the game the user tries to guess what the character
-                    Socrates is thinking. If they're wrong Socrates gives a clue that somehow relates the incorrect guess
-                    with the correct answer. For example if Socrates is thinking of "dog" and the user guesses "cat" Socrates'
-                    next clue may be "Pets are great companions."
+                    Vol was intended to be a website that would help users easily find volunteering opportunities in their communities.
+                    In my experience it's always been hard to find a centralized place that lists volunteering opportunities. Typically for me
+                    my volunteering has come as a result of word of mouth or being in the right place at the right time.
                 </p>
                 <p class="page_description">
-                    Our final product wasn't fully functional, however we attempted multiple avenues to try to create
-                    functionality. Myself and one of my teammates mostly researched using Beautiful Soup to scrape a
-                    website that gave similar words to the inputted word. Other teammates explored API options.
+                    Myself and one or two other team members coded the front end of the website using Boostrap (this was my first
+                    time using Boostrap) and two other team members worked on getting the login flow to work thorugh Firebase Authentication.
                 </p>
             </div>
         </body>
