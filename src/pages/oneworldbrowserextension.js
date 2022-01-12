@@ -579,7 +579,7 @@ class OneWorldBrowserExtension extends React.Component {
                     The One World Browser Extension is used in conjunction with a Square Business account to easily offset a
                     business's inventory carbon emissions. To see it in action feel free to enter data into the table below.
                 </h3>
-                <video controls id="page_video">
+                <video controls class="page_video">
                     <source src={demoVideo} type="video/mp4"></source>
                 </video>
                 <TableContainer component={Paper} id="one_world_table_container">

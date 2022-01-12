@@ -18,8 +18,8 @@ const SmrtnrllBrowserExtension = () => (
                     is by continually refreshing the page and clicking enroll until someone drops the class at which case you are enrolled. I've
                     used this to succesfully get into 2 classes.
                 </h3>
-                <video controls id="page_video">
-                    <source src={demoVideo} poster={demoPoster} type="video/mp4"></source>
+                <video controls poster="demoPoster" class="page_video">
+                    <source src={demoVideo} type="video/mp4"></source>
                 </video>
             </div>
         </body>
