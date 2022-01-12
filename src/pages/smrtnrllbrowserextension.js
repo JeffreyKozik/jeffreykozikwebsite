@@ -1,6 +1,6 @@
 import * as React from "react"
 import demoVideo from "../images/smrtnrlldemo.mp4";
-import demoPoster from "../images/smrtnrllbrowserextensionpic.png"
+// import demoPoster from "../images/smrtnrllbrowserextensionpic.png"
 import "../page_styling/pages.css"
 import Seo from "../components/seo"
 
@@ -16,7 +16,7 @@ const SmrtnrllBrowserExtension = () => (
                 <h3 class="page_subtitle">
                     The smrtnrll browser extension is used by college students to get into classes that are currently full.
                 </h3>
-                <video controls preload="auto" poster="demoPoster" class="page_video">
+                <video controls preload="auto" class="page_video">
                     <source src={demoVideo} type="video/mp4"></source>
                 </video>
                 <p class="page_description">
