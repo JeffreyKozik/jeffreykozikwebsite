@@ -31,17 +31,13 @@ const AirCharger = () => (
                     However, although a few magsafe battery packs already existed on the market, most were clunky and big almost
                     doubling or tripling the thickness of the phone. So the AirCharger would be a thinner, sleeker alternative.
                 </p>
-                <div class="page_video">
-                    <img src={aircharger8} alt="aircharger8"/>
-                </div>
+                <img class="page_video" src={aircharger8} alt="aircharger8"/>
                 <p class="page_description">
                     This was the first prototype. It was based on this <a href="https://www.instructables.com/DIY-Wireless-Charging-Power-Bank/">instructables tutorial</a>.
                     Except instead of using three 3.7V Li-ion Batteries (18650) which provided a lot of storage (6600 mAH or about 3x battery size of iPhone 12),
                     I used four much smaller, and as a result much lower capacity, LIR 2032H (high capacity coin cell) batteries which provided 280 mAH or about 10% of the battery life of an iPhone 12.
                 </p>
-                <div class="page_video">
-                    <img src={aircharger7} alt="aircharger7"/>
-                </div>
+                <img class="page_video" src={aircharger7} alt="aircharger7"/>
                 <video controls class="page_video">
                     <source src={aircharger6} type="video/mov"></source>
                 </video>
@@ -56,9 +52,7 @@ const AirCharger = () => (
                     Since I only had an iPhone 11 to work with I attached a metal ring to the back of the phone (iPhone 12's have this built in) and
                     I attached a magnet to my prototype encasing (a plastic pouch) for the battery.
                 </p>
-                <div class="page_video">
-                    <img src={aircharger3} alt="aircharger3"/>
-                </div>
+                <img class="page_video" src={aircharger3} alt="aircharger3"/>
                 <p class="page_description">
                     As shown at the very top of the page, my first prototype indicated that the phone was charging, so on that front it was a success!
                     However, after about 10 minutes of charging, the battery of my phone had actually decreased a percentage (even though I wasn't using it).
@@ -69,9 +63,7 @@ const AirCharger = () => (
                     due to thick wires (high resistance) and probably other inefficiencies in my amateur design. So, my second prototype used a bigger battery (1100 mAH lithium polymer pouch battery) and
                     thinner (lower resistance) wires. Unfortunately, although this worked, the battery got extremely hot, so I had to take apart this prototype.
                 </p>
-                <div class="page_video">
-                    <img src={aircharger2} alt="aircharger2"/>
-                </div>
+                <img class="page_video" src={aircharger2} alt="aircharger2"/>
                 <p class="page_description">
                     I also 3D printed a case for the battery. The idea was for the battery to be about the size of the wired magsafe charging puck Apple sells. However,
                     there were difficulties in printing the filament so thin. I was able to work around those difficulties and make a prototype case that magnetically

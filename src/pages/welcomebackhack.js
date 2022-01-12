@@ -16,9 +16,7 @@ const WelcomeBackHack = () => (
                     Myself along with two core teammates won "Best in Creativity" at the 12-hour WelcomeBackHack Hackthon at
                     Case Western Reserve University during the Fall of 2019.
                 </h3>
-                <div class="page_video">
-                    <img src={socrates} alt="Team has lots of his own canine."/>
-                </div>
+                <img class="page_video" src={socrates} alt="Team has lots of his own canine."/>
                 <p class="page_description">
                     We created a website brainteaser game. In the game the user tries to guess what the character
                     Socrates is thinking. If they're wrong Socrates gives a clue that somehow relates the incorrect guess
