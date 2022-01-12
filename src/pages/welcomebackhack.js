@@ -17,7 +17,7 @@ const WelcomeBackHack = () => (
                     Case Western Reserve University during the Fall of 2019.
                 </h3>
                 <div class="page_video">
-                    <img src={socrates} alt="Team has lots of his own canine.">
+                    <img src={socrates} alt="Team has lots of his own canine."/>
                 </div>
                 <p class="page_description">
                     We created a website brainteaser game. In the game the user tries to guess what the character

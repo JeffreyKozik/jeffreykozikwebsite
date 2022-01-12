@@ -25,10 +25,10 @@ const AirCharger = () => (
                     <source src={aircharger5} type="video/mov"></source>
                 </video>
                 <div class="page_video">
-                    <img src={aircharger8} alt="aircharger8">
+                    <img src={aircharger8} alt="aircharger8"/>
                 </div>
                 <div class="page_video">
-                    <img src={aircharger7} alt="aircharger7">
+                    <img src={aircharger7} alt="aircharger7"/>
                 </div>
                 <video controls class="page_video">
                     <source src={aircharger4} type="video/mov"></source>
@@ -37,10 +37,10 @@ const AirCharger = () => (
                     <source src={aircharger6} type="video/mov"></source>
                 </video>
                 <div class="page_video">
-                    <img src={aircharger3} alt="aircharger3">
+                    <img src={aircharger3} alt="aircharger3"/>
                 </div>
                 <div class="page_video">
-                    <img src={aircharger2} alt="aircharger2">
+                    <img src={aircharger2} alt="aircharger2"/>
                 </div>
                 <p class="page_description">
 
