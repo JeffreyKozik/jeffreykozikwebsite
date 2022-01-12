@@ -7,6 +7,7 @@
     font-family: 'Rubik', sans-serif;
     margin-left: 25%;
     margin-right: 25%;
+    width: 0.5vw;
 }
 
 .page_title {
@@ -25,7 +26,8 @@
     align-self: center;
     margin-top: 0;
     margin-bottom: 3%;
-    /* width: 100%; */
+    width: 100%;
+    /* figure out a way to make it so that the max width of the video or picture is the width of the page container" */
 }
 
 .page_description{
