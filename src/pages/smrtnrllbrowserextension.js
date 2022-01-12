@@ -1,6 +1,6 @@
 import * as React from "react"
 import demoVideo from "../images/smrtnrlldemo.mp4";
-import demoPoster from "../images/smrtnrllbrwoserextensionpic.png"
+import demoPoster from "../images/smrtnrllbrowserextensionpic.png"
 import "../page_styling/pages.css"
 import Seo from "../components/seo"
 
