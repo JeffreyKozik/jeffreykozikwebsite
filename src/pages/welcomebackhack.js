@@ -1,7 +1,7 @@
 import * as React from "react"
 import "../page_styling/pages.css"
 import Seo from "../components/seo"
-import socrates from "../images/smrtnrllbrowserextensionpic.png"
+import socrates from "../images/welcomebackhacksocrates.png"
 
 const WelcomeBackHack = () => (
     <>
