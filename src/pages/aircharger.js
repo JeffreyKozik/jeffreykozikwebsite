@@ -21,8 +21,8 @@ const AirCharger = () => (
                 <h3 class="page_subtitle">
                     Prototype for small, sleek iPhone magsafe battery pack.
                 </h3>
-                <video controls class="page_video">
-                    <source src={aircharger5} type="video/mov"></source>
+                <video controls preload="auto" class="page_video">
+                    <source src={aircharger5} type="video/mp4"></source>
                 </video>
                 <p class="page_description">
                     My friend from high school reached out to me with this idea in February of 2021 and I began making
@@ -38,15 +38,15 @@ const AirCharger = () => (
                     I used four much smaller, and as a result much lower capacity, LIR 2032H (high capacity coin cell) batteries which provided 280 mAH or about 10% of the battery life of an iPhone 12.
                 </p>
                 <img class="page_video" src={aircharger7} alt="aircharger7"/>
-                <video controls class="page_video">
-                    <source src={aircharger6} type="video/mov"></source>
+                <video controls preload="auto" class="page_video">
+                    <source src={aircharger6} type="video/mp4"></source>
                 </video>
                 <p class="page_description">
                     Since I was using a much lower battery capacity, I had to modify the battery charger by removing the R4 resistor which was 1.2K ohms and replacing it with a
                     33K ohm resistor (I followed <a href="https://www.instructables.com/Cheap-LIR2032-Coin-Cell-Charger/">this instructable</a>).
                 </p>
-                <video controls class="page_video">
-                    <source src={aircharger4} type="video/mov"></source>
+                <video controls preload="auto" class="page_video">
+                    <source src={aircharger4} type="video/mp4"></source>
                 </video>
                 <p class="page_description">
                     Since I only had an iPhone 11 to work with I attached a metal ring to the back of the phone (iPhone 12's have this built in) and
