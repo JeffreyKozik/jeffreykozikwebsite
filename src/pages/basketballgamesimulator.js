@@ -15,7 +15,7 @@ const BasketballGameSimulator = () => (
                     Khan Academy JavaScript project I created in 2016 to simulate basktball games
                     using data from <a href="https://www.basketball-reference.com/"> basketball-reference.com </a>.
                 </h3>
-                <h2><a href="https://www.khanacademy.org/computer-programming/basketball-game/6687774851858432">Basketball Game Simulator</a></h2><script src="https://www.khanacademy.org/computer-programming/basketball-game/6687774851858432/embed.js?editor=yes&buttons=yes&author=yes&embed=yes"></script><p>Made using: <a href="http://www.khanacademy.org/computer-programming">Khan Academy Computer Science</a></p>
+                <h2><a href="https://www.khanacademy.org/computer-programming/basketball-game/6687774851858432">Basketball Game Simulator</a></h2><iframe src="https://www.khanacademy.org/computer-programming/basketball-game/6687774851858432/embed.js?editor=yes&buttons=yes&author=yes&embed=yes"></iframe><p>Made using: <a href="http://www.khanacademy.org/computer-programming">Khan Academy Computer Science</a></p>
                 <p class="page_description">
                     To run a simluation click on the right hand side of the embed which shows a mock
                     basketball court and some circles representing players. Then press "a" on your keyboard to see the action unfold.
