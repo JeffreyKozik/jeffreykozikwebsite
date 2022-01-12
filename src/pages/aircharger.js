@@ -1,13 +1,13 @@
 import * as React from "react"
 import "../page_styling/pages.css"
 import Seo from "../components/seo"
-import aircharger2 from "../images/aircharger2.heic";
-import aircharger3 from "../images/aircharger3.heic";
+import aircharger2 from "../images/aircharger2.HEIC";
+import aircharger3 from "../images/aircharger3.HEIC";
 import aircharger4 from "../images/aircharger4.mov";
 import aircharger5 from "../images/aircharger5.mov";
 import aircharger6 from "../images/aircharger6.mov";
-import aircharger7 from "../images/aircharger7.heic";
-import aircharger8 from "../images/aircharger8.heic";
+import aircharger7 from "../images/aircharger7.HEIC";
+import aircharger8 from "../images/aircharger8.HEIC";
 
 const AirCharger = () => (
     <>
