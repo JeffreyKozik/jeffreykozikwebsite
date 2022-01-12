@@ -1,5 +1,6 @@
 import * as React from "react"
 import demoVideo from "../images/smrtnrlldemo.mp4";
+import demoPoster from "../images/smrtnrllbrwoserextensionpic.png"
 import "../page_styling/pages.css"
 import Seo from "../components/seo"
 
@@ -18,7 +19,7 @@ const SmrtnrllBrowserExtension = () => (
                     used this to succesfully get into 2 classes.
                 </h3>
                 <video controls id="page_video">
-                    <source src={demoVideo} type="video/mp4"></source>
+                    <source src={demoVideo} poster={demoPoster} type="video/mp4"></source>
                 </video>
             </div>
         </body>
