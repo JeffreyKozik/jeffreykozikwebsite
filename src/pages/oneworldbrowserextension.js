@@ -456,7 +456,7 @@ class OneWorldBrowserExtension extends React.Component {
             options.push({value: consumptionOptions[i], label: consumptionOptions[i]});
         }
         return(
-            <Select class="select" closeMenuOnSelect={false} components={animatedComponentsConsumption} options={consumptionOptions}/>
+            <Select class="select" closeMenuOnSelect={false} components={animatedComponentsConsumption} options={options}/>
         )
     }
 
@@ -467,7 +467,7 @@ class OneWorldBrowserExtension extends React.Component {
             options.push({value: supplyChainOptions[i], label: supplyChainOptions[i]});
         }
         return(
-            <Select class="select" closeMenuOnSelect={false} components={animatedComponentsSupplyChain} options={supplyChainOptions}/>
+            <Select class="select" closeMenuOnSelect={false} components={animatedComponentsSupplyChain} options={options}/>
         )
     }
 

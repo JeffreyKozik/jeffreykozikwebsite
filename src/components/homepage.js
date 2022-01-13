@@ -176,7 +176,7 @@ function generateOptions(selectId, array){
 const HomePage = () => (
     <>
         <h1 id="jeffrey_kozik"> Jeffrey Kozik </h1>
-        <div class="container" id="selection_div">
+        <div className="homepage_container" id="selection_div">
             {generateOptions("categories", categoryArray)}
             {generateOptions("tags", tagArray)}
         </div>
