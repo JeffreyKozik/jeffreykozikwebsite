@@ -29,13 +29,13 @@ const BasketballGameSimulator = () => (
                 <p>Made using: <a href="http://www.khanacademy.org/computer-programming">Khan Academy Computer Science</a></p>
                 <p className="page_description">
                     To run a simluation click on the right hand side of the embed which shows a mock
-                    basketball court and some circles representing players. Then press &quot;a&quot; on your keyboard to see the action unfold.
-                    If you want to run the simulation quickly simply hold down &quot;a&quot; on your keyboard. If you want to
+                    basketball court and some circles representing players. Then press "a" on your keyboard to see the action unfold.
+                    If you want to run the simulation quickly simply hold down "a" on your keyboard. If you want to
                     change the teams playing, simply edit the name shown on line 167 and 168 of the code to one of the other
                     team names from the previous lines.
                 </p>
                 <p className="page_description">
-                    This was one of the first projects I made when I learned how to code. It&apos;s written
+                    This was one of the first projects I made when I learned how to code. It's written
                     entirely in JavaScript. It also includes the NBA team with the longest streak without losing
                     (Seattle Supersonics).
                 </p>

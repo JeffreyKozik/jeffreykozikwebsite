@@ -15,8 +15,8 @@ const InLine = () => (
                 <h1 className="page_title"> inLine </h1>
                 <h3 className="page_subtitle">
                     Myself and one other person created the inLine database to help businesses manage waitlists so that
-                    customers don&apos;t have to physically wait in line, and can instead spend their time more productively until
-                    there&apos;s room for them at the resturant or business.
+                    customers don't have to physically wait in line, and can instead spend their time more productively until
+                    there's room for them at the resturant or business.
                 </h3>
                 <video controls preload="auto" className="page_video">
                     <source src={flaskDemo} type="video/mp4"></source>

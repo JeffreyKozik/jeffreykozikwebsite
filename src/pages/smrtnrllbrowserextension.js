@@ -21,7 +21,7 @@ const SmrtnrllBrowserExtension = () => (
                 </video>
                 <p className="page_description">
                     The way it works is by continually refreshing the page and clicking enroll until someone drops the class at which case
-                    you are enrolled. I&apos;ve used this to succesfully get into 2 classes.
+                    you are enrolled. I've used this to succesfully get into 2 classes.
                 </p>
             </div>
         </body>

@@ -49,13 +49,13 @@ const AirCharger = () => (
                     <source src={aircharger4} type="video/mp4"></source>
                 </video>
                 <p className="page_description">
-                    Since I only had an iPhone 11 to work with I attached a metal ring to the back of the phone (iPhone 12&apos;s have this built in) and
+                    Since I only had an iPhone 11 to work with I attached a metal ring to the back of the phone (iPhone 12's have this built in) and
                     I attached a magnet to my prototype encasing (a plastic pouch) for the battery.
                 </p>
                 <img className="page_video" src={aircharger3} alt="aircharger3"/>
                 <p className="page_description">
                     As shown at the very top of the page, my first prototype indicated that the phone was charging, so on that front it was a success!
-                    However, after about 10 minutes of charging, the battery of my phone had actually decreased a percentage (even though I wasn&apos;t using it).
+                    However, after about 10 minutes of charging, the battery of my phone had actually decreased a percentage (even though I wasn't using it).
                     I figured out that this was due to the fact that my mAH calculation was off. I thought that since my batteries had a combined mAH of 280,
                     and my phone had a mAH of roughly 10x that, it meant the battery would add 10% charge to my phone. I failed to take into consideration that
                     my batteries were 3.7 V and went through a boost converter from 3.7V to 5V which meant that the mAH at 5V was only 207 (3.7*280/5=207).
@@ -71,10 +71,10 @@ const AirCharger = () => (
                 </p>
                 <p className="page_description">
                     I also explored for a while designing a circuit for this battery pack so that it could be soldered in a factory on pcb instead of myself having
-                    to solder it without any pcb. However, it was difficult to fully design this circuit using the software I was using because I couldn&apos;t add components
+                    to solder it without any pcb. However, it was difficult to fully design this circuit using the software I was using because I couldn't add components
                     such as a qi wireless charger in, and I would have had to still solder the battery on my own. In the end, this was a cool idea I spent quite a bit of time on and I
                     learned a ton about hardware, circuits, and the manufacturing process. It was also difficult to get this in a price point that people would actually buy the
-                    product at, especially since I wasn&apos;t ordering the parts in bulk. I had some other ideas such as mini solar panels on the back of the battery
+                    product at, especially since I wasn't ordering the parts in bulk. I had some other ideas such as mini solar panels on the back of the battery
                     and an LED screen that could attach to an app to display custom designs, but these were ultimately too expensive, bulky, and power consuming.
                     I would love to continue this project in the future or one similar when I find the time.
                 </p>
