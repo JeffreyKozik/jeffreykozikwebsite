@@ -18,14 +18,16 @@ const GiveBackHackVol = () => (
                     Myself along with a team of developers and businesspeople jointly created a business model and a prototype for a
                     volunteering website.
                 </h3>
-                <iframe
+                <iframe className="page_video"
                         src="https://codesandbox.io/embed/givebackhack-vol-q8n85?fontsize=14&module=%2Fvol.html"
                         style={{width: '100%', height: '500px', border: '0', borderRadius: '4px', overflow: 'hidden'}}
                         title="GiveBackHack Vol"
                 ></iframe>
+                <iframe className="page_video" src="https://q8n85.csb.app/friends.html"></iframe>
+                <iframe className="page_video" src="https://q8n85.csb.app/vol.html"></iframe>
                 <p className="page_description">
-                    Navigate to <a href="https://q8n85.csb.app/vol.html"> https://q8n85.csb.app/vol.html </a> on the codesandbox embedded browser and
-                    <a href="https://q8n85.csb.app/friends.html"> https://q8n85.csb.app/vol.html </a> on the codesandbox embedded browser to see the
+                    Navigate to <a href="https://q8n85.csb.app/vol.html" target="_blank" rel="noreferrer"> https://q8n85.csb.app/vol.html </a> on the codesandbox embedded browser and
+                    <a href="https://q8n85.csb.app/friends.html" target="_blank" rel="noreferrer"> https://q8n85.csb.app/friends.html </a> on the codesandbox embedded browser to see the
                     pages that I created.
                 </p>
                 <p className="page_description">
