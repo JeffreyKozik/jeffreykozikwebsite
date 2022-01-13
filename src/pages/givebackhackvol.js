@@ -2,6 +2,9 @@ import * as React from "react"
 import "../page_styling/pages.css"
 import Seo from "../components/seo"
 
+// allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+// sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow scripts"
+
 const GiveBackHackVol = () => (
     <>
         <head>
@@ -16,11 +19,9 @@ const GiveBackHackVol = () => (
                     volunteering website.
                 </h3>
                 <iframe
-                        src="https://codesandbox.io/embed/givebackhack-vol-q8n85?fontsize=14&hidenavigation=1&theme=dark"
+                        src="https://codesandbox.io/embed/givebackhack-vol-q8n85?fontsize=14"
                         style={{width: '100%', height: '500px', border: '0', borderRadius: '4px', overflow: 'hidden'}}
                         title="GiveBackHack Vol"
-                        allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
-                        sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow scripts"
                 ></iframe>
                 <p className="page_description">
                     Vol was intended to be a website that would help users easily find volunteering opportunities in their communities.
