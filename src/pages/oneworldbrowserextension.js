@@ -601,9 +601,7 @@ class OneWorldBrowserExtension extends React.Component {
                     </TableHead>
                     <TableBody>
                         {this.state.rows.map((row) =>
-                            <TableRow
-                                key={row.name}
-                            >
+                            <TableRow>
                                 <TableCell class="one_world_nameTable"><TextField id="standard-basic" placeholder="Apples..." variant="standard" value={row.name}/></TableCell>
                                 <TableCell class="one_world_costTable" align="right"><TextField id="standard-basic" placeholder="$10..." variant="standard" value={row.cost}/></TableCell>
                                 <TableCell class="one_world_consumptionTable" align="right">{row.consumption}</TableCell>
