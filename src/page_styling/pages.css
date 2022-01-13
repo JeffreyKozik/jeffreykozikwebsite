@@ -9,6 +9,16 @@
     margin-right: 25%;
 }
 
+@media only screen and (max-width: 1280) {
+    .page_container{
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+        font-family: 'Rubik', sans-serif;
+        width: 640px;
+    }
+}
+
 .page_title {
   align-self: flex-start;
   margin-bottom: 0;
