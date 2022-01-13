@@ -581,7 +581,7 @@ class OneWorldBrowserExtension extends React.Component {
                 <h1 className="page_title"> One World Browser Extension </h1>
                 <h3 className="page_subtitle">
                     The One World Browser Extension is used in conjunction with a Square Business account to easily offset a
-                    business`&apos;`s inventory carbon emissions. To see it in action feel free to enter data into the table below.
+                    business&apos;s inventory carbon emissions. To see it in action feel free to enter data into the table below.
                 </h3>
                 <video controls className="page_video">
                     <source src={demoVideo} type="video/mp4"></source>
@@ -624,11 +624,11 @@ class OneWorldBrowserExtension extends React.Component {
                 </p>
                 <p className="page_description">
                     Products are automatically categorized by using an Azure Function which utilizes the Bing API to search the name of the product
-                    and compare the words in the results with the words in the results of Bing searches for each of the categories via nltk and sklearn`&apos;`s TFIDF vectorization.
-                    Then the user is able to easily offset their carbon emissions using Patch. I`&apos;`ve also tried approaches using Google Cloud`&apos;`s Google Cloud Function, Google Cloud Run (with Docker) and VADER.
+                    and compare the words in the results with the words in the results of Bing searches for each of the categories via nltk and sklearn&apos;s TFIDF vectorization.
+                    Then the user is able to easily offset their carbon emissions using Patch. I&apos;ve also tried approaches using Google Cloud&apos;s Google Cloud Function, Google Cloud Run (with Docker) and VADER.
                 </p>
                 <p className="page_description">
-                    Note: in the video, there`&apos;`s a calculation error that has been corrected now. In the video I say 1t = 100kg but in fact 1t = 1000kg.
+                    Note: in the video, there&apos;s a calculation error that has been corrected now. In the video I say 1t = 100kg but in fact 1t = 1000kg.
                     So really 0.01t should be offset in the video, not 0.13t. So offsetting $100 worth of apples (12.77 kg CO2) through the project chosen
                     on Patch would cost $0.13 not $1.27.
                 </p>

@@ -11,17 +11,17 @@ const SmrtnrllBrowserExtension = () => (
         </head>
         <body>
             <Seo title="smrtnrll browser extension" />
-            <div class="page_container">
-                <h1 class="page_title"> smrtnrll browser extension </h1>
-                <h3 class="page_subtitle">
+            <div className="page_container">
+                <h1 className="page_title"> smrtnrll browser extension </h1>
+                <h3 className="page_subtitle">
                     The smrtnrll browser extension is used by college students to get into classes that are currently full.
                 </h3>
-                <video controls preload="auto" class="page_video">
+                <video controls preload="auto" className="page_video">
                     <source src={demoVideo} type="video/mp4"></source>
                 </video>
-                <p class="page_description">
+                <p className="page_description">
                     The way it works is by continually refreshing the page and clicking enroll until someone drops the class at which case
-                    you are enrolled. I've used this to succesfully get into 2 classes.
+                    you are enrolled. I&apos;ve used this to succesfully get into 2 classes.
                 </p>
             </div>
         </body>
