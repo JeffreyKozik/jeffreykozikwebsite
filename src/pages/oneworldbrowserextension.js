@@ -586,29 +586,29 @@ class OneWorldBrowserExtension extends React.Component {
                 <video controls className="page_video">
                     <source src={demoVideo} type="video/mp4"></source>
                 </video>
-                <TableContainer component={Paper} id="one_world_table_container">
-                  <Table sx={{ minWidth: 650 }} aria-label="simple table" id="one_world_table">
+                <TableContainer style={{overflow: "visible"}} component={Paper} id="one_world_table_container">
+                  <Table style={{overflow: "visible"}} sx={{ minWidth: 650 }} aria-label="simple table" id="one_world_table">
                     <TableHead>
                       <TableRow>
-                        <TableCell class="one_world_nameTable">Name</TableCell>
-                        <TableCell class="one_world_costTable" align="right">Cost</TableCell>
-                        <TableCell class="one_world_consumptionTable" align="right">Consumption</TableCell>
-                        <TableCell class="one_world_supplychainTable" align="right">Supply Chain</TableCell>
-                        <TableCell class="one_world_CO2Table" align="right">CO2</TableCell>
-                        <TableCell class="one_world_offsetcostTable" align="right">Offset Cost</TableCell>
-                        <TableCell class="one_world_deleteTable" align="right"></TableCell>
+                        <TableCell className="one_world_nameTable">Name</TableCell>
+                        <TableCell className="one_world_costTable" align="right">Cost</TableCell>
+                        <TableCell className="one_world_consumptionTable" align="right">Consumption</TableCell>
+                        <TableCell className="one_world_supplychainTable" align="right">Supply Chain</TableCell>
+                        <TableCell className="one_world_CO2Table" align="right">CO2</TableCell>
+                        <TableCell className="one_world_offsetcostTable" align="right">Offset Cost</TableCell>
+                        <TableCell className="one_world_deleteTable" align="right"></TableCell>
                       </TableRow>
                     </TableHead>
-                    <TableBody>
+                    <TableBody style={{overflow: "visible"}}>
                         {this.state.rows.map((row) =>
-                            <TableRow>
-                                <TableCell class="one_world_nameTable"><TextField id="standard-basic" placeholder="Apples..." variant="standard" value={row.name}/></TableCell>
-                                <TableCell class="one_world_costTable" align="right"><TextField id="standard-basic" placeholder="$10..." variant="standard" value={row.cost}/></TableCell>
-                                <TableCell class="one_world_consumptionTable" align="right">{row.consumption}</TableCell>
-                                <TableCell class="one_world_supplychainTable" align="right">{row.supply_chain}</TableCell>
-                                <TableCell class="one_world_CO2Table" align="right"><div>{row.co2} kg</div></TableCell>
-                                <TableCell class="one_world_offsetcostTable" align="right"><div>{row.offset_cost}</div></TableCell>
-                                <TableCell class="one_world_deleteTable" align="right"><FontAwesomeIcon icon={faTrashAlt} id="delete_row_button"/></TableCell>
+                            <TableRow style={{overflow: "visible"}}>
+                                <TableCell className="one_world_nameTable"><TextField id="standard-basic" placeholder="Apples..." variant="standard" value={row.name}/></TableCell>
+                                <TableCell className="one_world_costTable" align="right"><TextField id="standard-basic" placeholder="$10..." variant="standard" value={row.cost}/></TableCell>
+                                <TableCell style={{overflow: "visible"}} className="one_world_consumptionTable" align="right">{row.consumption}</TableCell>
+                                <TableCell style={{overflow: "visible"}} className="one_world_supplychainTable" align="right">{row.supply_chain}</TableCell>
+                                <TableCell className="one_world_CO2Table" align="right"><div>{row.co2} kg</div></TableCell>
+                                <TableCell className="one_world_offsetcostTable" align="right"><div>{row.offset_cost}</div></TableCell>
+                                <TableCell className="one_world_deleteTable" align="right"><FontAwesomeIcon icon={faTrashAlt} id="delete_row_button"/></TableCell>
                             </TableRow>
                         )}
                     </TableBody>
