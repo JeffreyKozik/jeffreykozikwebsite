@@ -33,7 +33,7 @@ const AirCharger = () => (
                 </p>
                 <img className="page_video" src={aircharger8} alt="aircharger8"/>
                 <p className="page_description">
-                    This was the first prototype. It was based on this <a href="https://www.instructables.com/DIY-Wireless-Charging-Power-Bank/">instructables tutorial</a>.
+                    This was the first prototype. It was based on this <a href="https://www.instructables.com/DIY-Wireless-Charging-Power-Bank/" target="_blank" rel="noreferrer">instructables tutorial</a>.
                     Except instead of using three 3.7V Li-ion Batteries (18650) which provided a lot of storage (6600 mAH or about 3x battery size of iPhone 12),
                     I used four much smaller, and as a result much lower capacity, LIR 2032H (high capacity coin cell) batteries which provided 280 mAH or about 10% of the battery life of an iPhone 12.
                 </p>
@@ -43,7 +43,7 @@ const AirCharger = () => (
                 </video>
                 <p className="page_description">
                     Since I was using a much lower battery capacity, I had to modify the battery charger by removing the R4 resistor which was 1.2K ohms and replacing it with a
-                    33K ohm resistor (I followed <a href="https://www.instructables.com/Cheap-LIR2032-Coin-Cell-Charger/">this instructable</a>).
+                    33K ohm resistor (I followed <a href="https://www.instructables.com/Cheap-LIR2032-Coin-Cell-Charger/" target="_blank" rel="noreferrer">this instructable</a>).
                 </p>
                 <video controls preload="auto" className="page_video">
                     <source src={aircharger4} type="video/mp4"></source>

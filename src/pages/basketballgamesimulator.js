@@ -11,6 +11,9 @@ function createEmbedMarkup() {
   };
 }
 
+// <InnerHTML className="page_video" html={createEmbedMarkup().__html} />
+
+
 const BasketballGameSimulator = () => (
     <>
         <head>
@@ -22,11 +25,11 @@ const BasketballGameSimulator = () => (
                 <h1 className="page_title"> Basketball Game Simulator </h1>
                 <h3 className="page_subtitle">
                     Khan Academy JavaScript project I created in 2016 to simulate basktball games
-                    using data from <a href="https://www.basketball-reference.com/"> basketball-reference.com </a>.
+                    using data from <a href="https://www.basketball-reference.com/" target="_blank" rel="noreferrer"> basketball-reference.com </a>.
                 </h3>
-                <h2><a href="https://www.khanacademy.org/computer-programming/basketball-game/6687774851858432">Basketball Game Simulator</a></h2>
-                <InnerHTML className="page_video" html={createEmbedMarkup().__html} />
-                <p>Made using: <a href="http://www.khanacademy.org/computer-programming">Khan Academy Computer Science</a></p>
+                <h2><a href="https://www.khanacademy.org/computer-programming/basketball-game/6687774851858432" target="_blank" rel="noreferrer">Basketball Game Simulator</a></h2>
+                <iframe className="page_video" src="https://www.khanacademy.org/computer-programming/basketball-game/6687774851858432"></iframe>
+                <p>Made using: <a href="http://www.khanacademy.org/computer-programming" target="_blank" rel="noreferrer">Khan Academy Computer Science</a></p>
                 <p className="page_description">
                     To run a simluation click on the right hand side of the embed which shows a mock
                     basketball court and some circles representing players. Then press "a" on your keyboard to see the action unfold.

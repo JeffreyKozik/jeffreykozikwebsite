@@ -620,7 +620,7 @@ class OneWorldBrowserExtension extends React.Component {
                 <Button onClick={this.offsetFunction} variant="text" id="one_world_offset_row_button"> Offset CO2 </Button>
                 <p className="page_description">
                     The consumption categories and supply chain categories as well as the amount of CO2 emitted per dollar spent
-                    in each of those categories comes from <a href="https://www.gov.uk/government/statistics/uks-carbon-footprint">publicly available data from the UK government</a>.
+                    in each of those categories comes from <a href="https://www.gov.uk/government/statistics/uks-carbon-footprint" target="_blank" rel="noreferrer">publicly available data from the UK government</a>.
                 </p>
                 <p className="page_description">
                     Products are automatically categorized by using an Azure Function which utilizes the Bing API to search the name of the product
