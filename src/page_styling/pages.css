@@ -1,44 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 
-/* body{
-    display: flex;
-    align-items: center;
-} */
-
 .page_container{
+    align-items: flex-start;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     font-family: 'Rubik', sans-serif;
-    margin-right: 25%;
     margin-left: 25%;
+    margin-right: 25%;
 }
 
 .page_title {
-  align-self: left;
+  align-self: flex-start;
   margin-bottom: 0;
 }
 
 .page_subtitle {
+    align-self: flex-start;
     color: grey;
-    margin-top: 1.5%;
     margin-bottom: 3%;
-    align-self: left;
+    margin-top: 1.5%;
 }
 
 .page_video{
     align-self: center;
-    margin-top: 0;
     margin-bottom: 3%;
-    /* width: 100%; */
-    max-width: 100%;
+    margin-top: 0;
     max-height: 50vh;
-    /* figure out a way to make it so that the max width of the video or picture is the width of the page container" */
+    max-width: 100%;
 }
 
 .page_description{
     align-self: center;
-    width: 100%;
     line-height: 1.8;
-    /* font-size: 1.25rem; */
+    width: 100%;
 }
