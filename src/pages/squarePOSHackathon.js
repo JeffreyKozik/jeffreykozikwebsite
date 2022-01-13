@@ -1,7 +1,6 @@
 import * as React from "react"
 import "../page_styling/pages.css"
 import Seo from "../components/seo"
-import
 
 const SquarePOSHackathon = () => (
     <>
