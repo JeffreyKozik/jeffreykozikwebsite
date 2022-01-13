@@ -595,7 +595,7 @@ class OneWorldBrowserExtension extends React.Component {
                         <TableCell className="one_world_consumptionTable" align="right">Consumption</TableCell>
                         <TableCell className="one_world_supplychainTable" align="right">Supply Chain</TableCell>
                         <TableCell className="one_world_CO2Table" align="right">CO2</TableCell>
-                        <TableCell className="one_world_offsetcostTable" align="right">Offset Cost</TableCell>
+                        <TableCell className="one_world_offsetcostTable" align="right">Offset</TableCell>
                         <TableCell className="one_world_deleteTable" align="right"></TableCell>
                       </TableRow>
                     </TableHead>
