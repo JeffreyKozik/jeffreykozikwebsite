@@ -19,10 +19,15 @@ const GiveBackHackVol = () => (
                     volunteering website.
                 </h3>
                 <iframe
-                        src="https://codesandbox.io/embed/givebackhack-vol-q8n85?fontsize=14"
+                        src="https://codesandbox.io/embed/givebackhack-vol-q8n85?fontsize=14&module=%2Fvol.html"
                         style={{width: '100%', height: '500px', border: '0', borderRadius: '4px', overflow: 'hidden'}}
                         title="GiveBackHack Vol"
                 ></iframe>
+                <p className="page_description">
+                    Navigate to <a href="https://q8n85.csb.app/vol.html"> https://q8n85.csb.app/vol.html </a> on the codesandbox embedded browser and
+                    <a href="https://q8n85.csb.app/friends.html"> https://q8n85.csb.app/vol.html </a> on the codesandbox embedded browser to see the
+                    pages that I created.
+                </p>
                 <p className="page_description">
                     Vol was intended to be a website that would help users easily find volunteering opportunities in their communities.
                     In my experience it`&apos;`s always been hard to find a centralized place that lists volunteering opportunities. Typically for me
