@@ -2,6 +2,9 @@ import * as React from "react"
 import "../page_styling/pages.css"
 import Seo from "../components/seo"
 
+import volhtml from "../images/volhtml.png";
+import friendshtml from "../images/friendshtml.png"
+
 // allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
 // sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow scripts"
 
@@ -29,6 +32,8 @@ const GiveBackHackVol = () => (
                     pages that I created. The website is quite buggy because it was a very preliminary prototype and it hasn&apos;t been updated since 2019.
                     There&apos;s no need to sign up or login (the database supporting this feature has been deactivated) simply click on the links I@apos;ve provided to see the front end design.
                 </p>
+                <img className="page_video" src={volhtml} alt="aircharger2"/>
+                <img className="page_video" src={friendshtml} alt="aircharger2"/>
                 <p className="page_description">
                     Vol was intended to be a website that would help users easily find volunteering opportunities in their communities.
                     In my experience it&apos;s always been hard to find a centralized place that lists volunteering opportunities. Typically for me
