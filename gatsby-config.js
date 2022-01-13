@@ -6,6 +6,7 @@ module.exports = {
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
   plugins: [
+    `lodash`,
     `dangerously-set-html-content`,
     `react-script-tag`,
     `xtypejs`,

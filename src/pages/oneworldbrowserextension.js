@@ -23,6 +23,8 @@ import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 
 import xtype from 'xtypejs'
 
+import _ from 'lodash'
+
 const animatedComponentsConsumption = makeAnimated();
 let consumptionOptions = [
 '1.1.1.1 Rice',
@@ -471,8 +473,8 @@ class OneWorldBrowserExtension extends React.Component {
         )
     }
 
-    createData(name, cost, consumption, supply_chain, co2, offset_cost){
-        return {name, cost, consumption, supply_chain, co2, offset_cost}
+    createData(name, cost, consumption, supply_chain, co2, offset_cost, row_num){
+        return {name, cost, consumption, supply_chain, co2, offset_cost, row_num}
     }
 
     constructor(props){
@@ -492,8 +494,9 @@ class OneWorldBrowserExtension extends React.Component {
         let cost = <TextField id="standard-basic" placeholder="$10..." variant="standard" value=""/>;
         let co2 = 0;
         let offset_cost = "$0";
+        let row_num = 0;
 
-        let firstRow = this.createData(name, cost, consumptionSelect, supplyChainSelect, co2, offset_cost);
+        let firstRow = this.createData(name, cost, consumptionSelect, supplyChainSelect, co2, offset_cost, row_num);
         // firstRow = Array.from(firstRow);
         // let rows = [firstRow];
         // do this.createData save that to a variable
@@ -518,6 +521,7 @@ class OneWorldBrowserExtension extends React.Component {
             console.log("this.state.rows[" + i.toString(10) + "].supplyChainSelect: " + this.state.rows[i].supply_chain);
             // console.log("this.state.rows[" + i.toString(10) + "].co2: " + this.state.rows[i].co2.toString(10));
             console.log("this.state.rows[" + i.toString(10) + "].offset_cost: " + this.state.rows[i].offset_cost);
+            console.log("this.state.rows[" + i.toString(10) + "].offset_cost: " + this.state.rows[i].row_num);
         }
     }
 
@@ -528,9 +532,10 @@ class OneWorldBrowserExtension extends React.Component {
         let cost2 = <TextField id="standard-basic" placeholder="$10..." variant="standard" value=""/>;
         let co22 = 0;
         let offset_cost2 = "$0";
+        let row_num2 = this.state.rows.length;
 
         // let oldRows = Array.from(this.state.rows);
-        let nextRow = this.createData(name2, cost2, consumptionSelect2, supplyChainSelect2, co22, offset_cost2);
+        let nextRow = this.createData(name2, cost2, consumptionSelect2, supplyChainSelect2, co22, offset_cost2, row_num2);
         // nextRow = Array.from(nextRow);
         // let newRows = oldRows.push(nextRow);
         //
@@ -557,11 +562,28 @@ class OneWorldBrowserExtension extends React.Component {
             console.log("this.state.rows[" + i.toString(10) + "].supplyChainSelect: " + this.state.rows[i].supply_chain);
             // console.log("this.state.rows[" + i.toString(10) + "].co2: " + this.state.rows[i].co2.toString(10));
             console.log("this.state.rows[" + i.toString(10) + "].offset_cost: " + this.state.rows[i].offset_cost);
+            console.log("this.state.rows[" + i.toString(10) + "].offset_cost: " + this.state.rows[i].row_num);
         }
     }
 
-    deleteRowFunction(){
+    deleteRowFunction(row_num){
+        let oldRows = Array.from(this.state.rows);
+        let oldRowsClone = _.cloneDeep(oldRows);
+        oldRowsClone.splice(row_num, 1);
+        this.setState({
+            rows : Array.from(oldRowsClone)
+        });
 
+        for(let i = 0; i < this.state.rows.length; i++){
+            console.log("this.state.rows[" + i.toString(10) + "]" + this.state.rows[i]);
+            console.log("this.state.rows[" + i.toString(10) + "].name: " + this.state.rows[i].name);
+            console.log("this.state.rows[" + i.toString(10) + "].cost: " + this.state.rows[i].cost);
+            console.log("this.state.rows[" + i.toString(10) + "].consumptionSelect: " + this.state.rows[i].consumption);
+            console.log("this.state.rows[" + i.toString(10) + "].supplyChainSelect: " + this.state.rows[i].supply_chain);
+            // console.log("this.state.rows[" + i.toString(10) + "].co2: " + this.state.rows[i].co2.toString(10));
+            console.log("this.state.rows[" + i.toString(10) + "].offset_cost: " + this.state.rows[i].offset_cost);
+            console.log("this.state.rows[" + i.toString(10) + "].offset_cost: " + this.state.rows[i].row_num);
+        }
     }
 
     offsetFunction(){
@@ -608,7 +630,7 @@ class OneWorldBrowserExtension extends React.Component {
                                 <TableCell style={{overflow: "visible"}} className="one_world_supplychainTable" align="right">{row.supply_chain}</TableCell>
                                 <TableCell className="one_world_CO2Table" align="right"><div>{row.co2} kg</div></TableCell>
                                 <TableCell className="one_world_offsetcostTable" align="right"><div>{row.offset_cost}</div></TableCell>
-                                <TableCell className="one_world_deleteTable" align="right"><FontAwesomeIcon icon={faTrashAlt} id="delete_row_button"/></TableCell>
+                                <TableCell className="one_world_deleteTable" align="right"><button onClick={`deleteRowFunction(${row.row_num})`}><FontAwesomeIcon icon={faTrashAlt} id="delete_row_button"/></button></TableCell>
                             </TableRow>
                         )}
                     </TableBody>
