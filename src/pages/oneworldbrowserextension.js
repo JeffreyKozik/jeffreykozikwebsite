@@ -488,8 +488,8 @@ class OneWorldBrowserExtension extends React.Component {
         console.log("consumptionSelect: " + consumptionSelect);
         let supplyChainSelect = this.generateSupplyChainOptions();
         console.log("supplyChainSelect: " + supplyChainSelect);
-        let name = "";
-        let cost = "";
+        let name = <TextField id="standard-basic" placeholder="Apples..." variant="standard" value=""/>;
+        let cost = <TextField id="standard-basic" placeholder="$10..." variant="standard" value=""/>;
         let co2 = 0;
         let offset_cost = "$0";
 
@@ -524,8 +524,8 @@ class OneWorldBrowserExtension extends React.Component {
     addRowFunction(){
         let consumptionSelect2 = this.generateConsumptionOptions();
         let supplyChainSelect2 = this.generateSupplyChainOptions();
-        let name2 = "";
-        let cost2 = "";
+        let name2 = <TextField id="standard-basic" placeholder="Apples..." variant="standard" value=""/>;
+        let cost2 = <TextField id="standard-basic" placeholder="$10..." variant="standard" value=""/>;
         let co22 = 0;
         let offset_cost2 = "$0";
 
@@ -602,8 +602,8 @@ class OneWorldBrowserExtension extends React.Component {
                     <TableBody style={{overflow: "visible"}}>
                         {this.state.rows.map((row) =>
                             <TableRow style={{overflow: "visible"}}>
-                                <TableCell className="one_world_nameTable"><TextField id="standard-basic" placeholder="Apples..." variant="standard" value={row.name}/></TableCell>
-                                <TableCell className="one_world_costTable" align="right"><TextField id="standard-basic" placeholder="$10..." variant="standard" value={row.cost}/></TableCell>
+                                <TableCell className="one_world_nameTable">{row.name}</TableCell>
+                                <TableCell className="one_world_costTable" align="right">{row.cost}</TableCell>
                                 <TableCell style={{overflow: "visible"}} className="one_world_consumptionTable" align="right">{row.consumption}</TableCell>
                                 <TableCell style={{overflow: "visible"}} className="one_world_supplychainTable" align="right">{row.supply_chain}</TableCell>
                                 <TableCell className="one_world_CO2Table" align="right"><div>{row.co2} kg</div></TableCell>
