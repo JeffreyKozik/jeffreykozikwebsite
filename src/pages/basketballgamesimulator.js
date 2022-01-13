@@ -12,7 +12,8 @@ function createEmbedMarkup() {
 }
 
 // <InnerHTML className="page_video" html={createEmbedMarkup().__html} />
-
+// ^^ !!!!!!!!!!!!! use the innerhtml element, and then position it after the fact. Potentially even use everything through innerHTML for this
+// page
 
 const BasketballGameSimulator = () => (
     <>
