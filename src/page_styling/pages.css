@@ -48,6 +48,5 @@ body {
 @media (max-width: 768) {
     .page_container{
         width: 640px;
-        background-color: red;
     }
 }
