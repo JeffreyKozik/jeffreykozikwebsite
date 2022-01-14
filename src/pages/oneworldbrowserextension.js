@@ -487,9 +487,9 @@ class OneWorldBrowserExtension extends React.Component {
         this.deleteRowFunction = this.deleteRowFunction.bind(this);
 
         let consumptionSelect = this.generateConsumptionOptions();
-        console.log("consumptionSelect: " + consumptionSelect);
+        // console.log("consumptionSelect: " + consumptionSelect);
         let supplyChainSelect = this.generateSupplyChainOptions();
-        console.log("supplyChainSelect: " + supplyChainSelect);
+        // console.log("supplyChainSelect: " + supplyChainSelect);
         let name = <TextField id="standard-basic" placeholder="Apples..." variant="standard" value=""/>;
         let cost = <TextField id="standard-basic" placeholder="$10..." variant="standard" value=""/>;
         let co2 = 0;
@@ -506,10 +506,10 @@ class OneWorldBrowserExtension extends React.Component {
             rows : [firstRow]
         }
 
-        console.log("rows" + this.state.rows);
-        console.log("type of rows" + xtype(this.state.rows));
-        console.log("consumptionSelect: " + consumptionSelect);
-        console.log("supplyChainSelect: " + supplyChainSelect);
+        // console.log("rows" + this.state.rows);
+        // console.log("type of rows" + xtype(this.state.rows));
+        // console.log("consumptionSelect: " + consumptionSelect);
+        // console.log("supplyChainSelect: " + supplyChainSelect);
 
 
 
