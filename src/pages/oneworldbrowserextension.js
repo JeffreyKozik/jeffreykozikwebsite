@@ -645,7 +645,8 @@ class OneWorldBrowserExtension extends React.Component {
                 <p className="page_description">
                     Products are automatically categorized by using an Azure Function which utilizes the Bing API to search the name of the product
                     and compare the words in the results with the words in the results of Bing searches for each of the categories via nltk and sklearn's TFIDF vectorization.
-                    Then the user is able to easily offset their carbon emissions using Patch. I've also tried approaches using Google Cloud's Google Cloud Function, Google Cloud Run (with Docker) and VADER.
+                    Then the user is able to easily offset their carbon emissions using Patch. I've also tried approaches using Google Cloud's Google Cloud Function, Google Cloud Run (with Docker) and VADER
+                    sentiment analysis.
                 </p>
                 <p className="page_description">
                     Note: in the video, there's a calculation error that has been corrected now. In the video I say 1t = 100kg but in fact 1t = 1000kg.
