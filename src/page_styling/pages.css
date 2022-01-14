@@ -4,6 +4,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    background-color: yellow;
 }
 
 @media only screen and (max-width: 1280) {
@@ -13,6 +14,7 @@ body {
         flex-direction: column;
         font-family: 'Rubik', sans-serif;
         width: 640px;
+        background-color: red;
     }
 }
 
@@ -25,6 +27,7 @@ body {
         /* margin-left: 25%;
         margin-right: 25%; */
         width: 50vw;
+        background-color: red;
     }
 }
 
