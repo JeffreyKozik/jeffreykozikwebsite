@@ -28,21 +28,16 @@ const Sciquel = () => (
                 <video controls preload="auto" className="page_video">
                     <source src={demoVideo} type="video/mp4"></source>
                 </video>
-                <p className="page_description">
-                    The images above show the homepage which is what I worked on mostly. I initially used Bootstrap, but eventually switched to flexbox because I wanted a little bit more
-                    customization on the components. I also worked hard to make this page responsive (as you can see in the video below) which
-                    was especially tricky because of the overlapping components. My teammate worked on header and footer and the rest of the pages screenshotted below.
-                </p>
                 <img className="page_video" src={sciquelhomepage1}></img>
                 <img className="page_video" src={sciquelhomepage2andfooter}></img>
-                <p className="page_description">
-                    The images above show the homepage which is what I worked on mostly. I initially used Bootstrap, but eventually switched to flexbox because I wanted a little bit more
-                    customization on the components. I also worked hard to make this page responsive (as you can see in the video below) which
-                    was especially tricky because of the overlapping components. My teammate worked on header and footer and the rest of the pages screenshotted below.
-                </p>
                 <video controls preload="auto" className="page_video">
                     <source src={responsiveVideo} type="video/mp4"></source>
                 </video>
+                <p className="page_description">
+                    The images and video above show the homepage which is what I worked on mostly. I initially used Bootstrap, but eventually switched to flexbox because I wanted a little bit more
+                    customization on the components. I also worked hard to make this page responsive (as you can see in the video above) which
+                    was especially tricky because of the overlapping components. My teammate worked on header and footer and the rest of the pages screenshotted below.
+                </p>
                 <img className="page_video" src={sciquelarticlepage}></img>
                 <img className="page_video" src={sciquelarticlepage2}></img>
                 <img className="page_video" src={sciquelaboutuspage}></img>
