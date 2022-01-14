@@ -608,7 +608,7 @@ class OneWorldBrowserExtension extends React.Component {
                 <video controls className="page_video">
                     <source src={demoVideo} type="video/mp4"></source>
                 </video>
-                <TableContainer style={{overflow: "auto"}} component={Paper} id="one_world_table_container">
+                <TableContainer style={{overflowX: "auto", overflowY: "visible"}} component={Paper} id="one_world_table_container">
                   <Table style={{overflow: "visible"}} aria-label="simple table" id="one_world_table">
                     <TableHead>
                       <TableRow>
