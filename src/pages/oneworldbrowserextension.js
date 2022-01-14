@@ -539,7 +539,7 @@ class OneWorldBrowserExtension extends React.Component {
         let oldRows = Array.from(this.state.rows);
         let oldRowsClone = _.cloneDeep(oldRows);
         oldRowsClone.push(nextRow);
-        
+
         this.setState({
             rows : Array.from(oldRowsClone)
         });
@@ -605,8 +605,8 @@ class OneWorldBrowserExtension extends React.Component {
                 <video controls className="page_video">
                     <source src={demoVideo} type="video/mp4"></source>
                 </video>
-                <TableContainer style={{overflowX: "auto", overflowY: "visible"}} component={Paper} id="one_world_table_container">
-                  <Table style={{overflow: "visible"}} aria-label="simple table" id="one_world_table">
+                <TableContainer style={{overflowX: "auto", overflowY: "visible !important"}} component={Paper} id="one_world_table_container">
+                  <Table style={{overflowY: "visible !important"}} aria-label="simple table" id="one_world_table">
                     <TableHead>
                       <TableRow>
                         <TableCell className="one_world_nameTable">Name</TableCell>
@@ -618,13 +618,13 @@ class OneWorldBrowserExtension extends React.Component {
                         <TableCell className="one_world_deleteTable" align="right"></TableCell>
                       </TableRow>
                     </TableHead>
-                    <TableBody style={{overflow: "visible"}}>
+                    <TableBody style={{overflowY: "visible !important"}}>
                         {this.state.rows.map((row) =>
-                            <TableRow style={{overflow: "visible"}}>
+                            <TableRow style={{overflowY: "visible !important"}}>
                                 <TableCell className="one_world_nameTable">{row.name}</TableCell>
                                 <TableCell className="one_world_costTable" align="right">{row.cost}</TableCell>
-                                <TableCell style={{overflow: "visible"}} className="one_world_consumptionTable" align="right">{row.consumption}</TableCell>
-                                <TableCell style={{overflow: "visible"}} className="one_world_supplychainTable" align="right">{row.supply_chain}</TableCell>
+                                <TableCell style={{overflowY: "visible !important"}} className="one_world_consumptionTable" align="right">{row.consumption}</TableCell>
+                                <TableCell style={{overflowY: "visible !important"}} className="one_world_supplychainTable" align="right">{row.supply_chain}</TableCell>
                                 <TableCell className="one_world_CO2Table" align="right"><div>{row.co2} kg</div></TableCell>
                                 <TableCell className="one_world_offsetcostTable" align="right"><div>{row.offset_cost}</div></TableCell>
                                 <TableCell className="one_world_deleteTable" align="right"><button onClick={() => this.deleteRowFunction(row.row_num)}><FontAwesomeIcon icon={faTrashAlt} id="delete_row_button"/></button></TableCell>
