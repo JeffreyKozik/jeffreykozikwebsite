@@ -4,7 +4,6 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-color: yellow;
 }
 
 .page_container{
@@ -12,9 +11,8 @@ body {
     display: flex;
     flex-direction: column;
     font-family: 'Rubik', sans-serif;
-    /* margin-left: 25%;
-    margin-right: 25%; */
-    background-color: red;
+    margin-left: 25%;
+    margin-right: 25%;
 }
 
 .page_title {
@@ -43,17 +41,17 @@ body {
     width: 100%;
 }
 
-@media (min-width: 1024) {
+/* @media (min-width: 1024) {
     .page_container{
         margin-left: 25%;
         margin-right: 25%;
     }
-}
+} */
 
 /* ipad and smaller */
-@media (max-width: 1024) {
+/* @media (max-width: 1024) {
     .page_container{
         margin-left: calc(100vw - 512px);
         margin-right: calc(100vw - 512px);
     }
-}
+} */
