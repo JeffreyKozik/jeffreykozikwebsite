@@ -7,29 +7,24 @@ body {
     background-color: yellow;
 }
 
-@media only screen and (max-width: 1280) {
+.page_container{
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Rubik', sans-serif;
+    /* margin-left: 25%;
+    margin-right: 25%; */
+    width: 50vw;
+    background-color: red;
+}
+
+@media (max-width: 1280) {
     .page_container{
-        align-items: flex-start;
-        display: flex;
-        flex-direction: column;
-        font-family: 'Rubik', sans-serif;
         width: 640px;
         background-color: red;
     }
 }
 
-@media only screen and (min-width: 1280) {
-    .page_container{
-        align-items: flex-start;
-        display: flex;
-        flex-direction: column;
-        font-family: 'Rubik', sans-serif;
-        /* margin-left: 25%;
-        margin-right: 25%; */
-        width: 50vw;
-        background-color: red;
-    }
-}
 
 .page_title {
   align-self: flex-start;
