@@ -45,8 +45,8 @@ body {
 }
 
 /* ipad and smaller */
-@media (max-width: 768) {
+@media (max-width: 1024) {
     .page_container{
-        width: 640px;
+        width: 512;
     }
 }
