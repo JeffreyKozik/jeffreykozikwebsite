@@ -18,14 +18,6 @@ body {
     background-color: red;
 }
 
-@media (max-width: 1280) {
-    .page_container{
-        width: 640px;
-        background-color: red;
-    }
-}
-
-
 .page_title {
   align-self: flex-start;
   margin-bottom: 0;
@@ -50,4 +42,12 @@ body {
     align-self: center;
     line-height: 1.8;
     width: 100%;
+}
+
+/* ipad and smaller */
+@media (max-width: 768) {
+    .page_container{
+        width: 640px;
+        background-color: red;
+    }
 }
