@@ -446,9 +446,6 @@ let supplyChainOptions = [
 'Services of households as employers of domestic personnel'
 ];
 
-// <TableContainer style={{overflow: "visible"}} component={Paper} id="one_world_table_container">
-
-
 class OneWorldBrowserExtension extends React.Component {
     generateConsumptionOptions(){
 
@@ -611,6 +608,7 @@ class OneWorldBrowserExtension extends React.Component {
                 <video controls className="page_video">
                     <source src={demoVideo} type="video/mp4"></source>
                 </video>
+                <TableContainer style={{overflow: "auto"}} component={Paper} id="one_world_table_container">
                   <Table style={{overflow: "visible"}} aria-label="simple table" id="one_world_table">
                     <TableHead>
                       <TableRow>
@@ -637,6 +635,7 @@ class OneWorldBrowserExtension extends React.Component {
                         )}
                     </TableBody>
                   </Table>
+                </TableContainer>
                 <Button onClick={this.addRowFunction} variant="text" id="one_world_add_row_button"> Add Row </Button>
                 <Button onClick={this.offsetFunction} variant="text" id="one_world_offset_row_button"> Offset CO2 </Button>
                 <p className="page_description">
