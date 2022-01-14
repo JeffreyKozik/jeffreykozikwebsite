@@ -534,22 +534,19 @@ class OneWorldBrowserExtension extends React.Component {
         let offset_cost2 = "$0";
         let row_num2 = this.state.rows.length;
 
-        // let oldRows = Array.from(this.state.rows);
         let nextRow = this.createData(name2, cost2, consumptionSelect2, supplyChainSelect2, co22, offset_cost2, row_num2);
-        // nextRow = Array.from(nextRow);
-        // let newRows = oldRows.push(nextRow);
-        //
-        // this.setState({
-        //     rows : Array.from(newRows)
-        // });
+
+        let oldRows = Array.from(this.state.rows);
+        let oldRowsClone = _.cloneDeep(oldRows);
+        oldRowsClone.push(nextRow);
+        
+        this.setState({
+            rows : Array.from(oldRowsClone)
+        });
 
         // this.setState(previousState => ({
-        //     myArray: [...previousState.myArray, 'new value']
+        //     rows: [...previousState.rows, nextRow]
         // }));
-
-        this.setState(previousState => ({
-            rows: [...previousState.rows, nextRow]
-        }));
 
         console.log("rows" + this.state.rows);
         console.log("type of rows" + xtype(this.state.rows));
