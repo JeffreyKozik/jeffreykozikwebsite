@@ -14,7 +14,6 @@ body {
     font-family: 'Rubik', sans-serif;
     /* margin-left: 25%;
     margin-right: 25%; */
-    width: 50vw;
     background-color: red;
 }
 
@@ -42,6 +41,12 @@ body {
     align-self: center;
     line-height: 1.8;
     width: 100%;
+}
+
+@media (min-width: 1024) {
+    .page_container{
+        width: 50vw;
+    }
 }
 
 /* ipad and smaller */
