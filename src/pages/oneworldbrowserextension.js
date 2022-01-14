@@ -609,7 +609,7 @@ class OneWorldBrowserExtension extends React.Component {
                     <source src={demoVideo} type="video/mp4"></source>
                 </video>
                 <TableContainer style={{overflow: "visible"}} component={Paper} id="one_world_table_container">
-                  <Table style={{overflow: "visible"}} sx={{ minWidth: 650 }} aria-label="simple table" id="one_world_table">
+                  <Table style={{overflow: "visible"}} aria-label="simple table" id="one_world_table">
                     <TableHead>
                       <TableRow>
                         <TableCell className="one_world_nameTable">Name</TableCell>
