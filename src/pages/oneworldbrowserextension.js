@@ -446,7 +446,7 @@ let supplyChainOptions = [
 'Services of households as employers of domestic personnel'
 ];
 
-import {useMediaQuery} from '../hooks';
+import {useMediaQuery} from '../hooks/useMediaQuery';
 
 const styles = {
   page_container: isIPAD => ({
