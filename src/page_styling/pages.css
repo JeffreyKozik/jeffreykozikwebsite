@@ -41,17 +41,17 @@ body {
     width: 100%;
 }
 
-@media (min-width: 820) {
+/* @media (min-width: 820) {
     .page_container{
         margin-left: 25% !important;
         margin-right: 25% !important;
     }
-}
+} */
 
 /* ipad and smaller */
-@media (max-width: 820) {
+/* @media (max-width: 820) {
     .page_container{
         margin-left: 0 !important;
         margin-right: 0 !important;
     }
-}
+} */
