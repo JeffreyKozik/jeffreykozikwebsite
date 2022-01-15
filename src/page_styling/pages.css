@@ -11,8 +11,8 @@ body {
     display: flex;
     flex-direction: column;
     font-family: 'Rubik', sans-serif;
-    margin-left: 0;
-    margin-right: 0;
+    /* margin-left: 0;
+    margin-right: 0; */
 }
 
 .page_title {
@@ -49,9 +49,9 @@ body {
 }
 
 /* ipad and smaller */
-/* @media (max-width: 820) {
+@media (max-width: 820) {
     .page_container{
         margin-left: 0 !important;
         margin-right: 0 !important;
     }
-} */
+}
