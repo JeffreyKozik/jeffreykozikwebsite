@@ -605,7 +605,6 @@ class OneWorldBrowserExtension extends React.Component {
                 <video controls className="page_video">
                     <source src={demoVideo} type="video/mp4"></source>
                 </video>
-                <div style={{overflowX: "auto", overflowY: "visible !important"}} component={Paper} id="one_world_table_container">
                   <table style={{overflowY: "visible !important"}} aria-label="simple table" id="one_world_table">
                       <tr>
                         <td className="one_world_nameTable">Name</td>
@@ -628,7 +627,6 @@ class OneWorldBrowserExtension extends React.Component {
                         </tr>
                     )}
                   </table>
-                </div>
                 <Button onClick={this.addRowFunction} variant="text" id="one_world_add_row_button"> Add Row </Button>
                 <Button onClick={this.offsetFunction} variant="text" id="one_world_offset_row_button"> Offset CO2 </Button>
                 <p className="page_description">
