@@ -528,8 +528,8 @@ class OneWorldBrowserExtension extends React.Component {
     addRowFunction(){
         let consumptionSelect2 = this.generateConsumptionOptions();
         let supplyChainSelect2 = this.generateSupplyChainOptions();
-        let name2 = <TextField id="standard-basic" placeholder="Apples..." variant="standard" value=""/>;
-        let cost2 = <TextField id="standard-basic" placeholder="$10..." variant="standard" value=""/>;
+        let name2 = <TextField placeholder="Apples..." variant="standard" value=""/>;
+        let cost2 = <TextField placeholder="$10..." variant="standard" value=""/>;
         let co22 = 0;
         let offset_cost2 = "$0";
         let row_num2 = this.state.rows.length;
