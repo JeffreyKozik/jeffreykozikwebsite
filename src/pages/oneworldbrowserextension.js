@@ -605,34 +605,30 @@ class OneWorldBrowserExtension extends React.Component {
                 <video controls className="page_video">
                     <source src={demoVideo} type="video/mp4"></source>
                 </video>
-                <TableContainer style={{overflowX: "auto", overflowY: "visible !important"}} component={Paper} id="one_world_table_container">
-                  <Table style={{overflowY: "visible !important"}} aria-label="simple table" id="one_world_table">
-                    <TableHead>
-                      <TableRow>
-                        <TableCell className="one_world_nameTable">Name</TableCell>
-                        <TableCell className="one_world_costTable" align="right">Cost</TableCell>
-                        <TableCell className="one_world_consumptionTable" align="right">Consumption</TableCell>
-                        <TableCell className="one_world_supplychainTable" align="right">Supply Chain</TableCell>
-                        <TableCell className="one_world_CO2Table" align="right">CO2</TableCell>
-                        <TableCell className="one_world_offsetcostTable" align="right">Offset</TableCell>
-                        <TableCell className="one_world_deleteTable" align="right"></TableCell>
-                      </TableRow>
-                    </TableHead>
-                    <TableBody style={{overflowY: "visible !important"}}>
-                        {this.state.rows.map((row) =>
-                            <TableRow style={{overflowY: "visible !important"}}>
-                                <TableCell className="one_world_nameTable">{row.name}</TableCell>
-                                <TableCell className="one_world_costTable" align="right">{row.cost}</TableCell>
-                                <TableCell style={{overflowY: "visible !important"}} className="one_world_consumptionTable" align="right">{row.consumption}</TableCell>
-                                <TableCell style={{overflowY: "visible !important"}} className="one_world_supplychainTable" align="right">{row.supply_chain}</TableCell>
-                                <TableCell className="one_world_CO2Table" align="right"><div>{row.co2} kg</div></TableCell>
-                                <TableCell className="one_world_offsetcostTable" align="right"><div>{row.offset_cost}</div></TableCell>
-                                <TableCell className="one_world_deleteTable" align="right"><button onClick={() => this.deleteRowFunction(row.row_num)}><FontAwesomeIcon icon={faTrashAlt} id="delete_row_button"/></button></TableCell>
-                            </TableRow>
-                        )}
-                    </TableBody>
-                  </Table>
-                </TableContainer>
+                <div style={{overflowX: "auto", overflowY: "visible !important"}} component={Paper} id="one_world_table_container">
+                  <table style={{overflowY: "visible !important"}} aria-label="simple table" id="one_world_table">
+                      <tr>
+                        <td className="one_world_nameTable">Name</td>
+                        <td className="one_world_costTable" align="right">Cost</td>
+                        <td className="one_world_consumptionTable" align="right">Consumption</td>
+                        <td className="one_world_supplychainTable" align="right">Supply Chain</td>
+                        <td className="one_world_CO2Table" align="right">CO2</td>
+                        <td className="one_world_offsetcostTable" align="right">Offset</td>
+                        <td className="one_world_deleteTable" align="right"></td>
+                      </tr>
+                    {this.state.rows.map((row) =>
+                        <tr style={{overflowY: "visible !important"}}>
+                            <td className="one_world_nameTable">{row.name}</td>
+                            <td className="one_world_costTable" align="right">{row.cost}</td>
+                            <td style={{overflowY: "visible !important"}} className="one_world_consumptionTable" align="right">{row.consumption}</td>
+                            <td style={{overflowY: "visible !important"}} className="one_world_supplychainTable" align="right">{row.supply_chain}</td>
+                            <td className="one_world_CO2Table" align="right"><div>{row.co2} kg</div></td>
+                            <td className="one_world_offsetcostTable" align="right"><div>{row.offset_cost}</div></td>
+                            <td className="one_world_deleteTable" align="right"><button onClick={() => this.deleteRowFunction(row.row_num)}><FontAwesomeIcon icon={faTrashAlt} id="delete_row_button"/></button></td>
+                        </tr>
+                    )}
+                  </table>
+                </div>
                 <Button onClick={this.addRowFunction} variant="text" id="one_world_add_row_button"> Add Row </Button>
                 <Button onClick={this.offsetFunction} variant="text" id="one_world_offset_row_button"> Offset CO2 </Button>
                 <p className="page_description">

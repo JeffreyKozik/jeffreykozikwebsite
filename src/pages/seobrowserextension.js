@@ -21,7 +21,7 @@ const SeoBrowserExtension = () => (
                 <p className="page_description">
                     This browser extension is in the hands of the owner of site-checker.org at the moment and they have chosen not to release it on the chrome extension
                     store yet. However, the video above gives a good idea of what the browser extension does. To be clear, I did not code any of <a href="site-checker.org">site-checker.org</a>
-                    I coded the browser extension which easily opens a new tab analyzing the current website's SEO.
+                     I coded the browser extension which easily opens a new tab analyzing the current website's SEO.
                 </p>
             </div>
         </body>
