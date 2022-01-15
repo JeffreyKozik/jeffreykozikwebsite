@@ -49,9 +49,9 @@ body {
 } */
 
 /* ipad and smaller */
-@media (max-width: 769) {
+@media (max-width: 1024) {
     .page_container{
-        margin-left: 0 !important;
-        margin-right: 0 !important;
+        margin-left: calc(100vw - 768px + 2vw) !important;
+        margin-right: calc(100vw - 768px + 2vw) !important;
     }
 }
