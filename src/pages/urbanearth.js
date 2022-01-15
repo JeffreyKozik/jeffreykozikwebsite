@@ -29,7 +29,7 @@ const UrbanEarth  = () => (
                     Storyboard for the frontend, Swift for the in-app logic, and Firebase Authentication for the backend storing of users.
                 </p>
                 <img className="page_video" src={urbanEarthLogin}></img>
-                <img className="page_video" src={urbanEarthSignup}></img>
+                <img className="page_video" src={urbanEarthSignUp}></img>
                 <p className="page_description">
                     The next page below is the "Record" page which I did most of the work on. As this project was for a class at school, we only had a limited time
                     and thus the UI of this page could use some improvement, but the functionality is pretty much all there. A user can select what form of transportation
@@ -39,18 +39,19 @@ const UrbanEarth  = () => (
                     kg CO2 saved is calculated by comparing how much CO2 would have been emitted if the person traveled by an average gas car minus how much CO2 was
                     emitted by the form of transportation they actually used.
                 </p>
-                <img className="page_video" src={urbanEarthStats}></img>
+                <img className="page_video" src={urbanEarthRecord}></img>
                 <p className="page_description">
                     The "Stats" page which my partner and I contributed to on a roughly equal level, easily shows the user their sustainable transportation
                     trends over time. Once again, all of this information is stored in Firestore and the frontend was created with a library called
                     <a href="https://github.com/danielgindi/Charts">Charts</a>.
                 </p>
-                <img className="page_video" src={urbanEarthFriends}></img>
+                <img className="page_video" src={urbanEarthStats}></img>
                 <p className="page_description">
                     Finally, the last page that we were planning on implementing, and which we will implement if we continue this project forwards
                     is the Friends page. Currently this is an empty page, but our plans were for people to be able to be "friends" with their
                     friends and family on the app and see their "friends" sustainability scores as well to motivate them and help form a community.
                 </p>
+                <img className="page_video" src={urbanEarthFriends}></img>
             </div>
         </body>
     </>
