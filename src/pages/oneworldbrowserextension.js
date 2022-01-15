@@ -446,9 +446,7 @@ let supplyChainOptions = [
 'Services of households as employers of domestic personnel'
 ];
 
-import {useMediaQuery} from '../hooks/useMediaQuery';
-import {useEffect, useState} from 'react';
-
+import {useMediaQuery} from '../hooks';
 
 const styles = {
   page_container: isIPAD => ({
@@ -600,15 +598,7 @@ class OneWorldBrowserExtension extends React.Component {
     }
 
     render(){
-        const mediaMatch = window.matchMedia('(max-width: 820px)');
-        const [matches, setMatches] = useState(mediaMatch.matches);
-
-         useEffect(() => {
-            const handler = e => setMatches(e.matches);
-            mediaMatch.addListener(handler);
-            return () => mediaMatch.removeListener(handler);
-         });
-
+        const isIPAD = useMediaQuery('(max-width: 820px)');
     return(
     <>
         <head>
@@ -616,7 +606,7 @@ class OneWorldBrowserExtension extends React.Component {
         </head>
         <body>
             <Seo title="One World Browser Extension" />
-            <div className="page_container" style={styles.page_container(matches)}>
+            <div className="page_container" style={styles.page_container(isIPAD)}>
                 <h1 className="page_title"> One World Browser Extension </h1>
                 <h3 className="page_subtitle">
                     The One World Browser Extension is used in conjunction with a Square Business account to easily offset a
