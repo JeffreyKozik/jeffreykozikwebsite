@@ -1,10 +1,11 @@
 import * as React from "react"
-import urbanEarthDemoVideo from "../images/sciqueldemofinished.mp4"
-import urbanEarthLogin from "../images/sciquelhomepage1.png"
-import urbanEarthSignUp from "../images/sciquelhomepage2andfooter.png"
-import urbanEarthRecord from "../images/sciquelarticlepage.png"
-import urbanEarthFriends from "../images/sciquelarticlepage2.png"
-import urbanEarthStats from "../images/sciquelaboutuspage.png"
+import urbanEarthDemoVideo from "../images/urbanearthdemospedup.mp4"
+import urbanEarthLogin from "../images/urbanearthlogin.png"
+import urbanEarthSignUp from "../images/urbanearthsignup.png"
+import urbanEarthRecord from "../images/urbanearthrecord.png"
+import urbanEarthStats from "../images/urbanearthstats.png"
+import urbanEarthSettings from "../images/urbanearthsettings.png"
+import urbanEarthLogo from "../images/urbanearthlogo.png"
 import "../page_styling/pages.css"
 import Seo from "../components/seo"
 
@@ -47,11 +48,21 @@ const UrbanEarth  = () => (
                 </p>
                 <img className="page_video" src={urbanEarthStats}></img>
                 <p className="page_description">
+                    The "Settings" page which my partner and I contributed to on a roughly equal level, allows a user to reset their password and also has the front end
+                    done for picking out a sustainability unit and for auto trip tracking (which would allow the app to automatically track user
+                    travel by always tracking location). However, the functionality of these features hasn't been implemented yet.
+                </p>
+                <img className="page_video" src={urbanEarthSettings}></img>
+                <p className="page_description">
                     Finally, the last page that we were planning on implementing, and which we will implement if we continue this project forwards
                     is the Friends page. Currently this is an empty page, but our plans were for people to be able to be "friends" with their
                     friends and family on the app and see their "friends" sustainability scores as well to motivate them and help form a community.
                 </p>
-                <img className="page_video" src={urbanEarthFriends}></img>
+                <p className="page_description">
+                    Also shown below is the logo for Urban Earth, which my partner designed, and a slide deck describing the app in more detail.
+                </p>
+                <img className="page_video" src={urbanEarthLogo}></img>
+                <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQmk0OuoC_DKb1l1LOMnm4xqMSQMcRuHkUDkxdyhd6xSGsKrqf09fmTU5QuTjLbuHpbg_BbHbkXHiAM/embed?start=false&loop=true&delayms=60000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
             </div>
         </body>
     </>
