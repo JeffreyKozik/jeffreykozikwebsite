@@ -1,5 +1,5 @@
 import * as React from "react"
-import multitabdemo from "../images/site-checker.org.mp4"
+import multitabdemo from "../images/multitabedited.mp4"
 import "../page_styling/pages.css"
 import Seo from "../components/seo"
 
