@@ -21,7 +21,8 @@ const MultiTabSearch = () => (
                 <p className="page_description">
                     In the video I had to redact quite a bit of information because it's a business's private clients. However, you can tell from
                     the video that when a name is searched the tabs that have that name change their name to "FOUND" and the ones that aren't
-                    change their names to their corresponding subdomain so it's easier to tell what tab corresponds to what.
+                    change their names to their corresponding subdomain so it's easier to tell what tab corresponds to what. In the video only 2
+                    tabs are shown, but the browser extension can be used with as many tabs as needed, in this case 12 were used by the client.
                 </p>
             </div>
         </body>
