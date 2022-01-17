@@ -14,7 +14,8 @@ const SmrtnrllBrowserExtension = () => (
             <div className="page_container">
                 <h1 className="page_title"> smrtnrll browser extension </h1>
                 <h3 className="page_subtitle">
-                    The smrtnrll browser extension is used by college students to get into classes that are currently full.
+                    The smrtnrll browser extension is used by college students to get into classes that are currently full. Add it to your
+                    browser <a href="https://chrome.google.com/webstore/detail/smrtnrll/faoobmndgioamolfhbnkdegeolmmgnmj?hl=en&authuser=0">here</a>.
                 </h3>
                 <iframe src="https://www.youtube.com/watch?v=59Mph03CJZU" className="page_video">-</iframe>
                 <p className="page_description">
