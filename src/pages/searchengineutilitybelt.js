@@ -44,9 +44,9 @@ const SearchEngineUtilityBelt = () => (
                 </p>
                 <p className="page_description">
                     Overall, this browser extension I coded highlights how pervasive advertising is online which also ties in with how pervasive data collection and tracking is. I think
-                    internet privacy is important and it's great when privacy preserving options are given. I use <a href="https://presearch.org/" target="_blank" rel="noreferrer"> https://presearch.org/</a>. as my
+                    internet privacy is important and it's great when privacy preserving options are given. I use <a href="https://presearch.org" target="_blank" rel="noreferrer"> https://presearch.org/</a> as my
                     primary search engine because it doesn't track me and it rewards me for seeing ads. It's also decentralized and allows members of the community to contribute to the search engine.
-                    I also used <a href="https://search.brave.com" target="_blank" rel="noreferrer"> search.brave.com</a> because it's an independent search engine that doesn't use
+                    I also used <a href="https://search.brave.com" target="_blank" rel="noreferrer"> https://search.brave.com</a> because it's an independent search engine that doesn't use
                     Bing or Google's algorithms for it's results which I think is important so that Big Tech doesn't have too much power. I use <a href="https://www.duckduckgo.com" target="_blank" rel="noreferrer"> https://www.duckduckgo.com</a>
                     as they don't track me either and are 125% carbon negative. Finally, I use <a href="https://www.neeva.com" target="_blank" rel="noreferrer"> https://www.neeva.com</a> because they offer a paid
                     ad free search option.
