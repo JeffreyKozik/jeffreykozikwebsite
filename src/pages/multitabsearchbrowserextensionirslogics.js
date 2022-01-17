@@ -1,5 +1,5 @@
 import * as React from "react"
-import siteChecker from "../images/site-checker.org.mp4"
+import multitabdemo from "../images/site-checker.org.mp4"
 import "../page_styling/pages.css"
 import Seo from "../components/seo"
 
@@ -11,17 +11,17 @@ const MultiTabSearch = () => (
         <body>
             <Seo title="sciquel" />
             <div className="page_container">
-                <h1 className="page_title"> site-checker.org browser extension </h1>
+                <h1 className="page_title"> Search Multiple Tabs Browser Extension </h1>
                 <h3 className="page_subtitle">
-                    Browser extension I coded for the owner of <a href="site-checker.org">site-checker.org</a> to easily get SEO tips for any website.
+                    Custom browser extension I coded so that 12 different tabs could be searched across simultaneously.
                 </h3>
                 <video controls preload="auto" className="page_video">
-                    <source src={siteChecker} type="video/mp4"></source>
+                    <source src={multitabdemo} type="video/mp4"></source>
                 </video>
                 <p className="page_description">
-                    This browser extension is in the hands of the owner of site-checker.org at the moment and they have chosen not to release it on the chrome extension
-                    store yet. However, the video above gives a good idea of what the browser extension does. To be clear, I did not code any of <a href="site-checker.org">site-checker.org</a>
-                     I coded the browser extension which easily opens a new tab analyzing the current website's SEO.
+                    In the video I had to redact quite a bit of information because it's a business's private clients. However, you can tell from
+                    the video that when a name is searched the tabs that have that name change their name to "FOUND" and the ones that aren't
+                    change their names to their corresponding subdomain so it's easier to tell what tab corresponds to what.
                 </p>
             </div>
         </body>
