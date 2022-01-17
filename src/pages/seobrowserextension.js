@@ -9,7 +9,7 @@ const SeoBrowserExtension = () => (
             <meta name="viewport" content="initial-scale=1, width=device-width"/>
         </head>
         <body>
-            <Seo title="sciquel" />
+            <Seo title="SEO Browser Extension" />
             <div className="page_container">
                 <h1 className="page_title"> site-checker.org browser extension </h1>
                 <h3 className="page_subtitle">

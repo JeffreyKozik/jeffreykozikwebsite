@@ -9,7 +9,7 @@ const TotalCostBrowserExtension = () => (
             <meta name="viewport" content="initial-scale=1, width=device-width"/>
         </head>
         <body>
-            <Seo title="sciquel" />
+            <Seo title="Total Cost Browser Extension" />
             <div className="page_container">
                 <h1 className="page_title"> Search Multiple Tabs Browser Extension </h1>
                 <h3 className="page_subtitle">
