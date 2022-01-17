@@ -13,7 +13,7 @@ const SeoBrowserExtension = () => (
             <div className="page_container">
                 <h1 className="page_title"> site-checker.org browser extension </h1>
                 <h3 className="page_subtitle">
-                    Browser extension I coded for the owner of <a href="site-checker.org">site-checker.org</a> to easily get SEO tips for any website.
+                    Browser extension I coded for the owner of <a href="site-checker.org" target="_blank" rel="noreferrer">site-checker.org</a> to easily get SEO tips for any website.
                 </h3>
                 <video controls preload="auto" className="page_video">
                     <source src={siteChecker} type="video/mp4"></source>
