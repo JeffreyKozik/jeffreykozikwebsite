@@ -16,9 +16,7 @@ const SmrtnrllBrowserExtension = () => (
                 <h3 className="page_subtitle">
                     The smrtnrll browser extension is used by college students to get into classes that are currently full.
                 </h3>
-                <video controls preload="auto" className="page_video">
-                    <source src={demoVideo} type="video/mp4"></source>
-                </video>
+                <iframe src="https://www.youtube.com/watch?v=59Mph03CJZU" className="page_video">-</iframe>
                 <p className="page_description">
                     The way it works is by continually refreshing the page and clicking enroll until someone drops the class at which case
                     you are enrolled. I've used this to succesfully get into 2 classes.

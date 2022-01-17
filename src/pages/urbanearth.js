@@ -44,7 +44,7 @@ const UrbanEarth  = () => (
                 <p className="page_description">
                     The "Stats" page which my partner and I contributed to on a roughly equal level, easily shows the user their sustainable transportation
                     trends over time. Once again, all of this information is stored in Firestore and the frontend was created with a library called
-                    <a href="https://github.com/danielgindi/Charts">Charts</a>.
+                    <a href="https://github.com/danielgindi/Charts"> Charts</a>.
                 </p>
                 <img className="page_video" src={urbanEarthStats}></img>
                 <p className="page_description">
