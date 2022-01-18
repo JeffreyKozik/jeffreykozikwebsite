@@ -4,6 +4,8 @@ import './homepage.css';
 // import App from './App';
 // import reportWebVitals from './reportWebVitals';
 
+import ProjectComponent from "./projectcomponent.js"
+
 import Select from 'react-select'
 import makeAnimated from 'react-select/animated'
 const animatedComponents = makeAnimated();
@@ -112,56 +114,69 @@ class Project{
     projectsArray.push(this);
   }
 }
-let harryPotterGame = new Project("Harry Potter Game", "", "", "", "");
-let thomasRobertMalthusPresentation = new Project("Thomas Robert Malthus Presentation", "", "", "", "");
-let basketballGameSimulator = new Project("Basktball Game Simulator", "", "", "", "");
-let gomoku = new Project("Gomoku", "", "", "", "");
-let railyard = new Project("Railyard", "", "", "", "");
-let stringAndArrayManipulation = new Project("String and Array Manipulation", "", "", "", "");
-let sorting = new Project("Sorting", "", "", "", "");
-let hashtable = new Project("Hashtable", "", "", "", "");
-let huffmanEncoder = new Project("Huffman Encoder", "", "", "", "");
-let imperativeInterpreter = new Project("Imperative Interpreter", "", "", "", "");
-let aiProject2 = new Project("AI Project 2", "", "", "", "");
-let aiProject5 = new Project("AI Project 5", "", "", "", "");
-let aiProject6 = new Project("AI Project 6", "", "", "", "");
-let automatedResourceCollection = new Project("Automated Resource Collection", "", "", "", "");
-let smoothNumbers = new Project("Smooth Numbers", "", "", "", "");
-let rsa = new Project("RSA", "", "", "", "");
-let inline = new Project("inLine", "", "", "", "");
-let urbanEarth = new Project("Urban Earth", "", "", "", "");
-let walksatDPLL = new Project("WalkSAT and DPLL", "", "", "", "");
-let shampooColorMixModel = new Project("Shampoo Color Mix Model", "", "", "", "");
-let pgAutomationBrowserExtension = new Project("P&G Automation Browser Extension", "", "", "", "");
-let pgSplittingCSVAutomation = new Project("P&G Splitting CSV Automation", "", "", "", "");
-let pgSortingCSVAutomation = new Project("P&G Sorting CSV Automation", "", "", "", "");
-let pgFixing3DPrinter = new Project("P&G Fixing 3D Printer", "", "", "", "");
-let computerVisionToMeasureRinsability = new Project("Computer Vision to Measure Rinsability", "", "", "", "");
-let smrtnrllSelenium = new Project("smrtnrll Selenium", "", "", "", "");
-let smrtnrllBrowserExtension = new Project("smrtnrll Browser Extension", "", "", "", "");
-let airCharger = new Project("Air Charger", "", "", "", "");
-let welcomeBackHack = new Project("Welcome Back Hack", "", "", "", "");
-let giveBackHackVol = new Project("GiveBackHack Vol & Tell", "", "", "", "");
-let oneWorldBrowserExtension = new Project("1World Browser Extension", "", "", "", "");
-let jeffreykozikwebsite = new Project("jeffreykozik.com", "", "", "", "");
-let taskTimeRecorder = new Project("Task Time Recorder", "", "", "", "");
-let pingPongRallyTracker = new Project("Ping Pong Rally Tracker", "", "", "", "");
-let trickOrTag = new Project("Trick or Tag", "", "", "", "");
-let squarePOSHackathon = new Project("Square Build What's POS-sible Hackathon", "", "", "", "");
-let searchEngineUtilityBelt = new Project("Search Engine Utility Belt", "", "", "", "");
-let tedXCwru = new Project("TEDxCWRU", "", "", "", "");
-let designForAmerica = new Project("Design For America", "", "", "", "");
-let fixingSeleniumTaxScript = new Project("Fixing Selenium Tax Script", "", "", "", "");
-let germanImmigrationAutomation = new Project("German Immigration Automation", "", "", "", "");
-let circumvent2FASelenium = new Project("Circumvent 2FA Selenium", "", "", "", "");
-let multitabSearchBrowserExtensionIRSLogics = new Project("Multitab Search Browser Extension IRS Logics", "", "", "", "");
-let automatingUsernameCheckProcessIreland = new Project("Automating Username Check Process Ireland", "", "", "", "");
-let automatedWayToGetJSErrors = new Project("Automated Way to Get JS Errors", "", "", "", "");
-let totalCostBrowserExtensionIRSLogics = new Project("Total Cost Browser Extension IRS Logics", "", "", "", "");
-let autopayHealthcare = new Project("Autopay Healthcare", "", "", "", "");
-let iosExtensionUnicart = new Project("iOS Extension Unicart", "", "", "", "");
-let seoBrowserExtension = new Project("SEO Browser Extension", "", "", "", "");
-let tradingViewGraphAutomation = new Project("Trading View Graph Automation", "", "", "", "");
+
+// sciquel
+// urbanearth
+// jeffreykozikwebsite
+// oneworldbrowserextension
+// givebackhackvol
+// smrtnrllbrowserextension
+// searchengineutilitybelt
+// totalcostbrowserextensionirslogics
+// multitabsearchbrowserextensionirslogics
+// seobrowserextension
+let sciquel = new Project("Sciquel", "/sciquel", "", "", "", "");
+let urbanEarth = new Project("Urban Earth", "/urbanearth", "", "", "", "");
+let jeffreykozikwebsite = new Project("jeffreykozik.com", "/jeffreykozikwebsite", "", "", "", "");
+let oneWorldBrowserExtension = new Project("1World Browser Extension", "/oneworldbrowserextension", "", "", "", "");
+let giveBackHackVol = new Project("GiveBackHack Vol & Tell", "/givebackhackvol", "", "", "", "");
+let smrtnrllBrowserExtension = new Project("smrtnrll Browser Extension", "/smrtnrllbrowserextension", "", "", "", "");
+let searchEngineUtilityBelt = new Project("Search Engine Utility Belt", "/searchengineutilitybelt", "", "", "", "");
+let totalCostBrowserExtensionIRSLogics = new Project("Total Cost Browser Extension IRS Logics", "/totalcostbrowserextension", "", "", "", "");
+let multitabSearchBrowserExtensionIRSLogics = new Project("Multitab Search Browser Extension IRS Logics", "/multitabsearch", "", "", "", "");
+let seoBrowserExtension = new Project("SEO Browser Extension", "/seobrowserextension", "", "", "", "");
+
+// let harryPotterGame = new Project("Harry Potter Game", "", "", "", "", "");
+// let thomasRobertMalthusPresentation = new Project("Thomas Robert Malthus Presentation", "", "", "", "", "");
+// let basketballGameSimulator = new Project("Basktball Game Simulator", "", "", "", "", "");
+// let gomoku = new Project("Gomoku", "", "", "", "", "");
+// let railyard = new Project("Railyard", "", "", "", "", "");
+// let stringAndArrayManipulation = new Project("String and Array Manipulation", "", "", "", "", "");
+// let sorting = new Project("Sorting", "", "", "", "", "");
+// let hashtable = new Project("Hashtable", "", "", "", "", "");
+// let huffmanEncoder = new Project("Huffman Encoder", "", "", "", "", "");
+// let imperativeInterpreter = new Project("Imperative Interpreter", "", "", "", "", "");
+// let aiProject2 = new Project("AI Project 2", "", "", "", "", "");
+// let aiProject5 = new Project("AI Project 5", "", "", "", "", "");
+// let aiProject6 = new Project("AI Project 6", "", "", "", "", "");
+// let automatedResourceCollection = new Project("Automated Resource Collection", "", "", "", "", "");
+// let smoothNumbers = new Project("Smooth Numbers", "", "", "", "", "");
+// let rsa = new Project("RSA", "", "", "", "", "");
+// let inline = new Project("inLine", "", "", "", "", "");
+// let walksatDPLL = new Project("WalkSAT and DPLL", "", "", "", "", "");
+// let shampooColorMixModel = new Project("Shampoo Color Mix Model", "", "", "", "", "");
+// let pgAutomationBrowserExtension = new Project("P&G Automation Browser Extension", "", "", "", "", "");
+// let pgSplittingCSVAutomation = new Project("P&G Splitting CSV Automation", "", "", "", "", "");
+// let pgSortingCSVAutomation = new Project("P&G Sorting CSV Automation", "", "", "", "", "");
+// let pgFixing3DPrinter = new Project("P&G Fixing 3D Printer", "", "", "", "", "");
+// let computerVisionToMeasureRinsability = new Project("Computer Vision to Measure Rinsability", "", "", "", "", "");
+// let smrtnrllSelenium = new Project("smrtnrll Selenium", "", "", "", "", "");
+// let airCharger = new Project("Air Charger", "", "", "", "", "");
+// let welcomeBackHack = new Project("Welcome Back Hack", "", "", "", "", "");
+// let taskTimeRecorder = new Project("Task Time Recorder", "", "", "", "", "");
+// let pingPongRallyTracker = new Project("Ping Pong Rally Tracker", "", "", "", "", "");
+// let trickOrTag = new Project("Trick or Tag", "", "", "", "", "");
+// let squarePOSHackathon = new Project("Square Build What's POS-sible Hackathon", "", "", "", "", "");
+// let tedXCwru = new Project("TEDxCWRU", "", "", "", "", "");
+// let designForAmerica = new Project("Design For America", "", "", "", "", "");
+// let fixingSeleniumTaxScript = new Project("Fixing Selenium Tax Script", "", "", "", "", "");
+// let germanImmigrationAutomation = new Project("German Immigration Automation", "", "", "", "", "");
+// let circumvent2FASelenium = new Project("Circumvent 2FA Selenium", "", "", "", "", "");
+// let automatingUsernameCheckProcessIreland = new Project("Automating Username Check Process Ireland", "", "", "", "", "");
+// let automatedWayToGetJSErrors = new Project("Automated Way to Get JS Errors", "", "", "", "", "");
+// let autopayHealthcare = new Project("Autopay Healthcare", "", "", "", "", "");
+// let iosExtensionUnicart = new Project("iOS Extension Unicart", "", "", "", "", "");
+// let tradingViewGraphAutomation = new Project("Trading View Graph Automation", "", "", "", "", "");
 
 function generateOptions(selectId, array){
     let options = []
@@ -173,12 +188,18 @@ function generateOptions(selectId, array){
     )
 }
 
+// {generateOptions("categories", categoryArray)}
+// {generateOptions("tags", tagArray)}
+
+const listItems = projectsArray.map((projectElement) =>
+   <li>{projectElement}</li>
+ );
+
 const HomePage = () => (
     <>
         <h1 id="jeffrey_kozik"> Jeffrey Kozik </h1>
         <div className="homepage_container" id="selection_div">
-            {generateOptions("categories", categoryArray)}
-            {generateOptions("tags", tagArray)}
+            {listItems}
         </div>
     </>
 )
