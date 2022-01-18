@@ -12,6 +12,7 @@ function ProjectComponent({ name, link, tags, startDate, endDate, imagePath }) {
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
         crossOrigin="anonymous"
         />
+        <a href={link}>
         <div className="card mb-3" style="max-width: 540px;">
           <div className="row g-0">
             <div className="col-md-4">
@@ -26,6 +27,7 @@ function ProjectComponent({ name, link, tags, startDate, endDate, imagePath }) {
             </div>
           </div>
         </div>
+        </a>
       </>
   )
 }
