@@ -191,8 +191,8 @@ function generateOptions(selectId, array){
 // {generateOptions("categories", categoryArray)}
 // {generateOptions("tags", tagArray)}
 
-const listItems = projectsArray.map((projectElement) =>
-   <li>{projectElement}</li>
+const listItems = projectsArray.map((projectElement, index) =>
+   <li key={index}><ProjectComponent name={projectElement.name} link={projectElement.link} tags={projectElement.tags} startDate={projectElement.startDate} endDate={projectElement.endDate} imagePath={projectElement.imagePath}/></li>
  );
 
 const HomePage = () => (
