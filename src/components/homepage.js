@@ -125,16 +125,16 @@ class Project{
 // totalcostbrowserextensionirslogics
 // multitabsearchbrowserextensionirslogics
 // seobrowserextension
-let sciquel = new Project("Sciquel", "/sciquel", "", "", "", "");
-let urbanEarth = new Project("Urban Earth", "/urbanearth", "", "", "", "");
+let sciquel = new Project("Sciquel", "/sciquel", "", "", "", "../images/sciquelhomepage1.png");
+let urbanEarth = new Project("Urban Earth", "/urbanearth", "", "", "", "../images/urbanearthlogo.png");
 let jeffreykozikwebsite = new Project("jeffreykozik.com", "/jeffreykozikwebsite", "", "", "", "");
-let oneWorldBrowserExtension = new Project("1World Browser Extension", "/oneworldbrowserextension", "", "", "", "");
-let giveBackHackVol = new Project("GiveBackHack Vol & Tell", "/givebackhackvol", "", "", "", "");
-let smrtnrllBrowserExtension = new Project("smrtnrll Browser Extension", "/smrtnrllbrowserextension", "", "", "", "");
-let searchEngineUtilityBelt = new Project("Search Engine Utility Belt", "/searchengineutilitybelt", "", "", "", "");
-let totalCostBrowserExtensionIRSLogics = new Project("Total Cost Browser Extension IRS Logics", "/totalcostbrowserextension", "", "", "", "");
-let multitabSearchBrowserExtensionIRSLogics = new Project("Multitab Search Browser Extension IRS Logics", "/multitabsearch", "", "", "", "");
-let seoBrowserExtension = new Project("SEO Browser Extension", "/seobrowserextension", "", "", "", "");
+let oneWorldBrowserExtension = new Project("1World Browser Extension", "/oneworldbrowserextension", "", "", "", "../images/1worldscreenshot");
+let giveBackHackVol = new Project("GiveBackHack Vol & Tell", "/givebackhackvol", "", "", "", "../images/volhtml.png");
+let smrtnrllBrowserExtension = new Project("smrtnrll Browser Extension", "/smrtnrllbrowserextension", "", "", "", "../images/smrtnrllscreenshot");
+let searchEngineUtilityBelt = new Project("Search Engine Utility Belt", "/searchengineutilitybelt", "", "", "", "../images/searchengineutilitybeltscreenshot");
+let totalCostBrowserExtensionIRSLogics = new Project("Total Cost Browser Extension IRS Logics", "/totalcostbrowserextension", "", "", "", "../images/totalcostscreenshot");
+let multitabSearchBrowserExtensionIRSLogics = new Project("Multitab Search Browser Extension IRS Logics", "/multitabsearch", "", "", "", "../images/multitabscreenshot");
+let seoBrowserExtension = new Project("SEO Browser Extension", "/seobrowserextension", "", "", "", "../images/seoscreenshot");
 
 // let harryPotterGame = new Project("Harry Potter Game", "", "", "", "", "");
 // let thomasRobertMalthusPresentation = new Project("Thomas Robert Malthus Presentation", "", "", "", "", "");
@@ -188,17 +188,19 @@ function generateOptions(selectId, array){
     )
 }
 
-// {generateOptions("categories", categoryArray)}
-// {generateOptions("tags", tagArray)}
+// <div className="homepage_container" id="selection_div">
+//     {generateOptions("categories", categoryArray)}
+//     {generateOptions("tags", tagArray)}
+// </div>
 
 const listItems = projectsArray.map((projectElement, index) =>
-   <li key={index}><ProjectComponent name={projectElement.name} link={projectElement.link} tags={projectElement.tags} startDate={projectElement.startDate} endDate={projectElement.endDate} imagePath={projectElement.imagePath}/></li>
+   <div key={index}><ProjectComponent name={projectElement.name} link={projectElement.link} tags={projectElement.tags} startDate={projectElement.startDate} endDate={projectElement.endDate} imagePath={projectElement.imagePath}/></div>
  );
 
 const HomePage = () => (
     <>
         <h1 id="jeffrey_kozik"> Jeffrey Kozik </h1>
-        <div className="homepage_container" id="selection_div">
+        <div>
             {listItems}
         </div>
     </>
