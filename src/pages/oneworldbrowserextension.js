@@ -597,20 +597,20 @@ class OneWorldBrowserExtension extends React.Component {
         window.open("https://checkout.patch.io/che_prod_9d820f15d0b93ec15fc23694efb70726?amount=" + this.state.rows[0].co2, "_blank")
     }
 
-    nameChange(row_num){
-        let oldRows = Array.from(this.state.rows);
-        let oldRowsClone = _.cloneDeep(oldRows);
-        oldRowClone[]
-        this.setState({
-            rows : Array.from(oldRowsClone)
-        });
-    }
-
-    costChange(row_num){
-        this.setState({
-            rows : Array.from(oldRowsClone)
-        });
-    }
+    // nameChange(row_num){
+    //     let oldRows = Array.from(this.state.rows);
+    //     let oldRowsClone = _.cloneDeep(oldRows);
+    //     oldRowClone[row_num].name =
+    //     this.setState({
+    //         rows : Array.from(oldRowsClone)
+    //     });
+    // }
+    //
+    // costChange(row_num){
+    //     this.setState({
+    //         rows : Array.from(oldRowsClone)
+    //     });
+    // }
 
     render(){
     return(
@@ -639,13 +639,13 @@ class OneWorldBrowserExtension extends React.Component {
                       </tr>
                     {this.state.rows.map((row) =>
                         <tr style={{overflowY: "visible !important"}}>
-                            <td className="one_world_nameTable"><TextField id="standard-basic" placeholder="Apples..." variant="standard" value={row.name} onChange={() => this.nameChange(row.row_num)}/></td>
-                            <td className="one_world_costTable" align="right"><TextField id="standard-basic" placeholder="$10..." variant="standard" value={row.cost} onChange={() => this.costChange(row.row_num)}/></td>
-                            <td style={{overflowY: "visible !important"}} className="one_world_consumptionTable" align="right">{row.consumption}</td>
-                            <td style={{overflowY: "visible !important"}} className="one_world_supplychainTable" align="right">{row.supply_chain}</td>
-                            <td className="one_world_CO2Table" align="right"><div>{row.co2} kg</div></td>
-                            <td className="one_world_offsetcostTable" align="right"><div>{row.offset_cost}</div></td>
-                            <td className="one_world_deleteTable" align="right"><button onClick={() => this.deleteRowFunction(row.row_num)}><FontAwesomeIcon icon={faTrashAlt} id="delete_row_button"/></button></td>
+                            <td key={row.name} className="one_world_nameTable"><TextField id="standard-basic" placeholder="Apples..." variant="standard" value={row.name}/></td>
+                            <td key={row.cost} className="one_world_costTable" align="right"><TextField id="standard-basic" placeholder="$10..." variant="standard" value={row.cost}/></td>
+                            <td key={row.consumption} style={{overflowY: "visible !important"}} className="one_world_consumptionTable" align="right">{row.consumption}</td>
+                            <td key={row.supply_chain} style={{overflowY: "visible !important"}} className="one_world_supplychainTable" align="right">{row.supply_chain}</td>
+                            <td key={row.co2} className="one_world_CO2Table" align="right"><div>{row.co2} kg</div></td>
+                            <td key={row.offset_cost} className="one_world_offsetcostTable" align="right"><div>{row.offset_cost}</div></td>
+                            <td key={row.row_num} className="one_world_deleteTable" align="right"><button onClick={() => this.deleteRowFunction(row.row_num)}><FontAwesomeIcon icon={faTrashAlt} id="delete_row_button"/></button></td>
                         </tr>
                     )}
                   </table>
