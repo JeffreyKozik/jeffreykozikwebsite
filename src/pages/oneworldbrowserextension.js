@@ -597,20 +597,15 @@ class OneWorldBrowserExtension extends React.Component {
         window.open("https://checkout.patch.io/che_prod_9d820f15d0b93ec15fc23694efb70726?amount=" + this.state.rows[0].co2, "_blank")
     }
 
-    // nameChange(row_num){
-    //     let oldRows = Array.from(this.state.rows);
-    //     let oldRowsClone = _.cloneDeep(oldRows);
-    //     oldRowClone[row_num].name =
-    //     this.setState({
-    //         rows : Array.from(oldRowsClone)
-    //     });
-    // }
-    //
-    // costChange(row_num){
-    //     this.setState({
-    //         rows : Array.from(oldRowsClone)
-    //     });
-    // }
+    nameChange(event){
+        console.log("event" + event);
+        console.log("event.target.value: " + event.target.value)
+    }
+
+    costChange(event){
+        console.log("event" + event);
+        console.log("event.target.value: " + event.target.value)
+    }
 
     render(){
     return(
@@ -639,8 +634,8 @@ class OneWorldBrowserExtension extends React.Component {
                       </tr>
                     {this.state.rows.map((row) =>
                         <tr key={row.row_num} style={{overflowY: "visible !important"}}>
-                            <td className="one_world_nameTable"><TextField id="standard-basic" placeholder="Apples..." variant="standard" value={row.name}/></td>
-                            <td className="one_world_costTable" align="right"><TextField id="standard-basic" placeholder="$10..." variant="standard" value={row.cost}/></td>
+                            <td className="one_world_nameTable"><TextField id="standard-basic" placeholder="Apples..." variant="standard" value={row.name} onChange={this.state.nameChange}/></td>
+                            <td className="one_world_costTable" align="right"><TextField id="standard-basic" placeholder="$10..." variant="standard" value={row.cost} onChange={this.state.costChange}/></td>
                             <td style={{overflowY: "visible !important"}} className="one_world_consumptionTable" align="right">{row.consumption}</td>
                             <td style={{overflowY: "visible !important"}} className="one_world_supplychainTable" align="right">{row.supply_chain}</td>
                             <td className="one_world_CO2Table" align="right"><div>{row.co2} kg</div></td>
