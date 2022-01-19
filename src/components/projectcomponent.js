@@ -64,7 +64,7 @@ let imageArray = [sciquelScreenshot, urbanearthScreenshot, jeffreykozikScreensho
 function ProjectComponent({ name, link, tags, startDate, endDate, imagePath, description }) {
   return(
       <a href={link}>
-          <Card height="30vh">
+          <Card sx={{ height: 1/3 }}>
             <CardHeader
               title={name}
               subheader={{startDate} + "-" + {endDate}}
