@@ -3,15 +3,15 @@ import ReactDOM from 'react-dom';
 import './homepage.css';
 import PropTypes from 'prop-types';
 
-import sciquelScreenshot from "../images/sciquelScreenshot.png"
-import urbanearthScreenshot from "../images/urbanearthLogo.png"
-import jeffreykozikScreenshot from "../images/urbanearthLogo.png"
-import oneworldbrowserextensionScreenshot from "../images/oneworldbrowserextension.png"
-import smrtnrllbrowserextensionScreenshot from "../images/smrtnrllbrowserextensionScreenshot.png"
-import searchengineutilitybeltScreenshot from "../images/searchengineutilitybeltScreenshot.png"
+import sciquelScreenshot from "../images/sciquelhomepage1.png"
+import urbanearthScreenshot from "../images/urbanearthlogo.png"
+import jeffreykozikScreenshot from "../images/urbanearthlogo.png"
+import oneworldbrowserextensionScreenshot from "../images/1worldscreenshot.png"
+import smrtnrllbrowserextensionScreenshot from "../images/smrtnrllscreenshot.png"
+import searchengineutilitybeltScreenshot from "../images/searchengineutilitybeltscreenshot.png"
 import totalcostScreenshot from "../images/totalcostscreenshot.png"
 import multitabsearchScreenshot from "../images/multitabscreenshot.png"
-import seobrowserextensionScreenshot from "../images/seobrowserextensionScreenshot.png"
+import seobrowserextensionScreenshot from "../images/seoscreenshot.png"
 
 let imageArray = [sciquelScreenshot, urbanearthScreenshot, jeffreykozikScreenshot, oneworldbrowserextensionScreenshot, smrtnrllbrowserextensionScreenshot, searchengineutilitybeltScreenshot, totalcostScreenshot, multitabsearchScreenshot, seobrowserextensionScreenshot]
 
