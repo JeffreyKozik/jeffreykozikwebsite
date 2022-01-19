@@ -64,10 +64,10 @@ let imageArray = [sciquelScreenshot, urbanearthScreenshot, jeffreykozikScreensho
 function ProjectComponent({ name, link, tags, startDate, endDate, imagePath, description }) {
   return(
       <a href={link}>
-          <Card>
+          <Card height="30vh">
             <CardHeader
               title={name}
-              subheader={{startDate}-{endDate}}
+              subheader={{startDate} + "-" + {endDate}}
             />
             <CardMedia
               component="img"
