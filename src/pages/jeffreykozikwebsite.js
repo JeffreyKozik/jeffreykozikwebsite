@@ -13,7 +13,7 @@ const JeffreyKozikWebsite = () => (
             <div className="page_container">
                 <h1 className="page_title"> Jeffrey Kozik Website </h1>
                 <h3 className="page_subtitle">
-
+                    Portfolio website I created with React, Gatsby, and Material UI.
                 </h3>
                 <img className="page_video" src={jeffreykozikScreenshot} alt="jeffreykozik.com screenshot"/>
                 <p className="page_description">
