@@ -62,10 +62,12 @@ const UrbanEarth  = () => (
                     Also shown below is the logo for Urban Earth, which my partner designed, and a slide deck describing the app in more detail.
                 </p>
                 <img className="page_video" src={urbanEarthLogo}></img>
-                <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQmk0OuoC_DKb1l1LOMnm4xqMSQMcRuHkUDkxdyhd6xSGsKrqf09fmTU5QuTjLbuHpbg_BbHbkXHiAM/embed?start=false&loop=true&delayms=60000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQmk0OuoC_DKb1l1LOMnm4xqMSQMcRuHkUDkxdyhd6xSGsKrqf09fmTU5QuTjLbuHpbg_BbHbkXHiAM/embed?start=false&loop=true&delayms=60000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
             </div>
         </body>
     </>
 )
+
+// width="960" height="569"
 
 export default UrbanEarth
