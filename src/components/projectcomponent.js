@@ -3,6 +3,19 @@ import ReactDOM from 'react-dom';
 import './homepage.css';
 import PropTypes from 'prop-types';
 
+import sciquelScreenshot from "../images/sciquelScreenshot"
+import urbanearthScreenshot from "../images/urbanearth"
+import jeffreykozikScreenshot from "../images/urbanearth"
+import oneworldbrowserextensionScreenshot from "../images/oneworldbrowserextension"
+import smrtnrllbrowserextensionScreenshot from "../images/smrtnrllbrowserextensionScreenshot"
+import searchengineutilitybeltScreenshot from "../images/searchengineutilitybeltScreenshot"
+import totalcostScreenshot from "../images/totalcostscreenshot"
+import multitabsearchScreenshot from "../images/multitabscreenshot"
+import seobrowserextensionScreenshot from "../images/seobrowserextensionScreenshot"
+
+let imageArray = [sciquelScreenshot, urbanearthScreenshot, jeffreykozikScreenshot, oneworldbrowserextensionScreenshot, smrtnrllbrowserextensionScreenshot, searchengineutilitybeltScreenshot, totalcostScreenshot, multitabsearchScreenshot, seobrowserextensionScreenshot]
+
+
 // <html>
 //   <head>
 //       <link
@@ -32,15 +45,16 @@ import PropTypes from 'prop-types';
 //   </body>
 // </html>
 
-function ProjectComponent({ name, link, tags, startDate, endDate, imagePath }) {
+function ProjectComponent({ name, link, tags, startDate, endDate, imagePath, description }) {
   return(
       <a href={link}>
           <div className="project_container">
-            <img src={imagePath} className="image_column"/>
+            <img src={imageArray[imagePath]} className="image_column"/>
             <div className="words_column">
                 <h1>{name}</h1>
                 <h2>{startDate}-{endDate}</h2>
-                <h3>{tags}</h3>
+                {description}
+                <h4>{tags}</h4>
             </div>
           </div>
       </a>
@@ -52,7 +66,8 @@ ProjectComponent.propTypes = {
   tags: PropTypes.array.isRequired,
   startDate: PropTypes.string.isRequired,
   endDate: PropTypes.string.isRequired,
-  imagePath: PropTypes.string.isRequired
+  imagePath: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired
 }
 
 export default ProjectComponent;

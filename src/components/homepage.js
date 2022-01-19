@@ -104,13 +104,14 @@ let collegeSenior = new Tag("College Senior", "", "Time Period");
 
 let projectsArray = [];
 class Project{
-  constructor(name, link, tags, startDate, endDate, imagePath){
+  constructor(name, link, tags, startDate, endDate, imagePath, description){
     this.name = name;
     this.link = link;
     this.tags = tags;
     this.startDate = startDate;
     this.endDate = endDate;
     this.imagePath = imagePath;
+    this.description = description;
     projectsArray.push(this);
   }
 }
@@ -125,17 +126,39 @@ class Project{
 // totalcostbrowserextensionirslogics
 // multitabsearchbrowserextensionirslogics
 // seobrowserextension
-let sciquel = new Project("Sciquel", "/sciquel", "", "", "", "../images/sciquelhomepage1.png");
-let urbanEarth = new Project("Urban Earth", "/urbanearth", "", "", "", "../images/urbanearthlogo.png");
-let jeffreykozikwebsite = new Project("jeffreykozik.com", "/jeffreykozikwebsite", "", "", "", "");
-let oneWorldBrowserExtension = new Project("1World Browser Extension", "/oneworldbrowserextension", "", "", "", "../images/1worldscreenshot");
-let giveBackHackVol = new Project("GiveBackHack Vol & Tell", "/givebackhackvol", "", "", "", "../images/volhtml.png");
-let smrtnrllBrowserExtension = new Project("smrtnrll Browser Extension", "/smrtnrllbrowserextension", "", "", "", "../images/smrtnrllscreenshot");
-let searchEngineUtilityBelt = new Project("Search Engine Utility Belt", "/searchengineutilitybelt", "", "", "", "../images/searchengineutilitybeltscreenshot");
-let totalCostBrowserExtensionIRSLogics = new Project("Total Cost Browser Extension IRS Logics", "/totalcostbrowserextension", "", "", "", "../images/totalcostscreenshot");
-let multitabSearchBrowserExtensionIRSLogics = new Project("Multitab Search Browser Extension IRS Logics", "/multitabsearch", "", "", "", "../images/multitabscreenshot");
-let seoBrowserExtension = new Project("SEO Browser Extension", "/seobrowserextension", "", "", "", "../images/seoscreenshot");
+let sciquel = new Project("Sciquel", "/sciquel", "", "", "", 0, <h3>
+    Sciquel is a website that myself and one other person worked together on to code. It is a project that a number of
+    Harvard Medical School students came up with to make science more accessible to the average person as academic papers
+    are often very complicated to read and more often than not cost money to read.
+</h3>);
+let urbanEarth = new Project("Urban Earth", "/urbanearth", "", "", "", 1, <h3>
+    Urban Earth is a project myself and a partner worked on during Fall of 2021. It's an iOS app that helps users
+    track how often they use sustainable forms of transportation and motivates them to keep at it.
+</h3>);
+let jeffreykozikwebsite = new Project("jeffreykozik.com", "/jeffreykozikwebsite", "", "", "", 2, <h3>Jeffrey Kozik</h3>);
+let oneWorldBrowserExtension = new Project("1World Browser Extension", "/oneworldbrowserextension", "", "", "", 3, <h3>
+    The One World Browser Extension is used in conjunction with a Square Business account to easily offset a
+    business's inventory carbon emissions. To see it in action feel free to enter data into the table below.
+</h3>);
+let smrtnrllBrowserExtension = new Project("smrtnrll Browser Extension", "/smrtnrllbrowserextension", "", "", "", 4, <h3>
+    The smrtnrll browser extension is used by college students to get into classes that are currently full. Add it to your
+    browser <a href="https://chrome.google.com/webstore/detail/smrtnrll/faoobmndgioamolfhbnkdegeolmmgnmj?hl=en&authuser=0" target="_blank" rel="noreferrer">here</a>.
+</h3>);
+let searchEngineUtilityBelt = new Project("Search Engine Utility Belt", "/searchengineutilitybelt", "", "", "", 5, <h3>
+    Browser extension I created to show how pervasive ads are in search engines by highlighting ads on Bing and keeping track of how many you see on each tab. Also
+    ensures recent results.
+</h3>);
+let totalCostBrowserExtensionIRSLogics = new Project("Total Cost Browser Extension IRS Logics", "/totalcostbrowserextension", "", "", "", 6, <h3>
+    Custom browser extension I coded so that payment information across 12 tabs could be displayed in a single location.
+</h3>);
+let multitabSearchBrowserExtensionIRSLogics = new Project("Multitab Search Browser Extension IRS Logics", "/multitabsearch", "", "", "", 7, <h3 className="page_subtitle">
+    Custom browser extension I coded so that 12 different tabs could be searched across simultaneously.
+</h3>);
+let seoBrowserExtension = new Project("SEO Browser Extension", "/seobrowserextension", "", "", "", 8, <h3 className="page_subtitle">
+    Browser extension I coded for the owner of <a href="site-checker.org" target="_blank" rel="noreferrer">site-checker.org</a> to easily get SEO tips for any website.
+</h3>);
 
+// let giveBackHackVol = new Project("GiveBackHack Vol & Tell", "/givebackhackvol", "", "", "", "../images/volhtml.png");
 // let harryPotterGame = new Project("Harry Potter Game", "", "", "", "", "");
 // let thomasRobertMalthusPresentation = new Project("Thomas Robert Malthus Presentation", "", "", "", "", "");
 // let basketballGameSimulator = new Project("Basktball Game Simulator", "", "", "", "", "");
