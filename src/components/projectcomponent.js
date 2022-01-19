@@ -21,7 +21,7 @@ import Typography from '@mui/material/Typography';
 
 import sciquelScreenshot from "../images/sciquelhomepage1.png"
 import urbanearthScreenshot from "../images/urbanearthlogo.png"
-import jeffreykozikScreenshot from "../images/urbanearthlogo.png"
+import jeffreykozikScreenshot from "../images/jeffreykozikwebsitescreenshot.png"
 import oneworldbrowserextensionScreenshot from "../images/1worldscreenshot.png"
 import smrtnrllbrowserextensionScreenshot from "../images/smrtnrllscreenshot.png"
 import searchengineutilitybeltScreenshot from "../images/searchengineutilitybeltscreenshot.png"

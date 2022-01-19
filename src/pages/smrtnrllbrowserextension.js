@@ -4,11 +4,13 @@ import demoVideo from "../images/smrtnrlldemo.mp4";
 import "../page_styling/pages.css"
 import Seo from "../components/seo"
 
+import {Helmet} from "react-helmet";
+
 const SmrtnrllBrowserExtension = () => (
     <>
-        <head>
+        <Helmet>
             <meta name="viewport" content="initial-scale=1, width=device-width"/>
-        </head>
+        </Helmet>
         <body>
             <Seo title="smrtnrll browser extension" />
             <div className="page_container">

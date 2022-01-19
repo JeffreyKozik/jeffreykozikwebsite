@@ -25,6 +25,8 @@ import xtype from 'xtypejs'
 
 import _ from 'lodash'
 
+import {Helmet} from "react-helmet";
+
 const animatedComponentsConsumption = makeAnimated();
 let consumptionOptions = [
 '1.1.1.1 Rice',
@@ -610,9 +612,9 @@ class OneWorldBrowserExtension extends React.Component {
     render(){
     return(
     <>
-        <head>
+        <Helmet>
             <meta name="viewport" content="initial-scale=1, width=device-width"/>
-        </head>
+        </Helmet>
         <body>
             <Seo title="One World Browser Extension" />
             <div className="page_container">

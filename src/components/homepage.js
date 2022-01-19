@@ -134,7 +134,8 @@ let urbanEarth = new Project("Urban Earth", "/urbanearth", "", "2022", "", 1, <h
     Urban Earth is a project myself and a partner worked on during Fall of 2021. It's an iOS app that helps users
     track how often they use sustainable forms of transportation and motivates them to keep at it.
 </h3>);
-let jeffreykozikwebsite = new Project("jeffreykozik.com", "/jeffreykozikwebsite", "", "2022", "", 2, <h3>Jeffrey Kozik</h3>);
+let jeffreykozikwebsite = new Project("jeffreykozik.com", "/jeffreykozikwebsite", "", "2022", "", 2, <h3>Portfolio website I created with React and Gatsby and a number of react packages including
+material-ui, react-select, and react-helmet.</h3>);
 let oneWorldBrowserExtension = new Project("1World Browser Extension", "/oneworldbrowserextension", "", "2022", "", 3, <h3>
     The One World Browser Extension is used in conjunction with a Square Business account to easily offset a
     business's inventory carbon emissions. To see it in action feel free to enter data into the table below.

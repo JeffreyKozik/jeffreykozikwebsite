@@ -2,12 +2,13 @@ import * as React from "react"
 import multitabdemo from "../images/multitabedited.mp4"
 import "../page_styling/pages.css"
 import Seo from "../components/seo"
+import {Helmet} from "react-helmet";
 
 const MultiTabSearch = () => (
     <>
-        <head>
+        <Helmet>
             <meta name="viewport" content="initial-scale=1, width=device-width"/>
-        </head>
+        </Helmet>
         <body>
             <Seo title="Multitab Search" />
             <div className="page_container">

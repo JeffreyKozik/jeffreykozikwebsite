@@ -8,12 +8,13 @@ import urbanEarthSettings from "../images/urbanearthsettings.png"
 import urbanEarthLogo from "../images/urbanearthlogo.png"
 import "../page_styling/pages.css"
 import Seo from "../components/seo"
+import {Helmet} from "react-helmet";
 
 const UrbanEarth  = () => (
     <>
-        <head>
+        <Helmet>
             <meta name="viewport" content="initial-scale=1, width=device-width"/>
-        </head>
+        </Helmet>
         <body>
             <Seo title="Urban Earth" />
             <div className="page_container">

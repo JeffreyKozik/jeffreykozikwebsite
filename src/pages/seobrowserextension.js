@@ -2,12 +2,13 @@ import * as React from "react"
 import siteChecker from "../images/site-checker.org.mp4"
 import "../page_styling/pages.css"
 import Seo from "../components/seo"
+import {Helmet} from "react-helmet";
 
 const SeoBrowserExtension = () => (
     <>
-        <head>
+        <Helmet>
             <meta name="viewport" content="initial-scale=1, width=device-width"/>
-        </head>
+        </Helmet>
         <body>
             <Seo title="SEO Browser Extension" />
             <div className="page_container">

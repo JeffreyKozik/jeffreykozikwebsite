@@ -5,14 +5,16 @@ import Seo from "../components/seo"
 import volhtml from "../images/volhtml.png";
 import friendshtml from "../images/friendshtml.png"
 
+import {Helmet} from "react-helmet";
+
 // allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
 // sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow scripts"
 
 const GiveBackHackVol = () => (
     <>
-        <head>
+        <Helmet>
             <meta name="viewport" content="initial-scale=1, width=device-width"/>
-        </head>
+        </Helmet>
         <body>
             <Seo title="GiveBackHack Vol" />
             <div className="page_container">

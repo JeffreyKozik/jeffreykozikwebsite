@@ -10,12 +10,13 @@ import demoVideo from "../images/sciqueldemofinished.mp4"
 import responsiveVideo from "../images/sciquelresponsivefinal.mp4"
 import "../page_styling/pages.css"
 import Seo from "../components/seo"
+import {Helmet} from "react-helmet";
 
 const Sciquel = () => (
     <>
-        <head>
+        <Helmet>
             <meta name="viewport" content="initial-scale=1, width=device-width"/>
-        </head>
+        </Helmet>
         <body>
             <Seo title="sciquel" />
             <div className="page_container">
