@@ -34,7 +34,16 @@ import PropTypes from 'prop-types';
 
 function ProjectComponent({ name, link, tags, startDate, endDate, imagePath }) {
   return(
-      <div> {name} <a href={link}> {link} </a> {tags} {startDate} {endDate} <img src={imagePath}/> </div>
+      <a href={link}>
+          <div className="project_container">
+            <img src={imagePath} className="image_column"/>
+            <div className="words_column">
+                <h1>{name}</h1>
+                <h2>{startDate}-{endDate}</h2>
+                <h3>{tags}</h3>
+            </div>
+          </div>
+      </a>
   )
 }
 ProjectComponent.propTypes = {
