@@ -63,20 +63,19 @@ let imageArray = [sciquelScreenshot, urbanearthScreenshot, jeffreykozikScreensho
 
 function ProjectComponent({ name, link, tags, startDate, endDate, imagePath, description }) {
   return(
-      <a href={link}>
-          <Card sx={{ height: 1/3 }}>
+      <a href={link} className="itemList">
+          <Card sx={{ maxWidth: 345 }}>
             <CardHeader
               title={name}
-              subheader={{startDate} + "-" + {endDate}}
+              subheader={startDate}
             />
             <CardMedia
               component="img"
               image={imageArray[imagePath]}
+              height="194"
             />
             <CardContent>
-              <Typography variant="body2" color="text.secondary">
                 {description}
-              </Typography>
             </CardContent>
           </Card>
       </a>
