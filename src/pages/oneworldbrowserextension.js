@@ -611,8 +611,53 @@ class OneWorldBrowserExtension extends React.Component {
         window.open("https://checkout.patch.io/che_prod_9d820f15d0b93ec15fc23694efb70726?amount=" + this.state.rows[0].co2, "_blank")
     }
 
-    submitFunction(){
+    submitFunction(row){
+        if(row == "total"){
+            console.log("total");
+        }else{
+            let nameOfProduct = this.state.rows[row].name;
+            let costOfProduct = this.state.rows[row].cost;
+            let euroSpent = 0.886727 * costOfProduct;
 
+            let consumption_category = ""
+            let supply_chain_category = ""
+            let total_co2 = 0
+            // const api_url = 'https://localhost:7071/api/OneWorldSquareExtensionFunction?code=/tw7J4uFrU4tRm9HcP1pMI2kiUaoou8ZT0GjMWljPZIv3zoGRle8uQ=='
+            const api_url = 'https://oneworldsquareextensionfunctionapp.azurewebsites.net/api/OneWorldSquareExtensionFunction/?code=/tw7J4uFrU4tRm9HcP1pMI2kiUaoou8ZT0GjMWljPZIv3zoGRle8uQ==';
+            fetch(api_url, {
+                method: 'POST',
+                body: JSON.stringify({
+                    'whatToOffset': nameOfProduct
+                })
+                // headers:{
+                //     'Content-Type': 'application/json'
+                // }
+            })
+            .then(response => response.json())
+            .then(json => {
+                    console.log(json['what_to_offset_consumption_category']);
+                    consumption_category = json['what_to_offset_consumption_category'].toString()
+                    console.log(json['what_to_offset_supply_chain_category']);
+                    supply_chain_category = json['what_to_offset_supply_chain_category'].toString()
+                    console.log(json['what_to_offset_consumption_kgCO2perEuro']);
+                    total_co2 += parseFloat(json['what_to_offset_consumption_kgCO2perEuro'])
+                    console.log(json['what_to_offset_supply_chain_kgCO2perEuro']);
+                    total_co2 += parseFloat(json['what_to_offset_consumption_kgCO2perEuro'])
+                    total_co2 = Number(total_co2 * euroSpent).toFixed(2)
+                    // https://stackoverflow.com/questions/4328500/how-can-i-strip-all-punctuation-from-a-string-in-javascript-using-regex
+                    consumption_category = consumption_category.replace(/[^\w\s]|_/g, "")
+                                                               .replace(/\s+/g, " ")
+                                                               .replace(/[1234567890]/g, "")
+
+                    supply_chain_category = supply_chain_category.replace(/[^\w\s]|_/g, "")
+                                                               .replace(/\s+/g, " ")
+                                                               .replace(/[1234567890]/g, "")
+                    // STRIP PUNCTUATION IN OPTIONS
+                    console.log("consumption_category " + consumption_category)
+                    console.log("supply_chain_category " + supply_chain_category)
+                    console.log("total_co2 " + total_co2)
+            });
+        }
     }
 
     nameChange(newValue, row){
@@ -661,11 +706,11 @@ class OneWorldBrowserExtension extends React.Component {
                       </tr>
                     {this.state.rows.map((row) =>
                         <tr key={row.row_num.toString()} style={{overflowY: "visible !important"}}>
-                            <td className="one_world_nameTable"><TextField id="standard-basic" placeholder="Apples..." variant="standard" value={row.name} onChange={(selectedOption) => this.nameChange(selectedOption, row.row_num)}/></td>
-                            <td className="one_world_costTable" align="right"><TextField id="standard-basic" placeholder="$10..." variant="standard" value={row.cost} onChange={(selectedOption) => this.costChange(selectedOption, row.row_num)}/></td>
+                            <td className="one_world_nameTable"><TextField id="standard-basic" placeholder="Apples..." variant="standard" value={row.name} onChange={(e) => this.nameChange(e.target.value, row.row_num)}/></td>
+                            <td className="one_world_costTable" align="right"><TextField id="standard-basic" placeholder="$10..." variant="standard" value={row.cost} onChange={(e) => this.costChange(e.target.value, row.row_num)}/></td>
                             <td className="one_world_submit" align="right"><button onClick={() => this.submitFunction(row.row_num)}>Submit</button></td>
-                            <td style={{overflowY: "visible !important"}} className="one_world_consumptionTable" align="right"><Select class="one_world_select" closeMenuOnSelect={false} components={animatedComponentsConsumption} options={selectConsumptionOptions} value={row.consumption} onChange={(e) => this.consumptionChange(e.target.value, row.row_num)}/></td>
-                            <td style={{overflowY: "visible !important"}} className="one_world_supplychainTable" align="right"><Select class="one_world_select" closeMenuOnSelect={false} components={animatedComponentsSupplyChain} options={selectSupplyChainOptions} value={row.supply_chain} onChange={(e) => this.supplyChainChange(e.target.value, row.row_num)}/></td>
+                            <td style={{overflowY: "visible !important"}} className="one_world_consumptionTable" align="right"><Select class="one_world_select" closeMenuOnSelect={false} components={animatedComponentsConsumption} options={selectConsumptionOptions} value={row.consumption} onChange={(selectedOption) => this.consumptionChange(selectedOption, row.row_num)}/></td>
+                            <td style={{overflowY: "visible !important"}} className="one_world_supplychainTable" align="right"><Select class="one_world_select" closeMenuOnSelect={false} components={animatedComponentsSupplyChain} options={selectSupplyChainOptions} value={row.supply_chain} onChange={(selectedOption) => this.supplyChainChange(selectedOption, row.row_num)}/></td>
                             <td className="one_world_CO2Table" align="right"><div>{row.co2} kg</div></td>
                             <td className="one_world_offsetcostTable" align="right"><div>{row.offset_cost}</div></td>
                             <td className="one_world_deleteTable" align="right"><button onClick={() => this.deleteRowFunction(row.row_num)}><FontAwesomeIcon icon={faTrashAlt} id="delete_row_button"/></button></td>
