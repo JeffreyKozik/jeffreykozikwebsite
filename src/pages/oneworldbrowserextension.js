@@ -479,6 +479,44 @@ class OneWorldBrowserExtension extends React.Component {
         return {name, cost, consumption, supply_chain, co2, offset_cost, row_num}
     }
 
+    addRowFunction(){
+        let consumptionSelect2 = this.generateConsumptionOptions();
+        let supplyChainSelect2 = this.generateSupplyChainOptions();
+        let name2 = "";
+        let cost2 = "";
+        let co22 = 0;
+        let offset_cost2 = "$0";
+        let row_num2 = this.state.rows.length;
+
+        let nextRow = this.createData(name2, cost2, consumptionSelect2, supplyChainSelect2, co22, offset_cost2, row_num2);
+
+        let oldRows = Array.from(this.state.rows);
+        let oldRowsClone = _.cloneDeep(oldRows);
+        oldRowsClone.push(nextRow);
+
+        this.setState({
+            rows : Array.from(oldRowsClone)
+        });
+
+        // this.setState(previousState => ({
+        //     rows: [...previousState.rows, nextRow]
+        // }));
+
+        console.log("rows" + this.state.rows);
+        // console.log("type of rows" + xtype(this.state.rows));
+
+        for(let i = 0; i < this.state.rows.length; i++){
+            // console.log("this.state.rows[" + i.toString(10) + "]" + this.state.rows[i]);
+            // console.log("this.state.rows[" + i.toString(10) + "].name: " + this.state.rows[i].name);
+            // console.log("this.state.rows[" + i.toString(10) + "].cost: " + this.state.rows[i].cost);
+            // console.log("this.state.rows[" + i.toString(10) + "].consumptionSelect: " + this.state.rows[i].consumption);
+            // console.log("this.state.rows[" + i.toString(10) + "].supplyChainSelect: " + this.state.rows[i].supply_chain);
+            // console.log("this.state.rows[" + i.toString(10) + "].co2: " + this.state.rows[i].co2.toString(10));
+            // console.log("this.state.rows[" + i.toString(10) + "].offset_cost: " + this.state.rows[i].offset_cost);
+            console.log("this.state.rows[" + i.toString(10) + "].row_num: " + this.state.rows[i].row_num);
+        }
+    }
+
     constructor(props){
         super(props);
 
@@ -519,44 +557,6 @@ class OneWorldBrowserExtension extends React.Component {
         // console.log("supplyChainSelect: " + supplyChainSelect);
 
 
-
-        for(let i = 0; i < this.state.rows.length; i++){
-            // console.log("this.state.rows[" + i.toString(10) + "]" + this.state.rows[i]);
-            // console.log("this.state.rows[" + i.toString(10) + "].name: " + this.state.rows[i].name);
-            // console.log("this.state.rows[" + i.toString(10) + "].cost: " + this.state.rows[i].cost);
-            // console.log("this.state.rows[" + i.toString(10) + "].consumptionSelect: " + this.state.rows[i].consumption);
-            // console.log("this.state.rows[" + i.toString(10) + "].supplyChainSelect: " + this.state.rows[i].supply_chain);
-            // console.log("this.state.rows[" + i.toString(10) + "].co2: " + this.state.rows[i].co2.toString(10));
-            // console.log("this.state.rows[" + i.toString(10) + "].offset_cost: " + this.state.rows[i].offset_cost);
-            console.log("this.state.rows[" + i.toString(10) + "].row_num: " + this.state.rows[i].row_num);
-        }
-    }
-
-    addRowFunction(){
-        let consumptionSelect2 = this.generateConsumptionOptions();
-        let supplyChainSelect2 = this.generateSupplyChainOptions();
-        let name2 = "";
-        let cost2 = "";
-        let co22 = 0;
-        let offset_cost2 = "$0";
-        let row_num2 = this.state.rows.length;
-
-        let nextRow = this.createData(name2, cost2, consumptionSelect2, supplyChainSelect2, co22, offset_cost2, row_num2);
-
-        let oldRows = Array.from(this.state.rows);
-        let oldRowsClone = _.cloneDeep(oldRows);
-        oldRowsClone.push(nextRow);
-
-        this.setState({
-            rows : Array.from(oldRowsClone)
-        });
-
-        // this.setState(previousState => ({
-        //     rows: [...previousState.rows, nextRow]
-        // }));
-
-        console.log("rows" + this.state.rows);
-        // console.log("type of rows" + xtype(this.state.rows));
 
         for(let i = 0; i < this.state.rows.length; i++){
             // console.log("this.state.rows[" + i.toString(10) + "]" + this.state.rows[i]);
