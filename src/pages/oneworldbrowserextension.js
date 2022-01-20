@@ -140,7 +140,7 @@ class OneWorldBrowserExtension extends React.Component {
     offsetChange = (newValue, currentRow) => {
         let oldRows = Array.from(this.state.rows);
         let oldRowsClone = _.cloneDeep(oldRows);
-        oldRowsClone[currentRow].offset = newValue;
+        oldRowsClone[currentRow].offset_cost = newValue;
         this.setState({
             rows : Array.from(oldRowsClone)
         });
@@ -222,7 +222,8 @@ class OneWorldBrowserExtension extends React.Component {
     }
 
     offsetFunction = () => {
-        window.open("https://checkout.patch.io/che_prod_9d820f15d0b93ec15fc23694efb70726?amount=" + this.state.totalKG, "_blank")
+        let urlAppend = (this.state.totalKG*1000).toFixed(0))
+        window.open("https://checkout.patch.io/che_prod_9d820f15d0b93ec15fc23694efb70726?amount=" + urlAppend, "_blank")
     }
 
     constructor(props){
