@@ -648,6 +648,12 @@ class OneWorldBrowserExtension extends React.Component {
                 <Button onClick={this.addRowFunction} variant="text" id="one_world_add_row_button"> Add Row </Button>
                 <Button onClick={this.offsetFunction} variant="text" id="one_world_offset_row_button"> Offset CO2 </Button>
                 <p className="page_description">
+                    The name category is the name of what you're offseting. So if you're a restaurant and you want to offset the CO2 emissions from buying apples you'd put
+                    "Apples" in that category. The cost category is how much it cost to buy what you're offsetting. So if you bought $1000 worth of apples you'd put $1000 in that category.
+                    Once these two text fields are filled in, my program will automatically determine the consumption and supply chain categories the product fits in. If you feel like it categorized
+                    the product wrong, simply change the category using the dropdown. My program will also calculate the kg CO2 emitted for each product you're offsetting and the cost to do so.
+                </p>
+                <p className="page_description">
                     The consumption categories and supply chain categories as well as the amount of CO2 emitted per dollar spent
                     in each of those categories comes from <a href="https://www.gov.uk/government/statistics/uks-carbon-footprint" target="_blank" rel="noreferrer">publicly available data from the UK government</a>.
                 </p>
