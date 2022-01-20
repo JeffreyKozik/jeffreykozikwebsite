@@ -147,8 +147,8 @@ class OneWorldBrowserExtension extends React.Component {
     }
 
     predictCategory = (row) => {
-        this.consumptionChange({value: "Loading", label: "Loading"}, row);
-        this.supplyChainChange({value: "Loading", label: "Loading"}, row);
+        // this.consumptionChange({value: "Loading", label: "Loading"}, row);
+        // this.supplyChainChange({value: "Loading", label: "Loading"}, row);
 
         this.submitTextChange("Loading", row);
 
@@ -193,7 +193,7 @@ class OneWorldBrowserExtension extends React.Component {
             this.submitTextChange("Loading " + timeLeft.toString(), row);
             timeLeft++;
 
-            if(!_.isEqual(consumption_category, {value: "Loading", label: "Loading"}) && !_.isEqual(supply_chain_category, {value: "Loading", label: "Loading"})){
+            if(!_.isEqual(consumption_category, "") && !_.isEqual(supply_chain_category, "")){
                 setTimeout(() => {
                     this.submitTextChange("Submit", row);
 
