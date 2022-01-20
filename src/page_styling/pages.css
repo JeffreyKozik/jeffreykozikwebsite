@@ -35,7 +35,14 @@ body {
     max-width: 100%;
 }
 
-.page_video iframe{
+.page_videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0;
+}
+
+.page_videoWrapper iframe{
     position: absolute;
     top: 0;
     left: 0;
