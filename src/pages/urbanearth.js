@@ -60,10 +60,10 @@ const UrbanEarth  = () => (
                     friends and family on the app and see their "friends" sustainability scores as well to motivate them and help form a community.
                 </p>
                 <p className="page_description">
-                    Also shown below is the logo for Urban Earth, which my partner designed, and a slide deck describing the app in more detail.
+                    Also shown below is the logo for Urban Earth, which my partner designed, and <a href='https://docs.google.com/presentation/d/e/2PACX-1vQmk0OuoC_DKb1l1LOMnm4xqMSQMcRuHkUDkxdyhd6xSGsKrqf09fmTU5QuTjLbuHpbg_BbHbkXHiAM/pub?start=false&loop=false&delayms=60000' target="_blank" rel="noreferrer">here</a>
+                    is a link to a slide deck describing the app in more detail.
                 </p>
                 <img className="page_video" src={urbanEarthLogo}></img>
-                <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQmk0OuoC_DKb1l1LOMnm4xqMSQMcRuHkUDkxdyhd6xSGsKrqf09fmTU5QuTjLbuHpbg_BbHbkXHiAM/embed?start=false&loop=true&delayms=60000" width="960" height="569" frameBorder="0" allowFullScreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
             </div>
         </body>
     </>
