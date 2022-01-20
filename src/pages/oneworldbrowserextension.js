@@ -535,7 +535,7 @@ class OneWorldBrowserExtension extends React.Component {
         let oldRowsClone = _.cloneDeep(oldRows);
 
         for(let removalIndex = 0; removalIndex < oldRowsClone.length; removalIndex++){
-            if(oldRowsClone[removalIndex] == row_num){
+            if(oldRowsClone[removalIndex].row_num == row_num){
                 oldRowsClone.splice(removalIndex, 1);
             }
         }
