@@ -29,6 +29,173 @@ import {Helmet} from "react-helmet";
 // };
 
 class OneWorldBrowserExtension extends React.Component {
+    createData = (name, cost, submit_text, consumption, supply_chain, co2, offset_cost, row_num) => {
+        return {name, cost, submit_text, consumption, supply_chain, co2, offset_cost, row_num}
+    }
+
+    printRows = () => {
+        for(let i = 0; i < this.state.rows.length; i++){
+            console.log("Row #" + this.state.rows[i].row_num + ": " + this.state.rows[i].name + " " +
+                                                                      this.state.rows[i].cost + " " +
+                                                                      this.state.rows[i].submit_text + " " +
+                                                                      this.state.rows[i].consumption + " " +
+                                                                      this.state.rows[i].supply_chain + " " +
+                                                                      this.state.rows[i].co2.toString(10) + " " +
+                                                                      this.state.rows[i].offset_cost.toString(10))
+        }
+    }
+
+    addRowFunction = () => {
+        let name = "";
+        let cost = "";
+        let submitText = "Submit";
+        let consumptionSelect = {value: ' Rice', label: ' Rice'};
+        let supplyChainSelect = {value: 'Agriculture products', label: 'Agriculture products'};
+        let co2 = 0;
+        let offset_cost = 0;
+        let row_num = this.state.numRows;
+
+        let nextRow = this.createData(name, cost, submitText, consumptionSelect, supplyChainSelect, co2, offset_cost, row_num);
+
+        let oldRows = Array.from(this.state.rows);
+        let oldRowsClone = _.cloneDeep(oldRows);
+        oldRowsClone.push(nextRow);
+
+        this.setState({
+            numRows : (this.state.numRows + 1),
+            rows : Array.from(oldRowsClone)
+        });
+
+        this.printRows();
+    }
+
+    deleteRowFunction = (row_num) => {
+        let oldRows = Array.from(this.state.rows);
+        let oldRowsClone = _.cloneDeep(oldRows);
+
+        for(let removalIndex = 0; removalIndex < oldRowsClone.length; removalIndex++){
+            if(oldRowsClone[removalIndex].row_num == row_num){
+                oldRowsClone.splice(removalIndex, 1);
+            }
+        }
+        this.setState({
+            rows : Array.from(oldRowsClone)
+        });
+
+        this.printRows();
+    }
+
+    nameChange = (newValue, row) => {
+        let oldRows = Array.from(this.state.rows);
+        let oldRowsClone = _.cloneDeep(oldRows);
+        oldRowsClone[row].name = newValue;
+        this.setState({
+            rows : Array.from(oldRowsClone)
+        });
+    }
+    costChange = (newValue, row) => {
+        let oldRows = Array.from(this.state.rows);
+        let oldRowsClone = _.cloneDeep(oldRows);
+        oldRowsClone[row].cost = newValue;
+        this.setState({
+            rows : Array.from(oldRowsClone)
+        });
+    }
+    submitTextChange = (newValue, row) => {
+        let oldRows = Array.from(this.state.rows);
+        let oldRowsClone = _.cloneDeep(oldRows);
+        oldRowsClone[row].submit_text = newValue;
+        this.setState({
+            rows : Array.from(oldRowsClone)
+        });
+    }
+    consumptionChange = (selectedOption, currentRow) => {
+        console.log("SelectedOption", selectedOption);
+        let oldRows = Array.from(this.state.rows);
+        let oldRowsClone = _.cloneDeep(oldRows);
+        oldRowsClone[currentRow].consumption = selectedOption;
+        this.setState({
+            rows : Array.from(oldRowsClone)
+        });
+    }
+    supplyChainChange = (selectedOption, currentRow) => {
+        console.log("SelectedOption", selectedOption);
+        let oldRows = Array.from(this.state.rows);
+        let oldRowsClone = _.cloneDeep(oldRows);
+        oldRowsClone[currentRow].supply_chain = selectedOption;
+        this.setState({
+            rows : Array.from(oldRowsClone)
+        });
+    }
+
+    submitFunction = (row) => {
+        if(row == "total"){
+            for(let i = 0; i < this.state.rows.length; i++){
+                this.predictCategory(i);
+            }
+        }else{
+            this.predictCategory(row);
+        }
+    }
+
+    predictCategory = (row) => {
+        this.state.submitTextChange("Loading", row);
+
+        let nameOfProduct = this.state.rows[row].name;
+        let costOfProduct = this.state.rows[row].cost.replace(/[^\w\s]|_/g, "").replace(/\s+/g, " ");
+        let euroSpent = 0.886727 * costOfProduct;
+
+        let consumption_category = ""
+        let supply_chain_category = ""
+        let total_co2 = 0
+        const api_url = 'https://oneworldsquareextensionfunctionapp.azurewebsites.net/api/OneWorldSquareExtensionFunction/?code=/tw7J4uFrU4tRm9HcP1pMI2kiUaoou8ZT0GjMWljPZIv3zoGRle8uQ==';
+        fetch(api_url, {
+            method: 'POST',
+            body: JSON.stringify({
+                'whatToOffset': nameOfProduct
+            })
+        })
+        .then(response => response.json())
+        .then(json => {
+                // console.log(json['what_to_offset_consumption_category']);
+                consumption_category = json['what_to_offset_consumption_category'].toString()
+                // console.log(json['what_to_offset_supply_chain_category']);
+                supply_chain_category = json['what_to_offset_supply_chain_category'].toString()
+                // console.log(json['what_to_offset_consumption_kgCO2perEuro']);
+                total_co2 += parseFloat(json['what_to_offset_consumption_kgCO2perEuro'])
+                // console.log(json['what_to_offset_supply_chain_kgCO2perEuro']);
+                total_co2 += parseFloat(json['what_to_offset_consumption_kgCO2perEuro'])
+                total_co2 = Number(total_co2 * euroSpent).toFixed(2)
+                // https://stackoverflow.com/questions/4328500/how-can-i-strip-all-punctuation-from-a-string-in-javascript-using-regex
+                consumption_category = consumption_category.replace(/[^\w\s]|_/g, "").replace(/\s+/g, " ").replace(/[1234567890]/g, "")
+                supply_chain_category = supply_chain_category.replace(/[^\w\s]|_/g, "").replace(/\s+/g, " ").replace(/[1234567890]/g, "")
+                console.log("consumption_category " + consumption_category)
+                console.log("supply_chain_category " + supply_chain_category)
+                console.log("total_co2 " + total_co2)
+        });
+
+        let timeLeft = 20;
+        setInterval(function(){
+            this.state.submitTextChange("Loading " + timeLeft.toString(), row);
+            timeLeft--;
+        }, 1000);
+
+        setTimeout(function(){
+            this.state.submitTextChange("Submit", row);
+
+            this.consumptionChange({value: consumption_category, label: consumption_category}, row);
+            this.supplyChainChange({value: supply_chain_category, label: supply_chain_category}, row);
+            this.costChange(total_co2, row);
+            this.setState({
+                totalKG : this.totalKG + total_co2
+            });
+        }, 20000);
+    }
+
+    offsetFunction = () => {
+        window.open("https://checkout.patch.io/che_prod_9d820f15d0b93ec15fc23694efb70726?amount=" + this.state.totalKG, "_blank")
+    }
+
     constructor(props){
         super(props);
 
@@ -488,173 +655,6 @@ class OneWorldBrowserExtension extends React.Component {
             rows : []
         }
         this.addRowFunction();
-    }
-
-    createData(name, cost, submit_text, consumption, supply_chain, co2, offset_cost, row_num){
-        return {name, cost, submit_text, consumption, supply_chain, co2, offset_cost, row_num}
-    }
-
-    printRows(){
-        for(let i = 0; i < this.state.rows.length; i++){
-            console.log("Row #" + this.state.rows[i].row_num + ": " + this.state.rows[i].name + " " +
-                                                                      this.state.rows[i].cost + " " +
-                                                                      this.state.rows[i].submit_text + " " +
-                                                                      this.state.rows[i].consumption + " " +
-                                                                      this.state.rows[i].supply_chain + " " +
-                                                                      this.state.rows[i].co2.toString(10) + " " +
-                                                                      this.state.rows[i].offset_cost.toString(10))
-        }
-    }
-
-    addRowFunction(){
-        let name = "";
-        let cost = "";
-        let submitText = "Submit";
-        let consumptionSelect = {value: ' Rice', label: ' Rice'};
-        let supplyChainSelect = {value: 'Agriculture products', label: 'Agriculture products'};
-        let co2 = 0;
-        let offset_cost = 0;
-        let row_num = this.state.numRows;
-
-        let nextRow = this.createData(name, cost, submitText, consumptionSelect, supplyChainSelect, co2, offset_cost, row_num);
-
-        let oldRows = Array.from(this.state.rows);
-        let oldRowsClone = _.cloneDeep(oldRows);
-        oldRowsClone.push(nextRow);
-
-        this.setState({
-            numRows : (this.state.numRows + 1),
-            rows : Array.from(oldRowsClone)
-        });
-
-        this.printRows();
-    }
-
-    deleteRowFunction(row_num){
-        let oldRows = Array.from(this.state.rows);
-        let oldRowsClone = _.cloneDeep(oldRows);
-
-        for(let removalIndex = 0; removalIndex < oldRowsClone.length; removalIndex++){
-            if(oldRowsClone[removalIndex].row_num == row_num){
-                oldRowsClone.splice(removalIndex, 1);
-            }
-        }
-        this.setState({
-            rows : Array.from(oldRowsClone)
-        });
-
-        this.printRows();
-    }
-
-    nameChange(newValue, row){
-        let oldRows = Array.from(this.state.rows);
-        let oldRowsClone = _.cloneDeep(oldRows);
-        oldRowsClone[row].name = newValue;
-        this.setState({
-            rows : Array.from(oldRowsClone)
-        });
-    }
-    costChange(newValue, row){
-        let oldRows = Array.from(this.state.rows);
-        let oldRowsClone = _.cloneDeep(oldRows);
-        oldRowsClone[row].cost = newValue;
-        this.setState({
-            rows : Array.from(oldRowsClone)
-        });
-    }
-    submitTextChange(newValue, row){
-        let oldRows = Array.from(this.state.rows);
-        let oldRowsClone = _.cloneDeep(oldRows);
-        oldRowsClone[row].submit_text = newValue;
-        this.setState({
-            rows : Array.from(oldRowsClone)
-        });
-    }
-    consumptionChange(selectedOption, currentRow){
-        console.log("SelectedOption", selectedOption);
-        let oldRows = Array.from(this.state.rows);
-        let oldRowsClone = _.cloneDeep(oldRows);
-        oldRowsClone[currentRow].consumption = selectedOption;
-        this.setState({
-            rows : Array.from(oldRowsClone)
-        });
-    }
-    supplyChainChange(selectedOption, currentRow){
-        console.log("SelectedOption", selectedOption);
-        let oldRows = Array.from(this.state.rows);
-        let oldRowsClone = _.cloneDeep(oldRows);
-        oldRowsClone[currentRow].supply_chain = selectedOption;
-        this.setState({
-            rows : Array.from(oldRowsClone)
-        });
-    }
-
-    submitFunction(row){
-        if(row == "total"){
-            for(let i = 0; i < this.state.rows.length; i++){
-                this.predictCategory(i);
-            }
-        }else{
-            this.predictCategory(row);
-        }
-    }
-
-    predictCategory(row){
-        this.state.submitTextChange("Loading", row);
-
-        let nameOfProduct = this.state.rows[row].name;
-        let costOfProduct = this.state.rows[row].cost.replace(/[^\w\s]|_/g, "").replace(/\s+/g, " ");
-        let euroSpent = 0.886727 * costOfProduct;
-
-        let consumption_category = ""
-        let supply_chain_category = ""
-        let total_co2 = 0
-        const api_url = 'https://oneworldsquareextensionfunctionapp.azurewebsites.net/api/OneWorldSquareExtensionFunction/?code=/tw7J4uFrU4tRm9HcP1pMI2kiUaoou8ZT0GjMWljPZIv3zoGRle8uQ==';
-        fetch(api_url, {
-            method: 'POST',
-            body: JSON.stringify({
-                'whatToOffset': nameOfProduct
-            })
-        })
-        .then(response => response.json())
-        .then(json => {
-                // console.log(json['what_to_offset_consumption_category']);
-                consumption_category = json['what_to_offset_consumption_category'].toString()
-                // console.log(json['what_to_offset_supply_chain_category']);
-                supply_chain_category = json['what_to_offset_supply_chain_category'].toString()
-                // console.log(json['what_to_offset_consumption_kgCO2perEuro']);
-                total_co2 += parseFloat(json['what_to_offset_consumption_kgCO2perEuro'])
-                // console.log(json['what_to_offset_supply_chain_kgCO2perEuro']);
-                total_co2 += parseFloat(json['what_to_offset_consumption_kgCO2perEuro'])
-                total_co2 = Number(total_co2 * euroSpent).toFixed(2)
-                // https://stackoverflow.com/questions/4328500/how-can-i-strip-all-punctuation-from-a-string-in-javascript-using-regex
-                consumption_category = consumption_category.replace(/[^\w\s]|_/g, "").replace(/\s+/g, " ").replace(/[1234567890]/g, "")
-                supply_chain_category = supply_chain_category.replace(/[^\w\s]|_/g, "").replace(/\s+/g, " ").replace(/[1234567890]/g, "")
-                console.log("consumption_category " + consumption_category)
-                console.log("supply_chain_category " + supply_chain_category)
-                console.log("total_co2 " + total_co2)
-        });
-
-        let timeLeft = 20;
-        setInterval(function(){
-            this.state.submitTextChange("Loading " + timeLeft.toString(), row);
-            timeLeft--;
-        }, 1000);
-
-        setTimeout(function(){
-            this.state.submitTextChange("Submit", row);
-
-            this.consumptionChange({value: consumption_category, label: consumption_category}, row);
-            this.supplyChainChange({value: supply_chain_category, label: supply_chain_category}, row);
-            this.costChange(total_co2, row);
-            this.setState({
-                totalKG : this.totalKG + total_co2
-            });
-        }, 20000);
-    }
-
-    offsetFunction(){
-        window.open("https://checkout.patch.io/che_prod_9d820f15d0b93ec15fc23694efb70726?amount=" + this.state.totalKG, "_blank")
     }
 
     render(){
