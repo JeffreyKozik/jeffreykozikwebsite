@@ -631,12 +631,12 @@ class OneWorldBrowserExtension extends React.Component {
 
         let timeLeft = 20;
         setInterval(function(){
-            this.state.submitTextChange("Loading " + timeLeft.toString(), row);
+            this.submitTextChange("Loading " + timeLeft.toString(), row);
             timeLeft--;
         }, 1000);
 
         setTimeout(function(){
-            this.state.submitTextChange("Submit", row);
+            this.submitTextChange("Submit", row);
 
             this.consumptionChange({value: consumption_category, label: consumption_category}, row);
             this.supplyChainChange({value: supply_chain_category, label: supply_chain_category}, row);
