@@ -556,6 +556,14 @@ class OneWorldBrowserExtension extends React.Component {
             rows : Array.from(oldRowsClone)
         });
     }
+    submitTextChange(newValue, row){
+        let oldRows = Array.from(this.state.rows);
+        let oldRowsClone = _.cloneDeep(oldRows);
+        oldRowsClone[row].submit_text = newValue;
+        this.setState({
+            rows : Array.from(oldRowsClone)
+        });
+    }
     consumptionChange(selectedOption, currentRow){
         console.log("SelectedOption", selectedOption);
         let oldRows = Array.from(this.state.rows);
@@ -586,12 +594,7 @@ class OneWorldBrowserExtension extends React.Component {
     }
 
     predictCategory(row){
-        let oldRows = Array.from(this.state.rows);
-        let oldRowsClone = _.cloneDeep(oldRows);
-        oldRowsClone[row].submit_text = "Loading";
-        this.setState({
-            rows : Array.from(oldRowsClone)
-        });
+        this.state.submitTextChange("Loading", row);
 
         let nameOfProduct = this.state.rows[row].name;
         let costOfProduct = this.state.rows[row].cost.replace(/[^\w\s]|_/g, "").replace(/\s+/g, " ");
@@ -628,22 +631,12 @@ class OneWorldBrowserExtension extends React.Component {
 
         let timeLeft = 20;
         setInterval(function(){
-            let oldRows = Array.from(this.rows);
-            let oldRowsClone = _.cloneDeep(oldRows);
-            oldRowsClone[row].submit_text = "Loading " + timeLeft.toString();
-            this.setState({
-                rows : Array.from(oldRowsClone)
-            });
+            this.state.submitTextChange("Loading " + timeLeft.toString(), row);
             timeLeft--;
         }, 1000);
 
         setTimeout(function(){
-            let oldRows = Array.from(this.rows);
-            let oldRowsClone = _.cloneDeep(oldRows);
-            oldRowsClone[row].submit_text = "Submit";
-            this.setState({
-                rows : Array.from(oldRowsClone)
-            });
+            this.state.submitTextChange("Submit", row);
 
             this.consumptionChange({value: consumption_category, label: consumption_category}, row);
             this.supplyChainChange({value: supply_chain_category, label: supply_chain_category}, row);
