@@ -328,6 +328,7 @@ let consumptionOptions = [
 '12.5.3.3 Funeral expenses',
 '12.5.3.4 TU and professional organisations',
 '12.5.3.5 Other payments for services',
+'Loading...'
 ];
 
 const animatedComponentsSupplyChain = makeAnimated();
@@ -437,7 +438,8 @@ let supplyChainOptions = [
 'Services furnished by membership organisations',
 'Repair services of computers and personal and household goods',
 'Other personal services',
-'Services of households as employers of domestic personnel'
+'Services of households as employers of domestic personnel',
+'Loading...'
 ];
 
 // import {useMediaQuery} from '../hooks/useMediaQuery';
@@ -455,12 +457,20 @@ let supplyChainOptions = [
     // }
     let selectConsumptionOptions = []
     for(let i = 0; i < consumptionOptions.length; i++){
-        selectConsumptionOptions.push({value: consumptionOptions[i], label: consumptionOptions[i]});
+        selectConsumptionOptions.push({value: consumptionOptions[i].replace(/[^\w\s]|_/g, "")
+                                                   .replace(/\s+/g, " ")
+                                                   .replace(/[1234567890]/g, ""), label: consumptionOptions[i].replace(/[^\w\s]|_/g, "")
+                                                                                              .replace(/\s+/g, " ")
+                                                                                              .replace(/[1234567890]/g, "")});
     }
 
     let selectSupplyChainOptions = []
     for(let i = 0; i < supplyChainOptions.length; i++){
-        selectSupplyChainOptions.push({value: supplyChainOptions[i], label: supplyChainOptions[i]});
+        selectSupplyChainOptions.push({value: supplyChainOptions[i].replace(/[^\w\s]|_/g, "")
+                                                   .replace(/\s+/g, " ")
+                                                   .replace(/[1234567890]/g, ""), label: supplyChainOptions[i].replace(/[^\w\s]|_/g, "")
+                                                                                              .replace(/\s+/g, " ")
+                                                                                              .replace(/[1234567890]/g, "")});
     }
 
 class OneWorldBrowserExtension extends React.Component {
@@ -487,7 +497,7 @@ class OneWorldBrowserExtension extends React.Component {
     }
 
     addRowFunction(){
-        let consumptionSelect2 = '1.1.1.1 Rice';
+        let consumptionSelect2 = 'Rice';
         let supplyChainSelect2 = 'Agriculture products';
         let name2 = "";
         let cost2 = "";
@@ -615,6 +625,11 @@ class OneWorldBrowserExtension extends React.Component {
         if(row == "total"){
             console.log("total");
         }else{
+            let oldRows = Array.from(this.state.rows);
+            let oldRowsClone = _.cloneDeep(oldRows);
+            oldRowsClone[row].consumption = "Loading...";
+            oldRowsClone[row].supply_chain = "Loading...";
+
             let nameOfProduct = this.state.rows[row].name;
             let costOfProduct = this.state.rows[row].cost;
             let euroSpent = 0.886727 * costOfProduct;
@@ -656,6 +671,11 @@ class OneWorldBrowserExtension extends React.Component {
                     console.log("consumption_category " + consumption_category)
                     console.log("supply_chain_category " + supply_chain_category)
                     console.log("total_co2 " + total_co2)
+            });
+            oldRowsClone[row].consumption = consumption_category;
+            oldRowsClone[row].supply_chain = supply_chain_category;
+            this.setState({
+                rows : Array.from(oldRowsClone)
             });
         }
     }
