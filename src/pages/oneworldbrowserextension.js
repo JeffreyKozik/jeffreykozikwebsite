@@ -526,7 +526,7 @@ class OneWorldBrowserExtension extends React.Component {
             rows : Array.from(oldRowsClone)
         });
 
-        this.state.printRows();
+        this.printRows();
     }
 
     deleteRowFunction(row_num){
@@ -537,7 +537,7 @@ class OneWorldBrowserExtension extends React.Component {
             rows : Array.from(oldRowsClone)
         });
 
-        this.state.printRows();
+        this.printRows();
     }
 
     nameChange(newValue, row){
@@ -578,10 +578,10 @@ class OneWorldBrowserExtension extends React.Component {
     submitFunction(row){
         if(row == "total"){
             for(let i = 0; i < this.state.rows.length; i++){
-                this.state.predictCategory(i);
+                this.predictCategory(i);
             }
         }else{
-            this.state.predictCategory(row);
+            this.predictCategory(row);
         }
     }
 
