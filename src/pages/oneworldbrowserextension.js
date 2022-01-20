@@ -199,21 +199,21 @@ class OneWorldBrowserExtension extends React.Component {
     constructor(props){
         super(props);
 
-        this.createData = this.createData.bind(this);
-
-        this.printRows = this.printRows.bind(this);
-        this.addRowFunction = this.addRowFunction.bind(this);
-        this.deleteRowFunction = this.deleteRowFunction.bind(this);
-
-        this.nameChange = this.nameChange.bind(this);
-        this.costChange = this.costChange.bind(this);
-        this.submitTextChange = this.submitTextChange.bind(this);
-        this.consumptionChange = this.consumptionChange.bind(this);
-        this.supplyChainChange = this.supplyChainChange.bind(this);
-
-        this.submitFunction = this.submitFunction.bind(this);
-        this.predictCategory = this.predictCategory.bind(this);
-        this.offsetFunction = this.offsetFunction.bind(this);
+        // this.createData = this.createData.bind(this);
+        //
+        // this.printRows = this.printRows.bind(this);
+        // this.addRowFunction = this.addRowFunction.bind(this);
+        // this.deleteRowFunction = this.deleteRowFunction.bind(this);
+        //
+        // this.nameChange = this.nameChange.bind(this);
+        // this.costChange = this.costChange.bind(this);
+        // this.submitTextChange = this.submitTextChange.bind(this);
+        // this.consumptionChange = this.consumptionChange.bind(this);
+        // this.supplyChainChange = this.supplyChainChange.bind(this);
+        //
+        // this.submitFunction = this.submitFunction.bind(this);
+        // this.predictCategory = this.predictCategory.bind(this);
+        // this.offsetFunction = this.offsetFunction.bind(this);
 
         const animatedComponentsConsumption = makeAnimated();
         const animatedComponentsSupplyChain = makeAnimated();
