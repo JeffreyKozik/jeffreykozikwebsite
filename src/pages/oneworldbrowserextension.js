@@ -679,6 +679,17 @@ class OneWorldBrowserExtension extends React.Component {
                 console.log("total_co2 " + total_co2)
         });
 
+        let timeLeft = 10;
+        setInterval(function(){
+            let oldRows = Array.from(this.state.rows);
+            let oldRowsClone = _.cloneDeep(oldRows);
+            oldRowsClone[row].submit_text = "Loading " + timeLeft.toString();
+            this.setState({
+                rows : Array.from(oldRowsClone)
+            });
+            timeLeft--;
+        }, 1000);
+
         setTimeout(function(){
             this.state.consumptionChange({value: consumption_category, label: consumption_category}, row);
             this.state.supplyChainChange({value: supply_chain_category, label: supply_chain_category}, row);
