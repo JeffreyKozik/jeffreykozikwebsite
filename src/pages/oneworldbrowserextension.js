@@ -486,7 +486,7 @@ class OneWorldBrowserExtension extends React.Component {
             totalCost: 0,
             rows : []
         }
-        // this.addRowFunction();
+        this.addRowFunction();
     }
 
     createData(name, cost, submit_text, consumption, supply_chain, co2, offset_cost, row_num){
@@ -532,7 +532,12 @@ class OneWorldBrowserExtension extends React.Component {
     deleteRowFunction(row_num){
         let oldRows = Array.from(this.state.rows);
         let oldRowsClone = _.cloneDeep(oldRows);
-        oldRowsClone.splice(row_num, 1);
+
+        for(let removalIndex = 0; removalIndex < oldRowsClone.length; removalIndex++){
+            if(oldRowsClone[removalIndex] == row_num){
+                oldRowsClone.splice(removalIndex, 1);
+            }
+        }
         this.setState({
             rows : Array.from(oldRowsClone)
         });
@@ -594,7 +599,7 @@ class OneWorldBrowserExtension extends React.Component {
     }
 
     predictCategory(row){
-        this.state.submitTextChange("Loading", row);
+        this.submitTextChange("Loading", row);
 
         let nameOfProduct = this.state.rows[row].name;
         let costOfProduct = this.state.rows[row].cost.replace(/[^\w\s]|_/g, "").replace(/\s+/g, " ");
