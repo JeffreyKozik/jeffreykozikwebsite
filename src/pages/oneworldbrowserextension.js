@@ -493,7 +493,7 @@ class OneWorldBrowserExtension extends React.Component {
         let cost2 = "";
         let co22 = 0;
         let offset_cost2 = "$0";
-        let row_num2 = this.state.rows.length;
+        let row_num2 = this.state.numRows;
 
         let nextRow = this.createData(name2, cost2, consumptionSelect2, supplyChainSelect2, co22, offset_cost2, row_num2);
 
@@ -502,6 +502,7 @@ class OneWorldBrowserExtension extends React.Component {
         oldRowsClone.push(nextRow);
 
         this.setState({
+            numRows : (this.state.numRows + 1),
             rows : Array.from(oldRowsClone)
         });
 
@@ -529,8 +530,8 @@ class OneWorldBrowserExtension extends React.Component {
 
         this.consumptionChange = this.consumptionChange.bind(this);
         this.supplyChainChange = this.supplyChainChange.bind(this);
-        this.generateConsumptionOptions = this.generateConsumptionOptions.bind(this);
-        this.generateSupplyChainOptions = this.generateSupplyChainOptions.bind(this);
+        // this.generateConsumptionOptions = this.generateConsumptionOptions.bind(this);
+        // this.generateSupplyChainOptions = this.generateSupplyChainOptions.bind(this);
         this.createData = this.createData.bind(this);
         this.addRowFunction = this.addRowFunction.bind(this);
         this.deleteRowFunction = this.deleteRowFunction.bind(this);
@@ -559,6 +560,7 @@ class OneWorldBrowserExtension extends React.Component {
 
 
         this.state = {
+            numRows: 0,
             rows : []
         }
         // this.addRowFunction();
