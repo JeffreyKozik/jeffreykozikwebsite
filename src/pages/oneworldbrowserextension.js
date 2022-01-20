@@ -51,8 +51,8 @@ class OneWorldBrowserExtension extends React.Component {
         let name = "";
         let cost = "";
         let submitText = "Submit";
-        let consumptionSelect = {value: 'Press Submit', label: 'Press Submit'};
-        let supplyChainSelect = {value: 'Press Submit', label: 'Press Submit'};
+        let consumptionSelect = null;
+        let supplyChainSelect = null;
         let co2 = 0;
         let offset_cost = 0;
         let row_num = this.state.numRows;
@@ -157,9 +157,6 @@ class OneWorldBrowserExtension extends React.Component {
     }
 
     predictCategory = (row) => {
-        // this.consumptionChange({value: "Loading", label: "Loading"}, row);
-        // this.supplyChainChange({value: "Loading", label: "Loading"}, row);
-
         this.submitTextChange("Loading", row);
 
         let nameOfProduct = this.state.rows[row].name;
@@ -222,7 +219,7 @@ class OneWorldBrowserExtension extends React.Component {
     }
 
     offsetFunction = () => {
-        let urlAppend = (this.state.totalKG*1000).toFixed(0);
+        let urlAppend = (this.state.totalKG*1000*1.15).toFixed(0);
         window.open("https://checkout.patch.io/che_prod_9d820f15d0b93ec15fc23694efb70726?amount=" + urlAppend, "_blank")
     }
 
@@ -553,9 +550,7 @@ class OneWorldBrowserExtension extends React.Component {
         '12.5.2.3 Credit card fees',
         '12.5.3.1 Other professional fees',
         '12.5.3.2 Legal fees',
-        '12.5.3.3 Funeral expenses',
-        'Press Submit',
-        'Loading'
+        '12.5.3.3 Funeral expenses'
         ];
         let selectConsumptionOptions = []
         for(let i = 0; i < consumptionOptions.length; i++){
@@ -669,8 +664,6 @@ class OneWorldBrowserExtension extends React.Component {
         'Repair services of computers and personal and household goods',
         'Other personal services',
         'Services of households as employers of domestic personnel',
-        'Press Submit',
-        'Loading'
         ];
         let selectSupplyChainOptions = []
         for(let i = 0; i < supplyChainOptions.length; i++){
