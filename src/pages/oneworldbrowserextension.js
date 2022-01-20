@@ -19,6 +19,8 @@ import _ from 'lodash'
 
 import {Helmet} from "react-helmet";
 
+import emissionsJSON from "../data/emissions.json"
+
 // import {useMediaQuery} from '../hooks/useMediaQuery';
 //
 // const styles = {
@@ -220,7 +222,7 @@ class OneWorldBrowserExtension extends React.Component {
     }
 
     offsetFunction = () => {
-        let urlAppend = (this.state.totalKG*1000).toFixed(0))
+        let urlAppend = (this.state.totalKG*1000).toFixed(0);
         window.open("https://checkout.patch.io/che_prod_9d820f15d0b93ec15fc23694efb70726?amount=" + urlAppend, "_blank")
     }
 
