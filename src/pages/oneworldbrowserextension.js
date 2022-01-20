@@ -679,9 +679,9 @@ class OneWorldBrowserExtension extends React.Component {
                 console.log("total_co2 " + total_co2)
         });
 
-        let timeLeft = 10;
+        let timeLeft = 20;
         setInterval(function(){
-            let oldRows = Array.from(this.state.rows);
+            let oldRows = Array.from(this.rows);
             let oldRowsClone = _.cloneDeep(oldRows);
             oldRowsClone[row].submit_text = "Loading " + timeLeft.toString();
             this.setState({
@@ -691,9 +691,20 @@ class OneWorldBrowserExtension extends React.Component {
         }, 1000);
 
         setTimeout(function(){
-            this.state.consumptionChange({value: consumption_category, label: consumption_category}, row);
-            this.state.supplyChainChange({value: supply_chain_category, label: supply_chain_category}, row);
-        }, 10000);
+            let oldRows = Array.from(this.rows);
+            let oldRowsClone = _.cloneDeep(oldRows);
+            oldRowsClone[row].submit_text = "Submit";
+            this.setState({
+                rows : Array.from(oldRowsClone)
+            });
+
+            this.consumptionChange({value: consumption_category, label: consumption_category}, row);
+            this.supplyChainChange({value: supply_chain_category, label: supply_chain_category}, row);
+            this.costChange(total_co2, row);
+            this.setState({
+                totalKG : this.totalKG + total_co2;
+            });
+        }, 20000);
 
         // oldRowsClone[row].consumption = consumption_category;
         // oldRowsClone[row].supply_chain = supply_chain_category;
@@ -775,7 +786,7 @@ class OneWorldBrowserExtension extends React.Component {
                         <td style={{overflowY: "visible !important"}} className="one_world_consumptionTable" align="right"></td>
                         <td style={{overflowY: "visible !important"}} className="one_world_supplychainTable" align="right"></td>
                         <td className="one_world_CO2Table" align="right"><div>{this.state.totalKG} kg</div></td>
-                        <td className="one_world_offsetcostTable" align="right"><div>{this.state.totalCost}</div></td>
+                        <td className="one_world_offsetcostTable" align="right"><div>${this.state.totalCost}</div></td>
                         <td className="one_world_deleteTable" align="right"></td>
                     </tr>
                   </table>
