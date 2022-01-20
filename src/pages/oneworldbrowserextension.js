@@ -147,18 +147,19 @@ class OneWorldBrowserExtension extends React.Component {
     }
 
     predictCategory = (row) => {
+        this.consumptionChange({value: "Loading", label: "Loading"}, row);
+        this.supplyChainChange({value: "Loading", label: "Loading"}, row);
+
         this.submitTextChange("Loading", row);
 
         let nameOfProduct = this.state.rows[row].name;
         let costOfProduct = this.state.rows[row].cost.replace(/[^\w\s]|_/g, "").replace(/\s+/g, " ");
         let euroSpent = 0.886727 * costOfProduct;
 
-        let original_consumption_category = _.cloneDeep(this.state.rows[row].consumption);
-        let original_supply_chain_category = _.cloneDeep(this.state.rows[row].supply_chain);
-
         let consumption_category = ""
         let supply_chain_category = ""
         let total_co2 = 0
+        let total_offset = 0
         const api_url = 'https://oneworldsquareextensionfunctionapp.azurewebsites.net/api/OneWorldSquareExtensionFunction/?code=/tw7J4uFrU4tRm9HcP1pMI2kiUaoou8ZT0GjMWljPZIv3zoGRle8uQ==';
         fetch(api_url, {
             method: 'POST',
@@ -177,12 +178,14 @@ class OneWorldBrowserExtension extends React.Component {
                 // console.log(json['what_to_offset_supply_chain_kgCO2perEuro']);
                 total_co2 += parseFloat(json['what_to_offset_consumption_kgCO2perEuro'])
                 total_co2 = Number(total_co2 * euroSpent).toFixed(2)
+                total_offset = Number(total_co2 * 0.0085).toFixed(2)
                 // https://stackoverflow.com/questions/4328500/how-can-i-strip-all-punctuation-from-a-string-in-javascript-using-regex
                 consumption_category = consumption_category.replace(/[^\w\s]|_/g, "").replace(/\s+/g, " ").replace(/[1234567890]/g, "")
                 supply_chain_category = supply_chain_category.replace(/[^\w\s]|_/g, "").replace(/\s+/g, " ").replace(/[1234567890]/g, "")
                 console.log("consumption_category " + consumption_category)
                 console.log("supply_chain_category " + supply_chain_category)
                 console.log("total_co2 " + total_co2)
+                console.log("total_offset " + total_offset)
         });
 
         let timeLeft = 1;
@@ -190,7 +193,7 @@ class OneWorldBrowserExtension extends React.Component {
             this.submitTextChange("Loading " + timeLeft.toString(), row);
             timeLeft++;
 
-            if(!_.isEqual(consumption_category, original_consumption_category) && !_.isEqual(supply_chain_category, original_consumption_category)){
+            if(!_.isEqual(consumption_category, {value: "Loading", label: "Loading"}) && !_.isEqual(supply_chain_category, {value: "Loading", label: "Loading"})){
                 setTimeout(() => {
                     this.submitTextChange("Submit", row);
 
@@ -198,7 +201,8 @@ class OneWorldBrowserExtension extends React.Component {
                     this.supplyChainChange({value: supply_chain_category, label: supply_chain_category}, row);
                     this.co2Change(total_co2, row);
                     this.setState({
-                        totalKG : this.totalKG + total_co2
+                        totalKG : (this.state.totalKG + total_co2),
+                        totalOffset : (this.state.totalOffset + total_offset)
                     });
                     clearInterval(timerID);
                 }, 2000)
@@ -549,7 +553,8 @@ class OneWorldBrowserExtension extends React.Component {
         '12.5.3.1 Other professional fees',
         '12.5.3.2 Legal fees',
         '12.5.3.3 Funeral expenses',
-        'Press Submit'
+        'Press Submit',
+        'Loading'
         ];
         let selectConsumptionOptions = []
         for(let i = 0; i < consumptionOptions.length; i++){
@@ -663,7 +668,8 @@ class OneWorldBrowserExtension extends React.Component {
         'Repair services of computers and personal and household goods',
         'Other personal services',
         'Services of households as employers of domestic personnel',
-        'Press Submit'
+        'Press Submit',
+        'Loading'
         ];
         let selectSupplyChainOptions = []
         for(let i = 0; i < supplyChainOptions.length; i++){
@@ -678,10 +684,10 @@ class OneWorldBrowserExtension extends React.Component {
             selectSupplyChainOptions: selectSupplyChainOptions,
             numRows: 0,
             totalKG: 0,
-            totalCost: 0,
+            totalOffset: 0,
             rows : []
         }
-        this.addRowFunction();
+        // this.addRowFunction();
     }
 
     render(){
@@ -729,7 +735,7 @@ class OneWorldBrowserExtension extends React.Component {
                                 <td style={{overflowY: "visible !important"}} className="one_world_consumptionTable" align="right"></td>
                                 <td style={{overflowY: "visible !important"}} className="one_world_supplychainTable" align="right"></td>
                                 <td className="one_world_CO2Table" align="right"><div>{this.state.totalKG} kg</div></td>
-                                <td className="one_world_offsetcostTable" align="right"><div>${this.state.totalCost}</div></td>
+                                <td className="one_world_offsetcostTable" align="right"><div>${this.state.totalOffset}</div></td>
                                 <td className="one_world_deleteTable" align="right"></td>
                             </tr>
                           </table>
