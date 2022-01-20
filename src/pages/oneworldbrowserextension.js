@@ -139,7 +139,7 @@ class OneWorldBrowserExtension extends React.Component {
     }
 
     predictCategory = (row) => {
-        this.state.submitTextChange("Loading", row);
+        this.submitTextChange("Loading", row);
 
         let nameOfProduct = this.state.rows[row].name;
         let costOfProduct = this.state.rows[row].cost.replace(/[^\w\s]|_/g, "").replace(/\s+/g, " ");
@@ -176,12 +176,12 @@ class OneWorldBrowserExtension extends React.Component {
 
         let timeLeft = 20;
         setInterval(function(){
-            this.state.submitTextChange("Loading " + timeLeft.toString(), row);
+            this.submitTextChange("Loading " + timeLeft.toString(), row);
             timeLeft--;
         }, 1000);
 
         setTimeout(function(){
-            this.state.submitTextChange("Submit", row);
+            this.submitTextChange("Submit", row);
 
             this.consumptionChange({value: consumption_category, label: consumption_category}, row);
             this.supplyChainChange({value: supply_chain_category, label: supply_chain_category}, row);
