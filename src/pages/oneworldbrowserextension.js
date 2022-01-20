@@ -487,8 +487,8 @@ class OneWorldBrowserExtension extends React.Component {
     }
 
     addRowFunction(){
-        let consumptionSelect2 = this.generateConsumptionOptions();
-        let supplyChainSelect2 = this.generateSupplyChainOptions();
+        let consumptionSelect2 = '1.1.1.1 Rice';
+        let supplyChainSelect2 = 'Agriculture products';
         let name2 = "";
         let cost2 = "";
         let co22 = 0;
@@ -539,18 +539,18 @@ class OneWorldBrowserExtension extends React.Component {
         this.nameChange = this.nameChange.bind(this);
         this.costChange = this.costChange.bind(this);
 
-        // let consumptionSelect = this.generateConsumptionOptions();
+        let consumptionSelect = '1.1.1.1 Rice';
         // console.log("consumptionSelect: " + consumptionSelect);
-        // let supplyChainSelect = this.generateSupplyChainOptions();
+        let supplyChainSelect = 'Agriculture products';
         // console.log("supplyChainSelect: " + supplyChainSelect);
 
-        // let name = "";
-        // let cost = "";
-        // let co2 = 0;
-        // let offset_cost = "$0";
-        // let row_num = 0;
-        //
-        // let firstRow = this.createData(name, cost, consumptionSelect, supplyChainSelect, co2, offset_cost, row_num);
+        let name = "";
+        let cost = "";
+        let co2 = 0;
+        let offset_cost = "$0";
+        let row_num = 0;
+
+        let firstRow = this.createData(name, cost, consumptionSelect, supplyChainSelect, co2, offset_cost, row_num);
 
         // firstRow = Array.from(firstRow);
         // let rows = [firstRow];
@@ -560,8 +560,8 @@ class OneWorldBrowserExtension extends React.Component {
 
 
         this.state = {
-            numRows: 0,
-            rows : []
+            numRows: 1,
+            rows : [firstRow]
         }
         // this.addRowFunction();
 
