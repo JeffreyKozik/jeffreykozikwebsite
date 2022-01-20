@@ -612,7 +612,7 @@ class OneWorldBrowserExtension extends React.Component {
     }
 
     submitFunction(){
-        
+
     }
 
     nameChange(newValue, row){
@@ -660,7 +660,7 @@ class OneWorldBrowserExtension extends React.Component {
                         <td className="one_world_deleteTable" align="right"></td>
                       </tr>
                     {this.state.rows.map((row) =>
-                        <tr key={row.row_num} style={{overflowY: "visible !important"}}>
+                        <tr key={row.row_num.toString()} style={{overflowY: "visible !important"}}>
                             <td className="one_world_nameTable"><TextField id="standard-basic" placeholder="Apples..." variant="standard" value={row.name} onChange={(e) => this.nameChange(e.target.value, row.row_num)}/></td>
                             <td className="one_world_costTable" align="right"><TextField id="standard-basic" placeholder="$10..." variant="standard" value={row.cost} onChange={(e) => this.costChange(e.target.value, row.row_num)}/></td>
                             <td className="one_world_submit" align="right"><button onClick={() => this.submitFunction(row.row_num)}>Submit</button></td>
@@ -671,6 +671,15 @@ class OneWorldBrowserExtension extends React.Component {
                             <td className="one_world_deleteTable" align="right"><button onClick={() => this.deleteRowFunction(row.row_num)}><FontAwesomeIcon icon={faTrashAlt} id="delete_row_button"/></button></td>
                         </tr>
                     )}
+                    <tr key="total" style={{overflowY: "visible !important"}}>
+                        <td className="one_world_nameTable"></td>
+                        <td className="one_world_costTable" align="right"></td>
+                        <td style={{overflowY: "visible !important"}} className="one_world_consumptionTable" align="right"></td>
+                        <td style={{overflowY: "visible !important"}} className="one_world_supplychainTable" align="right"></td>
+                        <td className="one_world_CO2Table" align="right"><div>{this.state.totalKG} kg</div></td>
+                        <td className="one_world_offsetcostTable" align="right"><div>{this.state.totalCost}</div></td>
+                        <td className="one_world_deleteTable" align="right"></td>
+                    </tr>
                   </table>
                 <Button onClick={this.addRowFunction} variant="text" id="one_world_add_row_button"> Add Row </Button>
                 <Button onClick={this.offsetFunction} variant="text" id="one_world_offset_row_button"> Offset CO2 </Button>
@@ -700,15 +709,5 @@ class OneWorldBrowserExtension extends React.Component {
     </>
 );
 }}
-
-<tr key="total" style={{overflowY: "visible !important"}}>
-    <td className="one_world_nameTable"></td>
-    <td className="one_world_costTable" align="right"></td>
-    <td style={{overflowY: "visible !important"}} className="one_world_consumptionTable" align="right"></td>
-    <td style={{overflowY: "visible !important"}} className="one_world_supplychainTable" align="right"></td>
-    <td className="one_world_CO2Table" align="right"><div>{this.state.totalKG} kg</div></td>
-    <td className="one_world_offsetcostTable" align="right"><div>{this.state.totalCost}</div></td>
-    <td className="one_world_deleteTable" align="right"></td>
-</tr>
 
 export default OneWorldBrowserExtension
