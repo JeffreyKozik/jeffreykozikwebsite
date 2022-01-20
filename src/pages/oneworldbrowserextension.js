@@ -488,25 +488,30 @@ class OneWorldBrowserExtension extends React.Component {
         this.addRowFunction = this.addRowFunction.bind(this);
         this.deleteRowFunction = this.deleteRowFunction.bind(this);
 
-        let consumptionSelect = this.generateConsumptionOptions();
+        // let consumptionSelect = this.generateConsumptionOptions();
         // console.log("consumptionSelect: " + consumptionSelect);
-        let supplyChainSelect = this.generateSupplyChainOptions();
+        // let supplyChainSelect = this.generateSupplyChainOptions();
         // console.log("supplyChainSelect: " + supplyChainSelect);
-        let name = "";
-        let cost = "";
-        let co2 = 0;
-        let offset_cost = "$0";
-        let row_num = 0;
 
-        let firstRow = this.createData(name, cost, consumptionSelect, supplyChainSelect, co2, offset_cost, row_num);
+        // let name = "";
+        // let cost = "";
+        // let co2 = 0;
+        // let offset_cost = "$0";
+        // let row_num = 0;
+        //
+        // let firstRow = this.createData(name, cost, consumptionSelect, supplyChainSelect, co2, offset_cost, row_num);
+
         // firstRow = Array.from(firstRow);
         // let rows = [firstRow];
         // do this.createData save that to a variable
         // then do the split on that
 
+
+
         this.state = {
-            rows : [firstRow]
+            rows : []
         }
+        this.state.addRowFunction();
 
         // console.log("rows" + this.state.rows);
         // console.log("type of rows" + xtype(this.state.rows));
@@ -551,7 +556,7 @@ class OneWorldBrowserExtension extends React.Component {
         // }));
 
         console.log("rows" + this.state.rows);
-        console.log("type of rows" + xtype(this.state.rows));
+        // console.log("type of rows" + xtype(this.state.rows));
 
         for(let i = 0; i < this.state.rows.length; i++){
             // console.log("this.state.rows[" + i.toString(10) + "]" + this.state.rows[i]);
