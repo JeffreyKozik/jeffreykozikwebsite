@@ -539,18 +539,18 @@ class OneWorldBrowserExtension extends React.Component {
         this.nameChange = this.nameChange.bind(this);
         this.costChange = this.costChange.bind(this);
 
-        let consumptionSelect = '1.1.1.1 Rice';
+        // let consumptionSelect = '1.1.1.1 Rice';
         // console.log("consumptionSelect: " + consumptionSelect);
-        let supplyChainSelect = 'Agriculture products';
+        // let supplyChainSelect = 'Agriculture products';
         // console.log("supplyChainSelect: " + supplyChainSelect);
 
-        let name = "";
-        let cost = "";
-        let co2 = 0;
-        let offset_cost = "$0";
-        let row_num = 0;
-
-        let firstRow = this.createData(name, cost, consumptionSelect, supplyChainSelect, co2, offset_cost, row_num);
+        // let name = "";
+        // let cost = "";
+        // let co2 = 0;
+        // let offset_cost = "$0";
+        // let row_num = 0;
+        //
+        // let firstRow = this.createData(name, cost, consumptionSelect, supplyChainSelect, co2, offset_cost, row_num);
 
         // firstRow = Array.from(firstRow);
         // let rows = [firstRow];
@@ -560,8 +560,8 @@ class OneWorldBrowserExtension extends React.Component {
 
 
         this.state = {
-            numRows: 1,
-            rows : [firstRow]
+            numRows: 0,
+            rows : []
         }
         // this.addRowFunction();
 
@@ -656,8 +656,8 @@ class OneWorldBrowserExtension extends React.Component {
                         <tr key={row.row_num} style={{overflowY: "visible !important"}}>
                             <td className="one_world_nameTable"><TextField id="standard-basic" placeholder="Apples..." variant="standard" value={row.name} onChange={(e) => this.nameChange(e.target.value, row.row_num)}/></td>
                             <td className="one_world_costTable" align="right"><TextField id="standard-basic" placeholder="$10..." variant="standard" value={row.cost} onChange={(e) => this.costChange(e.target.value, row.row_num)}/></td>
-                            <td style={{overflowY: "visible !important"}} className="one_world_consumptionTable" align="right"><Select class="one_world_select" closeMenuOnSelect={false} components={selectConsumptionOptions} options={this.state.generateSupplyChainOptions} value={row.consumption} onChange={(e) => this.consumptionChange(e.target.value, row.row_num)}/></td>
-                            <td style={{overflowY: "visible !important"}} className="one_world_supplychainTable" align="right"><Select class="one_world_select" closeMenuOnSelect={false} components={selectSupplyChainOptions} options={this.state.generateConsumptionOptions} value={row.supply_chain} onChange={(e) => this.supplyChainChange(e.target.value, row.row_num)}/></td>
+                            <td style={{overflowY: "visible !important"}} className="one_world_consumptionTable" align="right"><Select class="one_world_select" closeMenuOnSelect={false} components={animatedComponentsConsumption} options={selectConsumptionOptions} value={row.consumption} onChange={(e) => this.consumptionChange(e.target.value, row.row_num)}/></td>
+                            <td style={{overflowY: "visible !important"}} className="one_world_supplychainTable" align="right"><Select class="one_world_select" closeMenuOnSelect={false} components={animatedComponentsSupplyChain} options={selectSupplyChainOptions} value={row.supply_chain} onChange={(e) => this.supplyChainChange(e.target.value, row.row_num)}/></td>
                             <td className="one_world_CO2Table" align="right"><div>{row.co2} kg</div></td>
                             <td className="one_world_offsetcostTable" align="right"><div>{row.offset_cost}</div></td>
                             <td className="one_world_deleteTable" align="right"><button onClick={() => this.deleteRowFunction(row.row_num)}><FontAwesomeIcon icon={faTrashAlt} id="delete_row_button"/></button></td>
@@ -692,5 +692,15 @@ class OneWorldBrowserExtension extends React.Component {
     </>
 );
 }}
+
+// <tr key={-1} style={{overflowY: "visible !important"}}>
+//     <td className="one_world_nameTable"><TextField id="standard-basic" placeholder="Apples..." variant="standard" value={row.name} onChange={(e) => this.nameChange(e.target.value, row.row_num)}/></td>
+//     <td className="one_world_costTable" align="right"><TextField id="standard-basic" placeholder="$10..." variant="standard" value={row.cost} onChange={(e) => this.costChange(e.target.value, row.row_num)}/></td>
+//     <td style={{overflowY: "visible !important"}} className="one_world_consumptionTable" align="right"><Select class="one_world_select" closeMenuOnSelect={false} components={selectConsumptionOptions} options={this.state.generateSupplyChainOptions} value={row.consumption} onChange={(e) => this.consumptionChange(e.target.value, row.row_num)}/></td>
+//     <td style={{overflowY: "visible !important"}} className="one_world_supplychainTable" align="right"><Select class="one_world_select" closeMenuOnSelect={false} components={selectSupplyChainOptions} options={this.state.generateConsumptionOptions} value={row.supply_chain} onChange={(e) => this.supplyChainChange(e.target.value, row.row_num)}/></td>
+//     <td className="one_world_CO2Table" align="right"><div>{row.co2} kg</div></td>
+//     <td className="one_world_offsetcostTable" align="right"><div>{row.offset_cost}</div></td>
+//     <td className="one_world_deleteTable" align="right"><button onClick={() => this.deleteRowFunction(row.row_num)}><FontAwesomeIcon icon={faTrashAlt} id="delete_row_button"/></button></td>
+// </tr>
 
 export default OneWorldBrowserExtension
