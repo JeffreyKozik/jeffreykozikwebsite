@@ -6,6 +6,7 @@ module.exports = {
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
   plugins: [
+    `@babel/eslint-parser`,
     `bootstrap`,
     `react-bootstrap`,
     `prop-types`,

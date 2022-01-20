@@ -191,15 +191,17 @@ class OneWorldBrowserExtension extends React.Component {
             timeLeft++;
 
             if(!_.isEqual(consumption_category, original_consumption_category) && !_.isEqual(supply_chain_category, original_consumption_category)){
-                this.submitTextChange("Submit", row);
+                setTimeout(() => {
+                    this.submitTextChange("Submit", row);
 
-                this.consumptionChange({value: consumption_category, label: consumption_category}, row);
-                this.supplyChainChange({value: supply_chain_category, label: supply_chain_category}, row);
-                this.co2Change(total_co2, row);
-                this.setState({
-                    totalKG : this.totalKG + total_co2
-                });
-                clearInterval(timerID);
+                    this.consumptionChange({value: consumption_category, label: consumption_category}, row);
+                    this.supplyChainChange({value: supply_chain_category, label: supply_chain_category}, row);
+                    this.co2Change(total_co2, row);
+                    this.setState({
+                        totalKG : this.totalKG + total_co2
+                    });
+                    clearInterval(timerID);
+                }, 2000)
             }
         }, 1000);
 
