@@ -525,7 +525,7 @@ class OneWorldBrowserExtension extends React.Component {
         console.log("rows" + this.state.rows);
         // console.log("type of rows" + xtype(this.state.rows));
 
-        for(let i = 0; i < this.state.rows.length; i++){
+        for(let i = 0; i < this.state.numRows; i++){
             // console.log("this.state.rows[" + i.toString(10) + "]" + this.state.rows[i]);
             // console.log("this.state.rows[" + i.toString(10) + "].name: " + this.state.rows[i].name);
             // console.log("this.state.rows[" + i.toString(10) + "].cost: " + this.state.rows[i].cost);
@@ -630,8 +630,8 @@ class OneWorldBrowserExtension extends React.Component {
         // let oldRowsClone = _.cloneDeep(oldRows);
         // oldRowsClone[row].consumption = "Loading...";
         // oldRowsClone[row].supply_chain = "Loading...";
-        this.consumptionChange("Loading...", row);
-        this.supplyChainChange("Loading...", row);
+        this.consumptionChange({value: "Loading...", label: "Loading..."}, row);
+        this.supplyChainChange({value: "Loading...", label: "Loading..."}, row);
 
         let nameOfProduct = this.state.rows[row].name;
         let costOfProduct = this.state.rows[row].cost;
@@ -675,8 +675,8 @@ class OneWorldBrowserExtension extends React.Component {
                 console.log("supply_chain_category " + supply_chain_category)
                 console.log("total_co2 " + total_co2)
         });
-        this.consumptionChange(consumption_category, row);
-        this.supplyChainChange(supply_chain_category, row);
+        this.consumptionChange({value: consumption_category, label: consumption_category}, row);
+        this.consumptionChange({value: supply_chain_category, label: supply_chain_category}, row);
 
         // oldRowsClone[row].consumption = consumption_category;
         // oldRowsClone[row].supply_chain = supply_chain_category;
@@ -688,10 +688,10 @@ class OneWorldBrowserExtension extends React.Component {
     submitFunction(row){
         if(row == "total"){
             for(let i = 0; i < this.state.rows.length; i++){
-                this.state.predictCategory(i);
+                this.predictCategory(i);
             }
         }else{
-            this.state.predictCategory(row);
+            this.predictCategory(row);
         }
     }
 
