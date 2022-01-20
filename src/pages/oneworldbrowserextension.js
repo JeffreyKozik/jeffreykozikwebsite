@@ -671,8 +671,11 @@ class OneWorldBrowserExtension extends React.Component {
                 console.log("supply_chain_category " + supply_chain_category)
                 console.log("total_co2 " + total_co2)
         });
-        this.consumptionChange({value: consumption_category, label: consumption_category}, row);
-        this.consumptionChange({value: supply_chain_category, label: supply_chain_category}, row);
+
+        setTimeout(function(){
+            this.consumptionChange({value: consumption_category, label: consumption_category}, row);
+            this.consumptionChange({value: supply_chain_category, label: supply_chain_category}, row);
+        }, 5000);
 
         // oldRowsClone[row].consumption = consumption_category;
         // oldRowsClone[row].supply_chain = supply_chain_category;
