@@ -1,19 +1,11 @@
 import * as React from "react"
-import demoVideo from "../images/1world.mp4";
+// import demoVideo from "../images/1world.mp4";
 import "../page_styling/oneworldbrowserextension.css"
 import "../page_styling/pages.css"
 import Seo from "../components/seo"
 
 import Select from 'react-select'
 import makeAnimated from 'react-select/animated'
-
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
 
 import TextField from '@mui/material/TextField'
 import Button from '@mui/material/Button';
@@ -460,7 +452,6 @@ let supplyChainOptions = [
 class OneWorldBrowserExtension extends React.Component {
     generateConsumptionOptions(){
 
-
         // for (let i = 0; i < consumptionOptions.length; i++){
         //     consumptionOptions[i] = consumptionOptions.replace(/[^a-zA-z]/g, '');
         // }
@@ -599,14 +590,22 @@ class OneWorldBrowserExtension extends React.Component {
         window.open("https://checkout.patch.io/che_prod_9d820f15d0b93ec15fc23694efb70726?amount=" + this.state.rows[0].co2, "_blank")
     }
 
-    nameChange(event){
-        console.log("event" + event);
-        console.log("event.target.value: " + event.target.value)
+    nameChange(newValue, row){
+        let oldRows = Array.from(this.state.rows);
+        let oldRowsClone = _.cloneDeep(oldRows);
+        oldRowsClone[row].name = newValue;
+        this.setState({
+            rows : Array.from(oldRowsClone)
+        });
     }
 
-    costChange(event){
-        console.log("event" + event);
-        console.log("event.target.value: " + event.target.value)
+    costChange(newValue, row){
+        let oldRows = Array.from(this.state.rows);
+        let oldRowsClone = _.cloneDeep(oldRows);
+        oldRowsClone[row].cost = newValue;
+        this.setState({
+            rows : Array.from(oldRowsClone)
+        });
     }
 
     render(){
@@ -636,8 +635,8 @@ class OneWorldBrowserExtension extends React.Component {
                       </tr>
                     {this.state.rows.map((row) =>
                         <tr key={row.row_num} style={{overflowY: "visible !important"}}>
-                            <td className="one_world_nameTable"><TextField id="standard-basic" placeholder="Apples..." variant="standard" value={row.name} onChange={this.state.nameChange}/></td>
-                            <td className="one_world_costTable" align="right"><TextField id="standard-basic" placeholder="$10..." variant="standard" value={row.cost} onChange={this.state.costChange}/></td>
+                            <td className="one_world_nameTable"><TextField id="standard-basic" placeholder="Apples..." variant="standard" value={row.name} onChange={(e) => this.state.nameChange(e.target.value, row.row_num)}/></td>
+                            <td className="one_world_costTable" align="right"><TextField id="standard-basic" placeholder="$10..." variant="standard" value={row.cost} onChange={(e) => this.state.costChange(e.target.value, row.row_num)}/></td>
                             <td style={{overflowY: "visible !important"}} className="one_world_consumptionTable" align="right">{row.consumption}</td>
                             <td style={{overflowY: "visible !important"}} className="one_world_supplychainTable" align="right">{row.supply_chain}</td>
                             <td className="one_world_CO2Table" align="right"><div>{row.co2} kg</div></td>
