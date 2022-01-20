@@ -130,7 +130,7 @@ class OneWorldBrowserExtension extends React.Component {
     co2Change = (newValue, currentRow) => {
         let oldRows = Array.from(this.state.rows);
         let oldRowsClone = _.cloneDeep(oldRows);
-        oldRowsClone[currentRow].co2 = selectedOption;
+        oldRowsClone[currentRow].co2 = newValue;
         this.setState({
             rows : Array.from(oldRowsClone)
         });

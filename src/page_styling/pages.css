@@ -35,6 +35,14 @@ body {
     max-width: 100%;
 }
 
+.page_video iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
 .page_description{
     align-self: center;
     line-height: 1.8;
