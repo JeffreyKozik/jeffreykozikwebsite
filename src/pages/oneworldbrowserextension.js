@@ -190,7 +190,7 @@ class OneWorldBrowserExtension extends React.Component {
             this.submitTextChange("Loading " + timeLeft.toString(), row);
             timeLeft++;
 
-            if(_.isEqual(consumption_category, original_consumption_category) && _.isEqual(supply_chain_category, original_consumption_category)){
+            if(!_.isEqual(consumption_category, original_consumption_category) && !_.isEqual(supply_chain_category, original_consumption_category)){
                 this.submitTextChange("Submit", row);
 
                 this.consumptionChange({value: consumption_category, label: consumption_category}, row);
