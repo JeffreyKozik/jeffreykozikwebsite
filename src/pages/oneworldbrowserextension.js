@@ -724,7 +724,7 @@ class OneWorldBrowserExtension extends React.Component {
                                     <td style={{overflowY: "visible !important"}} className="one_world_consumptionTable" align="right"><Select class="one_world_select" closeMenuOnSelect={false} components={this.state.animatedComponentsConsumption} options={this.state.selectConsumptionOptions} value={row.consumption} onChange={(selectedOption) => this.consumptionChange(selectedOption, row.row_num)}/></td>
                                     <td style={{overflowY: "visible !important"}} className="one_world_supplychainTable" align="right"><Select class="one_world_select" closeMenuOnSelect={false} components={this.state.animatedComponentsSupplyChain} options={this.state.selectSupplyChainOptions} value={row.supply_chain} onChange={(selectedOption) => this.supplyChainChange(selectedOption, row.row_num)}/></td>
                                     <td className="one_world_CO2Table" align="right"><div>{row.co2} kg</div></td>
-                                    <td className="one_world_offsetcostTable" align="right"><div>{row.offset_cost}</div></td>
+                                    <td className="one_world_offsetcostTable" align="right"><div>${row.offset_cost}</div></td>
                                     <td className="one_world_deleteTable" align="right"><button onClick={() => this.deleteRowFunction(row.row_num)}><FontAwesomeIcon icon={faTrashAlt} id="delete_row_button"/></button></td>
                                 </tr>
                             )}
