@@ -207,27 +207,16 @@ class OneWorldBrowserExtension extends React.Component {
 
                     this.consumptionChange({value: consumption_category, label: consumption_category}, row);
                     this.supplyChainChange({value: supply_chain_category, label: supply_chain_category}, row);
-                    this.co2Change(total_co2, row);
-                    this.offsetChange(total_offset, row);
+                    this.co2Change(Number(total_co2), row);
+                    this.offsetChange(Number(total_offset), row);
                     this.setState({
-                        totalKG : this.state.totalKG + Number(total_co2),
-                        totalOffset : this.state.totalOffset + Number(total_offset)
+                        totalKG : Number((this.state.totalKG + Number(total_co2)).toFixed(2)),
+                        totalOffset : Number((this.state.totalOffset + Number(total_offset)).toFixed(2))
                     });
                 }, 2000)
                 clearInterval(timerID);
             }
         }, 1000);
-
-        // setTimeout(() => {
-        //     this.submitTextChange("Submit", row);
-        //
-        //     this.consumptionChange({value: consumption_category, label: consumption_category}, row);
-        //     this.supplyChainChange({value: supply_chain_category, label: supply_chain_category}, row);
-        //     this.costChange(total_co2, row);
-        //     this.setState({
-        //         totalKG : this.totalKG + total_co2
-        //     });
-        // }, 20000);
     }
 
     offsetFunction = () => {
@@ -732,8 +721,8 @@ class OneWorldBrowserExtension extends React.Component {
                                     <td className="one_world_submit" align="right"><button onClick={() => this.submitFunction(row.row_num)}>{row.submit_text}</button></td>
                                     <td style={{overflowY: "visible !important"}} className="one_world_consumptionTable" align="right"><Select class="one_world_select" closeMenuOnSelect={false} components={this.state.animatedComponentsConsumption} options={this.state.selectConsumptionOptions} value={row.consumption} onChange={(selectedOption) => this.consumptionChange(selectedOption, row.row_num)}/></td>
                                     <td style={{overflowY: "visible !important"}} className="one_world_supplychainTable" align="right"><Select class="one_world_select" closeMenuOnSelect={false} components={this.state.animatedComponentsSupplyChain} options={this.state.selectSupplyChainOptions} value={row.supply_chain} onChange={(selectedOption) => this.supplyChainChange(selectedOption, row.row_num)}/></td>
-                                    <td className="one_world_CO2Table" align="right"><div>{row.co2.toFixed(2)} kg</div></td>
-                                    <td className="one_world_offsetcostTable" align="right"><div>${row.offset_cost.toFixed(2)}</div></td>
+                                    <td className="one_world_CO2Table" align="right"><div>{row.co2} kg</div></td>
+                                    <td className="one_world_offsetcostTable" align="right"><div>${row.offset_cost}</div></td>
                                     <td className="one_world_deleteTable" align="right"><button onClick={() => this.deleteRowFunction(row.row_num)}><FontAwesomeIcon icon={faTrashAlt} id="delete_row_button"/></button></td>
                                 </tr>
                             )}
@@ -743,8 +732,8 @@ class OneWorldBrowserExtension extends React.Component {
                                 <td className="one_world_submit" align="right"><button onClick={() => this.submitFunction("total")}>Submit All</button></td>
                                 <td style={{overflowY: "visible !important"}} className="one_world_consumptionTable" align="right"></td>
                                 <td style={{overflowY: "visible !important"}} className="one_world_supplychainTable" align="right"></td>
-                                <td className="one_world_CO2Table" align="right"><div>{this.state.totalKG.toFixed(2)} kg</div></td>
-                                <td className="one_world_offsetcostTable" align="right"><div>${this.state.totalOffset.toFixed(2)}</div></td>
+                                <td className="one_world_CO2Table" align="right"><div>{this.state.totalKG} kg</div></td>
+                                <td className="one_world_offsetcostTable" align="right"><div>${this.state.totalOffset}</div></td>
                                 <td className="one_world_deleteTable" align="right"></td>
                             </tr>
                           </table>
