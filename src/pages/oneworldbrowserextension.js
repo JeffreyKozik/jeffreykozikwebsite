@@ -49,8 +49,8 @@ class OneWorldBrowserExtension extends React.Component {
         let name = "";
         let cost = "";
         let submitText = "Submit";
-        let consumptionSelect = {value: ' Rice', label: ' Rice'};
-        let supplyChainSelect = {value: 'Agriculture products', label: 'Agriculture products'};
+        let consumptionSelect = {value: 'Press Submit', label: 'Press Submit'};
+        let supplyChainSelect = {value: 'Press Submit', label: 'Press Submit'};
         let co2 = 0;
         let offset_cost = 0;
         let row_num = this.state.numRows;
@@ -127,6 +127,14 @@ class OneWorldBrowserExtension extends React.Component {
             rows : Array.from(oldRowsClone)
         });
     }
+    co2Change = (newValue, currentRow) => {
+        let oldRows = Array.from(this.state.rows);
+        let oldRowsClone = _.cloneDeep(oldRows);
+        oldRowsClone[currentRow].co2 = selectedOption;
+        this.setState({
+            rows : Array.from(oldRowsClone)
+        });
+    }
 
     submitFunction = (row) => {
         if(row == "total"){
@@ -144,6 +152,9 @@ class OneWorldBrowserExtension extends React.Component {
         let nameOfProduct = this.state.rows[row].name;
         let costOfProduct = this.state.rows[row].cost.replace(/[^\w\s]|_/g, "").replace(/\s+/g, " ");
         let euroSpent = 0.886727 * costOfProduct;
+
+        let original_consumption_category = _.cloneDeep(this.state.rows[row].consumption);
+        let original_supply_chain_category = _.cloneDeep(this.state.rows[row].supply_chain);
 
         let consumption_category = ""
         let supply_chain_category = ""
@@ -174,22 +185,34 @@ class OneWorldBrowserExtension extends React.Component {
                 console.log("total_co2 " + total_co2)
         });
 
-        let timeLeft = 20;
-        setInterval(() => {
+        let timeLeft = 1;
+        let timerID = setInterval(() => {
             this.submitTextChange("Loading " + timeLeft.toString(), row);
-            timeLeft--;
+            timeLeft++;
+
+            if(_.isEqual(consumption_category, original_consumption_category) && _.isEqual(supply_chain_category, original_consumption_category)){
+                this.submitTextChange("Submit", row);
+
+                this.consumptionChange({value: consumption_category, label: consumption_category}, row);
+                this.supplyChainChange({value: supply_chain_category, label: supply_chain_category}, row);
+                this.co2Change(total_co2, row);
+                this.setState({
+                    totalKG : this.totalKG + total_co2
+                });
+                clearInterval(timerID);
+            }
         }, 1000);
 
-        setTimeout(() => {
-            this.submitTextChange("Submit", row);
-
-            this.consumptionChange({value: consumption_category, label: consumption_category}, row);
-            this.supplyChainChange({value: supply_chain_category, label: supply_chain_category}, row);
-            this.costChange(total_co2, row);
-            this.setState({
-                totalKG : this.totalKG + total_co2
-            });
-        }, 20000);
+        // setTimeout(() => {
+        //     this.submitTextChange("Submit", row);
+        //
+        //     this.consumptionChange({value: consumption_category, label: consumption_category}, row);
+        //     this.supplyChainChange({value: supply_chain_category, label: supply_chain_category}, row);
+        //     this.costChange(total_co2, row);
+        //     this.setState({
+        //         totalKG : this.totalKG + total_co2
+        //     });
+        // }, 20000);
     }
 
     offsetFunction = () => {
@@ -524,6 +547,7 @@ class OneWorldBrowserExtension extends React.Component {
         '12.5.3.1 Other professional fees',
         '12.5.3.2 Legal fees',
         '12.5.3.3 Funeral expenses',
+        'Press Submit'
         ];
         let selectConsumptionOptions = []
         for(let i = 0; i < consumptionOptions.length; i++){
@@ -637,6 +661,7 @@ class OneWorldBrowserExtension extends React.Component {
         'Repair services of computers and personal and household goods',
         'Other personal services',
         'Services of households as employers of domestic personnel',
+        'Press Submit'
         ];
         let selectSupplyChainOptions = []
         for(let i = 0; i < supplyChainOptions.length; i++){
