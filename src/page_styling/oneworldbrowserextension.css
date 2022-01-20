@@ -24,11 +24,14 @@
 .one_world_costTable{
     width: 11%;
 }
+.one_world_submit{
+    width: 6%;
+}
 .one_world_consumptionTable{
-    width: 25%;
+    width: 22%;
 }
 .one_world_supplychainTable{
-    width: 25%;
+    width: 22%;
 }
 .one_world_CO2Table{
     width: 11%;
