@@ -635,8 +635,8 @@ class OneWorldBrowserExtension extends React.Component {
                       </tr>
                     {this.state.rows.map((row) =>
                         <tr key={row.row_num} style={{overflowY: "visible !important"}}>
-                            <td className="one_world_nameTable"><TextField id="standard-basic" placeholder="Apples..." variant="standard" value={row.name} onChange={(e) => this.state.nameChange(e.target.value, row.row_num)}/></td>
-                            <td className="one_world_costTable" align="right"><TextField id="standard-basic" placeholder="$10..." variant="standard" value={row.cost} onChange={(e) => this.state.costChange(e.target.value, row.row_num)}/></td>
+                            <td className="one_world_nameTable"><TextField id="standard-basic" placeholder="Apples..." variant="standard" value={row.name} onChange={(e) => this.nameChange(e.target.value, row.row_num)}/></td>
+                            <td className="one_world_costTable" align="right"><TextField id="standard-basic" placeholder="$10..." variant="standard" value={row.cost} onChange={(e) => this.costChange(e.target.value, row.row_num)}/></td>
                             <td style={{overflowY: "visible !important"}} className="one_world_consumptionTable" align="right">{row.consumption}</td>
                             <td style={{overflowY: "visible !important"}} className="one_world_supplychainTable" align="right">{row.supply_chain}</td>
                             <td className="one_world_CO2Table" align="right"><div>{row.co2} kg</div></td>
