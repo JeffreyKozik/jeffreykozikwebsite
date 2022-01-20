@@ -201,11 +201,11 @@ class OneWorldBrowserExtension extends React.Component {
                     this.supplyChainChange({value: supply_chain_category, label: supply_chain_category}, row);
                     this.co2Change(total_co2, row);
                     this.setState({
-                        totalKG : (this.state.totalKG + total_co2),
-                        totalOffset : (this.state.totalOffset + total_offset)
+                        totalKG : (this.state.totalKG + Number(total_co2)).toFixed(2),
+                        totalOffset : (this.state.totalOffset + Number(total_offset)).toFixed(2)
                     });
-                    clearInterval(timerID);
                 }, 2000)
+                clearInterval(timerID);
             }
         }, 1000);
 
