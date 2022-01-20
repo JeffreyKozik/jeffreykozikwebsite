@@ -40,6 +40,7 @@ class OneWorldBrowserExtension extends React.Component {
 
         this.nameChange = this.nameChange.bind(this);
         this.costChange = this.costChange.bind(this);
+        this.submitTextChange = this.submitTextChange.bind(this);
         this.consumptionChange = this.consumptionChange.bind(this);
         this.supplyChainChange = this.supplyChainChange.bind(this);
 
@@ -599,7 +600,7 @@ class OneWorldBrowserExtension extends React.Component {
     }
 
     predictCategory(row){
-        this.submitTextChange("Loading", row);
+        this.state.submitTextChange("Loading", row);
 
         let nameOfProduct = this.state.rows[row].name;
         let costOfProduct = this.state.rows[row].cost.replace(/[^\w\s]|_/g, "").replace(/\s+/g, " ");
@@ -636,12 +637,12 @@ class OneWorldBrowserExtension extends React.Component {
 
         let timeLeft = 20;
         setInterval(function(){
-            this.submitTextChange("Loading " + timeLeft.toString(), row);
+            this.state.submitTextChange("Loading " + timeLeft.toString(), row);
             timeLeft--;
         }, 1000);
 
         setTimeout(function(){
-            this.submitTextChange("Submit", row);
+            this.state.submitTextChange("Submit", row);
 
             this.consumptionChange({value: consumption_category, label: consumption_category}, row);
             this.supplyChainChange({value: supply_chain_category, label: supply_chain_category}, row);
