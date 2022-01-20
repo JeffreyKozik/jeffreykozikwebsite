@@ -328,7 +328,7 @@ let consumptionOptions = [
 '12.5.3.3 Funeral expenses',
 '12.5.3.4 TU and professional organisations',
 '12.5.3.5 Other payments for services',
-'Loading...'
+'Loading'
 ];
 
 const animatedComponentsSupplyChain = makeAnimated();
@@ -439,7 +439,7 @@ let supplyChainOptions = [
 'Repair services of computers and personal and household goods',
 'Other personal services',
 'Services of households as employers of domestic personnel',
-'Loading...'
+'Loading'
 ];
 
 // import {useMediaQuery} from '../hooks/useMediaQuery';
@@ -630,8 +630,8 @@ class OneWorldBrowserExtension extends React.Component {
         // let oldRowsClone = _.cloneDeep(oldRows);
         // oldRowsClone[row].consumption = "Loading...";
         // oldRowsClone[row].supply_chain = "Loading...";
-        this.consumptionChange({value: "Loading...", label: "Loading..."}, row);
-        this.supplyChainChange({value: "Loading...", label: "Loading..."}, row);
+        this.consumptionChange({value: "Loading", label: "Loading"}, row);
+        this.supplyChainChange({value: "Loading", label: "Loading"}, row);
 
         let nameOfProduct = this.state.rows[row].name;
         let costOfProduct = this.state.rows[row].cost;
