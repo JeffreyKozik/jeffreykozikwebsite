@@ -19,7 +19,7 @@ import _ from 'lodash'
 
 import {Helmet} from "react-helmet";
 
-import emissionsData from "../data/emissions.js"
+import {getEmissionsArray} from "../data/emissions.js"
 
 import $ from "jquery";
 
@@ -709,7 +709,7 @@ class OneWorld extends React.Component {
                                            label: supplyChainOptions[i].replace(/[^\w\s]|_/g, "").replace(/\s+/g, " ").replace(/[1234567890]/g, "")});
         }
 
-        let emissionsArray = emissionsData.getEmissionsArray();
+        let emissionsArray = getEmissionsArray();
        //  $.getJSON(emissionsJSON, function(data){
        //     console.log("data: " + data);
        //     for(let i = 0; i < data.length; i++){
