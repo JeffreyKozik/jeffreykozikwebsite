@@ -23,6 +23,8 @@ import {getEmissionsArray} from "../../data/emissions.js"
 
 import $ from "jquery";
 
+import Table from 'react-bootstrap/Table';
+
 // import {useMediaQuery} from '../hooks/useMediaQuery';
 //
 // const styles = {
@@ -2882,6 +2884,9 @@ class OneWorld extends React.Component {
             <>
                 <Helmet>
                     <meta name="viewport" content="initial-scale=1, width=device-width"/>
+                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+                          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+                          crossOrigin="anonymous"/>
                 </Helmet>
                 <body>
                     <Seo title="One World Browser Extension" />
@@ -2893,7 +2898,7 @@ class OneWorld extends React.Component {
                         </h3>
                         <iframe className={pages.page_video} src="https://www.youtube-nocookie.com/embed/TmRLSg4kcUk" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                         <div id={oneworld.one_world_table_container}>
-                          <table style={{overflowY: "visible !important"}} aria-label="simple table" id={oneworld.one_world_table}>
+                          <Table responsive style={{overflowY: "visible !important"}} aria-label="simple table" id={oneworld.one_world_table}>
                               <tr>
                                 <td className={oneworld.one_world_nameTable}>Name</td>
                                 <td className={oneworld.one_world_costTable} align="right">Cost</td>
@@ -2926,7 +2931,7 @@ class OneWorld extends React.Component {
                                 <td className={oneworld.one_world_offsetcostTable} align="right"><div>${this.state.totalOffset}</div></td>
                                 <td className={oneworld.one_world_deleteTable} align="right"></td>
                             </tr>
-                          </table>
+                          </Table>
                         </div>
                         <Button onClick={this.addRowFunction} variant="text" id={oneworld.one_world_add_row_button}> Add Row </Button>
                         <Button onClick={this.offsetFunction} variant="text" id={oneworld.one_world_offset_row_button}> Offset CO2 </Button>
