@@ -117,10 +117,11 @@ class OneWorld extends React.Component {
         });
     }
     kgCO2perEuroSupply = (selectedOption) => {
-        console.log("selected option " + selectedOption["label"]);
+        console.log("selected option " + selectedOption);
+        console.log("selected option label " + selectedOption.label);
         for(let i = 0; i < this.state.selectSupplyChainOptions.length; i++){
             console.log(i.toString() + " " + this.state.selectSupplyChainOptions[i]);
-            if(this.state.selectSupplyChainOptions[i] == selectedOption["label"]){
+            if(this.state.selectSupplyChainOptions[i] == selectedOption.label){
                 return(this.state.emissionsArray[i]["Total kg CO2e per euro"]);
             }
         }
@@ -128,7 +129,7 @@ class OneWorld extends React.Component {
     }
     kgCO2perEuroConsumption = (selectedOption) => {
         for(let i = 106; i < (106 + this.state.selectConsumptionOptions.length); i++){
-            if(this.state.selectConsumptionOptions[i] == selectedOption["label"]){
+            if(this.state.selectConsumptionOptions[i] == selectedOption.label){
                 return(this.state.emissionsArray[i]["Total kg CO2e per euro"]);
             }
         }
