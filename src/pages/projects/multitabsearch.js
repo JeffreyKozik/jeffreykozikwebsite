@@ -1,7 +1,7 @@
 import * as React from "react"
-import multitabdemo from "../images/multitabedited.mp4"
-import "../page_styling/pages.module.css"
-import Seo from "../components/seo"
+import multitabdemo from "../../images/multitabedited.mp4"
+import "../../page_styling/pages.module.css"
+import Seo from "../../components/seo"
 import {Helmet} from "react-helmet";
 
 const MultiTabSearch = () => (

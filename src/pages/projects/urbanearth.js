@@ -1,13 +1,13 @@
 import * as React from "react"
-import urbanEarthDemoVideo from "../images/urbanearthdemospedup.mp4"
-import urbanEarthLogin from "../images/urbanearthlogin.png"
-import urbanEarthSignUp from "../images/urbanearthsignup.png"
-import urbanEarthRecord from "../images/urbanearthrecord.png"
-import urbanEarthStats from "../images/urbanearthstats.png"
-import urbanEarthSettings from "../images/urbanearthsettings.png"
-import urbanEarthLogo from "../images/urbanearthlogo.png"
-import "../page_styling/pages.module.css"
-import Seo from "../components/seo"
+import urbanEarthDemoVideo from "../../images/urbanearthdemospedup.mp4"
+import urbanEarthLogin from "../../images/urbanearthlogin.png"
+import urbanEarthSignUp from "../../images/urbanearthsignup.png"
+import urbanEarthRecord from "../../images/urbanearthrecord.png"
+import urbanEarthStats from "../../images/urbanearthstats.png"
+import urbanEarthSettings from "../../images/urbanearthsettings.png"
+import urbanEarthLogo from "../../images/urbanearthlogo.png"
+import "../../page_styling/pages.module.css"
+import Seo from "../../components/seo"
 import {Helmet} from "react-helmet";
 
 const UrbanEarth  = () => (

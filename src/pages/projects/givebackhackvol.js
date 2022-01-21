@@ -1,9 +1,9 @@
 import * as React from "react"
-import "../page_styling/pages.module.css"
-import Seo from "../components/seo"
+import "../../page_styling/pages.module.css"
+import Seo from "../../components/seo"
 
-import volhtml from "../images/volhtml.png";
-import friendshtml from "../images/friendshtml.png"
+import volhtml from "../../images/volhtml.png";
+import friendshtml from "../../images/friendshtml.png"
 
 import {Helmet} from "react-helmet";
 

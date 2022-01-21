@@ -1,8 +1,8 @@
 import * as React from "react"
 // import demoVideo from "../images/1world.mp4";
-import "../page_styling/oneworldbrowserextension.module.css"
-import "../page_styling/pages.module.css"
-import Seo from "../components/seo"
+import "../../page_styling/oneworldbrowserextension.module.css"
+import "../../page_styling/pages.module.css"
+import Seo from "../../components/seo"
 
 import Select from 'react-select'
 import makeAnimated from 'react-select/animated'
@@ -19,7 +19,7 @@ import _ from 'lodash'
 
 import {Helmet} from "react-helmet";
 
-import {getEmissionsArray} from "../data/emissions.js"
+import {getEmissionsArray} from "../../data/emissions.js"
 
 import $ from "jquery";
 
