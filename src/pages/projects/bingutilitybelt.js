@@ -1,6 +1,6 @@
 import * as React from "react"
 import searchenginedemo from "../../images/searchengineutilitybeltedited.mp4"
-import "../../page_styling/pages.module.css"
+import * as pages from "../../page_styling/pages.module.css"
 import Seo from "../../components/seo"
 import {Helmet} from "react-helmet";
 
@@ -11,22 +11,22 @@ const BingUtilityBelt = () => (
         </Helmet>
         <body>
             <Seo title="Bing Utility Belt" />
-            <div className="page_container">
-                <h1 className="page_title"> Bing Utility Belt </h1>
-                <h3 className="page_subtitle">
+            <div className={pages.page_container}>
+                <h1 className={pages.page_title}> Bing Utility Belt </h1>
+                <h3 className={pages.page_subtitle}>
                     Browser extension I created to show how pervasive ads are in search engines by highlighting ads on Bing and keeping track of how many you see on each tab. Also
                     ensures recent results.
                 </h3>
-                <video controls preload="auto" className="page_video">
+                <video controls preload="auto" className={pages.page_video}>
                     <source src={searchenginedemo} type="video/mp4"></source>
                 </video>
-                <p className="page_description">
+                <p className={pages.page_description}>
                     When using this browser extension, whenever you search on Bing, all of the ads will get red backgrounds to make it more clear that they are ads, and the number of ads
                     displayed on a Bing tab will be included in the name of the tab. Also, "in 2021" will be appended to whatever you search to ensure the results are recent (this extension
                     was created in 2021). For example, if you search "cars" it will change the search to "cars in 2021" automatically and the name of the tab will be "2 ads cars in 2021".
                     Also, clicking on the browser extension popup will show the number of ads in each tab.
                 </p>
-                <p className="page_description">
+                <p className={pages.page_description}>
                     The number of ads that it counts isn't always perfect, because the way that Bing structures their search results makes it hard to programtically get an accurate count each time.
                     But typically it should be within 1 of the actual count, assuming you count a single component as a single ad (ie if there's a carousel advertising 15 different cars this
                     is considered 1 ad, not 15). The other tricky part of implementing this was to make sure that it worked every time a term was searched. Chrome extensions have gone through
@@ -43,7 +43,7 @@ const BingUtilityBelt = () => (
                     The second link is a bug filing with the Chromium team to change this: <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1024211" target="_blank" rel="noreferrer"> https://bugs.chromium.org/p/chromium/issues/detail?id=1024211</a>.
                     Finally here's a stackoverflow thread talking about it: <a href="https://stackoverflow.com/questions/66914626/chrome-extensions-service-worker-not-starting-on-event/70745536#70745536" target="_blank" rel="noreferrer"> https://stackoverflow.com/questions/66914626/chrome-extensions-service-worker-not-starting-on-event/70745536#70745536</a>.
                 </p>
-                <p className="page_description">
+                <p className={pages.page_description}>
                     Overall, this browser extension I coded highlights how pervasive advertising is online which also ties in with how pervasive data collection and tracking is. I think
                     internet privacy is important and it's great when privacy preserving options are given. I use <a href="https://presearch.org" target="_blank" rel="noreferrer"> https://presearch.org/</a> as my
                     primary search engine because it doesn't track me and it rewards me for seeing ads. It's also decentralized and allows members of the community to contribute to the search engine.

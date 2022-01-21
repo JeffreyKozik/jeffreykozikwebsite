@@ -102,6 +102,7 @@ let collegeFreshman = new Tag("College Freshman", "", "Time Period");
 let sophomoreJunior = new Tag("College Sophomore/Junior", "", "Time Period");
 let collegeSenior = new Tag("College Senior", "", "Time Period");
 
+
 let projectsArray = [];
 class Project{
   constructor(name, link, tags, startDate, endDate, imagePath, description){
@@ -113,6 +114,7 @@ class Project{
     this.imagePath = imagePath;
     this.description = description;
     projectsArray.push(this);
+    // projectsArray.push({label: this.name, value: this});
   }
 }
 
@@ -228,6 +230,10 @@ const HomePage = () => (
         </div>
     </>
 )
+// myProjectsArray
+// {myProjectsArray.map((element) =>
+//
+// )}
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

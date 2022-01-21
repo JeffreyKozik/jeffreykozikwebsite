@@ -1,7 +1,7 @@
 import * as React from "react"
 // import demoVideo from "../images/1world.mp4";
-import "../../page_styling/oneworldbrowserextension.module.css"
-import "../../page_styling/pages.module.css"
+import * as oneworld from "../../page_styling/oneworldbrowserextension.module.css"
+import * as pages from "../../page_styling/pages.module.css"
 import Seo from "../../components/seo"
 
 import Select from 'react-select'
@@ -117,8 +117,10 @@ class OneWorld extends React.Component {
         });
     }
     kgCO2perEuroSupply = (selectedOption) => {
+        console.log("selected option " + selectedOption["label"]);
         for(let i = 0; i < this.state.selectSupplyChainOptions.length; i++){
-            if(_.isEqual(this.state.selectSupplyChainOptions[i], selectedOption)){
+            console.log(i.toString() + " " + this.state.selectSupplyChainOptions[i]);
+            if(this.state.selectSupplyChainOptions[i] == selectedOption["label"]){
                 return(this.state.emissionsArray[i]["Total kg CO2e per euro"]);
             }
         }
@@ -126,7 +128,7 @@ class OneWorld extends React.Component {
     }
     kgCO2perEuroConsumption = (selectedOption) => {
         for(let i = 106; i < (106 + this.state.selectConsumptionOptions.length); i++){
-            if(_.isEqual(this.state.selectConsumptionOptions[i], selectedOption)){
+            if(this.state.selectConsumptionOptions[i] == selectedOption["label"]){
                 return(this.state.emissionsArray[i]["Total kg CO2e per euro"]);
             }
         }
@@ -2801,66 +2803,66 @@ class OneWorld extends React.Component {
                 </Helmet>
                 <body>
                     <Seo title="One World Browser Extension" />
-                    <div className="page_container">
-                        <h1 className="page_title"> One World Browser Extension </h1>
-                        <h3 className="page_subtitle">
+                    <div className={pages.page_container}>
+                        <h1 className={pages.page_title}> One World Browser Extension </h1>
+                        <h3 className={pages.page_subtitle}>
                             The One World Browser Extension is used in conjunction with a Square Business account to easily offset a
                             business's inventory carbon emissions. To see it in action feel free to enter data into the table below.
                         </h3>
-                        <iframe className="page_video" src="https://www.youtube-nocookie.com/embed/TmRLSg4kcUk" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-                          <table style={{overflowY: "visible !important"}} aria-label="simple table" id="one_world_table">
+                        <iframe className={pages.page_video} src="https://www.youtube-nocookie.com/embed/TmRLSg4kcUk" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                          <table style={{overflowY: "visible !important"}} aria-label="simple table" id={oneworld.one_world_table}>
                               <tr>
-                                <td className="one_world_nameTable">Name</td>
-                                <td className="one_world_costTable" align="right">Cost</td>
-                                <td className="one_world_submit" align="right"></td>
-                                <td className="one_world_consumptionTable" align="right">Consumption</td>
-                                <td className="one_world_supplychainTable" align="right">Supply Chain</td>
-                                <td className="one_world_CO2Table" align="right">CO2</td>
-                                <td className="one_world_offsetcostTable" align="right">Offset</td>
-                                <td className="one_world_deleteTable" align="right"></td>
+                                <td className={oneworld.one_world_nameTable}>Name</td>
+                                <td className={oneworld.one_world_costTable} align="right">Cost</td>
+                                <td className={oneworld.one_world_submit} align="right"></td>
+                                <td className={oneworld.one_world_consumptionTable} align="right">Consumption</td>
+                                <td className={oneworld.one_world_supplychainTable} align="right">Supply Chain</td>
+                                <td className={oneworld.one_world_CO2Table} align="right">CO2</td>
+                                <td className={oneworld.one_world_offsetcostTable} align="right">Offset</td>
+                                <td className={oneworld.one_world_deleteTable} align="right"></td>
                               </tr>
                             {this.state.rows.map((row) =>
                                 <tr key={row.row_num.toString()} style={{overflowY: "visible !important"}}>
-                                    <td className="one_world_nameTable"><TextField id="standard-basic" placeholder="Apples..." variant="standard" value={row.name} onChange={(e) => this.nameChange(e.target.value, row.row_num)}/></td>
-                                    <td className="one_world_costTable" align="right"><TextField id="standard-basic" placeholder="$10..." variant="standard" value={row.cost} onChange={(e) => this.costChange(e.target.value, row.row_num)}/></td>
-                                    <td className="one_world_submit" align="right"><button onClick={() => this.submitFunction(row.row_num)}>{row.submit_text}</button></td>
-                                    <td style={{overflowY: "visible !important"}} className="one_world_consumptionTable" align="right"><Select class="one_world_select" closeMenuOnSelect={false} components={this.state.animatedComponentsConsumption} options={this.state.selectConsumptionOptions} value={row.consumption} onChange={(selectedOption) => this.consumptionClickChange(selectedOption, row.row_num)}/></td>
-                                    <td style={{overflowY: "visible !important"}} className="one_world_supplychainTable" align="right"><Select class="one_world_select" closeMenuOnSelect={false} components={this.state.animatedComponentsSupplyChain} options={this.state.selectSupplyChainOptions} value={row.supply_chain} onChange={(selectedOption) => this.supplyChainClickChange(selectedOption, row.row_num)}/></td>
-                                    <td className="one_world_CO2Table" align="right"><div>{row.co2} kg</div></td>
-                                    <td className="one_world_offsetcostTable" align="right"><div>${row.offset_cost}</div></td>
-                                    <td className="one_world_deleteTable" align="right"><button onClick={() => this.deleteRowFunction(row.row_num)}><FontAwesomeIcon icon={faTrashAlt} id="delete_row_button"/></button></td>
+                                    <td className={oneworld.one_world_nameTable}><TextField id="standard-basic" placeholder="Apples..." variant="standard" value={row.name} onChange={(e) => this.nameChange(e.target.value, row.row_num)}/></td>
+                                    <td className={oneworld.one_world_costTable} align="right"><TextField id="standard-basic" placeholder="$10..." variant="standard" value={row.cost} onChange={(e) => this.costChange(e.target.value, row.row_num)}/></td>
+                                    <td className={oneworld.one_world_submit} align="right"><button onClick={() => this.submitFunction(row.row_num)}>{row.submit_text}</button></td>
+                                    <td style={{overflowY: "visible !important"}} className={oneworld.one_world_consumptionTable} align="right"><Select class="one_world_select" closeMenuOnSelect={false} components={this.state.animatedComponentsConsumption} options={this.state.selectConsumptionOptions} value={row.consumption} onChange={(selectedOption) => this.consumptionClickChange(selectedOption, row.row_num)}/></td>
+                                    <td style={{overflowY: "visible !important"}} className={oneworld.one_world_supplychainTable} align="right"><Select class="one_world_select" closeMenuOnSelect={false} components={this.state.animatedComponentsSupplyChain} options={this.state.selectSupplyChainOptions} value={row.supply_chain} onChange={(selectedOption) => this.supplyChainClickChange(selectedOption, row.row_num)}/></td>
+                                    <td className={oneworld.one_world_CO2Table} align="right"><div>{row.co2} kg</div></td>
+                                    <td className={oneworld.one_world_offsetcostTable} align="right"><div>${row.offset_cost}</div></td>
+                                    <td className={oneworld.one_world_deleteTable} align="right"><button onClick={() => this.deleteRowFunction(row.row_num)}><FontAwesomeIcon icon={faTrashAlt} id={oneworld.delete_row_button}/></button></td>
                                 </tr>
                             )}
                             <tr key="total" style={{overflowY: "visible !important"}}>
-                                <td className="one_world_nameTable"></td>
-                                <td className="one_world_costTable" align="right"></td>
-                                <td className="one_world_submit" align="right"><button onClick={() => this.submitFunction("total")}>Submit All</button></td>
-                                <td style={{overflowY: "visible !important"}} className="one_world_consumptionTable" align="right"></td>
-                                <td style={{overflowY: "visible !important"}} className="one_world_supplychainTable" align="right"></td>
-                                <td className="one_world_CO2Table" align="right"><div>{this.state.totalKG} kg</div></td>
-                                <td className="one_world_offsetcostTable" align="right"><div>${this.state.totalOffset}</div></td>
-                                <td className="one_world_deleteTable" align="right"></td>
+                                <td className={oneworld.one_world_nameTable}></td>
+                                <td className={oneworld.one_world_costTable} align="right"></td>
+                                <td className={oneworld.one_world_submit} align="right"><button onClick={() => this.submitFunction("total")}>Submit All</button></td>
+                                <td style={{overflowY: "visible !important"}} className={oneworld.one_world_consumptionTable} align="right"></td>
+                                <td style={{overflowY: "visible !important"}} className={oneworld.one_world_supplychainTable} align="right"></td>
+                                <td className={oneworld.one_world_CO2Table} align="right"><div>{this.state.totalKG} kg</div></td>
+                                <td className={oneworld.one_world_offsetcostTable} align="right"><div>${this.state.totalOffset}</div></td>
+                                <td className={oneworld.one_world_deleteTable} align="right"></td>
                             </tr>
                           </table>
-                        <Button onClick={this.addRowFunction} variant="text" id="one_world_add_row_button"> Add Row </Button>
-                        <Button onClick={this.offsetFunction} variant="text" id="one_world_offset_row_button"> Offset CO2 </Button>
-                        <p className="page_description">
+                        <Button onClick={this.addRowFunction} variant="text" id={oneworld.one_world_add_row_button}> Add Row </Button>
+                        <Button onClick={this.offsetFunction} variant="text" id={oneworld.one_world_offset_row_button}> Offset CO2 </Button>
+                        <p className={pages.page_description}>
                             The name category is the name of what you're offseting. So if you're a restaurant and you want to offset the CO2 emissions from buying apples you'd put
                             "Apples" in that category. The cost category is how much it cost to buy what you're offsetting. So if you bought $1000 worth of apples you'd put $1000 in that category.
                             Once these two text fields are filled in, my program will automatically determine the consumption and supply chain categories the product fits in. If you feel like it categorized
                             the product wrong, simply change the category using the dropdown. My program will also calculate the kg CO2 emitted for each product you're offsetting and the cost to do so.
                         </p>
-                        <p className="page_description">
+                        <p className={pages.page_description}>
                             The consumption categories and supply chain categories as well as the amount of CO2 emitted per dollar spent
                             in each of those categories comes from <a href="https://www.gov.uk/government/statistics/uks-carbon-footprint" target="_blank" rel="noreferrer">publicly available data from the UK government</a>.
                         </p>
-                        <p className="page_description">
+                        <p className={pages.page_description}>
                             Products are automatically categorized by using an Azure Function which utilizes the Bing API to search the name of the product
                             and compare the words in the results with the words in the results of Bing searches for each of the categories via nltk and sklearn's TFIDF vectorization.
                             Then the user is able to easily offset their carbon emissions using Patch. I've also tried approaches using Google Cloud's Google Cloud Function, Google Cloud Run (with Docker) and VADER
                             sentiment analysis.
                         </p>
-                        <p className="page_description">
+                        <p className={pages.page_description}>
                             Note: in the video, there's a calculation error that has been corrected now. In the video I say 1t = 100kg but in fact 1t = 1000kg.
                             So really 0.01t should be offset in the video, not 0.13t. So offsetting $100 worth of apples (12.77 kg CO2) through the project chosen
                             on Patch would cost $0.13 not $1.27.
