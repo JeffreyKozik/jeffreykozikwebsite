@@ -2897,7 +2897,7 @@ class OneWorld extends React.Component {
                             business's inventory carbon emissions. To see it in action feel free to enter data into the table below.
                         </h3>
                         <iframe className={pages.page_video} src="https://www.youtube-nocookie.com/embed/TmRLSg4kcUk" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-                        <div id={oneworld.one_world_table_container}>
+                        <div id={oneworld.one_world_table_container} style={{overflowX: "auto !important"}}>
                           <table responsive style={{overflowY: "visible !important"}} aria-label="simple table" id={oneworld.one_world_table}>
                               <tr>
                                 <td className={oneworld.one_world_nameTable}>Name</td>
