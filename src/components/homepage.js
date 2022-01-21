@@ -146,7 +146,7 @@ let smrtnrllBrowserExtension = new Project("smrtnrll Browser Extension", "https:
     The smrtnrll browser extension is used by college students to get into classes that are currently full. Add it to your
     browser <a href="https://chrome.google.com/webstore/detail/smrtnrll/faoobmndgioamolfhbnkdegeolmmgnmj?hl=en&authuser=0" target="_blank" rel="noreferrer">here</a>.
 </h3>);
-let searchEngineUtilityBelt = new Project("Search Engine Utility Belt", "https://gatsbystarterdefault33968.gtsb.io/projects/bingutilitybelt", "", "Nov 2021 - Jan 2022", "", 5, <h3>
+let searchEngineUtilityBelt = new Project("Bing Utility Belt", "https://gatsbystarterdefault33968.gtsb.io/projects/bingutilitybelt", "", "Nov 2021 - Jan 2022", "", 5, <h3>
     Browser extension I created to show how pervasive ads are in search engines by highlighting ads on Bing and keeping track of how many you see on each tab. Also
     ensures recent results.
 </h3>);
