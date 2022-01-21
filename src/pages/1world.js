@@ -717,17 +717,11 @@ class OneWorld extends React.Component {
        //         emissionsArray.push(data[i]);
        //     }
        // })
-       fetch(emissionsJSON, {
-           method: 'GET'
-       })
-       .then(response => response.json())
-       .then(json => {
-            console.log("json: " + json);
-            for(let i = 0; i < json.length; i++){
-                console.log(i.toString() + " " + json[i]);
-                emissionsArray.push(json[i]);
-            }
-       });
+       emissionsJSON.content.map((data, index) => {
+        console.log("data: " + data);
+        console.log("index: " + index);
+        emissionsArray.push(data);
+      })
 
         this.state = {
             emissionsArray: emissionsArray,
