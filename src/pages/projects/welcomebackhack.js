@@ -1,5 +1,5 @@
 import * as React from "react"
-import "../page_styling/pages.css"
+import "../page_styling/pages.module.css"
 import Seo from "../components/seo"
 import socrates from "../images/welcomebackhacksocrates.png"
 

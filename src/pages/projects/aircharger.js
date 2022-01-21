@@ -1,5 +1,5 @@
 import * as React from "react"
-import "../page_styling/pages.css"
+import "../page_styling/pages.module.css"
 import Seo from "../components/seo"
 import aircharger2 from "../images/aircharger2.png";
 import aircharger3 from "../images/aircharger3.png";
