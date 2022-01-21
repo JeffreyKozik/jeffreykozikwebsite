@@ -80,16 +80,19 @@ class OneWorld extends React.Component {
         let removalIndex = 0;
         for(; removalIndex < oldRowsClone.length; removalIndex++){
             if(oldRowsClone[removalIndex].row_num == row_num){
+                console.log("removalindex" + removalIndex);
+                console.log("oldrowsclone" + oldRowsClone[removalIndex]);
+                this.setState({
+                    totalKG : this.state.totalKG - oldRowsClone[removalIndex].co2,
+                    totalOffset : this.state.totalOffset - oldRowsClone[removalIndex].offset_cost
+                });
                 oldRowsClone.splice(removalIndex, 1);
+                this.setState({
+                    rows : Array.from(oldRowsClone)
+                });
                 break;
             }
         }
-
-        this.setState({
-            totalKG : this.state.totalKG - oldRowsClone[removalIndex].co2,
-            totalOffset : this.state.totalOffset - oldRowsClone[removalIndex].offset_cost,
-            rows : Array.from(oldRowsClone)
-        });
 
         this.printRows();
     }
