@@ -90,9 +90,13 @@ class OneWorld extends React.Component {
                     totalKG : this.state.totalKG - oldRowsClone[removalIndex].co2,
                     totalOffset : this.state.totalOffset - oldRowsClone[removalIndex].offset_cost
                 });
+                for(let i = removalIndex + 1; i < oldRowsClone.length; i++){
+                    oldRowsClone[i].row_num = oldRowsClone[i].row_num - 1;
+                }
                 oldRowsClone.splice(removalIndex, 1);
                 this.setState({
-                    rows : Array.from(oldRowsClone)
+                    rows : Array.from(oldRowsClone),
+                    numRows : this.state.numRows - 1
                 });
                 break;
             }
