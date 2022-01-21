@@ -19,7 +19,7 @@ import _ from 'lodash'
 
 import {Helmet} from "react-helmet";
 
-import emissionsJSON from "../data/emissions.json"
+import emissionsData from "../data/emissions.js"
 
 import $ from "jquery";
 
@@ -709,7 +709,7 @@ class OneWorld extends React.Component {
                                            label: supplyChainOptions[i].replace(/[^\w\s]|_/g, "").replace(/\s+/g, " ").replace(/[1234567890]/g, "")});
         }
 
-        let emissionsArray = [];
+        let emissionsArray = emissionsData.getEmissionsArray();
        //  $.getJSON(emissionsJSON, function(data){
        //     console.log("data: " + data);
        //     for(let i = 0; i < data.length; i++){
@@ -717,11 +717,11 @@ class OneWorld extends React.Component {
        //         emissionsArray.push(data[i]);
        //     }
        // })
-       emissionsJSON.content.map((data, index) => {
-        console.log("data: " + data);
-        console.log("index: " + index);
-        emissionsArray.push(data);
-      })
+      //  emissionsJSON.content.map((data, index) => {
+      //   console.log("data: " + data);
+      //   console.log("index: " + index);
+      //   emissionsArray.push(data);
+      // })
 
         this.state = {
             emissionsArray: emissionsArray,
