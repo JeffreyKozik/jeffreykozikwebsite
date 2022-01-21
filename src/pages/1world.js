@@ -21,7 +21,7 @@ import {Helmet} from "react-helmet";
 
 import emissionsJSON from "../data/emissions.json"
 
-import $ from "jquery";
+import Jquery from "jquery";
 
 // import {useMediaQuery} from '../hooks/useMediaQuery';
 //
@@ -710,7 +710,7 @@ class OneWorld extends React.Component {
         }
 
         let emissionsArray = [];
-        $.getJSON(emissionsJSON, function(data){
+        Jquery.getJSON(emissionsJSON, function(data){
            console.log("data: " + data);
            for(let i = 0; i < data.length; i++){
                console.log(i.toString() + " " + data[i]);
