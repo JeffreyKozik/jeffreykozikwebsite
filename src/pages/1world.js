@@ -120,6 +120,7 @@ class OneWorld extends React.Component {
                 return(this.state.emissionsArray[i]["Total kg CO2e per euro"]);
             }
         }
+        console.log("nothing found");
     }
     kgCO2perEuroConsumption = (selectedOption) => {
         for(let i = 106; i < (106 + this.state.selectConsumptionOptions.length); i++){
@@ -127,6 +128,7 @@ class OneWorld extends React.Component {
                 return(this.state.emissionsArray[i]["Total kg CO2e per euro"]);
             }
         }
+        console.log("nothing found");
     }
     supplyChainChange = (selectedOption, currentRow) => {
         console.log("SelectedOption", selectedOption);
