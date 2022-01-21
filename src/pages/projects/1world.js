@@ -117,11 +117,10 @@ class OneWorld extends React.Component {
         });
     }
     kgCO2perEuroSupply = (selectedOption) => {
-        console.log("selected option " + selectedOption);
         console.log("selected option label " + selectedOption.label);
         for(let i = 0; i < this.state.selectSupplyChainOptions.length; i++){
-            console.log(i.toString() + " " + this.state.selectSupplyChainOptions[i]);
-            if(this.state.selectSupplyChainOptions[i] == selectedOption.label){
+            console.log(i.toString() + " " + this.state.selectSupplyChainOptions[i].label);
+            if(this.state.selectSupplyChainOptions[i].label == selectedOption.label){
                 return(this.state.emissionsArray[i]["Total kg CO2e per euro"]);
             }
         }
@@ -129,7 +128,7 @@ class OneWorld extends React.Component {
     }
     kgCO2perEuroConsumption = (selectedOption) => {
         for(let i = 106; i < (106 + this.state.selectConsumptionOptions.length); i++){
-            if(this.state.selectConsumptionOptions[i] == selectedOption.label){
+            if(this.state.selectConsumptionOptions[i].label == selectedOption.label){
                 return(this.state.emissionsArray[i]["Total kg CO2e per euro"]);
             }
         }
@@ -2831,7 +2830,7 @@ class OneWorld extends React.Component {
                                     <td style={{overflowY: "visible !important"}} className={oneworld.one_world_supplychainTable} align="right"><Select class="one_world_select" closeMenuOnSelect={false} components={this.state.animatedComponentsSupplyChain} options={this.state.selectSupplyChainOptions} value={row.supply_chain} onChange={(selectedOption) => this.supplyChainClickChange(selectedOption, row.row_num)}/></td>
                                     <td className={oneworld.one_world_CO2Table} align="right"><div>{row.co2} kg</div></td>
                                     <td className={oneworld.one_world_offsetcostTable} align="right"><div>${row.offset_cost}</div></td>
-                                    <td className={oneworld.one_world_deleteTable} align="right"><button onClick={() => this.deleteRowFunction(row.row_num)}><FontAwesomeIcon icon={faTrashAlt} id={oneworld.delete_row_button}/></button></td>
+                                    <td className={oneworld.one_world_deleteTable} align="right"><button onClick={() => this.deleteRowFunction(row.row_num)}><FontAwesomeIcon icon={faTrashAlt} id={oneworld.one_world_delete_row_button}/></button></td>
                                 </tr>
                             )}
                             <tr key="total" style={{overflowY: "visible !important"}}>
