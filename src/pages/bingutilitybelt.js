@@ -4,15 +4,15 @@ import "../page_styling/pages.css"
 import Seo from "../components/seo"
 import {Helmet} from "react-helmet";
 
-const SearchEngineUtilityBelt = () => (
+const BingUtilityBelt = () => (
     <>
         <Helmet>
             <meta name="viewport" content="initial-scale=1, width=device-width"/>
         </Helmet>
         <body>
-            <Seo title="Search Engine Utility Belt" />
+            <Seo title="Bing Utility Belt" />
             <div className="page_container">
-                <h1 className="page_title"> Search Engine Utility Belt </h1>
+                <h1 className="page_title"> Bing Utility Belt </h1>
                 <h3 className="page_subtitle">
                     Browser extension I created to show how pervasive ads are in search engines by highlighting ads on Bing and keeping track of how many you see on each tab. Also
                     ensures recent results.
@@ -57,4 +57,4 @@ const SearchEngineUtilityBelt = () => (
     </>
 )
 
-export default SearchEngineUtilityBelt
+export default BingUtilityBelt

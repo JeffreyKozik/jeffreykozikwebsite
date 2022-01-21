@@ -75,7 +75,8 @@ class OneWorldBrowserExtension extends React.Component {
         let oldRows = Array.from(this.state.rows);
         let oldRowsClone = _.cloneDeep(oldRows);
 
-        for(let removalIndex = 0; removalIndex < oldRowsClone.length; removalIndex++){
+        let removalIndex = 0;
+        for(; removalIndex < oldRowsClone.length; removalIndex++){
             if(oldRowsClone[removalIndex].row_num == row_num){
                 oldRowsClone.splice(removalIndex, 1);
             }
@@ -134,10 +135,10 @@ class OneWorldBrowserExtension extends React.Component {
         oldRowsClone[currentRow].supply_chain = selectedOption;
         let oldKG = oldRowsClone[currentRow].co2;
         let oldCost = oldRowsClone[currentRow].offset_cost;
-        let newCO2 = Number(Number(kgCO2perEuroSupply(selectedOption) * this.state.rows[currentRow].cost * 0.886727).toFixed(2))
-        co2Change(newCO2, currentRow);
+        let newCO2 = Number(Number(this.kgCO2perEuroSupply(selectedOption) * this.state.rows[currentRow].cost * 0.886727).toFixed(2))
+        this.co2Change(newCO2, currentRow);
         let newOffset = Number(Number(newCO2 * 0.0085 * 1.15).toFixed(2));
-        offsetChange(newOffset, currentRow);
+        this.offsetChange(newOffset, currentRow);
         this.setState({
             totalKG : Number((this.state.totalKG - oldKG + newCO2).toFixed(2)),
             totalCost : Number((this.state.totalCost - oldCost + newOffset).toFixed(2)),
@@ -151,10 +152,10 @@ class OneWorldBrowserExtension extends React.Component {
         oldRowsClone[currentRow].consumption = selectedOption;
         let oldKG = oldRowsClone[currentRow].co2;
         let oldCost = oldRowsClone[currentRow].offset_cost;
-        let newCO2 = Number(Number(kgCO2perEuroConsumption(selectedOption) * this.state.rows[currentRow].cost * 0.886727).toFixed(2))
-        co2Change(newCO2, currentRow);
+        let newCO2 = Number(Number(this.kgCO2perEuroConsumption(selectedOption) * this.state.rows[currentRow].cost * 0.886727).toFixed(2))
+        this.co2Change(newCO2, currentRow);
         let newOffset = Number(Number(newCO2 * 0.0085 * 1.15).toFixed(2));
-        offsetChange(newOffset, currentRow);
+        this.offsetChange(newOffset, currentRow);
         this.setState({
             totalKG : Number((this.state.totalKG - oldKG + newCO2).toFixed(2)),
             totalCost : Number((this.state.totalCost - oldCost + newOffset).toFixed(2)),
