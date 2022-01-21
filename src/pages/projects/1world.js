@@ -104,7 +104,13 @@ class OneWorld extends React.Component {
     nameChange = (newValue, row) => {
         let oldRows = Array.from(this.state.rows);
         let oldRowsClone = _.cloneDeep(oldRows);
-        oldRowsClone[row].name = newValue;
+        let i = 0;
+        for(; i < oldRowsClone.length; i++){
+            if(oldRowsClone[i].row_num == row){
+                break;
+            }
+        }
+        oldRowsClone[i].name = newValue;
         this.setState({
             rows : Array.from(oldRowsClone)
         });
@@ -112,7 +118,13 @@ class OneWorld extends React.Component {
     costChange = (newValue, row) => {
         let oldRows = Array.from(this.state.rows);
         let oldRowsClone = _.cloneDeep(oldRows);
-        oldRowsClone[row].cost = newValue;
+        let i = 0;
+        for(; i < oldRowsClone.length; i++){
+            if(oldRowsClone[i].row_num == row){
+                break;
+            }
+        }
+        oldRowsClone[i].cost = newValue;
         this.setState({
             rows : Array.from(oldRowsClone)
         });
@@ -120,7 +132,13 @@ class OneWorld extends React.Component {
     submitTextChange = (newValue, row) => {
         let oldRows = Array.from(this.state.rows);
         let oldRowsClone = _.cloneDeep(oldRows);
-        oldRowsClone[row].submit_text = newValue;
+        let i = 0;
+        for(; i < oldRowsClone.length; i++){
+            if(oldRowsClone[i].row_num == row){
+                break;
+            }
+        }
+        oldRowsClone[i].submit_text = newValue;
         this.setState({
             rows : Array.from(oldRowsClone)
         });
@@ -149,13 +167,19 @@ class OneWorld extends React.Component {
         console.log("SelectedOption", selectedOption);
         let oldRows = Array.from(this.state.rows);
         let oldRowsClone = _.cloneDeep(oldRows);
-        oldRowsClone[currentRow].supply_chain = selectedOption;
-        let oldKG = oldRowsClone[currentRow].co2;
-        let oldCost = oldRowsClone[currentRow].offset_cost;
-        let newCO2 = Number(Number(this.kgCO2perEuroSupply(selectedOption) * this.state.rows[currentRow].cost * 0.886727).toFixed(2))
+        let i = 0;
+        for(; i < oldRowsClone.length; i++){
+            if(oldRowsClone[i].row_num == currentRow){
+                break;
+            }
+        }
+        oldRowsClone[i].supply_chain = selectedOption;
+        let oldKG = oldRowsClone[i].co2;
+        let oldCost = oldRowsClone[i].offset_cost;
+        let newCO2 = Number(Number(this.kgCO2perEuroSupply(selectedOption) * this.state.rows[i].cost * 0.886727).toFixed(2))
         let newOffset = Number(Number(newCO2 * 0.0085 * 1.15).toFixed(2));
-        oldRowsClone[currentRow].co2 = newCO2;
-        oldRowsClone[currentRow].offset_cost = newOffset;
+        oldRowsClone[i].co2 = newCO2;
+        oldRowsClone[i].offset_cost = newOffset;
         this.setState({
             totalKG : Number((this.state.totalKG - oldKG + newCO2).toFixed(2)),
             totalOffset : Number((this.state.totalOffset - oldCost + newOffset).toFixed(2)),
@@ -167,12 +191,18 @@ class OneWorld extends React.Component {
         let oldRows = Array.from(this.state.rows);
         let oldRowsClone = _.cloneDeep(oldRows);
         oldRowsClone[currentRow].consumption = selectedOption;
-        let oldKG = oldRowsClone[currentRow].co2;
-        let oldCost = oldRowsClone[currentRow].offset_cost;
-        let newCO2 = Number(Number(this.kgCO2perEuroConsumption(selectedOption) * this.state.rows[currentRow].cost * 0.886727).toFixed(2))
+        let i = 0;
+        for(; i < oldRowsClone.length; i++){
+            if(oldRowsClone[i].row_num == currentRow){
+                break;
+            }
+        }
+        let oldKG = oldRowsClone[i].co2;
+        let oldCost = oldRowsClone[i].offset_cost;
+        let newCO2 = Number(Number(this.kgCO2perEuroConsumption(selectedOption) * this.state.rows[i].cost * 0.886727).toFixed(2))
         let newOffset = Number(Number(newCO2 * 0.0085 * 1.15).toFixed(2));
-        oldRowsClone[currentRow].co2 = newCO2;
-        oldRowsClone[currentRow].offset_cost = newOffset;
+        oldRowsClone[i].co2 = newCO2;
+        oldRowsClone[i].offset_cost = newOffset;
         this.setState({
             totalKG : Number((this.state.totalKG - oldKG + newCO2).toFixed(2)),
             totalOffset : Number((this.state.totalOffset - oldCost + newOffset).toFixed(2)),
@@ -183,7 +213,13 @@ class OneWorld extends React.Component {
         console.log("SelectedOption", selectedOption);
         let oldRows = Array.from(this.state.rows);
         let oldRowsClone = _.cloneDeep(oldRows);
-        oldRowsClone[currentRow].supply_chain = selectedOption;
+        let i = 0;
+        for(; i < oldRowsClone.length; i++){
+            if(oldRowsClone[i].row_num == currentRow){
+                break;
+            }
+        }
+        oldRowsClone[i].supply_chain = selectedOption;
         this.setState({
             rows : Array.from(oldRowsClone)
         });
@@ -191,7 +227,13 @@ class OneWorld extends React.Component {
     consumptionChange = (newValue, currentRow) => {
         let oldRows = Array.from(this.state.rows);
         let oldRowsClone = _.cloneDeep(oldRows);
-        oldRowsClone[currentRow].consumption = newValue;
+        let i = 0;
+        for(; i < oldRowsClone.length; i++){
+            if(oldRowsClone[i].row_num == currentRow){
+                break;
+            }
+        }
+        oldRowsClone[i].consumption = newValue;
         this.setState({
             rows : Array.from(oldRowsClone)
         });
@@ -199,7 +241,13 @@ class OneWorld extends React.Component {
     co2Change = (newValue, currentRow) => {
         let oldRows = Array.from(this.state.rows);
         let oldRowsClone = _.cloneDeep(oldRows);
-        oldRowsClone[currentRow].co2 = newValue;
+        let i = 0;
+        for(; i < oldRowsClone.length; i++){
+            if(oldRowsClone[i].row_num == currentRow){
+                break;
+            }
+        }
+        oldRowsClone[i].co2 = newValue;
         this.setState({
             rows : Array.from(oldRowsClone)
         });
@@ -207,7 +255,13 @@ class OneWorld extends React.Component {
     offsetChange = (newValue, currentRow) => {
         let oldRows = Array.from(this.state.rows);
         let oldRowsClone = _.cloneDeep(oldRows);
-        oldRowsClone[currentRow].offset_cost = newValue;
+        let i = 0;
+        for(; i < oldRowsClone.length; i++){
+            if(oldRowsClone[i].row_num == currentRow){
+                break;
+            }
+        }
+        oldRowsClone[i].offset_cost = newValue;
         this.setState({
             rows : Array.from(oldRowsClone)
         });
@@ -216,14 +270,26 @@ class OneWorld extends React.Component {
     submitFunction = (row) => {
         if(row == "total"){
             for(let i = 0; i < this.state.rows.length; i++){
-                this.predictCategory(i);
+                this.predictCategory(this.state.rows[i].row_num);
             }
         }else{
-            this.predictCategory(row);
+            let i = 0;
+            for(; i < this.state.rows.length; i++){
+                if(this.state.rows[i].row_num == row){
+                    break;
+                }
+            }
+            this.predictCategory(i);
         }
     }
 
-    predictCategory = (row) => {
+    predictCategory = (rowParam) => {
+        let row = 0;
+        for(; row < this.state.rows.length; row++){
+            if(this.state.rows[row].row_num == rowParam){
+                break;
+            }
+        }
         this.submitTextChange("Loading", row);
         let oldRows = Array.from(this.state.rows);
         let oldRowsClone = _.cloneDeep(oldRows);
@@ -2826,7 +2892,7 @@ class OneWorld extends React.Component {
                             business's inventory carbon emissions. To see it in action feel free to enter data into the table below.
                         </h3>
                         <iframe className={pages.page_video} src="https://www.youtube-nocookie.com/embed/TmRLSg4kcUk" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-                        <div id={pages.page_video}>
+                        <div id={oneworld.one_world_table_container}>
                           <table style={{overflowY: "visible !important"}} aria-label="simple table" id={oneworld.one_world_table}>
                               <tr>
                                 <td className={oneworld.one_world_nameTable}>Name</td>
