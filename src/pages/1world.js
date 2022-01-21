@@ -21,7 +21,7 @@ import {Helmet} from "react-helmet";
 
 import emissionsJSON from "../data/emissions.json"
 
-import Jquery from "jquery";
+import $ from "jquery";
 
 // import {useMediaQuery} from '../hooks/useMediaQuery';
 //
@@ -710,13 +710,24 @@ class OneWorld extends React.Component {
         }
 
         let emissionsArray = [];
-        Jquery.getJSON(emissionsJSON, function(data){
-           console.log("data: " + data);
-           for(let i = 0; i < data.length; i++){
-               console.log(i.toString() + " " + data[i]);
-               emissionsArray.push(data[i]);
-           }
+       //  $.getJSON(emissionsJSON, function(data){
+       //     console.log("data: " + data);
+       //     for(let i = 0; i < data.length; i++){
+       //         console.log(i.toString() + " " + data[i]);
+       //         emissionsArray.push(data[i]);
+       //     }
+       // })
+       fetch(emissionsJSON, {
+           method: 'GET'
        })
+       .then(response => response.json())
+       .then(json => {
+            console.log("json: " + json);
+            for(let i = 0; i < json.length; i++){
+                console.log(i.toString() + " " + json[i]);
+                emissionsArray.push(json[i]);
+            }
+       });
 
         this.state = {
             emissionsArray: emissionsArray,
