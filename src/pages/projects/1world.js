@@ -70,7 +70,9 @@ class OneWorld extends React.Component {
             rows : Array.from(oldRowsClone)
         });
 
-        this.printRows();
+        setTimeout(() => {
+            this.printRows();
+        }, 5000)
     }
 
     deleteRowFunction = (row_num) => {
@@ -94,7 +96,9 @@ class OneWorld extends React.Component {
             }
         }
 
-        this.printRows();
+        setTimeout(() => {
+            this.printRows();
+        }, 5000)
     }
 
     nameChange = (newValue, row) => {
@@ -2822,6 +2826,7 @@ class OneWorld extends React.Component {
                             business's inventory carbon emissions. To see it in action feel free to enter data into the table below.
                         </h3>
                         <iframe className={pages.page_video} src="https://www.youtube-nocookie.com/embed/TmRLSg4kcUk" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                        <div id={oneworld.one_world_table_container}>
                           <table style={{overflowY: "visible !important"}} aria-label="simple table" id={oneworld.one_world_table}>
                               <tr>
                                 <td className={oneworld.one_world_nameTable}>Name</td>
@@ -2856,6 +2861,7 @@ class OneWorld extends React.Component {
                                 <td className={oneworld.one_world_deleteTable} align="right"></td>
                             </tr>
                           </table>
+                        </div>
                         <Button onClick={this.addRowFunction} variant="text" id={oneworld.one_world_add_row_button}> Add Row </Button>
                         <Button onClick={this.offsetFunction} variant="text" id={oneworld.one_world_offset_row_button}> Offset CO2 </Button>
                         <p className={pages.page_description}>
