@@ -127,7 +127,9 @@ class OneWorld extends React.Component {
         console.log("nothing found");
     }
     kgCO2perEuroConsumption = (selectedOption) => {
+        console.log("selected option label " + selectedOption.label);
         for(let i = 106; i < (106 + this.state.selectConsumptionOptions.length); i++){
+            console.log(i.toString() + " " + this.state.selectConsumptionOptions[i].label);
             if(this.state.selectConsumptionOptions[i].label == selectedOption.label){
                 return(this.state.emissionsArray[i]["Total kg CO2e per euro"]);
             }
@@ -142,9 +144,9 @@ class OneWorld extends React.Component {
         let oldKG = oldRowsClone[currentRow].co2;
         let oldCost = oldRowsClone[currentRow].offset_cost;
         let newCO2 = Number(Number(this.kgCO2perEuroSupply(selectedOption) * this.state.rows[currentRow].cost * 0.886727).toFixed(2))
-        this.co2Change(newCO2, currentRow);
         let newOffset = Number(Number(newCO2 * 0.0085 * 1.15).toFixed(2));
-        this.offsetChange(newOffset, currentRow);
+        oldRowsClone[currentRow].co2 = newCO2;
+        oldRowsClone[currentRow].offset_cost = newOffset;
         this.setState({
             totalKG : Number((this.state.totalKG - oldKG + newCO2).toFixed(2)),
             totalCost : Number((this.state.totalCost - oldCost + newOffset).toFixed(2)),
@@ -158,10 +160,10 @@ class OneWorld extends React.Component {
         oldRowsClone[currentRow].consumption = selectedOption;
         let oldKG = oldRowsClone[currentRow].co2;
         let oldCost = oldRowsClone[currentRow].offset_cost;
-        let newCO2 = Number(Number(this.kgCO2perEuroConsumption(selectedOption) * this.state.rows[currentRow].cost * 0.886727).toFixed(2))
-        this.co2Change(newCO2, currentRow);
+        let newCO2 = Number(Number(this.kgCO2perEuroSupply(selectedOption) * this.state.rows[currentRow].cost * 0.886727).toFixed(2))
         let newOffset = Number(Number(newCO2 * 0.0085 * 1.15).toFixed(2));
-        this.offsetChange(newOffset, currentRow);
+        oldRowsClone[currentRow].co2 = newCO2;
+        oldRowsClone[currentRow].offset_cost = newOffset;
         this.setState({
             totalKG : Number((this.state.totalKG - oldKG + newCO2).toFixed(2)),
             totalCost : Number((this.state.totalCost - oldCost + newOffset).toFixed(2)),
