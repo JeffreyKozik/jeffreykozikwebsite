@@ -30,7 +30,7 @@ import emissionsJSON from "../data/emissions.json"
 //   })
 // };
 
-class OneWorldBrowserExtension extends React.Component {
+class OneWorld extends React.Component {
     createData = (name, cost, submit_text, consumption, supply_chain, co2, offset_cost, row_num) => {
         return {name, cost, submit_text, consumption, supply_chain, co2, offset_cost, row_num}
     }
@@ -123,7 +123,7 @@ class OneWorldBrowserExtension extends React.Component {
     }
     kgCO2perEuroConsumption = (selectedOption) => {
         for(let i = 106; i < (106 + this.state.selectConsumptionOptions.length); i++){
-            if(_.isEqual(this.state.selectedConsumptionOptions[i], selectedOption)){
+            if(_.isEqual(this.state.selectConsumptionOptions[i], selectedOption)){
                 return(this.state.emissionsArray[i]["Total kg CO2e per euro"]);
             }
         }
@@ -783,4 +783,4 @@ class OneWorldBrowserExtension extends React.Component {
     }
 }
 
-export default OneWorldBrowserExtension
+export default OneWorld
