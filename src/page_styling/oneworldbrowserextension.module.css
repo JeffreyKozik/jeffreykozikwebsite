@@ -1,12 +1,14 @@
 #one_world_table_container{
     align-self: center;
     width: 100%;
+    overflow-x: auto !important;
 }
 
 #one_world_table{
     align-self: center;
     width: 100%;
     font-family: 'Rubik', sans-serif;
+    overflow-x: auto !important;
 }
 
 #one_world_add_row_button{
