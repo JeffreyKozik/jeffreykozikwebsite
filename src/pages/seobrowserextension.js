@@ -1,6 +1,6 @@
 import * as React from "react"
 import siteChecker from "../images/site-checker.org.mp4"
-import "../page_styling/pages.css"
+import "../page_styling/pages.module.css"
 import Seo from "../components/seo"
 import {Helmet} from "react-helmet";
 

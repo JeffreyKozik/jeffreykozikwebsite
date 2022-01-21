@@ -8,7 +8,7 @@ import sciquelgetinvolvedpage1 from "../images/sciquelgetinvolvedpage.png"
 import sciquelgetinvolvedpage2 from "../images/sciquelgetinvolvedpage2.png"
 import demoVideo from "../images/sciqueldemofinished.mp4"
 import responsiveVideo from "../images/sciquelresponsivefinal.mp4"
-import "../page_styling/pages.css"
+import "../page_styling/pages.module.css"
 import Seo from "../components/seo"
 import {Helmet} from "react-helmet";
 

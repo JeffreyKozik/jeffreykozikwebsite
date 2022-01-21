@@ -6,7 +6,7 @@ import urbanEarthRecord from "../images/urbanearthrecord.png"
 import urbanEarthStats from "../images/urbanearthstats.png"
 import urbanEarthSettings from "../images/urbanearthsettings.png"
 import urbanEarthLogo from "../images/urbanearthlogo.png"
-import "../page_styling/pages.css"
+import "../page_styling/pages.module.css"
 import Seo from "../components/seo"
 import {Helmet} from "react-helmet";
 
