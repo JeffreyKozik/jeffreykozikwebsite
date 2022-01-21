@@ -9,6 +9,9 @@ module.exports = {
         "plugin:react/recommended"
     ],
     "parserOptions": {
+        "babelOptions": {
+            "presets": ["@babel/preset-react"]
+        },
         requireConfigFile: false,
         "ecmaFeatures": {
             "jsx": true
