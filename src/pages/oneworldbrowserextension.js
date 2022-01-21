@@ -81,6 +81,8 @@ class OneWorldBrowserExtension extends React.Component {
             }
         }
         this.setState({
+            totalKG : this.state.totalKG - oldRowsClone[removalIndex].co2,
+            totalOffset : this.state.totalOffset - oldRowsClone[removalIndex].offset_cost,
             rows : Array.from(oldRowsClone)
         });
 
@@ -111,22 +113,51 @@ class OneWorldBrowserExtension extends React.Component {
             rows : Array.from(oldRowsClone)
         });
     }
-    consumptionChange = (selectedOption, currentRow) => {
-        console.log("SelectedOption", selectedOption);
-        let oldRows = Array.from(this.state.rows);
-        let oldRowsClone = _.cloneDeep(oldRows);
-        oldRowsClone[currentRow].consumption = selectedOption;
-
-        this.setState({
-            rows : Array.from(oldRowsClone)
-        });
+    kgCO2perEuroSupply = (selectedOption) => {
+        for(let i = 0; i < this.state.selectSupplyChainOptions.length; i++){
+            if(_.isEqual(this.state.selectSupplyChainOptions[i], selectedOption)){
+                return(this.state.emissionsArray[i]["Total kg CO2e per euro"]);
+            }
+        }
+    }
+    kgCO2perEuroConsumption = (selectedOption) => {
+        for(let i = 106; i < (106 + this.state.selectConsumptionOptions.length); i++){
+            if(_.isEqual(this.state.selectedConsumptionOptions[i], selectedOption)){
+                return(this.state.emissionsArray[i]["Total kg CO2e per euro"]);
+            }
+        }
     }
     supplyChainChange = (selectedOption, currentRow) => {
         console.log("SelectedOption", selectedOption);
         let oldRows = Array.from(this.state.rows);
         let oldRowsClone = _.cloneDeep(oldRows);
         oldRowsClone[currentRow].supply_chain = selectedOption;
+        let oldKG = oldRowsClone[currentRow].co2;
+        let oldCost = oldRowsClone[currentRow].offset_cost;
+        let newCO2 = Number(Number(kgCO2perEuroSupply(selectedOption) * this.state.rows[currentRow].cost * 0.886727).toFixed(2))
+        co2Change(newCO2, currentRow);
+        let newOffset = Number(Number(newCO2 * 0.0085 * 1.15).toFixed(2));
+        offsetChange(newOffset, currentRow);
         this.setState({
+            totalKG : Number((this.state.totalKG - oldKG + newCO2).toFixed(2)),
+            totalCost : Number((this.state.totalCost - oldCost + newOffset).toFixed(2)),
+            rows : Array.from(oldRowsClone)
+        });
+    }
+    consumptionChange = (selectedOption, currentRow) => {
+        console.log("SelectedOption", selectedOption);
+        let oldRows = Array.from(this.state.rows);
+        let oldRowsClone = _.cloneDeep(oldRows);
+        oldRowsClone[currentRow].consumption = selectedOption;
+        let oldKG = oldRowsClone[currentRow].co2;
+        let oldCost = oldRowsClone[currentRow].offset_cost;
+        let newCO2 = Number(Number(kgCO2perEuroConsumption(selectedOption) * this.state.rows[currentRow].cost * 0.886727).toFixed(2))
+        co2Change(newCO2, currentRow);
+        let newOffset = Number(Number(newCO2 * 0.0085 * 1.15).toFixed(2));
+        offsetChange(newOffset, currentRow);
+        this.setState({
+            totalKG : Number((this.state.totalKG - oldKG + newCO2).toFixed(2)),
+            totalCost : Number((this.state.totalCost - oldCost + newOffset).toFixed(2)),
             rows : Array.from(oldRowsClone)
         });
     }
@@ -226,22 +257,6 @@ class OneWorldBrowserExtension extends React.Component {
 
     constructor(props){
         super(props);
-
-        // this.createData = this.createData.bind(this);
-        //
-        // this.printRows = this.printRows.bind(this);
-        // this.addRowFunction = this.addRowFunction.bind(this);
-        // this.deleteRowFunction = this.deleteRowFunction.bind(this);
-        //
-        // this.nameChange = this.nameChange.bind(this);
-        // this.costChange = this.costChange.bind(this);
-        // this.submitTextChange = this.submitTextChange.bind(this);
-        // this.consumptionChange = this.consumptionChange.bind(this);
-        // this.supplyChainChange = this.supplyChainChange.bind(this);
-        //
-        // this.submitFunction = this.submitFunction.bind(this);
-        // this.predictCategory = this.predictCategory.bind(this);
-        // this.offsetFunction = this.offsetFunction.bind(this);
 
         const animatedComponentsConsumption = makeAnimated();
         const animatedComponentsSupplyChain = makeAnimated();
@@ -672,7 +687,10 @@ class OneWorldBrowserExtension extends React.Component {
                                            label: supplyChainOptions[i].replace(/[^\w\s]|_/g, "").replace(/\s+/g, " ").replace(/[1234567890]/g, "")});
         }
 
+        let emissionsArray = JSON.parse(emissionsJSON);
+
         this.state = {
+            emissionsArray: emissionsArray,
             animatedComponentsConsumption: animatedComponentsConsumption,
             animatedComponentsSupplyChain: animatedComponentsSupplyChain,
             selectConsumptionOptions: selectConsumptionOptions,
