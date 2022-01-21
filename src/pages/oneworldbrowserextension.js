@@ -19,7 +19,7 @@ import _ from 'lodash'
 
 import {Helmet} from "react-helmet";
 
-import emissionsJSON from "../data/emissions.json"
+// import emissionsJSON from "../data/emissions.json"
 
 // import {useMediaQuery} from '../hooks/useMediaQuery';
 //
@@ -687,7 +687,7 @@ class OneWorldBrowserExtension extends React.Component {
                                            label: supplyChainOptions[i].replace(/[^\w\s]|_/g, "").replace(/\s+/g, " ").replace(/[1234567890]/g, "")});
         }
 
-        let emissionsArray = JSON.parse(emissionsJSON);
+        let emissionsArray = JSON.parse("../data/emissions.json");
 
         this.state = {
             emissionsArray: emissionsArray,

@@ -9,12 +9,12 @@ module.exports = {
         "plugin:react/recommended"
     ],
     "parserOptions": {
+        requireConfigFile: false,
         "ecmaFeatures": {
             "jsx": true
         },
         "ecmaVersion": 12,
-        "sourceType": "module",
-        requireConfigFile: false
+        "sourceType": "module"
     },
     "plugins": [
         "react"
