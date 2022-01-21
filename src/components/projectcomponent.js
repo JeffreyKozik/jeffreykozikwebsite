@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom';
-import './homepage.css';
+import './homepage.module.css';
 import PropTypes from 'prop-types';
 
 // import { styled } from '@mui/material/styles';
