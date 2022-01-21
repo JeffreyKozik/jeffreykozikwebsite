@@ -290,7 +290,7 @@ class OneWorld extends React.Component {
                 break;
             }
         }
-        this.submitTextChange("Loading", row);
+        this.submitTextChange("Loading", rowParam);
         let oldRows = Array.from(this.state.rows);
         let oldRowsClone = _.cloneDeep(oldRows);
         let oldOffset = oldRowsClone[row].offset_cost;
@@ -335,17 +335,17 @@ class OneWorld extends React.Component {
         let timeLeft = 1;
         let timerID = setInterval(() => {
             let timeLeftPercent = (100*(timeLeft/20)).toFixed(0)
-            this.submitTextChange("Loading " + timeLeftPercent + "%", row);
+            this.submitTextChange("Loading " + timeLeftPercent + "%", rowParam);
             timeLeft++;
 
             if(!_.isEqual(consumption_category, "") && !_.isEqual(supply_chain_category, "")){
                 setTimeout(() => {
-                    this.submitTextChange("Submit", row);
+                    this.submitTextChange("Submit", rowParam);
 
-                    this.consumptionChange({value: consumption_category, label: consumption_category}, row);
-                    this.supplyChainChange({value: supply_chain_category, label: supply_chain_category}, row);
-                    this.co2Change(Number(total_co2), row);
-                    this.offsetChange(Number(total_offset), row);
+                    this.consumptionChange({value: consumption_category, label: consumption_category}, rowParam);
+                    this.supplyChainChange({value: supply_chain_category, label: supply_chain_category}, rowParam);
+                    this.co2Change(Number(total_co2), rowParam);
+                    this.offsetChange(Number(total_offset), rowParam);
                     this.setState({
                         totalKG : Number((this.state.totalKG + Number(total_co2) - oldCO2).toFixed(2)),
                         totalOffset : Number((this.state.totalOffset + Number(total_offset) - oldOffset).toFixed(2))
