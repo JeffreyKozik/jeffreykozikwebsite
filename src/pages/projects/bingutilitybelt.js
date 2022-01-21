@@ -38,18 +38,18 @@ const BingUtilityBelt = () => (
                     and only activate for a few seconds then go away. It's quite a contentious topic in the browser extension community and you can read more about it in the following links. The first two
                     talk about how this change from background scripts to service workers is an unfair move by Google because it makes it harder for Ad Blockers to work which is in Google's favor
                     because they run one of the biggest online ad networks in the world. It would be one thing if Google was upfront about this, but instead they claim it to be because of "security and speed":
-                    <a href="https://www.theverge.com/2019/2/20/18232972/google-chrome-ad-blocking-manifest-3-changes-response" target="_blank" rel="noreferrer"> https://www.theverge.com/2019/2/20/18232972/google-chrome-ad-blocking-manifest-3-changes-response</a> and
-                    <a href="https://www.eff.org/deeplinks/2021/12/chrome-users-beware-manifest-v3-deceitful-and-threatening" target="_blank" rel="noreferrer"> https://www.eff.org/deeplinks/2021/12/chrome-users-beware-manifest-v3-deceitful-and-threatening</a>.
-                    The second link is a bug filing with the Chromium team to change this: <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1024211" target="_blank" rel="noreferrer"> https://bugs.chromium.org/p/chromium/issues/detail?id=1024211</a>.
-                    Finally here's a stackoverflow thread talking about it: <a href="https://stackoverflow.com/questions/66914626/chrome-extensions-service-worker-not-starting-on-event/70745536#70745536" target="_blank" rel="noreferrer"> https://stackoverflow.com/questions/66914626/chrome-extensions-service-worker-not-starting-on-event/70745536#70745536</a>.
+                    <a href="https://www.theverge.com/2019/2/20/18232972/google-chrome-ad-blocking-manifest-3-changes-response" target="_blank" rel="noreferrer"> The Verge</a> and
+                    <a href="https://www.eff.org/deeplinks/2021/12/chrome-users-beware-manifest-v3-deceitful-and-threatening" target="_blank" rel="noreferrer"> Electronic Frontier Foundation</a>.
+                    The second link is a bug filing with the Chromium team to change this: <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1024211" target="_blank" rel="noreferrer"> Chromium Bugs</a>.
+                    Finally here's a stackoverflow thread talking about it: <a href="https://stackoverflow.com/questions/66914626/chrome-extensions-service-worker-not-starting-on-event/70745536#70745536" target="_blank" rel="noreferrer"> Stack Overflow</a>.
                 </p>
                 <p className={pages.page_description}>
                     Overall, this browser extension I coded highlights how pervasive advertising is online which also ties in with how pervasive data collection and tracking is. I think
-                    internet privacy is important and it's great when privacy preserving options are given. I use <a href="https://presearch.org" target="_blank" rel="noreferrer"> https://presearch.org/</a> as my
+                    internet privacy is important and it's great when privacy preserving options are given. I use <a href="https://presearch.org" target="_blank" rel="noreferrer"> Presearch</a> as my
                     primary search engine because it doesn't track me and it rewards me for seeing ads. It's also decentralized and allows members of the community to contribute to the search engine.
-                    I also used <a href="https://search.brave.com" target="_blank" rel="noreferrer"> https://search.brave.com</a> because it's an independent search engine that doesn't use
-                    Bing or Google's algorithms for it's results which I think is important so that Big Tech doesn't have too much power. I use <a href="https://www.duckduckgo.com" target="_blank" rel="noreferrer"> https://www.duckduckgo.com</a>
-                    as they don't track me either and are 125% carbon negative. Finally, I use <a href="https://www.neeva.com" target="_blank" rel="noreferrer"> https://www.neeva.com</a> because they offer a paid
+                    I also used <a href="https://search.brave.com" target="_blank" rel="noreferrer"> Brave Search</a> because it's an independent search engine that doesn't use
+                    Bing or Google's algorithms for it's results which I think is important so that Big Tech doesn't have too much power. I use <a href="https://www.duckduckgo.com" target="_blank" rel="noreferrer"> DuckDuckGo</a>
+                    as they don't track me either and are 125% carbon negative. Finally, I use <a href="https://www.neeva.com" target="_blank" rel="noreferrer"> Neeva</a> because they offer a paid
                     ad free search option.
                 </p>
             </div>

@@ -160,7 +160,7 @@ class OneWorld extends React.Component {
         oldRowsClone[currentRow].consumption = selectedOption;
         let oldKG = oldRowsClone[currentRow].co2;
         let oldCost = oldRowsClone[currentRow].offset_cost;
-        let newCO2 = Number(Number(this.kgCO2perEuroSupply(selectedOption) * this.state.rows[currentRow].cost * 0.886727).toFixed(2))
+        let newCO2 = Number(Number(this.kgCO2perEuroConsumption(selectedOption) * this.state.rows[currentRow].cost * 0.886727).toFixed(2))
         let newOffset = Number(Number(newCO2 * 0.0085 * 1.15).toFixed(2));
         oldRowsClone[currentRow].co2 = newCO2;
         oldRowsClone[currentRow].offset_cost = newOffset;
@@ -255,7 +255,8 @@ class OneWorld extends React.Component {
 
         let timeLeft = 1;
         let timerID = setInterval(() => {
-            this.submitTextChange("Loading " + timeLeft.toString(), row);
+            let timeLeftPercent = (timeLeft/20).toFixed(0)
+            this.submitTextChange("Loading " + timeLeftPercent + "%", row);
             timeLeft++;
 
             if(!_.isEqual(consumption_category, "") && !_.isEqual(supply_chain_category, "")){
