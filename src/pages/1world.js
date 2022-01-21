@@ -21,6 +21,8 @@ import {Helmet} from "react-helmet";
 
 import emissionsJSON from "../data/emissions.json"
 
+import $ from "jquery";
+
 // import {useMediaQuery} from '../hooks/useMediaQuery';
 //
 // const styles = {
@@ -707,7 +709,14 @@ class OneWorld extends React.Component {
                                            label: supplyChainOptions[i].replace(/[^\w\s]|_/g, "").replace(/\s+/g, " ").replace(/[1234567890]/g, "")});
         }
 
-        let emissionsArray = emissionsJSON;
+        let emissionsArray = [];
+        $.getJSON(emissionsJSON, function(data){
+           console.log("data: " + data);
+           for(let i = 0; i < data.length; i++){
+               console.log(i.toString() + " " + data[i]);
+               emissionsArray.push(data[i]);
+           }
+       })
 
         this.state = {
             emissionsArray: emissionsArray,
