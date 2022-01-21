@@ -216,6 +216,10 @@ class OneWorld extends React.Component {
 
     predictCategory = (row) => {
         this.submitTextChange("Loading", row);
+        let oldRows = Array.from(this.state.rows);
+        let oldRowsClone = _.cloneDeep(oldRows);
+        let oldOffset = oldRowsClone[row].offset_cost;
+        let oldCO2 = oldRowsClone[row].co2;
 
         let nameOfProduct = this.state.rows[row].name;
         let costOfProduct = this.state.rows[row].cost.replace(/[^\w\s]|_/g, "").replace(/\s+/g, " ");
@@ -255,7 +259,7 @@ class OneWorld extends React.Component {
 
         let timeLeft = 1;
         let timerID = setInterval(() => {
-            let timeLeftPercent = (timeLeft/20).toFixed(0)
+            let timeLeftPercent = (100*(timeLeft/20)).toFixed(0)
             this.submitTextChange("Loading " + timeLeftPercent + "%", row);
             timeLeft++;
 
@@ -268,8 +272,8 @@ class OneWorld extends React.Component {
                     this.co2Change(Number(total_co2), row);
                     this.offsetChange(Number(total_offset), row);
                     this.setState({
-                        totalKG : Number((this.state.totalKG + Number(total_co2)).toFixed(2)),
-                        totalOffset : Number((this.state.totalOffset + Number(total_offset)).toFixed(2))
+                        totalKG : Number((this.state.totalKG + Number(total_co2) - oldCO2).toFixed(2)),
+                        totalOffset : Number((this.state.totalOffset + Number(total_offset) - oldOffset).toFixed(2))
                     });
                 }, 2000)
                 clearInterval(timerID);
