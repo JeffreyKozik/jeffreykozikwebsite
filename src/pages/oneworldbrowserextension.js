@@ -116,6 +116,7 @@ class OneWorldBrowserExtension extends React.Component {
         let oldRows = Array.from(this.state.rows);
         let oldRowsClone = _.cloneDeep(oldRows);
         oldRowsClone[currentRow].consumption = selectedOption;
+
         this.setState({
             rows : Array.from(oldRowsClone)
         });
@@ -185,7 +186,7 @@ class OneWorldBrowserExtension extends React.Component {
                 // console.log(json['what_to_offset_supply_chain_kgCO2perEuro']);
                 total_co2 += parseFloat(json['what_to_offset_consumption_kgCO2perEuro'])
                 total_co2 = Number(total_co2 * euroSpent).toFixed(2)
-                total_offset = Number(total_co2 * 0.0085).toFixed(2)
+                total_offset = Number(total_co2 * 0.0085 * 1.15).toFixed(2)
                 // https://stackoverflow.com/questions/4328500/how-can-i-strip-all-punctuation-from-a-string-in-javascript-using-regex
                 consumption_category = consumption_category.replace(/[^\w\s]|_/g, "").replace(/\s+/g, " ").replace(/[1234567890]/g, "")
                 supply_chain_category = supply_chain_category.replace(/[^\w\s]|_/g, "").replace(/\s+/g, " ").replace(/[1234567890]/g, "")
@@ -219,7 +220,7 @@ class OneWorldBrowserExtension extends React.Component {
     }
 
     offsetFunction = () => {
-        let urlAppend = (this.state.totalKG*1000*1.15).toFixed(0);
+        let urlAppend = (this.state.totalKG*1000).toFixed(0);
         window.open("https://checkout.patch.io/che_prod_9d820f15d0b93ec15fc23694efb70726?amount=" + urlAppend, "_blank")
     }
 
