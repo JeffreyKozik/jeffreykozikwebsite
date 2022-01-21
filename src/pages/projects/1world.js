@@ -1,7 +1,7 @@
 import * as React from "react"
 import demoVideo from "../../images/1world.mp4";
-import "../../page_styling/oneworldbrowserextension.css"
-import "../../page_styling/pages.css"
+import "../../page_styling/oneworldbrowserextension.modules.css"
+import "../../page_styling/pages.modules.css"
 import Seo from "../../components/seo"
 
 import Select from 'react-select'
