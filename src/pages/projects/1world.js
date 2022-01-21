@@ -128,10 +128,10 @@ class OneWorld extends React.Component {
     }
     kgCO2perEuroConsumption = (selectedOption) => {
         console.log("selected option label " + selectedOption.label);
-        for(let i = 106; i < (106 + this.state.selectConsumptionOptions.length); i++){
+        for(let i = 0; i < (106 + this.state.selectConsumptionOptions.length); i++){
             console.log(i.toString() + " " + this.state.selectConsumptionOptions[i].label);
             if(this.state.selectConsumptionOptions[i].label == selectedOption.label){
-                return(this.state.emissionsArray[i]["Total kg CO2e per euro"]);
+                return(this.state.emissionsArray[i + 106]["Total kg CO2e per euro"]);
             }
         }
         console.log("nothing found");
@@ -149,7 +149,7 @@ class OneWorld extends React.Component {
         oldRowsClone[currentRow].offset_cost = newOffset;
         this.setState({
             totalKG : Number((this.state.totalKG - oldKG + newCO2).toFixed(2)),
-            totalCost : Number((this.state.totalCost - oldCost + newOffset).toFixed(2)),
+            totalOffset : Number((this.state.totalOffset - oldCost + newOffset).toFixed(2)),
             rows : Array.from(oldRowsClone)
         });
     }
@@ -166,7 +166,7 @@ class OneWorld extends React.Component {
         oldRowsClone[currentRow].offset_cost = newOffset;
         this.setState({
             totalKG : Number((this.state.totalKG - oldKG + newCO2).toFixed(2)),
-            totalCost : Number((this.state.totalCost - oldCost + newOffset).toFixed(2)),
+            totalOffset : Number((this.state.totalOffset - oldCost + newOffset).toFixed(2)),
             rows : Array.from(oldRowsClone)
         });
     }
