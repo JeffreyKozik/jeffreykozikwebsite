@@ -4,7 +4,7 @@ import Seo from "../../components/seo"
 import {Helmet} from "react-helmet";
 
 import MediaQuery from 'react-responsive'
-import AirChargerComponent from "../../../components/pages/aircharger"
+import AirChargerComponent from "../../components/pages/aircharger"
 
 const AirCharger = () => (
     <>

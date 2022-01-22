@@ -4,7 +4,7 @@ import Seo from "../../components/seo"
 import {Helmet} from "react-helmet";
 
 import MediaQuery from 'react-responsive'
-import MultitabSearchComponent from "../../../components/pages/multitabsearch"
+import MultitabSearchComponent from "../../components/pages/multitabsearch"
 
 const MultitabSearch = () => (
     <>

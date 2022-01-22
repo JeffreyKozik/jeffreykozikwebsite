@@ -4,7 +4,7 @@ import Seo from "../../components/seo"
 import {Helmet} from "react-helmet";
 
 import MediaQuery from 'react-responsive'
-import JeffreyKozikWebsiteComponent from "../../../components/pages/jeffreykozikwebsite"
+import JeffreyKozikWebsiteComponent from "../../components/pages/jeffreykozikwebsite"
 
 const JeffreyKozikWebsite = () => (
     <>

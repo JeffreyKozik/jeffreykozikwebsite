@@ -4,7 +4,7 @@ import Seo from "../../components/seo"
 import {Helmet} from "react-helmet";
 
 import MediaQuery from 'react-responsive'
-import SciquelComponent from "../../../components/pages/sciquel"
+import SciquelComponent from "../../components/pages/sciquel"
 
 const Sciquel = () => (
     <>

@@ -4,7 +4,7 @@ import Seo from "../../components/seo"
 import {Helmet} from "react-helmet";
 
 import MediaQuery from 'react-responsive'
-import UrbanEarthComponent from "../../../components/pages/urbanearth"
+import UrbanEarthComponent from "../../components/pages/urbanearth"
 
 const UrbanEarth = () => (
     <>

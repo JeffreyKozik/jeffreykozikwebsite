@@ -4,7 +4,7 @@ import Seo from "../../components/seo"
 import {Helmet} from "react-helmet";
 
 import MediaQuery from 'react-responsive'
-import TotalCostBrowserExtensionComponent from "../../../components/pages/totalcostbrowserextension"
+import TotalCostBrowserExtensionComponent from "../../components/pages/totalcostbrowserextension"
 
 const TotalCostBrowserExtension = () => (
     <>

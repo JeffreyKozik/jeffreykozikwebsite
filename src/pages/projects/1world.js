@@ -4,7 +4,7 @@ import Seo from "../../components/seo"
 import {Helmet} from "react-helmet";
 
 import MediaQuery from 'react-responsive'
-import OneWorldComponent from "../../../components/pages/1world"
+import OneWorldComponent from "../../components/pages/1world"
 
 const OneWorld = () => (
     <>

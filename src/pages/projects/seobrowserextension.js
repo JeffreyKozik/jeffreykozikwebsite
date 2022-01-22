@@ -4,7 +4,7 @@ import Seo from "../../components/seo"
 import {Helmet} from "react-helmet";
 
 import MediaQuery from 'react-responsive'
-import SeoBrowserExtensionComponent from "../../../components/pages/seobrowserextension"
+import SeoBrowserExtensionComponent from "../../components/pages/seobrowserextension"
 
 const SeoBrowserExtension = () => (
     <>

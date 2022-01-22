@@ -4,7 +4,7 @@ import Seo from "../../components/seo"
 import {Helmet} from "react-helmet";
 
 import MediaQuery from 'react-responsive'
-import BingUtilityBeltComponent from "../../../components/pages/bingutilitybelt"
+import BingUtilityBeltComponent from "../../components/pages/bingutilitybelt"
 
 const BingUtilityBelt = () => (
     <>

@@ -4,7 +4,7 @@ import Seo from "../../components/seo"
 import {Helmet} from "react-helmet";
 
 import MediaQuery from 'react-responsive'
-import SmrtnrllBrowserExtensionComponent from "../../../components/pages/smrtnrllbrowserextension"
+import SmrtnrllBrowserExtensionComponent from "../../components/pages/smrtnrllbrowserextension"
 
 const SmrtnrllBrowserExtension = () => (
     <>

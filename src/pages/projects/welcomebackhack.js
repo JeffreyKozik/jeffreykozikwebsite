@@ -4,7 +4,7 @@ import Seo from "../../components/seo"
 import {Helmet} from "react-helmet";
 
 import MediaQuery from 'react-responsive'
-import WelcomeBackHackComponent from "../../../components/pages/welcomebackhack"
+import WelcomeBackHackComponent from "../../components/pages/welcomebackhack"
 
 const WelcomeBackHack = () => (
     <>
