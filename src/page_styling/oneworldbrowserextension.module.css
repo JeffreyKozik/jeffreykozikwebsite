@@ -1,5 +1,5 @@
 #one_world_table_container{
-    /* padding: 3%; */
+    overflow-x: auto;
 }
 
 #one_world_table{
