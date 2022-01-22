@@ -126,35 +126,35 @@ class Project{
 // totalcostbrowserextensionirslogics
 // multitabsearchbrowserextensionirslogics
 // seobrowserextension
-let sciquel = new Project("Sciquel", "/sciquel", "", "Dec 2021 - Jan 2022", "", 0, <h3>
+let sciquel = new Project("Sciquel", "jeffreykozik.com/projects/sciquel", "", "Dec 2021 - Jan 2022", "", 0, <h3>
     Sciquel is a website that myself and one other person worked together on to code. It is a project that a number of
     Harvard Medical School students came up with to make science more accessible to the average person as academic papers
     are often very complicated to read and more often than not cost money to read."</h3>);
-let urbanEarth = new Project("Urban Earth", "/urbanearth", "", "Oct - Dec 2021", "", 1, <h3>
+let urbanEarth = new Project("Urban Earth", "jeffreykozik.com/projects/urbanearth", "", "Oct - Dec 2021", "", 1, <h3>
     Urban Earth is a project myself and a partner worked on during Fall of 2021. It's an iOS app that helps users
     track how often they use sustainable forms of transportation and motivates them to keep at it.
 </h3>);
-let jeffreykozikwebsite = new Project("jeffreykozik.com", "/jeffreykozikwebsite", "", "Dec 2021 - Jan 2022", "", 2,  <h3>Portfolio website I coded with React and Gatsby and a number of react packages including
+let jeffreykozikwebsite = new Project("jeffreykozik.com", "jeffreykozik.com/projects/jeffreykozikwebsite", "", "Dec 2021 - Jan 2022", "", 2,  <h3>Portfolio website I coded with React and Gatsby and a number of react packages including
 material-ui, react-select, font-awesome, and lodash.</h3>);
-let oneWorldBrowserExtension = new Project("1World Browser Extension", "/oneworldbrowserextension", "", "Nov 2021 - Jan 2022", "", 3, <h3>
+let oneWorldBrowserExtension = new Project("1World Browser Extension", "jeffreykozik.com/projects/oneworldbrowserextension", "", "Nov 2021 - Jan 2022", "", 3, <h3>
     The One World Browser Extension is used in conjunction with a Square Business account to easily offset a
     business's inventory carbon emissions. To see it in action feel free to enter data into the table below.
 </h3>);
-let smrtnrllBrowserExtension = new Project("smrtnrll Browser Extension", "/smrtnrllbrowserextension", "", "Dec 2020 - Oct 2021", "", 4, <h3>
+let smrtnrllBrowserExtension = new Project("smrtnrll Browser Extension", "jeffreykozik.com/projects/smrtnrllbrowserextension", "", "Dec 2020 - Oct 2021", "", 4, <h3>
     The smrtnrll browser extension is used by college students to get into classes that are currently full. Add it to your
     browser <a href="https://chrome.google.com/webstore/detail/smrtnrll/faoobmndgioamolfhbnkdegeolmmgnmj?hl=en&authuser=0" target="_blank" rel="noreferrer">here</a>.
 </h3>);
-let searchEngineUtilityBelt = new Project("Search Engine Utility Belt", "/searchengineutilitybelt", "", "Nov 2021 - Jan 2022", "", 5, <h3>
+let searchEngineUtilityBelt = new Project("Search Engine Utility Belt", "jeffreykozik.com/projects/searchengineutilitybelt", "", "Nov 2021 - Jan 2022", "", 5, <h3>
     Browser extension I created to show how pervasive ads are in search engines by highlighting ads on Bing and keeping track of how many you see on each tab. Also
     ensures recent results.
 </h3>);
-let totalCostBrowserExtensionIRSLogics = new Project("Total Cost Browser Extension IRS Logics", "/totalcostbrowserextension", "", "Oct - Nov 2021", "", 6, <h3>
+let totalCostBrowserExtensionIRSLogics = new Project("Total Cost Browser Extension IRS Logics", "jeffreykozik.com/projects/totalcostbrowserextension", "", "Oct - Nov 2021", "", 6, <h3>
     Custom browser extension I coded so that payment information across 12 tabs could be displayed in a single location.
 </h3>);
-let multitabSearchBrowserExtensionIRSLogics = new Project("Multitab Search Browser Extension IRS Logics", "/multitabsearch", "", "Oct 2021", "", 7, <h3 className="page_subtitle">
+let multitabSearchBrowserExtensionIRSLogics = new Project("Multitab Search Browser Extension IRS Logics", "jeffreykozik.com/projects/multitabsearch", "", "Oct 2021", "", 7, <h3 className="page_subtitle">
     Custom browser extension I coded so that 12 different tabs could be searched across simultaneously.
 </h3>);
-let seoBrowserExtension = new Project("SEO Browser Extension", "/seobrowserextension", "", "Nov 2021", "", 8, <h3 className="page_subtitle">
+let seoBrowserExtension = new Project("SEO Browser Extension", "jeffreykozik.com/projects/seobrowserextension", "", "Nov 2021", "", 8, <h3 className="page_subtitle">
     Browser extension I coded for the owner of <a href="site-checker.org" target="_blank" rel="noreferrer">site-checker.org</a> to easily get SEO tips for any website.
 </h3>);
 
