@@ -217,13 +217,13 @@ let seoBrowserExtension = new Project("SEO Browser Extension", "jeffreykozik.com
 // </div>
 
 const listItems = projectsArray.map((projectElement, index) =>
-   <div key={index}><ProjectComponent name={projectElement.name} link={projectElement.link} tags={projectElement.tags} startDate={projectElement.startDate} endDate={projectElement.endDate} imagePath={projectElement.imagePath}/></div>
+   <div className="homepage_container" key={index}><ProjectComponent name={projectElement.name} link={projectElement.link} tags={projectElement.tags} startDate={projectElement.startDate} endDate={projectElement.endDate} imagePath={projectElement.imagePath}/></div>
  );
 
 const HomePage = () => (
     <>
         <h1 id="jeffrey_kozik"> Jeffrey Kozik </h1>
-        <div className="homepage_container">
+        <div>
             {listItems}
         </div>
     </>
