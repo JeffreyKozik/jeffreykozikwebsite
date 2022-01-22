@@ -3,7 +3,7 @@ module.exports = {
     title: `Jeffrey Kozik`,
     description: `Portfolio website coded with React and Gatsby and a number of react packages including material-ui, react-select, font-awesome, and lodash.`,
     author: `Jeffrey Kozik`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    siteUrl: `https://jeffreykozik.com`,
   },
   plugins: [
     `jquery`,
@@ -25,6 +25,14 @@ module.exports = {
     `react-select`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
+    {
+    resolve: 'gatsby-plugin-matomo',
+        options: {
+            siteId: '1',
+            matomoUrl: 'https://jeffreykozik.matomo.cloud',
+            siteUrl: 'https://jeffreykozik.com'
+        }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
