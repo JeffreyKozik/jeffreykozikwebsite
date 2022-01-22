@@ -2901,7 +2901,7 @@ class OneWorld extends React.Component {
                 </Helmet>
                 <body>
                     <Seo title="One World Browser Extension" />
-                    <MediaQuery minWidth={821}>
+                    <MediaQuery minWidth={601}>
                         <div className={pages.page_container}>
                             <h1 className={pages.page_title}> One World Browser Extension </h1>
                             <h3 className={pages.page_subtitle}>
@@ -2986,7 +2986,7 @@ class OneWorld extends React.Component {
                             </p>
                         </div>
                     </MediaQuery>
-                    <MediaQuery maxWidth={820}>
+                    <MediaQuery maxWidth={600}>
                     <div className={pages.page_container_phone}>
                         <h1 className={pages.page_title}> One World Browser Extension </h1>
                         <h3 className={pages.page_subtitle}>
@@ -2994,48 +2994,9 @@ class OneWorld extends React.Component {
                             business's inventory carbon emissions. To see it in action feel free to enter data into the table below.
                         </h3>
                         <iframe className={pages.page_video} src="https://www.youtube-nocookie.com/embed/TmRLSg4kcUk" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-                        <Paper id={oneworld.one_world_table_container}>
-                          <Table aria-label="simple table" id={oneworld.one_world_table}>
-                              <TableHead>
-                                <TableRow>
-                                    <TableCell className={oneworld.one_world_nameTable}>Name</TableCell>
-                                    <TableCell className={oneworld.one_world_costTable} align="right">Cost</TableCell>
-                                    <TableCell className={oneworld.one_world_submit} align="right"></TableCell>
-                                    <TableCell className={oneworld.one_world_consumptionTable} align="right">Consumption</TableCell>
-                                    <TableCell className={oneworld.one_world_supplychainTable} align="right">Supply Chain</TableCell>
-                                    <TableCell className={oneworld.one_world_CO2Table} align="right">CO2</TableCell>
-                                    <TableCell className={oneworld.one_world_offsetcostTable} align="right">Offset</TableCell>
-                                    <TableCell className={oneworld.one_world_deleteTable} align="right"></TableCell>
-                                </TableRow>
-                              </TableHead>
-                              <TableBody>
-                            {this.state.rows.map((row) =>
-                                <TableRow key={row.row_num.toString()}>
-                                    <TableCell className={oneworld.one_world_nameTable}><TextField id="standard-basic" placeholder="Apples..." variant="standard" value={row.name} onChange={(e) => this.nameChange(e.target.value, row.row_num)}/></TableCell>
-                                    <TableCell className={oneworld.one_world_costTable} align="right"><TextField id="standard-basic" placeholder="$10..." variant="standard" value={row.cost} onChange={(e) => this.costChange(e.target.value, row.row_num)}/></TableCell>
-                                    <TableCell className={oneworld.one_world_submit} align="right"><button onClick={() => this.submitFunction(row.row_num)}>{row.submit_text}</button></TableCell>
-                                    <TableCell className={oneworld.one_world_consumptionTable} align="right"><Select class="one_world_select" closeMenuOnSelect={false} components={this.state.animatedComponentsConsumption} options={this.state.selectConsumptionOptions} value={row.consumption} onChange={(selectedOption) => this.consumptionClickChange(selectedOption, row.row_num)}/></TableCell>
-                                    <TableCell className={oneworld.one_world_supplychainTable} align="right"><Select class="one_world_select" closeMenuOnSelect={false} components={this.state.animatedComponentsSupplyChain} options={this.state.selectSupplyChainOptions} value={row.supply_chain} onChange={(selectedOption) => this.supplyChainClickChange(selectedOption, row.row_num)}/></TableCell>
-                                    <TableCell className={oneworld.one_world_CO2Table} align="right"><div>{row.co2} kg</div></TableCell>
-                                    <TableCell className={oneworld.one_world_offsetcostTable} align="right"><div>${row.offset_cost}</div></TableCell>
-                                    <TableCell className={oneworld.one_world_deleteTable} align="right"><button onClick={() => this.deleteRowFunction(row.row_num)}><FontAwesomeIcon icon={faTrashAlt} id={oneworld.one_world_delete_row_button}/></button></TableCell>
-                                </TableRow>
-                            )}
-                            <TableRow key="total">
-                                <TableCell className={oneworld.one_world_nameTable}></TableCell>
-                                <TableCell className={oneworld.one_world_costTable} align="right"></TableCell>
-                                <TableCell className={oneworld.one_world_submit} align="right"><button onClick={() => this.submitFunction("total")}>Submit All</button></TableCell>
-                                <TableCell className={oneworld.one_world_consumptionTable} align="right"></TableCell>
-                                <TableCell className={oneworld.one_world_supplychainTable} align="right"></TableCell>
-                                <TableCell className={oneworld.one_world_CO2Table} align="right"><div>{this.state.totalKG} kg</div></TableCell>
-                                <TableCell className={oneworld.one_world_offsetcostTable} align="right"><div>${this.state.totalOffset}</div></TableCell>
-                                <TableCell className={oneworld.one_world_deleteTable} align="right"></TableCell>
-                            </TableRow>
-                            </TableBody>
-                          </Table>
-                        </Paper>
-                        <Button onClick={this.addRowFunction} variant="text" id={oneworld.one_world_add_row_button}> Add Row </Button>
-                        <Button onClick={this.offsetFunction} variant="text" id={oneworld.one_world_offset_row_button}> Offset CO2 </Button>
+                        <p className={pages.page_description}>
+                            Turn your phone sideways or use a bigger device such as an iPad or laptop to see the carbon offset table.
+                        </p>
                         <p className={pages.page_description}>
                             The name category is the name of what you're offseting. So if you're a restaurant and you want to offset the CO2 emissions from buying apples you'd put
                             "Apples" in that category. The cost category is how much it cost to buy what you're offsetting. So if you bought $1000 worth of apples you'd put $1000 in that category.
