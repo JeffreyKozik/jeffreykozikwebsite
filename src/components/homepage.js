@@ -136,7 +136,7 @@ let urbanEarth = new Project("Urban Earth", "https://jeffreykozik.com/projects/u
 </h3>);
 let jeffreykozikwebsite = new Project("jeffreykozik.com", "https://jeffreykozik.com/projects/jeffreykozikwebsite", "", "Dec 2021 - Jan 2022", "", 2,  <h3>Portfolio website I coded with React and Gatsby and a number of react packages including
 material-ui, react-select, font-awesome, and lodash.</h3>);
-let oneWorldBrowserExtension = new Project("1World Browser Extension", "https://jeffreykozik.com/projects/oneworldbrowserextension", "", "Nov 2021 - Jan 2022", "", 3, <h3>
+let oneWorldBrowserExtension = new Project("1World Browser Extension", "https://jeffreykozik.com/projects/1world", "", "Nov 2021 - Jan 2022", "", 3, <h3>
     The One World Browser Extension is used in conjunction with a Square Business account to easily offset a
     business's inventory carbon emissions. To see it in action feel free to enter data into the table below.
 </h3>);
@@ -144,7 +144,7 @@ let smrtnrllBrowserExtension = new Project("smrtnrll Browser Extension", "https:
     The smrtnrll browser extension is used by college students to get into classes that are currently full. Add it to your
     browser <a href="https://chrome.google.com/webstore/detail/smrtnrll/faoobmndgioamolfhbnkdegeolmmgnmj?hl=en&authuser=0" target="_blank" rel="noreferrer">here</a>.
 </h3>);
-let searchEngineUtilityBelt = new Project("Search Engine Utility Belt", "https://jeffreykozik.com/projects/searchengineutilitybelt", "", "Nov 2021 - Jan 2022", "", 5, <h3>
+let bingUtilityBelt = new Project("Bing Utility Belt", "https://jeffreykozik.com/projects/bingutilitybelt", "", "Nov 2021 - Jan 2022", "", 5, <h3>
     Browser extension I created to show how pervasive ads are in search engines by highlighting ads on Bing and keeping track of how many you see on each tab. Also
     ensures recent results.
 </h3>);
