@@ -2910,7 +2910,7 @@ class OneWorld extends React.Component {
                             </h3>
                             <iframe className={pages.page_video} src="https://www.youtube-nocookie.com/embed/TmRLSg4kcUk" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                             <TableContainer component={Paper} id={oneworld.one_world_table_container}>
-                              <Table aria-label="simple table" id={oneworld.one_world_table}>
+                              <Table sx={{ minWidth: 650 }} aria-label="simple table" id={oneworld.one_world_table}>
                                   <TableHead>
                                     <TableRow>
                                         <TableCell className={oneworld.one_world_nameTable}>Name</TableCell>
@@ -2995,7 +2995,7 @@ class OneWorld extends React.Component {
                         </h3>
                         <iframe className={pages.page_video} src="https://www.youtube-nocookie.com/embed/TmRLSg4kcUk" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                         <TableContainer component={Paper} id={oneworld.one_world_table_container}>
-                          <Table aria-label="simple table" id={oneworld.one_world_table}>
+                          <Table sx={{ minWidth: 650 }} aria-label="simple table" id={oneworld.one_world_table}>
                               <TableHead>
                                 <TableRow>
                                     <TableCell className={oneworld.one_world_nameTable}>Name</TableCell>
