@@ -63,6 +63,18 @@
         margin-left: 25% !important;
         margin-right: 25% !important;
     }
+    .page_description{
+        margin-left: 25% !important;
+        margin-right: 25% !important;
+    }
+    .page_title {
+        margin-left: 25% !important;
+        margin-right: 25% !important;
+    }
+    .page_subtitle {
+        margin-left: 25% !important;
+        margin-right: 25% !important;
+    }
 }
 
 /* ipad and smaller */
