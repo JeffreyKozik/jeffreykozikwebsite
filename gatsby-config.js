@@ -7,7 +7,7 @@ module.exports = {
     siteUrl: `https://jeffreykozik.com`,
   },
   plugins: [
-    `"react-responsive"`,
+    `react-responsive`,
     `jquery`,
     `@babel/eslint-parser`,
     `bootstrap`,
