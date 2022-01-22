@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom';
-import * as homepage from './homepage.module.css';
+import './homepage.css';
 import PropTypes from 'prop-types';
 
 // import { styled } from '@mui/material/styles';
@@ -63,7 +63,7 @@ let imageArray = [sciquelScreenshot, urbanearthScreenshot, jeffreykozikScreensho
 
 function ProjectComponent({ name, link, tags, startDate, endDate, imagePath, description }) {
   return(
-      <a href={link} className={homepage.itemList}>
+      <a href={link} className="itemList">
           <Card sx={{ maxWidth: 345 }}>
             <CardHeader
               title={name}
