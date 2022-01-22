@@ -1,5 +1,7 @@
 #one_world_table_container{
     overflow-x: auto;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 #one_world_table{
