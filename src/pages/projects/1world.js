@@ -1,5 +1,5 @@
 import * as React from "react"
-// import demoVideo from "../images/1world.mp4";
+import demoVideo from "../../images/1world.mp4";
 import * as oneworld from "../../page_styling/oneworldbrowserextension.module.css"
 import * as pages from "../../page_styling/pages.module.css"
 import Seo from "../../components/seo"
@@ -95,8 +95,8 @@ class OneWorld extends React.Component {
                 console.log("removalindex" + removalIndex);
                 console.log("oldrowsclone" + oldRowsClone[removalIndex]);
                 this.setState({
-                    totalKG : this.state.totalKG - oldRowsClone[removalIndex].co2,
-                    totalOffset : this.state.totalOffset - oldRowsClone[removalIndex].offset_cost
+                    totalKG : Number((this.state.totalKG - oldRowsClone[removalIndex].co2).toFixed(2)),
+                    totalOffset : Number((this.state.totalOffset - oldRowsClone[removalIndex].offset_cost).toFixed(2))
                 });
                 for(let i = removalIndex + 1; i < oldRowsClone.length; i++){
                     oldRowsClone[i].row_num = oldRowsClone[i].row_num - 1;
@@ -2952,8 +2952,12 @@ class OneWorld extends React.Component {
                             The name category is the name of what you're offseting. So if you're a restaurant and you want to offset the CO2 emissions from buying apples you'd put
                             "Apples" in that category. The cost category is how much it cost to buy what you're offsetting. So if you bought $1000 worth of apples you'd put $1000 in that category.
                             Once these two text fields are filled in, my program will automatically determine the consumption and supply chain categories the product fits in. If you feel like it categorized
-                            the product wrong, simply change the category using the dropdown. My program will also calculate the kg CO2 emitted for each product you're offsetting and the cost to do so.
+                            the product wrong, simply change the category using the dropdown. My program will also calculate the kg CO2 emitted for each product you're offsetting and the cost to do so. The demo is
+                            shown below.
                         </p>
+                        <video controls preload="auto" className={pages.page_video}>
+                            <source src={demoVideo} type="video/mp4"></source>
+                        </video>
                         <p className={pages.page_description}>
                             The consumption categories and supply chain categories as well as the amount of CO2 emitted per dollar spent
                             in each of those categories comes from <a href="https://www.gov.uk/government/statistics/uks-carbon-footprint" target="_blank" rel="noreferrer">publicly available data from the UK government</a>.
