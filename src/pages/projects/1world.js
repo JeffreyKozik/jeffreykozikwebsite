@@ -2969,6 +2969,10 @@ class OneWorld extends React.Component {
                             sentiment analysis.
                         </p>
                         <p className={pages.page_description}>
+                            In the future I'm going to put this project on a separate website and improve the UI and estimations and I may integrate with other
+                            climate partners like KlimaDAO.
+                        </p>
+                        <p className={pages.page_description}>
                             Note 1: in the video, there's a calculation error that has been corrected now. In the video I say 1t = 100kg but in fact 1t = 1000kg.
                             So really 0.01t should be offset in the video, not 0.13t. So offsetting $100 worth of apples (12.77 kg CO2) through the project chosen
                             on Patch would cost $0.13 not $1.27.
