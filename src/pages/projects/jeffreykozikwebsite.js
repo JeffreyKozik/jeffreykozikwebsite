@@ -15,7 +15,7 @@ const JeffreyKozikWebsite = () => (
                 <h1 className={pages.page_title}> Jeffrey Kozik Website </h1>
                 <h3 className={pages.page_subtitle}>
                     Portfolio website I coded with React and Gatsby and a number of react packages including
-                    material-ui, react-select, font-awesome, and lodash.
+                    material-ui, react-select, font-awesome, lodash, and simple analytics.
                 </h3>
                 <img className={pages.page_video} src={jeffreykozikScreenshot} alt="jeffreykozik.com screenshot"/>
                 <p className={pages.page_description}>

@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Jeffrey Kozik`,
-    description: `Portfolio website coded with React and Gatsby and a number of react packages including material-ui, react-select, font-awesome, and lodash.`,
+    description: `Portfolio website I coded with React and Gatsby and a number of react packages including
+    material-ui, react-select, font-awesome, lodash, and simple analytics.`,
     author: `Jeffrey Kozik`,
     siteUrl: `https://jeffreykozik.com`,
   },
@@ -25,6 +26,15 @@ module.exports = {
     `react-select`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
+      {
+        resolve: "gatsby-plugin-simple-analytics",
+        options: {
+          trackPageViews: true,
+          events: true,
+          eventsGlobal: "sa_event",
+          ignorePages: ["pathname"],
+        },
+      },
     {
     resolve: 'gatsby-plugin-matomo',
         options: {
