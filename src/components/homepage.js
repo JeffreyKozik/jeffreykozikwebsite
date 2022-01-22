@@ -136,8 +136,8 @@ let urbanEarth = new Project("Urban Earth", "https://gatsbystarterdefault33968.g
     Urban Earth is a project myself and a partner worked on during Fall of 2021. It's an iOS app that helps users
     track how often they use sustainable forms of transportation and motivates them to keep at it.
 </h3>);
-let jeffreykozikwebsite = new Project("jeffreykozik.com", "https://gatsbystarterdefault33968.gtsb.io/projects/jeffreykozikwebsite", "", "Dec 2021 - Jan 2022", "", 2, <h3>Portfolio website I created with React and Gatsby and a number of react packages including
-material-ui, react-select, and react-helmet.</h3>);
+let jeffreykozikwebsite = new Project("jeffreykozik.com", "https://gatsbystarterdefault33968.gtsb.io/projects/jeffreykozikwebsite", "", "Dec 2021 - Jan 2022", "", 2, <h3>Portfolio website I coded with React and Gatsby and a number of react packages including
+material-ui, react-select, font-awesome, and lodash.</h3>);
 let oneWorldBrowserExtension = new Project("1World Browser Extension", "https://gatsbystarterdefault33968.gtsb.io/projects/1world", "", "Nov 2021 - Jan 2022", "", 3, <h3>
     The One World Browser Extension is used in conjunction with a Square Business account to easily offset a
     business's inventory carbon emissions. To see it in action feel free to enter data into the table below.
@@ -224,8 +224,8 @@ const listItems = projectsArray.map((projectElement, index) =>
 
 const HomePage = () => (
     <>
-        <h1 id={homepage.jeffrey_kozik}><a href="https://www.jeffreykozik.com">Jeffrey Kozik</a></h1>
-        <div>
+        <h1 id={homepage.jeffrey_kozik}><a href="jeffreykozik.com">Jeffrey Kozik</a></h1>
+        <div className={homepage.homepage_container}>
             {listItems}
         </div>
     </>

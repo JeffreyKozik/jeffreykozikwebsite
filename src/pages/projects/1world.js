@@ -2894,9 +2894,9 @@ class OneWorld extends React.Component {
     render(){
         return(
             <>
-                <head>
+                <Helmet>
                     <meta name="viewport" content="initial-scale=1, width=device-width"/>
-                </head>
+                </Helmet>
                 <body>
                     <Seo title="One World Browser Extension" />
                     <div className={pages.page_container}>
