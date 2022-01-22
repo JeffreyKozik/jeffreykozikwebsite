@@ -1,5 +1,5 @@
 import * as React from "react"
-import demoVideo from "../../images/1world.mp4";
+import demoVideo from "../../images/1worldoffsquareedited.mp4";
 import * as oneworld from "../../page_styling/oneworldbrowserextension.module.css"
 import * as pages from "../../page_styling/pages.module.css"
 import Seo from "../../components/seo"
@@ -2969,9 +2969,13 @@ class OneWorld extends React.Component {
                             sentiment analysis.
                         </p>
                         <p className={pages.page_description}>
-                            Note: in the video, there's a calculation error that has been corrected now. In the video I say 1t = 100kg but in fact 1t = 1000kg.
+                            Note 1: in the video, there's a calculation error that has been corrected now. In the video I say 1t = 100kg but in fact 1t = 1000kg.
                             So really 0.01t should be offset in the video, not 0.13t. So offsetting $100 worth of apples (12.77 kg CO2) through the project chosen
                             on Patch would cost $0.13 not $1.27.
+                        </p>
+                        <p className={pages.page_description}>
+                            Note 2: in the second video, the total cost to offset has more than 2 digits after the decimal point, however this has been fixed so the total
+                            should always only display two digits after the decimal point.
                         </p>
                     </div>
                 </body>
