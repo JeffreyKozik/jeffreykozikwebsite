@@ -2922,23 +2922,23 @@ class OneWorld extends React.Component {
                               </TableHead>
                               <TableBody>
                             {this.state.rows.map((row) =>
-                                <TableRow key={row.row_num.toString()} style={{overflowY: "visible !important"}}>
+                                <TableRow key={row.row_num.toString()}>
                                     <TableCell className={oneworld.one_world_nameTable}><TextField id="standard-basic" placeholder="Apples..." variant="standard" value={row.name} onChange={(e) => this.nameChange(e.target.value, row.row_num)}/></TableCell>
                                     <TableCell className={oneworld.one_world_costTable} align="right"><TextField id="standard-basic" placeholder="$10..." variant="standard" value={row.cost} onChange={(e) => this.costChange(e.target.value, row.row_num)}/></TableCell>
                                     <TableCell className={oneworld.one_world_submit} align="right"><button onClick={() => this.submitFunction(row.row_num)}>{row.submit_text}</button></TableCell>
-                                    <TableCell style={{overflowY: "visible !important"}} className={oneworld.one_world_consumptionTable} align="right"><Select class="one_world_select" closeMenuOnSelect={false} components={this.state.animatedComponentsConsumption} options={this.state.selectConsumptionOptions} value={row.consumption} onChange={(selectedOption) => this.consumptionClickChange(selectedOption, row.row_num)}/></TableCell>
-                                    <TableCell style={{overflowY: "visible !important"}} className={oneworld.one_world_supplychainTable} align="right"><Select class="one_world_select" closeMenuOnSelect={false} components={this.state.animatedComponentsSupplyChain} options={this.state.selectSupplyChainOptions} value={row.supply_chain} onChange={(selectedOption) => this.supplyChainClickChange(selectedOption, row.row_num)}/></TableCell>
+                                    <TableCell className={oneworld.one_world_consumptionTable} align="right"><Select class="one_world_select" closeMenuOnSelect={false} components={this.state.animatedComponentsConsumption} options={this.state.selectConsumptionOptions} value={row.consumption} onChange={(selectedOption) => this.consumptionClickChange(selectedOption, row.row_num)}/></TableCell>
+                                    <TableCell className={oneworld.one_world_supplychainTable} align="right"><Select class="one_world_select" closeMenuOnSelect={false} components={this.state.animatedComponentsSupplyChain} options={this.state.selectSupplyChainOptions} value={row.supply_chain} onChange={(selectedOption) => this.supplyChainClickChange(selectedOption, row.row_num)}/></TableCell>
                                     <TableCell className={oneworld.one_world_CO2Table} align="right"><div>{row.co2} kg</div></TableCell>
                                     <TableCell className={oneworld.one_world_offsetcostTable} align="right"><div>${row.offset_cost}</div></TableCell>
                                     <TableCell className={oneworld.one_world_deleteTable} align="right"><button onClick={() => this.deleteRowFunction(row.row_num)}><FontAwesomeIcon icon={faTrashAlt} id={oneworld.one_world_delete_row_button}/></button></TableCell>
                                 </TableRow>
                             )}
-                            <TableRow key="total" style={{overflowY: "visible !important"}}>
+                            <TableRow key="total">
                                 <TableCell className={oneworld.one_world_nameTable}></TableCell>
                                 <TableCell className={oneworld.one_world_costTable} align="right"></TableCell>
                                 <TableCell className={oneworld.one_world_submit} align="right"><button onClick={() => this.submitFunction("total")}>Submit All</button></TableCell>
-                                <TableCell style={{overflowY: "visible !important"}} className={oneworld.one_world_consumptionTable} align="right"></TableCell>
-                                <TableCell style={{overflowY: "visible !important"}} className={oneworld.one_world_supplychainTable} align="right"></TableCell>
+                                <TableCell className={oneworld.one_world_consumptionTable} align="right"></TableCell>
+                                <TableCell className={oneworld.one_world_supplychainTable} align="right"></TableCell>
                                 <TableCell className={oneworld.one_world_CO2Table} align="right"><div>{this.state.totalKG} kg</div></TableCell>
                                 <TableCell className={oneworld.one_world_offsetcostTable} align="right"><div>${this.state.totalOffset}</div></TableCell>
                                 <TableCell className={oneworld.one_world_deleteTable} align="right"></TableCell>
