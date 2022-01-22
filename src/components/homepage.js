@@ -223,7 +223,7 @@ const listItems = projectsArray.map((projectElement, index) =>
 const HomePage = () => (
     <>
         <h1 id="jeffrey_kozik"> Jeffrey Kozik </h1>
-        <div>
+        <div className="homepage_container">
             {listItems}
         </div>
     </>
