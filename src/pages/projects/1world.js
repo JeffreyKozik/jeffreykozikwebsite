@@ -2906,8 +2906,8 @@ class OneWorld extends React.Component {
                             business's inventory carbon emissions. To see it in action feel free to enter data into the table below.
                         </h3>
                         <iframe className={pages.page_video} src="https://www.youtube-nocookie.com/embed/TmRLSg4kcUk" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-                        <TableContainer component={Paper} id={oneworld.one_world_table_container} style={{overflowX: "auto !important"}}>
-                          <Table sx={{ minWidth: 650 }} style={{overflowY: "visible !important", overflowX: "auto !important"}} aria-label="simple table" id={oneworld.one_world_table}>
+                        <TableContainer component={Paper} id={oneworld.one_world_table_container}>
+                          <Table sx={{ minWidth: 650 }} aria-label="simple table" id={oneworld.one_world_table}>
                               <TableHead>
                                 <TableRow>
                                     <TableCell className={oneworld.one_world_nameTable}>Name</TableCell>
@@ -2933,7 +2933,7 @@ class OneWorld extends React.Component {
                                     <TableCell className={oneworld.one_world_deleteTable} align="right"><button onClick={() => this.deleteRowFunction(row.row_num)}><FontAwesomeIcon icon={faTrashAlt} id={oneworld.one_world_delete_row_button}/></button></TableCell>
                                 </TableRow>
                             )}
-                            <tr key="total" style={{overflowY: "visible !important"}}>
+                            <TableRow key="total" style={{overflowY: "visible !important"}}>
                                 <TableCell className={oneworld.one_world_nameTable}></TableCell>
                                 <TableCell className={oneworld.one_world_costTable} align="right"></TableCell>
                                 <TableCell className={oneworld.one_world_submit} align="right"><button onClick={() => this.submitFunction("total")}>Submit All</button></TableCell>
@@ -2942,7 +2942,7 @@ class OneWorld extends React.Component {
                                 <TableCell className={oneworld.one_world_CO2Table} align="right"><div>{this.state.totalKG} kg</div></TableCell>
                                 <TableCell className={oneworld.one_world_offsetcostTable} align="right"><div>${this.state.totalOffset}</div></TableCell>
                                 <TableCell className={oneworld.one_world_deleteTable} align="right"></TableCell>
-                            </tr>
+                            </TableRow>
                             </TableBody>
                           </Table>
                         </TableContainer>
