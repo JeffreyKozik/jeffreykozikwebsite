@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom';
-import './homepage.module.css';
+import * as homepage from './homepage.module.css';
 // import App from './App';
 // import reportWebVitals from './reportWebVitals';
 
@@ -153,10 +153,10 @@ let searchEngineUtilityBelt = new Project("Bing Utility Belt", "https://gatsbyst
 let totalCostBrowserExtensionIRSLogics = new Project("Total Cost Browser Extension IRS Logics", "https://gatsbystarterdefault33968.gtsb.io/projects/totalcostbrowserextension", "", "Oct - Nov 2021", "", 6, <h3>
     Custom browser extension I coded so that payment information across 12 tabs could be displayed in a single location.
 </h3>);
-let multitabSearchBrowserExtensionIRSLogics = new Project("Multitab Search Browser Extension IRS Logics", "https://gatsbystarterdefault33968.gtsb.io/projects/multitabsearch", "", "Oct 2021", "", 7, <h3 className="page_subtitle">
+let multitabSearchBrowserExtensionIRSLogics = new Project("Multitab Search Browser Extension IRS Logics", "https://gatsbystarterdefault33968.gtsb.io/projects/multitabsearch", "", "Oct 2021", "", 7, <h3>
     Custom browser extension I coded so that 12 different tabs could be searched across simultaneously.
 </h3>);
-let seoBrowserExtension = new Project("SEO Browser Extension", "https://gatsbystarterdefault33968.gtsb.io/projects/seobrowserextension", "", "Nov 2021", "", 8, <h3 className="page_subtitle">
+let seoBrowserExtension = new Project("SEO Browser Extension", "https://gatsbystarterdefault33968.gtsb.io/projects/seobrowserextension", "", "Nov 2021", "", 8, <h3>
     Browser extension I coded for the owner of <a href="site-checker.org" target="_blank" rel="noreferrer">site-checker.org</a> to easily get SEO tips for any website.
 </h3>);
 
@@ -224,7 +224,7 @@ const listItems = projectsArray.map((projectElement, index) =>
 
 const HomePage = () => (
     <>
-        <h1 id="jeffrey_kozik"> Jeffrey Kozik </h1>
+        <h1 id={homepage.jeffrey_kozik}><a href="https://www.jeffreykozik.com">Jeffrey Kozik</a></h1>
         <div>
             {listItems}
         </div>
