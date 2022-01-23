@@ -135,7 +135,7 @@ let urbanEarth = new Project("Urban Earth", "https://jeffreykozik.com/projects/u
     track how often they use sustainable forms of transportation and motivates them to keep at it.
 </h3>);
 let jeffreykozikwebsite = new Project("jeffreykozik.com", "https://jeffreykozik.com/projects/jeffreykozikwebsite", "", "Dec 2021 - Jan 2022", "", 2,  <h3>Portfolio website I coded with React and Gatsby and a number of react packages including
-material-ui, react-select, font-awesome, lodash, and simple analytics.</h3>);
+material-ui, react-select, font-awesome, lodash, simple analytics, and matomo analytics.</h3>);
 let oneWorldBrowserExtension = new Project("1World Browser Extension", "https://jeffreykozik.com/projects/1world", "", "Nov 2021 - Jan 2022", "", 3, <h3>
     The One World Browser Extension is used in conjunction with a Square Business account to easily offset a
     business's inventory carbon emissions. To see it in action feel free to enter data into the table below.

@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Jeffrey Kozik`,
     description: `Portfolio website I coded with React and Gatsby and a number of react packages including
-    material-ui, react-select, font-awesome, lodash, and simple analytics.`,
+    material-ui, react-select, font-awesome, lodash, simple analytics, and matomo analytics.`,
     author: `Jeffrey Kozik`,
     siteUrl: `https://jeffreykozik.com`,
   },
