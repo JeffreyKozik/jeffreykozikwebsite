@@ -95,7 +95,7 @@ let imageArray = [sciquelScreenshot, urbanearthScreenshot, jeffreykozikScreensho
 
 function ProjectComponent({ name, link, tags, startDate, endDate, imagePath, description }) {
   return(
-      <>
+      <div className={homepage.itemList}>
         <div className="card mb-3" style={{maxWidth: "540px"}}>
             <div className="row g-0">
                 <div className="col-md-4">
@@ -103,14 +103,14 @@ function ProjectComponent({ name, link, tags, startDate, endDate, imagePath, des
                 </div>
                 <div className="col-md-8">
                   <div className="card-body">
-                    <h5 className="card-title"><a href={link} className={homepage.itemList}>{name}</a></h5>
-                    <p className="card-text">{description}</p>
-                    <p className="card-text"><small className="text-muted">{startDate}</small></p>
+                    <h5 className="card-title" id={homepage.rubikFont1}><a href={link}>{name}</a></h5>
+                    <p className="card-text"><small className="text-muted" id={homepage.rubikFont3}>{startDate}</small></p>
+                    <p className="card-text" id={homepage.rubikFont2}>{description}</p>
                   </div>
                 </div>
             </div>
         </div>
-     </>
+     </div>
   )
 }
 ProjectComponent.propTypes = {

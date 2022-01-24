@@ -7,7 +7,7 @@ body {
 }
 
 #jeffrey_kozik {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Rubik', sans-serif !important;
   text-align: center;
 }
 
@@ -37,4 +37,16 @@ body {
     margin: 5%;
     /* display: flex;
     flex-wrap: wrap; */
+}
+
+#rubikFont1{
+    font-family: 'Rubik', sans-serif !important;
+}
+
+#rubikFont2{
+    font-family: 'Rubik', sans-serif !important;
+}
+
+#rubikFont3{
+    font-family: 'Rubik', sans-serif !important;
 }
