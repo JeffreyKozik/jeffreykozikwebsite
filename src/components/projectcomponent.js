@@ -19,7 +19,7 @@ import PropTypes from 'prop-types';
 // import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 // import MoreVertIcon from '@mui/icons-material/MoreVert';
 
-import './bootstrap.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import sciquelScreenshot from "../images/sciquelhomepage1.png"
 import urbanearthScreenshot from "../images/urbanearthlogo.png"
@@ -97,7 +97,7 @@ function ProjectComponent({ name, link, tags, startDate, endDate, imagePath, des
   return(
       <>
           <a href={link} className={homepage.itemList}>
-          <div className="card mb-3" style="max-width: 540px;">
+          <div className="card mb-3" style={{maxWidth: "540px"}}>
             <div className="row g-0">
             <div className="col-md-4">
               <img src={imageArray[imagePath]} className="img-fluid rounded-start" alt="..."/>
