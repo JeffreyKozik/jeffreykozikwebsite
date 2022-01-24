@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom';
-import * as homepage from './homepage.css';
+import * as homepage from './homepage.module.css';
 import PropTypes from 'prop-types';
 
 // import { styled } from '@mui/material/styles';
@@ -21,7 +21,7 @@ import Typography from '@mui/material/Typography';
 
 import {Helmet} from "react-helmet";
 
-import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import './bootstrap.min.css';
 
 import sciquelScreenshot from "../images/sciquelhomepage1.png"
 import urbanearthScreenshot from "../images/urbanearthlogo.png"
