@@ -19,7 +19,7 @@ import PropTypes from 'prop-types';
 // import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 // import MoreVertIcon from '@mui/icons-material/MoreVert';
 
-import './bootstrap.min.css';
+import './bootstrap.css';
 
 import sciquelScreenshot from "../images/sciquelhomepage1.png"
 import urbanearthScreenshot from "../images/urbanearthlogo.png"
