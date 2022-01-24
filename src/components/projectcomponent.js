@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom';
-import './homepage.css';
+import * as homepage from './homepage.css';
 import PropTypes from 'prop-types';
 
 // import { styled } from '@mui/material/styles';
@@ -101,7 +101,7 @@ function ProjectComponent({ name, link, tags, startDate, endDate, imagePath, des
           <Helmet>
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossOrigin="anonymous"/>
           </Helmet>
-          <a href={link} className="itemList">
+          <a href={link} className={homepage.itemList}>
           <div className="card mb-3" style="max-width: 540px;">
             <div className="row g-0">
             <div className="col-md-4">
