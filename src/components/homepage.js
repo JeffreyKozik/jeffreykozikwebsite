@@ -10,6 +10,16 @@ import Select from 'react-select'
 import makeAnimated from 'react-select/animated'
 const animatedComponents = makeAnimated();
 
+import { bounceInDown } from 'react-animations';
+import { StyleSheet, css } from 'aphrodite';
+
+const bounceInDownStyles = StyleSheet.create({
+  bounceInDown: {
+    animationName: bounceInDown,
+    animationDuration: '2s'
+  }
+})
+
 let categoryArray = [];
 class Category{
   constructor(name, shape){
@@ -196,7 +206,7 @@ let seoBrowserExtension = new Project("SEO Browser Extension", "https://jeffreyk
 // </div>
 
 const listItems = projectsArray.map((projectElement, index) =>
-   <div key={index}><ProjectComponent name={projectElement.name} link={projectElement.link} tags={projectElement.tags} startDate={projectElement.startDate} endDate={projectElement.endDate} imagePath={projectElement.imagePath} description={projectElement.description}/></div>
+   <div key={index}><ProjectComponent style={bounceInDownStyles.bounceInDown} name={projectElement.name} link={projectElement.link} tags={projectElement.tags} startDate={projectElement.startDate} endDate={projectElement.endDate} imagePath={projectElement.imagePath} description={projectElement.description}/></div>
  );
 
 const HomePage = () => (

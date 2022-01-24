@@ -7,6 +7,8 @@ module.exports = {
     siteUrl: `https://jeffreykozik.com`,
   },
   plugins: [
+    `react-animations`,
+    `aphrodite`,
     `react-responsive`,
     `jquery`,
     `@babel/eslint-parser`,
