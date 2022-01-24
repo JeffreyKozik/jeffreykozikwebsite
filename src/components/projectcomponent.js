@@ -21,6 +21,8 @@ import Typography from '@mui/material/Typography';
 
 import {Helmet} from "react-helmet";
 
+import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
 import sciquelScreenshot from "../images/sciquelhomepage1.png"
 import urbanearthScreenshot from "../images/urbanearthlogo.png"
 import jeffreykozikScreenshot from "../images/jeffreykozikwebsitescreenshot.png"
@@ -100,16 +102,16 @@ function ProjectComponent({ name, link, tags, startDate, endDate, imagePath, des
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossOrigin="anonymous"/>
           </Helmet>
           <a href={link} className="itemList">
-          <div class="card mb-3" style="max-width: 540px;">
-            <div class="row g-0">
-            <div class="col-md-4">
-              <img src="..." class="img-fluid rounded-start" alt="..."/>
+          <div className="card mb-3" style="max-width: 540px;">
+            <div className="row g-0">
+            <div className="col-md-4">
+              <img src={imageArray[imagePath]} className="img-fluid rounded-start" alt="..."/>
             </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <div className="col-md-8">
+              <div className="card-body">
+                <h5 className="card-title">{name}</h5>
+                <p className="card-text">{description}</p>
+                <p className="card-text"><small className="text-muted">{startDate}</small></p>
               </div>
             </div>
             </div>
