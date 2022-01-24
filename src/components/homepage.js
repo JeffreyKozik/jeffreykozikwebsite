@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import ReactDOM from 'react-dom';
+import React from 'react'
+// import ReactDOM from 'react-dom';
 import * as homepage from './homepage.module.css';
 // import App from './App';
 // import reportWebVitals from './reportWebVitals';
