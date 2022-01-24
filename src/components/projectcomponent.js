@@ -21,15 +21,15 @@ import PropTypes from 'prop-types';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import sciquelScreenshot from "../images/sciquelhomepage1.png"
-import urbanearthScreenshot from "../images/urbanearthlogo.png"
-import jeffreykozikScreenshot from "../images/jeffreykozikwebsitescreenshot.png"
-import oneworldbrowserextensionScreenshot from "../images/1worldscreenshot.png"
-import smrtnrllbrowserextensionScreenshot from "../images/smrtnrllscreenshot.png"
-import searchengineutilitybeltScreenshot from "../images/searchengineutilitybeltscreenshot.png"
-import totalcostScreenshot from "../images/totalcostscreenshot.png"
-import multitabsearchScreenshot from "../images/multitabscreenshot.png"
-import seobrowserextensionScreenshot from "../images/seoscreenshot.png"
+import sciquelScreenshot from "../images/homepage_squares/sciquelhomepage1.png"
+import urbanearthScreenshot from "../images/homepage_squares/urbanearthlogo.png"
+import jeffreykozikScreenshot from "../images/homepage_squares/jeffreykozikwebsitescreenshot.png"
+import oneworldbrowserextensionScreenshot from "../images/homepage_squares/1worldscreenshot.png"
+import smrtnrllbrowserextensionScreenshot from "../images/homepage_squares/smrtnrllscreenshot.png"
+import searchengineutilitybeltScreenshot from "../images/homepage_squares/searchengineutilitybeltscreenshot.png"
+import totalcostScreenshot from "../images/homepage_squares/totalcostscreenshot.png"
+import multitabsearchScreenshot from "../images/homepage_squares/multitabscreenshot.png"
+import seobrowserextensionScreenshot from "../images/homepage_squares/seoscreenshot.png"
 
 let imageArray = [sciquelScreenshot, urbanearthScreenshot, jeffreykozikScreenshot, oneworldbrowserextensionScreenshot, smrtnrllbrowserextensionScreenshot, searchengineutilitybeltScreenshot, totalcostScreenshot, multitabsearchScreenshot, seobrowserextensionScreenshot]
 
@@ -96,22 +96,20 @@ let imageArray = [sciquelScreenshot, urbanearthScreenshot, jeffreykozikScreensho
 function ProjectComponent({ name, link, tags, startDate, endDate, imagePath, description }) {
   return(
       <>
-          <a href={link} className={homepage.itemList}>
-          <div className="card mb-3" style={{maxWidth: "540px"}}>
+        <div className="card mb-3" style={{maxWidth: "540px"}}>
             <div className="row g-0">
-            <div className="col-md-4">
-              <img src={imageArray[imagePath]} className="img-fluid rounded-start" alt="..."/>
+                <div className="col-md-4">
+                  <img src={imageArray[imagePath]} className="img-fluid rounded-start" alt="..."/>
+                </div>
+                <div className="col-md-8">
+                  <div className="card-body">
+                    <h5 className="card-title"><a href={link} className={homepage.itemList}>{name}</a></h5>
+                    <p className="card-text">{description}</p>
+                    <p className="card-text"><small className="text-muted">{startDate}</small></p>
+                  </div>
+                </div>
             </div>
-            <div className="col-md-8">
-              <div className="card-body">
-                <h5 className="card-title">{name}</h5>
-                <p className="card-text">{description}</p>
-                <p className="card-text"><small className="text-muted">{startDate}</small></p>
-              </div>
-            </div>
-            </div>
-            </div>
-          </a>
+        </div>
      </>
   )
 }

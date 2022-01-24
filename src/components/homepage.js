@@ -132,8 +132,8 @@ let jeffreykozikwebsite = new Project("jeffreykozik.com", "https://jeffreykozik.
 let oneWorldBrowserExtension = new Project("1World Browser Extension", "https://jeffreykozik.com/projects/1world", "", "Nov 2021 - Jan 2022", "", 3, "The One World Browser Extension is used in conjunction with a Square Business account to easily offset a business's inventory carbon emissions. To see it in action feel free to enter data into the table below.");
 let smrtnrllBrowserExtension = new Project("smrtnrll Browser Extension", "https://jeffreykozik.com/projects/smrtnrllbrowserextension", "", "Dec 2020 - Oct 2021", "", 4, "The smrtnrll browser extension is used by college students to get into classes that are currently full. Add it to your browser.");
 let bingUtilityBelt = new Project("Bing Utility Belt", "https://jeffreykozik.com/projects/bingutilitybelt", "", "Nov 2021 - Jan 2022", "", 5, "Browser extension I created to show how pervasive ads are in search engines by highlighting ads on Bing and keeping track of how many you see on each tab. Also ensures recent results.");
-let totalCostBrowserExtensionIRSLogics = new Project("Total Cost Browser Extension IRS Logics", "https://jeffreykozik.com/projects/totalcostbrowserextension", "", "Oct - Nov 2021", "", 6, "Custom browser extension I coded so that payment information across 12 tabs could be displayed in a single location.");
-let multitabSearchBrowserExtensionIRSLogics = new Project("Multitab Search Browser Extension IRS Logics", "https://jeffreykozik.com/projects/multitabsearch", "", "Oct 2021", "", 7, "Custom browser extension I coded so that 12 different tabs could be searched across simultaneously.");
+let totalCostBrowserExtensionIRSLogics = new Project("Total Cost Browser Extension", "https://jeffreykozik.com/projects/totalcostbrowserextension", "", "Oct - Nov 2021", "", 6, "Custom browser extension I coded so that payment information across 12 tabs could be displayed in a single location.");
+let multitabSearchBrowserExtensionIRSLogics = new Project("Multitab Search Browser Extension", "https://jeffreykozik.com/projects/multitabsearch", "", "Oct 2021", "", 7, "Custom browser extension I coded so that 12 different tabs could be searched across simultaneously.");
 let seoBrowserExtension = new Project("SEO Browser Extension", "https://jeffreykozik.com/projects/seobrowserextension", "", "Nov 2021", "", 8, "Browser extension I coded for the owner of site-checker.org to easily get SEO tips for any website.");
 
 // let giveBackHackVol = new Project("GiveBackHack Vol & Tell", "/givebackhackvol", "", "", "", "../images/volhtml.png");
@@ -195,7 +195,7 @@ let seoBrowserExtension = new Project("SEO Browser Extension", "https://jeffreyk
 // </div>
 
 const listItems = projectsArray.map((projectElement, index) =>
-   <div key={index}><ProjectComponent name={projectElement.name} link={projectElement.link} tags={projectElement.tags} startDate={projectElement.startDate} endDate={projectElement.endDate} imagePath={projectElement.imagePath}/></div>
+   <div key={index}><ProjectComponent name={projectElement.name} link={projectElement.link} tags={projectElement.tags} startDate={projectElement.startDate} endDate={projectElement.endDate} imagePath={projectElement.imagePath} description={projectElement.description}/></div>
  );
 
 const HomePage = () => (
