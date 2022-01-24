@@ -1,5 +1,23 @@
 // import * as React from "react"
 // import PropTypes from "prop-types"
+// import * as pages from "../../page_styling/pages.module.css"
+//
+// const Header = ({ name, link }) => (
+//   <header style={{textAlign: "left"}}>
+//       <h2 id={pages.rubikFont1}><a href="https://jeffreykozik.com">Homepage</a></h2>
+//       <h2 id={pages.rubikFont2} style={{float: "right"}}><a href={link}>{name}</a></h2>
+//   </header>
+// )
+//
+// Header.propTypes = {
+//   name: PropTypes.string,
+//   link: PropTypes.string
+// }
+//
+// export default Header
+
+// import * as React from "react"
+// import PropTypes from "prop-types"
 // import { Link } from "gatsby"
 //
 // const Header = ({ siteTitle }) => (
