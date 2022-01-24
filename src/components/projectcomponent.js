@@ -102,10 +102,10 @@ function ProjectComponent({ name, link, tags, startDate, endDate, imagePath, des
           <div className={homepage.itemList}>
             <div className="card mb-3" style={{maxWidth: "540px"}}>
                 <div className="row g-0">
-                    <div className="col-md-4">
+                    <div className="col-4">
                       <img src={imageArray[imagePath]} className="img-fluid rounded-start" alt="..."/>
                     </div>
-                    <div className="col-md-8">
+                    <div className="col-8">
                       <div className="card-body">
                         <h5 className="card-title" id={homepage.rubikFont1}><a href={link}>{name}</a></h5>
                         <p className="card-text"><small className="text-muted" id={homepage.rubikFont3}>{startDate}</small></p>
@@ -119,10 +119,10 @@ function ProjectComponent({ name, link, tags, startDate, endDate, imagePath, des
           <div className={homepage.itemList}>
             <div className="card mb-3" style={{maxWidth: "540px"}}>
                 <div className="row g-0">
-                    <div className="col-md-4">
+                    <div className="col-4">
                       <img src={imageArray[imagePath]} className="img-fluid rounded-start" alt="..."/>
                     </div>
-                    <div className="col-md-8">
+                    <div className="col-8">
                       <div className="card-body">
                         <h5 className="card-title" id={homepage.rubikFont1}><a href={link}>{name}</a></h5>
                         <p className="card-text"><small className="text-muted" id={homepage.rubikFont3}>{startDate}</small></p>
