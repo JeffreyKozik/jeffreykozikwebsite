@@ -100,7 +100,7 @@ function ProjectComponent({ name, link, tags, startDate, endDate, imagePath, des
   return(
       <>
       <MediaQuery maxWidth={540}>
-          <Button className={homepage.itemList} onClick={"window.open(" + link + ")"}>
+          <button className={homepage.itemList} onClick={"window.open(" + link + ")"}>
             <div className="card mb-3" style={{maxWidth: "540px"}}>
                 <div className="row g-0">
                     <div className="col-3">
@@ -114,10 +114,10 @@ function ProjectComponent({ name, link, tags, startDate, endDate, imagePath, des
                     </div>
                 </div>
             </div>
-         </Button>
+         </button>
       </MediaQuery>
       <MediaQuery minWidth={541}>
-          <Button className={homepage.itemList} onClick={"window.open(" + link + ")"}>
+          <button className={homepage.itemList} onClick={"window.open(" + link + ")"}>
             <div className="card mb-3" style={{maxWidth: "540px"}}>
                 <div className="row g-0">
                     <div className="col-3">
@@ -132,7 +132,7 @@ function ProjectComponent({ name, link, tags, startDate, endDate, imagePath, des
                     </div>
                 </div>
             </div>
-         </Button>
+         </button>
       </MediaQuery>
       </>
   )
