@@ -1,6 +1,6 @@
 import * as React from "react"
 import PropTypes from "prop-types"
-import * as pages from "../page_styling/pages.module.css"
+import * as homepage from "../page_styling/homepage.module.css"
 
 function Header() {
     function generateLink(){
@@ -27,8 +27,8 @@ function Header() {
     }
     return(
         <header style={{textAlign: "left"}}>
-          <h2 id={pages.rubikFont1}><a href="https://jeffreykozik.com">Homepage</a></h2>
-          <h2 id={pages.rubikFont2} style={{float: "right"}}><a href={generateLink}>{generateName}</a></h2>
+          <h2 id={homepage.rubikFont1}><a href="https://jeffreykozik.com">Homepage</a></h2>
+          <h2 id={homepage.rubikFont2} style={{float: "right"}}><a href={generateLink}>{generateName}</a></h2>
         </header>
     )
 }

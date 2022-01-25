@@ -13,16 +13,18 @@ const AirCharger = () => (
         <Helmet>
             <meta name="viewport" content="initial-scale=1, width=device-width"/>
         </Helmet>
-        <Header/>
         <body>
+            <Header/>
             <Seo title="Air Charger" />
             <MediaQuery minWidth={821}>
                 <div className={pages.page_container}>
+                <Header/>
                     <AirChargerComponent/>
                 </div>
             </MediaQuery>
             <MediaQuery maxWidth={820}>
                 <div className={pages.page_container_phone}>
+                    <Header/>
                     <AirChargerComponent/>
                 </div>
             </MediaQuery>
