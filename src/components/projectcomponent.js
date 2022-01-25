@@ -100,10 +100,9 @@ function ProjectComponent({ name, link, tags, startDate, endDate, imagePath, des
   return(
       <>
       <MediaQuery maxWidth={540}>
-          <button className={homepage.itemList} onClick={"window.open(" + link + ")"}>
             <div className="row g-0">
                 <div className="col-3"></div>
-                <div className="card mb-3 col-6">
+                <button className="card mb-3 col-6" onClick={"window.open(" + link + ")"} style={{margin: "5% !important"}}>
                     <div className="row g-0">
                         <div className="col-4">
                           <img src={imageArray[imagePath]} className="img-fluid rounded-start" alt="..."/>
@@ -115,16 +114,14 @@ function ProjectComponent({ name, link, tags, startDate, endDate, imagePath, des
                           </div>
                         </div>
                     </div>
-                </div>
+                </button>
                 <div className="col-3"></div>
             </div>
-         </button>
       </MediaQuery>
       <MediaQuery minWidth={541}>
-          <button className={homepage.itemList} onClick={"window.open(" + link + ")"}>
             <div className="row g-0">
                 <div className="col-3"></div>
-                <div className="card mb-3 col-9">
+                <button className="card mb-3 col-6" onClick={"window.open(" + link + ")"} style={{margin: "5% !important"}}>
                     <div className="row g-0">
                         <div className="col-4">
                           <img src={imageArray[imagePath]} className="img-fluid rounded-start" alt="..."/>
@@ -137,10 +134,9 @@ function ProjectComponent({ name, link, tags, startDate, endDate, imagePath, des
                           </div>
                         </div>
                     </div>
-                </div>
+                </button>
                 <div className="col-3"></div>
             </div>
-         </button>
       </MediaQuery>
       </>
   )
