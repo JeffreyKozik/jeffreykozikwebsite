@@ -22,6 +22,7 @@ import PropTypes from 'prop-types';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import MediaQuery from 'react-responsive'
+import Button from '@mui/material/Button';
 
 import sciquelScreenshot from "../images/homepage_squares/sciquelhomepage1.png"
 import urbanearthScreenshot from "../images/homepage_squares/urbanearthlogo.png"
@@ -99,13 +100,13 @@ function ProjectComponent({ name, link, tags, startDate, endDate, imagePath, des
   return(
       <>
       <MediaQuery maxWidth={540}>
-          <div className={homepage.itemList}>
+          <Button className={homepage.itemList} onClick={"window.open(" + link + ")"}>
             <div className="card mb-3" style={{maxWidth: "540px"}}>
                 <div className="row g-0">
-                    <div className="col-4">
+                    <div className="col-3">
                       <img src={imageArray[imagePath]} className="img-fluid rounded-start" alt="..."/>
                     </div>
-                    <div className="col-8">
+                    <div className="col-9">
                       <div className="card-body">
                         <h5 className="card-title" id={homepage.rubikFont1}><a href={link}>{name}</a></h5>
                         <p className="card-text"><small className="text-muted" id={homepage.rubikFont3}>{startDate}</small></p>
@@ -113,16 +114,16 @@ function ProjectComponent({ name, link, tags, startDate, endDate, imagePath, des
                     </div>
                 </div>
             </div>
-         </div>
+         </Button>
       </MediaQuery>
       <MediaQuery minWidth={541}>
-          <div className={homepage.itemList}>
+          <Button className={homepage.itemList} onClick={"window.open(" + link + ")"}>
             <div className="card mb-3" style={{maxWidth: "540px"}}>
                 <div className="row g-0">
-                    <div className="col-4">
+                    <div className="col-3">
                       <img src={imageArray[imagePath]} className="img-fluid rounded-start" alt="..."/>
                     </div>
-                    <div className="col-8">
+                    <div className="col-9">
                       <div className="card-body">
                         <h5 className="card-title" id={homepage.rubikFont1}><a href={link}>{name}</a></h5>
                         <p className="card-text" id={homepage.rubikFont2}>{description}</p>
@@ -131,7 +132,7 @@ function ProjectComponent({ name, link, tags, startDate, endDate, imagePath, des
                     </div>
                 </div>
             </div>
-         </div>
+         </Button>
       </MediaQuery>
       </>
   )
