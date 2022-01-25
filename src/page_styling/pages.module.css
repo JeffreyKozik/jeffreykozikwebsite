@@ -10,7 +10,7 @@
     align-items: flex-start;
     display: flex;
     flex-direction: column;
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Rubik', sans-serif !important;
     margin-left: 25%;
     margin-right: 25%;
 }
@@ -19,7 +19,7 @@
     align-items: flex-start;
     display: flex;
     flex-direction: column;
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Rubik', sans-serif !important;
     margin-left: 0%;
     margin-right: 0%;
 }

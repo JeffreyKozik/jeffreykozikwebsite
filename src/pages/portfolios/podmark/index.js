@@ -33,9 +33,9 @@ import Header from "../../../components/header"
 
 const IndexPage = () => (
     <>
-    <Seo title="Home" />
-    <Header/>
-    <HomePage/>
+        <Seo title="Home" />
+        <Header/>
+        <HomePage/>
     </>
 )
 

@@ -18,7 +18,7 @@ const AirCharger = () => (
             <Seo title="Air Charger" />
             <MediaQuery minWidth={821}>
                 <div className={pages.page_container}>
-                <Header/>
+                    <Header/>
                     <AirChargerComponent/>
                 </div>
             </MediaQuery>
