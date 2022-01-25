@@ -108,7 +108,7 @@ function ProjectComponent({ name, link, tags, startDate, endDate, imagePath, des
                     </div>
                     <div className="col-9">
                       <div className="card-body">
-                        <h5 className="card-title" id={homepage.rubikFont1}><a href={link}>{name}</a></h5>
+                        <h5 className="card-title" id={homepage.rubikFont1}>{name}</h5>
                         <p className="card-text"><small className="text-muted" id={homepage.rubikFont3}>{startDate}</small></p>
                       </div>
                     </div>
@@ -125,7 +125,7 @@ function ProjectComponent({ name, link, tags, startDate, endDate, imagePath, des
                     </div>
                     <div className="col-9">
                       <div className="card-body">
-                        <h5 className="card-title" id={homepage.rubikFont1}><a href={link}>{name}</a></h5>
+                        <h5 className="card-title" id={homepage.rubikFont1}>{name}</h5>
                         <p className="card-text" id={homepage.rubikFont2}>{description}</p>
                         <p className="card-text"><small className="text-muted" id={homepage.rubikFont3}>{startDate}</small></p>
                       </div>
