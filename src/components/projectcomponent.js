@@ -101,36 +101,44 @@ function ProjectComponent({ name, link, tags, startDate, endDate, imagePath, des
       <>
       <MediaQuery maxWidth={540}>
           <button className={homepage.itemList} onClick={"window.open(" + link + ")"}>
-            <div className="card mb-3" style={{maxWidth: "540px"}}>
-                <div className="row g-0">
-                    <div className="col-3">
-                      <img src={imageArray[imagePath]} className="img-fluid rounded-start" alt="..."/>
-                    </div>
-                    <div className="col-9">
-                      <div className="card-body">
-                        <h5 className="card-title" id={homepage.rubikFont1}>{name}</h5>
-                        <p className="card-text"><small className="text-muted" id={homepage.rubikFont3}>{startDate}</small></p>
-                      </div>
+            <div className="row g-0">
+                <div className="col-3"></div>
+                <div className="card mb-3 col-6">
+                    <div className="row g-0">
+                        <div className="col-4">
+                          <img src={imageArray[imagePath]} className="img-fluid rounded-start" alt="..."/>
+                        </div>
+                        <div className="col-8">
+                          <div className="card-body">
+                            <h5 className="card-title" id={homepage.rubikFont1}>{name}</h5>
+                            <p className="card-text"><small className="text-muted" id={homepage.rubikFont3}>{startDate}</small></p>
+                          </div>
+                        </div>
                     </div>
                 </div>
+                <div className="col-3"></div>
             </div>
          </button>
       </MediaQuery>
       <MediaQuery minWidth={541}>
           <button className={homepage.itemList} onClick={"window.open(" + link + ")"}>
-            <div className="card mb-3" style={{maxWidth: "540px"}}>
-                <div className="row g-0">
-                    <div className="col-3">
-                      <img src={imageArray[imagePath]} className="img-fluid rounded-start" alt="..."/>
-                    </div>
-                    <div className="col-9">
-                      <div className="card-body">
-                        <h5 className="card-title" id={homepage.rubikFont1}>{name}</h5>
-                        <p className="card-text" id={homepage.rubikFont2}>{description}</p>
-                        <p className="card-text"><small className="text-muted" id={homepage.rubikFont3}>{startDate}</small></p>
-                      </div>
+            <div className="row g-0">
+                <div className="col-3"></div>
+                <div className="card mb-3 col-9">
+                    <div className="row g-0">
+                        <div className="col-4">
+                          <img src={imageArray[imagePath]} className="img-fluid rounded-start" alt="..."/>
+                        </div>
+                        <div className="col-8">
+                          <div className="card-body">
+                            <h5 className="card-title" id={homepage.rubikFont1}>{name}</h5>
+                            <p className="card-text" id={homepage.rubikFont2}>{description}</p>
+                            <p className="card-text"><small className="text-muted" id={homepage.rubikFont3}>{startDate}</small></p>
+                          </div>
+                        </div>
                     </div>
                 </div>
+                <div className="col-3"></div>
             </div>
          </button>
       </MediaQuery>
