@@ -100,7 +100,7 @@ function ProjectComponent({ name, link, tags, startDate, endDate, imagePath, des
   return(
       <>
       <MediaQuery maxWidth={540}>
-          <div className={homepage.itemList}>
+          <div>
             <div className="card mb-3" style={{maxWidth: "540px"}}>
                 <div className="row g-0">
                     <div className="col-4">
@@ -117,7 +117,7 @@ function ProjectComponent({ name, link, tags, startDate, endDate, imagePath, des
          </div>
       </MediaQuery>
       <MediaQuery minWidth={541}>
-          <div className={homepage.itemList}>
+          <div>
             <div className="card mb-3" style={{maxWidth: "540px"}}>
                 <div className="row g-0">
                     <div className="col-4">
