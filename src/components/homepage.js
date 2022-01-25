@@ -148,15 +148,15 @@ let bingUtilityBelt = new Project("Bing Utility Belt", "https://jeffreykozik.com
     Browser extension I created to show how pervasive ads are in search engines by highlighting ads on Bing and keeping track of how many you see on each tab. Also
     ensures recent results.
 </h3>);
-let totalCostBrowserExtensionIRSLogics = new Project("Total Cost Browser Extension IRS Logics", "https://jeffreykozik.com/projects/totalcostbrowserextension", "", "Oct - Nov 2021", "", 6, <h3>
-    Custom browser extension I coded so that payment information across 12 tabs could be displayed in a single location.
-</h3>);
-let multitabSearchBrowserExtensionIRSLogics = new Project("Multitab Search Browser Extension IRS Logics", "https://jeffreykozik.com/projects/multitabsearch", "", "Oct 2021", "", 7, <h3 className="page_subtitle">
-    Custom browser extension I coded so that 12 different tabs could be searched across simultaneously.
-</h3>);
-let seoBrowserExtension = new Project("SEO Browser Extension", "https://jeffreykozik.com/projects/seobrowserextension", "", "Nov 2021", "", 8, <h3 className="page_subtitle">
-    Browser extension I coded for the owner of <a href="site-checker.org" target="_blank" rel="noreferrer">site-checker.org</a> to easily get SEO tips for any website.
-</h3>);
+// let totalCostBrowserExtensionIRSLogics = new Project("Total Cost Browser Extension IRS Logics", "https://jeffreykozik.com/projects/totalcostbrowserextension", "", "Oct - Nov 2021", "", 6, <h3>
+//     Custom browser extension I coded so that payment information across 12 tabs could be displayed in a single location.
+// </h3>);
+// let multitabSearchBrowserExtensionIRSLogics = new Project("Multitab Search Browser Extension IRS Logics", "https://jeffreykozik.com/projects/multitabsearch", "", "Oct 2021", "", 7, <h3 className="page_subtitle">
+//     Custom browser extension I coded so that 12 different tabs could be searched across simultaneously.
+// </h3>);
+// let seoBrowserExtension = new Project("SEO Browser Extension", "https://jeffreykozik.com/projects/seobrowserextension", "", "Nov 2021", "", 8, <h3 className="page_subtitle">
+//     Browser extension I coded for the owner of <a href="site-checker.org" target="_blank" rel="noreferrer">site-checker.org</a> to easily get SEO tips for any website.
+// </h3>);
 
 // let giveBackHackVol = new Project("GiveBackHack Vol & Tell", "/givebackhackvol", "", "", "", "../images/volhtml.png");
 // let harryPotterGame = new Project("Harry Potter Game", "", "", "", "", "");
