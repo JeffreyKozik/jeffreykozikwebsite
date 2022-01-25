@@ -1,11 +1,12 @@
 import * as React from "react"
 import PropTypes from "prop-types"
-import * as homepage from "../page_styling/homepage.module.css"
+import * as homepage from "./homepage.module.css"
 
 function Header() {
     function generateLink(){
         let referrer = document.referrer;
-        if (referrer.search("jeffreykozik.com/portfolios") != -1){
+        // "jeffreykozik.com/portfolios"
+        if (referrer.search("portfolios") != -1){
             return referrer;
         }
         else {
@@ -15,7 +16,8 @@ function Header() {
     function generateName(){
         let referrer = document.referrer;
         let portfolioName = "";
-        if (referrer.search("jeffreykozik.com/portfolios") != -1){
+        // "jeffreykozik.com/portfolios"
+        if (referrer.search("portfolios") != -1){
             let portfolioStart = referrer.indexOf("portfolios");
             let portfolioNameStart = portfolioStart + 11;
             while ((referrer[portfolioNameStart] != "/") && (portfolioNameStart < referrer.length)){

@@ -33,6 +33,8 @@ import $ from "jquery";
 
 import MediaQuery from 'react-responsive'
 
+import Header from "../../components/header"
+
 // import Table from 'react-bootstrap/Table';
 
 // import {useMediaQuery} from '../hooks/useMediaQuery';
@@ -2903,6 +2905,7 @@ class OneWorld extends React.Component {
                     <Seo title="One World Browser Extension" />
                     <MediaQuery minWidth={601}>
                         <div className={pages.page_container}>
+                            <Header/>
                             <h1 className={pages.page_title}> One World Browser Extension </h1>
                             <h3 className={pages.page_subtitle}>
                                 The One World Browser Extension is used in conjunction with a Square Business account to easily offset a
@@ -2988,6 +2991,7 @@ class OneWorld extends React.Component {
                     </MediaQuery>
                     <MediaQuery maxWidth={600}>
                     <div className={pages.page_container_phone}>
+                        <Header/>
                         <h1 className={pages.page_title}> One World Browser Extension </h1>
                         <h3 className={pages.page_subtitle}>
                             The One World Browser Extension is used in conjunction with a Square Business account to easily offset a

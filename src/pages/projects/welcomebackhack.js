@@ -5,6 +5,7 @@ import {Helmet} from "react-helmet";
 
 import MediaQuery from 'react-responsive'
 import WelcomeBackHackComponent from "../../components/pages/welcomebackhack"
+import Header from "../../components/header"
 
 const WelcomeBackHack = () => (
     <>
@@ -15,11 +16,13 @@ const WelcomeBackHack = () => (
             <Seo title="WelcomeBackHack" />
             <MediaQuery minWidth={821}>
                 <div className={pages.page_container}>
+                    <Header/>
                     <WelcomeBackHackComponent/>
                 </div>
             </MediaQuery>
             <MediaQuery maxWidth={820}>
                 <div className={pages.page_container_phone}>
+                    <Header/>
                     <WelcomeBackHackComponent/>
                 </div>
             </MediaQuery>

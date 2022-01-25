@@ -14,11 +14,10 @@ const BingUtilityBelt = () => (
             <meta name="viewport" content="initial-scale=1, width=device-width"/>
         </Helmet>
         <body>
-            <Header/>
             <Seo title="Bing Utility Belt" />
             <MediaQuery minWidth={821}>
                 <div className={pages.page_container}>
-                <Header/>
+                    <Header/>
                     <BingUtilityBeltComponent/>
                 </div>
             </MediaQuery>

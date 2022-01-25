@@ -5,6 +5,7 @@ import {Helmet} from "react-helmet";
 
 import MediaQuery from 'react-responsive'
 import JeffreyKozikWebsiteComponent from "../../components/pages/jeffreykozikwebsite"
+import Header from "../../components/header"
 
 const JeffreyKozikWebsite = () => (
     <>
@@ -15,11 +16,13 @@ const JeffreyKozikWebsite = () => (
             <Seo title="Jeffrey Kozik Website" />
             <MediaQuery minWidth={821}>
                 <div className={pages.page_container}>
+                    <Header/>
                     <JeffreyKozikWebsiteComponent/>
                 </div>
             </MediaQuery>
             <MediaQuery maxWidth={820}>
                 <div className={pages.page_container_phone}>
+                    <Header/>
                     <JeffreyKozikWebsiteComponent/>
                 </div>
             </MediaQuery>

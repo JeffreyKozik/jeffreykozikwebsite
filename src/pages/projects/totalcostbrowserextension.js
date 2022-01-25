@@ -5,6 +5,7 @@ import {Helmet} from "react-helmet";
 
 import MediaQuery from 'react-responsive'
 import TotalCostBrowserExtensionComponent from "../../components/pages/totalcostbrowserextension"
+import Header from "../../components/header"
 
 const TotalCostBrowserExtension = () => (
     <>
@@ -15,11 +16,13 @@ const TotalCostBrowserExtension = () => (
             <Seo title="Total Cost Browser Extension" />
             <MediaQuery minWidth={821}>
                 <div className={pages.page_container}>
+                    <Header/>
                     <TotalCostBrowserExtensionComponent/>
                 </div>
             </MediaQuery>
             <MediaQuery maxWidth={820}>
                 <div className={pages.page_container_phone}>
+                    <Header/>
                     <TotalCostBrowserExtensionComponent/>
                 </div>
             </MediaQuery>
