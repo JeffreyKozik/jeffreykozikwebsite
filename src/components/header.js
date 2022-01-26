@@ -2,30 +2,33 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import * as homepage from "./homepage.module.css"
 
+import Button from '@mui/material/Button';
+
+
 class Header extends React.Component {
     // generateLink = () => {
-    //     let referer = document.referer;
-    //     console.log("referer: " + referer);
+    //     let referrer = document.referrer;
+    //     console.log("referrer: " + referrer);
     //     // "jeffreykozik.com/portfolios"
-    //     // if (referer.search("portfolios") != -1){
-    //         return referer;
+    //     // if (referrer.search("portfolios") != -1){
+    //         return referrer;
     //     // }
     //     // else {
     //     //     return "";
     //     // }
     // }
     // generateName = () => {
-    //     let referer = document.referer;
-    //     console.log("referer: " + referer);
+    //     let referrer = document.referrer;
+    //     console.log("referrer: " + referrer);
     //     let portfolioName = "";
     //     // "jeffreykozik.com/portfolios"
-    //     // if (referer.search("portfolios") != -1){
-    //         let portfolioStart = referer.indexOf("portfolios");
+    //     // if (referrer.search("portfolios") != -1){
+    //         let portfolioStart = referrer.indexOf("portfolios");
     //         console.log("portfolioStart: " + portfolioStart);
     //         let portfolioNameStart = portfolioStart + 11;
     //         console.log("portfolioNameStart: " + portfolioNameStart);
-    //         while ((referer[portfolioNameStart] != "/") && (portfolioNameStart < referer.length)){
-    //             portfolioName += referer[portfolioNameStart];
+    //         while ((referrer[portfolioNameStart] != "/") && (portfolioNameStart < referrer.length)){
+    //             portfolioName += referrer[portfolioNameStart];
     //             console.log("portfolioName: " + portfolioName);
     //             portfolioNameStart++;
     //         }
@@ -36,7 +39,7 @@ class Header extends React.Component {
         return(
             <div style={{textAlign: "left"}}>
               <h2 id={homepage.rubikFont1}><a href="https://jeffreykozik.com">Homepage</a></h2>
-              <h2 id={homepage.rubikFont2} style={{float: "right"}}><a href={document.referer}>Portfolio</a></h2>
+              <Button id={homepage.rubikFont2} style={{float: "right"}} onclick="history.back()">Portfolio</Button>
             </div>
         )
     }
