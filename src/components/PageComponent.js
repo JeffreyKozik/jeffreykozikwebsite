@@ -1,7 +1,7 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import {Helmet} from "react-helmet";
-import ArticleComponent from "./articlecoomponent"
+import ArticleComponent from "./articlecomponent"
 import Seo from "./seo"
 
 class PageComponent extends React.Component {
