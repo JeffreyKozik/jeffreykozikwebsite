@@ -19,7 +19,8 @@ import PropTypes from 'prop-types';
 // import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 // import MoreVertIcon from '@mui/icons-material/MoreVert';
 
-import 'bootstrap/dist/css/bootstrap.css';
+// import 'bootstrap/dist/css/bootstrap.css';
+import './bootstrap.css'
 // import * as bootstrap from "./mybootstrap.module.css";
 
 import MediaQuery from 'react-responsive'
