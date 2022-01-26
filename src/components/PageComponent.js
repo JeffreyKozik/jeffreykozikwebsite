@@ -4,20 +4,18 @@ import {Helmet} from "react-helmet";
 import ArticleComponent from "./articlecomponent"
 import Seo from "./seo"
 
-class PageComponent extends React.Component {
-    render(){
-        return (
-            <>
-                <Helmet>
-                    <meta name="viewport" content="initial-scale=1, width=device-width"/>
-                </Helmet>
-                <body>
-                    <Seo title={this.props.seoName} />
-                    <ArticleComponent innerComponent={this.props.innerComponent}/>
-                </body>
-            </>
-        )
-    }
+function PageComponent({ seoName, innerComponent }) {
+    return (
+        <>
+            <Helmet>
+                <meta name="viewport" content="initial-scale=1, width=device-width"/>
+            </Helmet>
+            <body>
+                <Seo title={seoName} />
+                <ArticleComponent innerComponent={innerComponent}/>
+            </body>
+        </>
+    )
 }
 
 PageComponent.propTypes = {
