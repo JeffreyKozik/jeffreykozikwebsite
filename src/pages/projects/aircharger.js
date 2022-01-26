@@ -1,6 +1,6 @@
 import * as React from "react"
 import AirChargerComponent from "../../components/pages/aircharger"
-import PageComponent from "../../components/pagecomponent"
+import PageComponent from "../../components/pagesHelpers/pagecomponent"
 
 
 const AirCharger = () => (
