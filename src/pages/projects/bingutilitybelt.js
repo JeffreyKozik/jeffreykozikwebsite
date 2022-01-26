@@ -5,7 +5,7 @@ import BingUtilityBeltComponent from "../../components/pages/bingutilitybelt"
 
 const BingUtilityBelt = () => (
     <>
-        <PageComponent pageInnerComponent={BingUtilityBeltComponent} seoName="Bing Utility Belt"/>
+        <PageComponent pageInnerComponent={<div>Testing if this works at all </div>} seoName="Bing Utility Belt"/>
     </>
 )
 
