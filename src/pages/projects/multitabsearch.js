@@ -2,10 +2,11 @@ import * as React from "react"
 import PageComponent from "../../components/pagesHelpers/pagecomponent"
 
 import MultiTabSearchComponent from "../../components/pages/multitabsearch"
+let element = <>{MultiTabSearchComponent}</>
 
 const MultiTabSearch = () => (
     <>
-        <PageComponent pageInnerComponent={<>{MultiTabSearchComponent}</>} seoName="MultiTab Search"/>
+        <PageComponent pageInnerComponent={element} seoName="MultiTab Search"/>
     </>
 )
 
