@@ -2,7 +2,6 @@ import * as React from "react"
 import * as pages from "../../page_styling/pages.module.css"
 import Seo from "../../components/seo"
 import {Helmet} from "react-helmet";
-import { Link } from "gatsby"
 
 import MediaQuery from 'react-responsive'
 import BingUtilityBeltComponent from "../../components/pages/bingutilitybelt"
@@ -19,7 +18,6 @@ const BingUtilityBelt = () => (
             <MediaQuery minWidth={821}>
                 <div className={pages.page_container}>
                     <Header/>
-                    <Link to={location.state.statePortfolioLink}>location.state.statePortfolioName</Link>
                     <BingUtilityBeltComponent/>
                 </div>
             </MediaQuery>
