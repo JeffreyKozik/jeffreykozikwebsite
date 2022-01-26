@@ -211,6 +211,7 @@ const listItems = projectsArray.map((projectElement, index) =>
 
 const HomePage = () => (
     <>
+        <h1 id="jeffrey_kozik"> Jeffrey Kozik </h1>
         <div>
             {listItems}
         </div>
@@ -224,7 +225,7 @@ const HomePage = () => (
 
 // const HomePage = () => (
 //     <>
-//         <h1 id="jeffrey_kozik"> Jeffrey Kozik </h1>
+        // <h1 id="jeffrey_kozik"> Jeffrey Kozik </h1>
 //         <div class="container" id="selection_div">
 //         </div>
 //     </>
