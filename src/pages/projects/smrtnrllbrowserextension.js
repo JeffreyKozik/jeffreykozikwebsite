@@ -5,7 +5,7 @@ import SmrtnrllBrowserExtensionComponent from "../../components/pages/smrtnrllbr
 
 const SmrtnrllBrowserExtension = () => (
     <>
-        <PageComponent innerComponent={SmrtnrllBrowserExtensionComponent} seoName="smtrnll Browser Extension"/>
+        <PageComponent pageInnerComponent={SmrtnrllBrowserExtensionComponent} seoName="smtrnll Browser Extension"/>
     </>
 )
 

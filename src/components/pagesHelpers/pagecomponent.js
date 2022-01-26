@@ -4,7 +4,7 @@ import {Helmet} from "react-helmet";
 import ArticleComponent from "./articlecomponent"
 import Seo from "../seo"
 
-function PageComponent({ seoName, innerComponent }) {
+function PageComponent({ seoName, pageInnerComponent }) {
     return (
         <>
             <Helmet>
@@ -12,14 +12,14 @@ function PageComponent({ seoName, innerComponent }) {
             </Helmet>
             <body>
                 <Seo title={seoName} />
-                <ArticleComponent innerComponent={innerComponent}/>
+                <ArticleComponent articleInnerComponent={pageInnerComponent}/>
             </body>
         </>
     )
 }
 
 PageComponent.propTypes = {
-  innerComponent: PropTypes.element,
+  pageInnerComponent: PropTypes.element,
   seoName: PropTypes.string
 }
 

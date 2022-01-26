@@ -5,7 +5,7 @@ import UrbanEarthComponent from "../../components/pages/urbanearth"
 
 const UrbanEarth = () => (
     <>
-        <PageComponent innerComponent={UrbanEarthComponent} seoName="Urban Earth"/>
+        <PageComponent pageInnerComponent={UrbanEarthComponent} seoName="Urban Earth"/>
     </>
 )
 

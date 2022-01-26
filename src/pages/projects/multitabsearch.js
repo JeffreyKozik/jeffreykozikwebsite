@@ -5,7 +5,7 @@ import MultiTabSearchComponent from "../../components/pages/multitabsearch"
 
 const MultiTabSearch = () => (
     <>
-        <PageComponent innerComponent={MultiTabSearchComponent} seoName="MultiTab Search"/>
+        <PageComponent pageInnerComponent={MultiTabSearchComponent} seoName="MultiTab Search"/>
     </>
 )
 

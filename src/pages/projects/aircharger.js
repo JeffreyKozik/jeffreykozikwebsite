@@ -5,7 +5,7 @@ import AirChargerComponent from "../../components/pages/aircharger"
 
 const AirCharger = () => (
     <>
-        <PageComponent innerComponent={AirChargerComponent} seoName="Air Charger"/>
+        <PageComponent pageInnerComponent={AirChargerComponent} seoName="Air Charger"/>
     </>
 )
 

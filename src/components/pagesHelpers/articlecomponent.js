@@ -5,19 +5,19 @@ import Header from "../header"
 
 import * as pages from "../../page_styling/pages.module.css"
 
-function ArticleComponent ({innerComponent}) {
+function ArticleComponent ({articleInnerComponent}) {
     return (
         <>
             <MediaQuery minWidth={821}>
                 <div className={pages.page_container}>
                     <Header/>
-                    {innerComponent}
+                    <>{articleInnerComponent}</>
                 </div>
             </MediaQuery>
             <MediaQuery maxWidth={820}>
                 <div className={pages.page_container_phone}>
                     <Header/>
-                    {innerComponent}
+                    <>{articleInnerComponent}</>
                 </div>
             </MediaQuery>
         </>
@@ -25,7 +25,7 @@ function ArticleComponent ({innerComponent}) {
 }
 
 ArticleComponent.propTypes = {
-  innerComponent: PropTypes.element,
+  articleInnerComponent: PropTypes.element
 }
 
 export default ArticleComponent
