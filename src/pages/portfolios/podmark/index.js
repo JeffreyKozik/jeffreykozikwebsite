@@ -38,7 +38,7 @@ const IndexPage = () => (
         <Seo title="Home" />
         <Header/>
         <h1 id={homepage.jeffrey_kozik}>Jeffrey Kozik: Podmark Portfolio</h1>
-        <HomePage/>
+        <HomePage portfolioName="Podmark" portfolioLink="https://jeffreykozik.com/portfolios/podmark"/>
     </>
 )
 

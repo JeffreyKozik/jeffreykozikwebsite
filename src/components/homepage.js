@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from "prop-types"
 // import ReactDOM from 'react-dom';
 import * as homepage from './homepage.module.css';
 // import App from './App';
@@ -205,17 +206,37 @@ let bingUtilityBelt = new Project("Bing Utility Belt", "https://jeffreykozik.com
 //     {generateOptions("tags", tagArray)}
 // </div>
 
-const listItems = projectsArray.map((projectElement, index) =>
-   <div key={index}><ProjectComponent style={bounceInDownStyles.bounceInDown} name={projectElement.name} link={projectElement.link} tags={projectElement.tags} startDate={projectElement.startDate} endDate={projectElement.endDate} imagePath={projectElement.imagePath} description={projectElement.description}/></div>
- );
+// const listItems = projectsArray.map((projectElement, index) =>
+//    <div key={index}><ProjectComponent style={bounceInDownStyles.bounceInDown} name={projectElement.name} link={projectElement.link} tags={projectElement.tags} startDate={projectElement.startDate} endDate={projectElement.endDate} imagePath={projectElement.imagePath} description={projectElement.description}/></div>
+//  );
 
-const HomePage = () => (
-    <>
-        <div>
-            {listItems}
-        </div>
-    </>
-)
+class HomePage extends React.Component{
+    listItemsFunction = (portfolioLink, portfolioName) => {
+        const listItems = projectsArray.map((projectElement, index) =>
+           <div key={index}><ProjectComponent style={bounceInDownStyles.bounceInDown} name={projectElement.name} link={projectElement.link} tags={projectElement.tags} startDate={projectElement.startDate} endDate={projectElement.endDate} imagePath={projectElement.imagePath} description={projectElement.description} portfolioName={portfolioName} portfolioLink={portfolioLink}/></div>
+         );
+        return listItems;
+    }
+    render(){
+        return(
+            <>
+                <div>
+                    {this.listItemsFunction(this.props.portfolioLink, this.props.portfolioName)}
+                </div>
+            </>
+        )
+    }
+}
+
+HomePage.propTypes = {
+  portfolioLink: PropTypes.string,
+  portfolioName: PropTypes.string
+}
+
+HomePage.defaultProps = {
+  portfolioLink: "",
+  portfolioName: ""
+}
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

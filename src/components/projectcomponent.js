@@ -1,6 +1,7 @@
 import React from 'react'
 // import ReactDOM from 'react-dom';
 import * as homepage from './homepage.module.css';
+import { Link } from "gatsby"
 import PropTypes from 'prop-types';
 
 // import { styled } from '@mui/material/styles';
@@ -139,7 +140,7 @@ let imageArray = [sciquelScreenshot, urbanearthScreenshot, jeffreykozikScreensho
 //       </>
 //   )
 // }
-function ProjectComponent({ name, link, tags, startDate, endDate, imagePath, description }) {
+function ProjectComponent({ name, link, tags, startDate, endDate, imagePath, description, portfolioName, portfolioLink }) {
   return(
       <>
       <MediaQuery maxWidth={540}>
@@ -151,7 +152,7 @@ function ProjectComponent({ name, link, tags, startDate, endDate, imagePath, des
                     </div>
                     <div className="col-8">
                       <div className="card-body">
-                        <h5 className="card-title h5"><a className="a" href={link}>{name}</a></h5>
+                        <h5 className="card-title h5"><Link className="a" to={link} state={{ statePortfolioName: [portfolioName], statePortfolioLink: [portfolioLink] }}>{name}</Link></h5>
                         <p className="card-text p"><small className="text-muted small">{startDate}</small></p>
                       </div>
                     </div>
@@ -168,7 +169,7 @@ function ProjectComponent({ name, link, tags, startDate, endDate, imagePath, des
                     </div>
                     <div className="col-8">
                       <div className="card-body">
-                        <h5 className="card-title h5"><a className="a" href={link}>{name}</a></h5>
+                        <h5 className="card-title h5"><Link className="a" to={link} state={{ statePortfolioName: [portfolioName], statePortfolioLink: [portfolioLink] }}>{name}</Link></h5>
                         <p className="card-text p">{description}</p>
                         <p className="card-text p"><small className="text-muted small">{startDate}</small></p>
                       </div>
