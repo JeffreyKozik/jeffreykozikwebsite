@@ -19,8 +19,8 @@ import PropTypes from 'prop-types';
 // import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 // import MoreVertIcon from '@mui/icons-material/MoreVert';
 
-// import 'bootstrap/dist/css/bootstrap.css';
-import * as bootstrap from "./mybootstrap.module.css";
+import 'bootstrap/dist/css/bootstrap.css';
+// import * as bootstrap from "./mybootstrap.module.css";
 
 import MediaQuery from 'react-responsive'
 import Button from '@mui/material/Button';
@@ -97,20 +97,61 @@ let imageArray = [sciquelScreenshot, urbanearthScreenshot, jeffreykozikScreensho
 //   description: PropTypes.string.isRequired
 // }
 
+// function ProjectComponent({ name, link, tags, startDate, endDate, imagePath, description }) {
+//   return(
+//       <>
+//       <MediaQuery maxWidth={540}>
+//           <div>
+//             <div className={bootstrap.card, bootstrap.mb3} style={{maxWidth: "540px"}}>
+//                 <div className={bootstrap.row, bootstrap.g0}>
+//                     <div className={bootstrap.col4}>
+//                       <img src={imageArray[imagePath]} className={bootstrap.img, bootstrap.imgfluid, bootstrap.roundedstart} alt="..."/>
+//                     </div>
+//                     <div className={bootstrap.col8}>
+//                       <div className={bootstrap.cardbody}>
+//                         <h5 className={bootstrap.h5, bootstrap.cardtitle}><a href={link}>{name}</a></h5>
+//                         <p className={bootstrap.p, bootstrap.cardtext}><small className={bootstrap.textmuted}>{startDate}</small></p>
+//                       </div>
+//                     </div>
+//                 </div>
+//             </div>
+//          </div>
+//       </MediaQuery>
+//       <MediaQuery minWidth={541}>
+//           <div>
+//             <div className={bootstrap.card, bootstrap.mb3} style={{maxWidth: "540px"}}>
+//                 <div className={bootstrap.row, bootstrap.g0}>
+//                     <div className={bootstrap.col4}>
+//                       <img src={imageArray[imagePath]} className={bootstrap.img, bootstrap.imgfluid, bootstrap.roundedstart} alt="..."/>
+//                     </div>
+//                     <div className={bootstrap.col8}>
+//                       <div className={bootstrap.cardbody}>
+//                         <h5 className={bootstrap.h5, bootstrap.cardtitle}><a href={link}>{name}</a></h5>
+//                         <p className={bootstrap.p, bootstrap.cardtext}>{description}</p>
+//                         <p className={bootstrap.p, bootstrap.cardtext}><small className={bootstrap.textmuted}>{startDate}</small></p>
+//                       </div>
+//                     </div>
+//                 </div>
+//             </div>
+//          </div>
+//       </MediaQuery>
+//       </>
+//   )
+// }
 function ProjectComponent({ name, link, tags, startDate, endDate, imagePath, description }) {
   return(
       <>
       <MediaQuery maxWidth={540}>
           <div>
-            <div className={bootstrap.card, bootstrap.mb3} style={{maxWidth: "540px"}}>
-                <div className={bootstrap.row, bootstrap.g0}>
-                    <div className={bootstrap.col4}>
-                      <img src={imageArray[imagePath]} className={bootstrap.img, bootstrap.imgfluid, bootstrap.roundedstart} alt="..."/>
+            <div className="card mb-3" style={{maxWidth: "540px"}}>
+                <div className="row g-0">
+                    <div className="col-4">
+                      <img src={imageArray[imagePath]} className="img img-fluid rounded-start" alt="..."/>
                     </div>
-                    <div className={bootstrap.col8}>
-                      <div className={bootstrap.cardbody}>
-                        <h5 className={bootstrap.h5, bootstrap.cardtitle}><a href={link}>{name}</a></h5>
-                        <p className={bootstrap.p, bootstrap.cardtext}><small className={bootstrap.textmuted}>{startDate}</small></p>
+                    <div className="col-8">
+                      <div className="card-body">
+                        <h5 className="card-title h5"><a className="a" href={link}>{name}</a></h5>
+                        <p className="card-text p"><small className="text-muted small">{startDate}</small></p>
                       </div>
                     </div>
                 </div>
@@ -119,16 +160,16 @@ function ProjectComponent({ name, link, tags, startDate, endDate, imagePath, des
       </MediaQuery>
       <MediaQuery minWidth={541}>
           <div>
-            <div className={bootstrap.card, bootstrap.mb3} style={{maxWidth: "540px"}}>
-                <div className={bootstrap.row, bootstrap.g0}>
-                    <div className={bootstrap.col4}>
-                      <img src={imageArray[imagePath]} className={bootstrap.img, bootstrap.imgfluid, bootstrap.roundedstart} alt="..."/>
+            <div className="card mb-3" style={{maxWidth: "540px"}}>
+                <div className="row g-0">
+                    <div className="col-4">
+                      <img src={imageArray[imagePath]} className="img img-fluid rounded-start" alt="..."/>
                     </div>
-                    <div className={bootstrap.col8}>
-                      <div className={bootstrap.cardbody}>
-                        <h5 className={bootstrap.h5, bootstrap.cardtitle}><a href={link}>{name}</a></h5>
-                        <p className={bootstrap.p, bootstrap.cardtext}>{description}</p>
-                        <p className={bootstrap.p, bootstrap.cardtext}><small className={bootstrap.textmuted}>{startDate}</small></p>
+                    <div className="col-8">
+                      <div className="card-body">
+                        <h5 className="card-title h5"><a className="a" href={link}>{name}</a></h5>
+                        <p className="card-text p">{description}</p>
+                        <p className="card-text p"><small className="text-muted small">{startDate}</small></p>
                       </div>
                     </div>
                 </div>
@@ -147,6 +188,5 @@ ProjectComponent.propTypes = {
   imagePath: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired
 }
-
 
 export default ProjectComponent;
