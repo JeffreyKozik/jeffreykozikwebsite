@@ -2,7 +2,7 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import {Helmet} from "react-helmet";
 import ArticleComponent from "./articlecomponent"
-import Seo from "./seo"
+import Seo from "../seo"
 
 function PageComponent({ seoName, innerComponent }) {
     return (

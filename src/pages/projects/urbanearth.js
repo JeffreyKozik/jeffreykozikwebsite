@@ -1,5 +1,5 @@
 import * as React from "react"
-import PageComponent from "../../components/pagecomponent"
+import PageComponent from "../../components/pagesHelpers/pagecomponent"
 
 import UrbanEarthComponent from "../../components/pages/urbanearth"
 
