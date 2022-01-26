@@ -5,7 +5,7 @@ import TotalCostBrowserExtensionComponent from "../../components/pages/totalcost
 
 const TotalCostBrowserExtension = () => (
     <>
-        <PageComponent pageInnerComponent={TotalCostBrowserExtensionComponent} seoName="Total Cost Browser Extension"/>
+        <PageComponent pageInnerComponent=<TotalCostBrowserExtensionComponent/> seoName="Total Cost Browser Extension"/>
     </>
 )
 

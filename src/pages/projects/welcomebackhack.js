@@ -5,7 +5,7 @@ import WelcomeBackHackComponent from "../../components/pages/welcomebackhack"
 
 const WelcomeBackHack = () => (
     <>
-        <PageComponent pageInnerComponent={WelcomeBackHackComponent} seoName="WelcomeBackHack"/>
+        <PageComponent pageInnerComponent=<WelcomeBackHackComponent/> seoName="WelcomeBackHack"/>
     </>
 )
 

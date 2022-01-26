@@ -5,7 +5,7 @@ import SciquelComponent from "../../components/pages/sciquel"
 
 const Sciquel = () => (
     <>
-        <PageComponent pageInnerComponent={SciquelComponent} seoName="Sciquel"/>
+        <PageComponent pageInnerComponent=<SciquelComponent/> seoName="Sciquel"/>
     </>
 )
 

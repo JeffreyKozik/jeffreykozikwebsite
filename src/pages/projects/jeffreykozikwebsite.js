@@ -5,7 +5,7 @@ import JeffreyKozikWebsiteComponent from "../../components/pages/jeffreykozikweb
 
 const JeffreyKozikWebsite = () => (
     <>
-        <PageComponent pageInnerComponent={JeffreyKozikWebsiteComponent} seoName="Jeffrey Kozik Website"/>
+        <PageComponent pageInnerComponent=<JeffreyKozikWebsiteComponent/> seoName="Jeffrey Kozik Website"/>
     </>
 )
 

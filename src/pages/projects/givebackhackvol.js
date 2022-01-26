@@ -5,7 +5,7 @@ import GiveBackHackVolComponent from "../../components/pages/givebackhackvol"
 
 const GiveBackHack = () => (
     <>
-        <PageComponent pageInnerComponent={GiveBackHackVolComponent} seoName="GiveBackHack Vol"/>
+        <PageComponent pageInnerComponent=<GiveBackHackVolComponent/> seoName="GiveBackHack Vol"/>
     </>
 )
 
