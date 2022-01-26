@@ -5,7 +5,7 @@ import SeoBrowserExtensionComponent from "../../components/pages/seobrowserexten
 
 const SeoBrowserExtension = () => (
     <>
-        <PageComponent pageInnerComponent={SeoBrowserExtensionComponent} seoName="SEO Browser Extension"/>
+        <PageComponent pageInnerComponent={<>{SeoBrowserExtensionComponent}</>} seoName="SEO Browser Extension"/>
     </>
 )
 
