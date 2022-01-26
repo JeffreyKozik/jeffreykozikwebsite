@@ -37,13 +37,15 @@ class Header extends React.Component {
     // }
     render(){
         return(
-            <div style={{textAlign: "left"}}>
-              <h2 id={homepage.rubikFont1}><a href="https://jeffreykozik.com">Homepage</a></h2>
-              <Button id={homepage.rubikFont2} style={{float: "right"}} onclick="history.back()">Portfolio</Button>
-            </div>
+            <></>
         )
     }
 }
+
+// <div style={{textAlign: "left"}}>
+//   <h2 id={homepage.rubikFont1}><a href="https://jeffreykozik.com">Homepage</a></h2>
+//   <Button id={homepage.rubikFont2} style={{float: "right"}} onclick="history.back()">Portfolio</Button>
+// </div>
 
 export default Header
 
