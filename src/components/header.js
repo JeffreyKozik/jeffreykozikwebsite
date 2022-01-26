@@ -5,26 +5,31 @@ import * as homepage from "./homepage.module.css"
 function Header() {
     function generateLink(){
         let referrer = document.referrer;
+        console.log("referrer: " + referrer);
         // "jeffreykozik.com/portfolios"
-        if (referrer.search("portfolios") != -1){
+        // if (referrer.search("portfolios") != -1){
             return referrer;
-        }
-        else {
-            return "";
-        }
+        // }
+        // else {
+        //     return "";
+        // }
     }
     function generateName(){
         let referrer = document.referrer;
+        console.log("referrer: " + referrer);
         let portfolioName = "";
         // "jeffreykozik.com/portfolios"
-        if (referrer.search("portfolios") != -1){
+        // if (referrer.search("portfolios") != -1){
             let portfolioStart = referrer.indexOf("portfolios");
+            console.log("portfolioStart: " + portfolioStart);
             let portfolioNameStart = portfolioStart + 11;
+            console.log("portfolioNameStart: " + portfolioNameStart);
             while ((referrer[portfolioNameStart] != "/") && (portfolioNameStart < referrer.length)){
                 portfolioName += referrer[portfolioNameStart];
+                console.log("portfolioName: " + portfolioName);
                 portfolioNameStart++;
             }
-        }
+        // }
         return portfolioName;
     }
     return(
