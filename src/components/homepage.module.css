@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#jeffrey_kozik {
+  font-family: 'Rubik', sans-serif !important;
+  text-align: center;
+}
+
+.homepage_container{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Rubik', sans-serif;
+    justify-content: center;
+}
+
+.project_container{
+    display: flex;
+    flex-direction: row;
+    font-family: 'Rubik', sans-serif;
+    justify-content: center;
+}
+
+#rubikFont1{
+    font-family: 'Rubik', sans-serif !important;
+}
+
+#rubikFont2{
+    font-family: 'Rubik', sans-serif !important;
+}
+
+#rubikFont3{
+    font-family: 'Rubik', sans-serif !important;
+}

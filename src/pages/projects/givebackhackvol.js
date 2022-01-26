@@ -5,6 +5,7 @@ import {Helmet} from "react-helmet";
 
 import MediaQuery from 'react-responsive'
 import GiveBackHackVolComponent from "../../components/pages/givebackhackvol"
+import Header from "../../components/header"
 
 const GiveBackHack = () => (
     <>
@@ -15,11 +16,13 @@ const GiveBackHack = () => (
             <Seo title="GiveBackHack Vol"/>
             <MediaQuery minWidth={821}>
                 <div className={pages.page_container}>
+                    <Header/>
                     <GiveBackHackVolComponent/>
                 </div>
             </MediaQuery>
             <MediaQuery maxWidth={820}>
                 <div className={pages.page_container_phone}>
+                    <Header/>
                     <GiveBackHackVolComponent/>
                 </div>
             </MediaQuery>

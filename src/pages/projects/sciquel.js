@@ -5,6 +5,7 @@ import {Helmet} from "react-helmet";
 
 import MediaQuery from 'react-responsive'
 import SciquelComponent from "../../components/pages/sciquel"
+import Header from "../../components/header"
 
 const Sciquel = () => (
     <>
@@ -15,11 +16,13 @@ const Sciquel = () => (
             <Seo title="Sciquel" />
             <MediaQuery minWidth={821}>
                 <div className={pages.page_container}>
+                    <Header/>
                     <SciquelComponent/>
                 </div>
             </MediaQuery>
             <MediaQuery maxWidth={820}>
                 <div className={pages.page_container_phone}>
+                    <Header/>
                     <SciquelComponent/>
                 </div>
             </MediaQuery>

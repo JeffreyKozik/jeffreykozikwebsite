@@ -1,3 +1,17 @@
+import * as React from "react"
+import PropTypes from "prop-types"
+import * as homepage from "./homepage.module.css"
+
+class Header extends React.Component {
+    render(){
+        return(
+            <></>
+        )
+    }
+}
+
+export default Header
+
 // import * as React from "react"
 // import PropTypes from "prop-types"
 // import { Link } from "gatsby"

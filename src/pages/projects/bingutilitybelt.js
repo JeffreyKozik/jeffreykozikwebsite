@@ -6,6 +6,8 @@ import {Helmet} from "react-helmet";
 import MediaQuery from 'react-responsive'
 import BingUtilityBeltComponent from "../../components/pages/bingutilitybelt"
 
+import Header from "../../components/header"
+
 const BingUtilityBelt = () => (
     <>
         <Helmet>
@@ -15,11 +17,13 @@ const BingUtilityBelt = () => (
             <Seo title="Bing Utility Belt" />
             <MediaQuery minWidth={821}>
                 <div className={pages.page_container}>
+                    <Header/>
                     <BingUtilityBeltComponent/>
                 </div>
             </MediaQuery>
             <MediaQuery maxWidth={820}>
                 <div className={pages.page_container_phone}>
+                    <Header/>
                     <BingUtilityBeltComponent/>
                 </div>
             </MediaQuery>

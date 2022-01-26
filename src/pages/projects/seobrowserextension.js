@@ -5,6 +5,7 @@ import {Helmet} from "react-helmet";
 
 import MediaQuery from 'react-responsive'
 import SeoBrowserExtensionComponent from "../../components/pages/seobrowserextension"
+import Header from "../../components/header"
 
 const SeoBrowserExtension = () => (
     <>
@@ -15,11 +16,13 @@ const SeoBrowserExtension = () => (
             <Seo title="SEO Browser Extension" />
             <MediaQuery minWidth={821}>
                 <div className={pages.page_container}>
+                    <Header/>
                     <SeoBrowserExtensionComponent/>
                 </div>
             </MediaQuery>
             <MediaQuery maxWidth={820}>
                 <div className={pages.page_container_phone}>
+                    <Header/>
                     <SeoBrowserExtensionComponent/>
                 </div>
             </MediaQuery>

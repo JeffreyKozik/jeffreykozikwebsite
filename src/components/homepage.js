@@ -1,6 +1,7 @@
-import React, { Component } from 'react'
-import ReactDOM from 'react-dom';
-import './homepage.css';
+import React from 'react'
+import PropTypes from "prop-types"
+// import ReactDOM from 'react-dom';
+import * as homepage from './homepage.module.css';
 // import App from './App';
 // import reportWebVitals from './reportWebVitals';
 
@@ -9,6 +10,16 @@ import ProjectComponent from "./projectcomponent.js"
 import Select from 'react-select'
 import makeAnimated from 'react-select/animated'
 const animatedComponents = makeAnimated();
+
+import { bounceInDown } from 'react-animations';
+import { StyleSheet, css } from 'aphrodite';
+
+const bounceInDownStyles = StyleSheet.create({
+  bounceInDown: {
+    animationName: bounceInDown,
+    animationDuration: '2s'
+  }
+})
 
 let categoryArray = [];
 class Category{
@@ -40,7 +51,7 @@ let javaFX = new Tag("JavaFX", "", "Tech Tool");
 let jUnitTesting = new Tag("JUnit Testing", "", "Tech Tool");
 let javaScript = new Tag("JavaScript", "", "Tech Tool");
 let html = new Tag("HTML", "", "Tech Tool");
-let css = new Tag("CSS", "", "Tech Tool");
+let css2 = new Tag("CSS", "", "Tech Tool");
 let bootstrap = new Tag("Bootstrap", "", "Tech Tool");
 let python = new Tag("Python", "", "Tech Tool");
 let pyGame = new Tag("PyGame", "", "Tech Tool");
@@ -126,37 +137,16 @@ class Project{
 // totalcostbrowserextensionirslogics
 // multitabsearchbrowserextensionirslogics
 // seobrowserextension
-let sciquel = new Project("Sciquel", "https://jeffreykozik.com/projects/sciquel", "", "Dec 2021 - Jan 2022", "", 0, <h3>
-    Sciquel is a website that myself and one other person worked together on to code. It is a project that a number of
-    Harvard Medical School students came up with to make science more accessible to the average person as academic papers
-    are often very complicated to read and more often than not cost money to read."</h3>);
-let urbanEarth = new Project("Urban Earth", "https://jeffreykozik.com/projects/urbanearth", "", "Oct - Dec 2021", "", 1, <h3>
-    Urban Earth is a project myself and a partner worked on during Fall of 2021. It's an iOS app that helps users
-    track how often they use sustainable forms of transportation and motivates them to keep at it.
-</h3>);
-let jeffreykozikwebsite = new Project("jeffreykozik.com", "https://jeffreykozik.com/projects/jeffreykozikwebsite", "", "Dec 2021 - Jan 2022", "", 2,  <h3>Portfolio website I coded with React and Gatsby and a number of react packages including
-material-ui, react-select, font-awesome, lodash, simple analytics, and matomo analytics.</h3>);
-let oneWorldBrowserExtension = new Project("1World Browser Extension", "https://jeffreykozik.com/projects/1world", "", "Nov 2021 - Jan 2022", "", 3, <h3>
-    The One World Browser Extension is used in conjunction with a Square Business account to easily offset a
-    business's inventory carbon emissions. To see it in action feel free to enter data into the table below.
-</h3>);
-let smrtnrllBrowserExtension = new Project("smrtnrll Browser Extension", "https://jeffreykozik.com/projects/smrtnrllbrowserextension", "", "Dec 2020 - Oct 2021", "", 4, <h3>
-    The smrtnrll browser extension is used by college students to get into classes that are currently full. Add it to your
-    browser <a href="https://chrome.google.com/webstore/detail/smrtnrll/faoobmndgioamolfhbnkdegeolmmgnmj?hl=en&authuser=0" target="_blank" rel="noreferrer">here</a>.
-</h3>);
-let bingUtilityBelt = new Project("Bing Utility Belt", "https://jeffreykozik.com/projects/bingutilitybelt", "", "Nov 2021 - Jan 2022", "", 5, <h3>
-    Browser extension I created to show how pervasive ads are in search engines by highlighting ads on Bing and keeping track of how many you see on each tab. Also
-    ensures recent results.
-</h3>);
-// let totalCostBrowserExtensionIRSLogics = new Project("Total Cost Browser Extension IRS Logics", "https://jeffreykozik.com/projects/totalcostbrowserextension", "", "Oct - Nov 2021", "", 6, <h3>
-//     Custom browser extension I coded so that payment information across 12 tabs could be displayed in a single location.
-// </h3>);
-// let multitabSearchBrowserExtensionIRSLogics = new Project("Multitab Search Browser Extension IRS Logics", "https://jeffreykozik.com/projects/multitabsearch", "", "Oct 2021", "", 7, <h3 className="page_subtitle">
-//     Custom browser extension I coded so that 12 different tabs could be searched across simultaneously.
-// </h3>);
-// let seoBrowserExtension = new Project("SEO Browser Extension", "https://jeffreykozik.com/projects/seobrowserextension", "", "Nov 2021", "", 8, <h3 className="page_subtitle">
-//     Browser extension I coded for the owner of <a href="site-checker.org" target="_blank" rel="noreferrer">site-checker.org</a> to easily get SEO tips for any website.
-// </h3>);
+// 99 - 126 characters
+let sciquel = new Project("Sciquel", "https://jeffreykozik.com/projects/sciquel", "", "Dec 2021 - Jan 2022", "", 0, <>Website that myself and one other person worked together on to code to make science more accessible to the average person.</>);
+let urbanEarth = new Project("Urban Earth", "https://jeffreykozik.com/projects/urbanearth", "", "Oct - Dec 2021", "", 1, <>An iOS app that helps users track how often they use sustainable forms of transportation and motivates them to keep at it.</>);
+let jeffreykozikwebsite = new Project("jeffreykozik.com", "https://jeffreykozik.com/projects/jeffreykozikwebsite", "", "Dec 2021 - Jan 2022", "", 2, <>Portfolio website I coded with React and Gatsby and a number of react packages including material-ui and react-select.</>);
+let oneWorldBrowserExtension = new Project("1World Browser Extension", "https://jeffreykozik.com/projects/1world", "", "Nov 2021 - Jan 2022", "", 3, <>The 1World Browser Extension is used with a Square Business account to easily offset a business's inventory carbon emissions.</>);
+let smrtnrllBrowserExtension = new Project("smrtnrll Browser Extension", "https://jeffreykozik.com/projects/smrtnrllbrowserextension", "", "Dec 2020 - Oct 2021", "", 4, <>The smrtnrll browser extension is used by college students to get into classes that are currently full. Add it to your browser <a href="https://chrome.google.com/webstore/detail/smrtnrll/faoobmndgioamolfhbnkdegeolmmgnmj?hl=en&authuser=0">here</a>.</>);
+let bingUtilityBelt = new Project("Bing Utility Belt", "https://jeffreykozik.com/projects/bingutilitybelt", "", "Nov 2021 - Jan 2022", "", 5, <>Browser extension I created to show how pervasive ads are in search engines by highlighting ads on Bing.</>);
+// let totalCostBrowserExtensionIRSLogics = new Project("Total Cost Browser Extension", "https://jeffreykozik.com/projects/totalcostbrowserextension", "", "Oct - Nov 2021", "", 6, <>Custom browser extension I coded so that payment information across 12 tabs could be displayed in a single location.</>);
+// let multitabSearchBrowserExtensionIRSLogics = new Project("Multitab Search Browser Extension", "https://jeffreykozik.com/projects/multitabsearch", "", "Oct 2021", "", 7, <>Custom browser extension I coded so that 12 different tabs could be searched across simultaneously.</>);
+// let seoBrowserExtension = new Project("SEO Browser Extension", "https://jeffreykozik.com/projects/seobrowserextension", "", "Nov 2021", "", 8, <>Browser extension I coded for the owner of <a href="site-checker.org">site-checker.org</a> to easily get SEO tips for any website.</>);
 
 // let giveBackHackVol = new Project("GiveBackHack Vol & Tell", "/givebackhackvol", "", "", "", "../images/volhtml.png");
 // let harryPotterGame = new Project("Harry Potter Game", "", "", "", "", "");
@@ -216,18 +206,37 @@ let bingUtilityBelt = new Project("Bing Utility Belt", "https://jeffreykozik.com
 //     {generateOptions("tags", tagArray)}
 // </div>
 
-const listItems = projectsArray.map((projectElement, index) =>
-   <div key={index}><ProjectComponent name={projectElement.name} link={projectElement.link} tags={projectElement.tags} startDate={projectElement.startDate} endDate={projectElement.endDate} imagePath={projectElement.imagePath}/></div>
- );
+// const listItems = projectsArray.map((projectElement, index) =>
+//    <div key={index}><ProjectComponent style={bounceInDownStyles.bounceInDown} name={projectElement.name} link={projectElement.link} tags={projectElement.tags} startDate={projectElement.startDate} endDate={projectElement.endDate} imagePath={projectElement.imagePath} description={projectElement.description}/></div>
+//  );
 
-const HomePage = () => (
-    <>
-        <h1 id="jeffrey_kozik"><a href="https://jeffreykozik.com">Jeffrey Kozik</a></h1>
-        <div>
-            {listItems}
-        </div>
-    </>
-)
+class HomePage extends React.Component{
+    listItemsFunction = (portfolioLink, portfolioName) => {
+        const listItems = projectsArray.map((projectElement, index) =>
+           <div key={index}><ProjectComponent style={bounceInDownStyles.bounceInDown} name={projectElement.name} link={projectElement.link} tags={projectElement.tags} startDate={projectElement.startDate} endDate={projectElement.endDate} imagePath={projectElement.imagePath} description={projectElement.description} portfolioName={portfolioName} portfolioLink={portfolioLink}/></div>
+         );
+        return listItems;
+    }
+    render(){
+        return(
+            <>
+                <div>
+                    {this.listItemsFunction(this.props.portfolioLink, this.props.portfolioName)}
+                </div>
+            </>
+        )
+    }
+}
+
+HomePage.propTypes = {
+  portfolioLink: PropTypes.string,
+  portfolioName: PropTypes.string
+}
+
+HomePage.defaultProps = {
+  portfolioLink: "",
+  portfolioName: ""
+}
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
@@ -236,7 +245,7 @@ const HomePage = () => (
 
 // const HomePage = () => (
 //     <>
-//         <h1 id="jeffrey_kozik"> Jeffrey Kozik </h1>
+        // <h1 id="jeffrey_kozik"> Jeffrey Kozik </h1>
 //         <div class="container" id="selection_div">
 //         </div>
 //     </>

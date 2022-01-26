@@ -29,20 +29,9 @@ import {Helmet} from "react-helmet";
 
 import {getEmissionsArray} from "../../data/emissions.js"
 
-import $ from "jquery";
-
 import MediaQuery from 'react-responsive'
 
-// import Table from 'react-bootstrap/Table';
-
-// import {useMediaQuery} from '../hooks/useMediaQuery';
-//
-// const styles = {
-//   page_container: isIPAD => ({
-//     marginLeft: isIPAD ? '2%' : '25%',
-//     marginRight: isIPAD ? '2%' : '25%',
-//   })
-// };
+import Header from "../../components/header"
 
 class OneWorld extends React.Component {
     createData = (name, cost, submit_text, consumption, supply_chain, co2, offset_cost, row_num) => {
@@ -2903,13 +2892,14 @@ class OneWorld extends React.Component {
                     <Seo title="One World Browser Extension" />
                     <MediaQuery minWidth={601}>
                         <div className={pages.page_container}>
+                            <Header/>
                             <h1 className={pages.page_title}> One World Browser Extension </h1>
                             <h3 className={pages.page_subtitle}>
                                 The One World Browser Extension is used in conjunction with a Square Business account to easily offset a
                                 business's inventory carbon emissions. To see it in action feel free to enter data into the table below.
                             </h3>
                             <iframe className={pages.page_video} src="https://www.youtube-nocookie.com/embed/TmRLSg4kcUk" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-                            <Paper id={oneworld.one_world_table_container}>
+                            <Paper>
                               <Table aria-label="simple table" id={oneworld.one_world_table}>
                                   <TableHead>
                                     <TableRow>
@@ -2933,7 +2923,7 @@ class OneWorld extends React.Component {
                                         <TableCell className={oneworld.one_world_supplychainTable} align="right"><Select class="one_world_select" closeMenuOnSelect={false} components={this.state.animatedComponentsSupplyChain} options={this.state.selectSupplyChainOptions} value={row.supply_chain} onChange={(selectedOption) => this.supplyChainClickChange(selectedOption, row.row_num)}/></TableCell>
                                         <TableCell className={oneworld.one_world_CO2Table} align="right"><div>{row.co2} kg</div></TableCell>
                                         <TableCell className={oneworld.one_world_offsetcostTable} align="right"><div>${row.offset_cost}</div></TableCell>
-                                        <TableCell className={oneworld.one_world_deleteTable} align="right"><button onClick={() => this.deleteRowFunction(row.row_num)}><FontAwesomeIcon icon={faTrashAlt} id={oneworld.one_world_delete_row_button}/></button></TableCell>
+                                        <TableCell className={oneworld.one_world_deleteTable} align="right"><button onClick={() => this.deleteRowFunction(row.row_num)}><FontAwesomeIcon icon={faTrashAlt}/></button></TableCell>
                                     </TableRow>
                                 )}
                                 <TableRow key="total">
@@ -2988,6 +2978,7 @@ class OneWorld extends React.Component {
                     </MediaQuery>
                     <MediaQuery maxWidth={600}>
                     <div className={pages.page_container_phone}>
+                        <Header/>
                         <h1 className={pages.page_title}> One World Browser Extension </h1>
                         <h3 className={pages.page_subtitle}>
                             The One World Browser Extension is used in conjunction with a Square Business account to easily offset a

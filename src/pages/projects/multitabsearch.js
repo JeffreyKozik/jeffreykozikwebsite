@@ -5,6 +5,7 @@ import {Helmet} from "react-helmet";
 
 import MediaQuery from 'react-responsive'
 import MultitabSearchComponent from "../../components/pages/multitabsearch"
+import Header from "../../components/header"
 
 const MultitabSearch = () => (
     <>
@@ -15,11 +16,13 @@ const MultitabSearch = () => (
             <Seo title="Multitab Search Browser Extension" />
             <MediaQuery minWidth={821}>
                 <div className={pages.page_container}>
+                    <Header/>
                     <MultitabSearchComponent/>
                 </div>
             </MediaQuery>
             <MediaQuery maxWidth={820}>
                 <div className={pages.page_container_phone}>
+                    <Header/>
                     <MultitabSearchComponent/>
                 </div>
             </MediaQuery>
