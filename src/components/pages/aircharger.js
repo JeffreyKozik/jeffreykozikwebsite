@@ -1,5 +1,4 @@
 import * as React from "react"
-import * as pages from "../../page_styling/pages.module.css"
 import aircharger2 from "../../images/aircharger2.png";
 import aircharger3 from "../../images/aircharger3.png";
 import aircharger4 from "../../images/aircharger4.mp4";
@@ -7,6 +6,7 @@ import aircharger5 from "../../images/aircharger5.mp4";
 import aircharger6 from "../../images/aircharger6.mp4";
 import aircharger7 from "../../images/aircharger7.png";
 import aircharger8 from "../../images/aircharger8.png";
+import * as pages from "../../page_styling/pages.module.css"
 
 const AirChargerComponent = () => (
     <>

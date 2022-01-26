@@ -1,18 +1,16 @@
-import React from 'react'
+import { StyleSheet, css } from 'aphrodite';
 import PropTypes from "prop-types"
-// import ReactDOM from 'react-dom';
-import * as homepage from './homepage.module.css';
-// import App from './App';
-// import reportWebVitals from './reportWebVitals';
-
-import ProjectComponent from "./projectcomponent.js"
-
+import React from 'react'
+import { bounceInDown } from 'react-animations';
 import Select from 'react-select'
+
 import makeAnimated from 'react-select/animated'
 const animatedComponents = makeAnimated();
 
-import { bounceInDown } from 'react-animations';
-import { StyleSheet, css } from 'aphrodite';
+import ProjectComponent from "./projectcomponent.js"
+
+import * as homepage from './homepage.module.css';
+
 
 const bounceInDownStyles = StyleSheet.create({
   bounceInDown: {

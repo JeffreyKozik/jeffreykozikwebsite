@@ -1,9 +1,10 @@
-import React from 'react'
 import { Link } from "gatsby"
 import PropTypes from 'prop-types';
+import React from 'react'
+import MediaQuery from 'react-responsive'
+
 import './bootstrap.css'
 
-import MediaQuery from 'react-responsive'
 
 import sciquelScreenshot from "../images/homepage_squares/sciquelhomepage1.png"
 import urbanearthScreenshot from "../images/homepage_squares/urbanearthlogo.png"

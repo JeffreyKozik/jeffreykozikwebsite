@@ -1,37 +1,34 @@
-import * as React from "react"
-import demoVideo from "../../images/1worldoffsquareedited.mp4";
-import * as oneworld from "../../page_styling/oneworldbrowserextension.module.css"
-import * as pages from "../../page_styling/pages.module.css"
-import Seo from "../../components/seo"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 
-import Select from 'react-select'
-import makeAnimated from 'react-select/animated'
-
+import Button from '@mui/material/Button';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
-
 import TextField from '@mui/material/TextField'
-import Button from '@mui/material/Button';
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
-
-import xtype from 'xtypejs'
+import Paper from '@mui/material/Paper';
 
 import _ from 'lodash'
 
+import * as React from "react"
 import {Helmet} from "react-helmet";
-
-import {getEmissionsArray} from "../../data/emissions.js"
-
 import MediaQuery from 'react-responsive'
+import Select from 'react-select'
+import makeAnimated from 'react-select/animated'
+
+import xtype from 'xtypejs'
+
+import demoVideo from "../../images/1worldoffsquareedited.mp4";
+import * as oneworld from "../../page_styling/oneworldbrowserextension.module.css"
+import * as pages from "../../page_styling/pages.module.css"
 
 import Header from "../../components/header"
+import Seo from "../../components/seo"
+
+import {getEmissionsArray} from "../../data/emissions.js"
 
 class OneWorld extends React.Component {
     createData = (name, cost, submit_text, consumption, supply_chain, co2, offset_cost, row_num) => {

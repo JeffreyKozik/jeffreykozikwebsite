@@ -1,7 +1,7 @@
 import * as React from "react"
-import Seo from "../components/seo"
 import HomePage from "../components/homepage"
 import Header from "../components/header"
+import Seo from "../components/seo"
 
 import * as homepage from "../components/homepage.module.css"
 

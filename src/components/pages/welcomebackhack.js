@@ -1,6 +1,6 @@
 import * as React from "react"
-import * as pages from "../../page_styling/pages.module.css"
 import socrates from "../../images/welcomebackhacksocrates.png"
+import * as pages from "../../page_styling/pages.module.css"
 
 const WelcomeBackHackComponent = () => (
     <>
