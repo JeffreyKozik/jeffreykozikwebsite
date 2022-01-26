@@ -1,5 +1,5 @@
 import * as React from "react"
-import PageComponent from "../../pagecomponent"
+import PageComponent from "../../components/pagecomponent"
 
 import AirChargerComponent from "../../components/pages/aircharger"
 

@@ -1,5 +1,5 @@
 import * as React from "react"
-import PageComponent from "../../pagecomponent"
+import PageComponent from "../../components/pagecomponent"
 
 import JeffreyKozikWebsiteComponent from "../../components/pages/jeffreykozikwebsite"
 
