@@ -113,41 +113,6 @@ let collegeFreshman = new Tag("College Freshman", "", "Time Period");
 let sophomoreJunior = new Tag("College Sophomore/Junior", "", "Time Period");
 let collegeSenior = new Tag("College Senior", "", "Time Period");
 
-let projectsArray = [];
-class Project{
-  constructor(name, link, tags, startDate, endDate, imagePath, description){
-    this.name = name;
-    this.link = link;
-    this.tags = tags;
-    this.startDate = startDate;
-    this.endDate = endDate;
-    this.imagePath = imagePath;
-    this.description = description;
-    projectsArray.push(this);
-  }
-}
-
-// sciquel
-// urbanearth
-// jeffreykozikwebsite
-// oneworldbrowserextension
-// givebackhackvol
-// smrtnrllbrowserextension
-// searchengineutilitybelt
-// totalcostbrowserextensionirslogics
-// multitabsearchbrowserextensionirslogics
-// seobrowserextension
-// 99 - 126 characters
-let sciquel = new Project("Sciquel", "https://jeffreykozik.com/projects/sciquel", "", "Dec 2021 - Jan 2022", "", 0, <>Website that myself and one other person worked together on to code to make science more accessible to the average person.</>);
-let urbanEarth = new Project("Urban Earth", "https://jeffreykozik.com/projects/urbanearth", "", "Oct - Dec 2021", "", 1, <>An iOS app that helps users track how often they use sustainable forms of transportation and motivates them to keep at it.</>);
-let jeffreykozikwebsite = new Project("jeffreykozik.com", "https://jeffreykozik.com/projects/jeffreykozikwebsite", "", "Dec 2021 - Jan 2022", "", 2, <>Portfolio website I coded with React and Gatsby and a number of react packages including material-ui and react-select.</>);
-let oneWorldBrowserExtension = new Project("1World Browser Extension", "https://jeffreykozik.com/projects/1world", "", "Nov 2021 - Jan 2022", "", 3, <>The 1World Browser Extension is used with a Square Business account to easily offset a business's inventory carbon emissions.</>);
-let smrtnrllBrowserExtension = new Project("smrtnrll Browser Extension", "https://jeffreykozik.com/projects/smrtnrllbrowserextension", "", "Dec 2020 - Oct 2021", "", 4, <>The smrtnrll browser extension is used by college students to get into classes that are currently full. Add it to your browser <a href="https://chrome.google.com/webstore/detail/smrtnrll/faoobmndgioamolfhbnkdegeolmmgnmj?hl=en&authuser=0">here</a>.</>);
-let bingUtilityBelt = new Project("Bing Utility Belt", "https://jeffreykozik.com/projects/bingutilitybelt", "", "Nov 2021 - Jan 2022", "", 5, <>Browser extension I created to show how pervasive ads are in search engines by highlighting ads on Bing.</>);
-// let totalCostBrowserExtensionIRSLogics = new Project("Total Cost Browser Extension", "https://jeffreykozik.com/projects/totalcostbrowserextension", "", "Oct - Nov 2021", "", 6, <>Custom browser extension I coded so that payment information across 12 tabs could be displayed in a single location.</>);
-// let multitabSearchBrowserExtensionIRSLogics = new Project("Multitab Search Browser Extension", "https://jeffreykozik.com/projects/multitabsearch", "", "Oct 2021", "", 7, <>Custom browser extension I coded so that 12 different tabs could be searched across simultaneously.</>);
-// let seoBrowserExtension = new Project("SEO Browser Extension", "https://jeffreykozik.com/projects/seobrowserextension", "", "Nov 2021", "", 8, <>Browser extension I coded for the owner of <a href="site-checker.org">site-checker.org</a> to easily get SEO tips for any website.</>);
-
 // let giveBackHackVol = new Project("GiveBackHack Vol & Tell", "/givebackhackvol", "", "", "", "../images/volhtml.png");
 // let harryPotterGame = new Project("Harry Potter Game", "", "", "", "", "");
 // let thomasRobertMalthusPresentation = new Project("Thomas Robert Malthus Presentation", "", "", "", "", "");
@@ -210,32 +175,66 @@ let bingUtilityBelt = new Project("Bing Utility Belt", "https://jeffreykozik.com
 //    <div key={index}><ProjectComponent style={bounceInDownStyles.bounceInDown} name={projectElement.name} link={projectElement.link} tags={projectElement.tags} startDate={projectElement.startDate} endDate={projectElement.endDate} imagePath={projectElement.imagePath} description={projectElement.description}/></div>
 //  );
 
-class HomePage extends React.Component{
-    listItemsFunction = (portfolioLink, portfolioName) => {
-        const listItems = projectsArray.map((projectElement, index) =>
-           <div key={index}><ProjectComponent style={bounceInDownStyles.bounceInDown} name={projectElement.name} link={projectElement.link} tags={projectElement.tags} startDate={projectElement.startDate} endDate={projectElement.endDate} imagePath={projectElement.imagePath} description={projectElement.description} portfolioName={portfolioName} portfolioLink={portfolioLink}/></div>
-         );
-        return listItems;
+function HomePage ({nameArray}){
+    let projectsArray = [];
+    class Project{
+      constructor(name, link, tags, startDate, endDate, imagePath, description){
+        this.name = name;
+        this.link = link;
+        this.tags = tags;
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.imagePath = imagePath;
+        this.description = description;
+        projectsArray.push(this);
+      }
     }
-    render(){
-        return(
-            <>
-                <div>
-                    {this.listItemsFunction(this.props.portfolioLink, this.props.portfolioName)}
-                </div>
-            </>
-        )
+
+    // sciquel
+    // urbanearth
+    // jeffreykozikwebsite
+    // oneworldbrowserextension
+    // givebackhackvol
+    // smrtnrllbrowserextension
+    // searchengineutilitybelt
+    // totalcostbrowserextensionirslogics
+    // multitabsearchbrowserextensionirslogics
+    // seobrowserextension
+    // 99 - 126 characters
+    let sciquel = new Project("Sciquel", "https://jeffreykozik.com/projects/sciquel", "", "Dec 2021 - Jan 2022", "", 0, <>Website that myself and one other person worked together on to code to make science more accessible to the average person.</>);
+    let urbanEarth = new Project("Urban Earth", "https://jeffreykozik.com/projects/urbanearth", "", "Oct - Dec 2021", "", 1, <>An iOS app that helps users track how often they use sustainable forms of transportation and motivates them to keep at it.</>);
+    let jeffreykozikwebsite = new Project("Jeffrey Kozik Website", "https://jeffreykozik.com/projects/jeffreykozikwebsite", "", "Dec 2021 - Jan 2022", "", 2, <>Portfolio website I coded with React and Gatsby and a number of react packages including material-ui and react-select.</>);
+    let oneWorldBrowserExtension = new Project("1World Browser Extension", "https://jeffreykozik.com/projects/1world", "", "Nov 2021 - Jan 2022", "", 3, <>The 1World Browser Extension is used with a Square Business account to easily offset a business's inventory carbon emissions.</>);
+    let smrtnrllBrowserExtension = new Project("smrtnrll Browser Extension", "https://jeffreykozik.com/projects/smrtnrllbrowserextension", "", "Dec 2020 - Oct 2021", "", 4, <>The smrtnrll browser extension is used by college students to get into classes that are currently full. Add it to your browser <a href="https://chrome.google.com/webstore/detail/smrtnrll/faoobmndgioamolfhbnkdegeolmmgnmj?hl=en&authuser=0">here</a>.</>);
+    let bingUtilityBelt = new Project("Bing Utility Belt", "https://jeffreykozik.com/projects/bingutilitybelt", "", "Nov 2021 - Jan 2022", "", 5, <>Browser extension I created to show how pervasive ads are in search engines by highlighting ads on Bing.</>);
+    let totalCostBrowserExtensionIRSLogics = new Project("Total Cost Browser Extension", "https://jeffreykozik.com/projects/totalcostbrowserextension", "", "Oct - Nov 2021", "", 6, <>Custom browser extension I coded so that payment information across 12 tabs could be displayed in a single location.</>);
+    let multitabSearchBrowserExtensionIRSLogics = new Project("Multitab Search Browser Extension", "https://jeffreykozik.com/projects/multitabsearch", "", "Oct 2021", "", 7, <>Custom browser extension I coded so that 12 different tabs could be searched across simultaneously.</>);
+    let seoBrowserExtension = new Project("SEO Browser Extension", "https://jeffreykozik.com/projects/seobrowserextension", "", "Nov 2021", "", 8, <>Browser extension I coded for the owner of <a href="site-checker.org">site-checker.org</a> to easily get SEO tips for any website.</>);
+
+    function listItemsFunction(nameArrayParam) {
+        let listItems = []
+        for(let i = 0; i <  projectsArray.length; i++){
+            if((nameArrayParam.length == 0) || (nameArrayParam.includes(projectsArray[i].name))){
+                listItems.append(<div key={i}><ProjectComponent style={bounceInDownStyles.bounceInDown} name={projectsArray[i].name} link={projectsArray[i].link} tags={projectsArray[i].tags} startDate={projectsArray[i].startDate} endDate={projectsArray[i].endDate} imagePath={projectsArray[i].imagePath} description={projectsArray[i].description}/></div>)
+            }
+        }
+        return listItems
     }
+    return(
+        <>
+            <div>
+                {listItemsFunction(nameArray)}
+            </div>
+        </>
+    )
 }
 
 HomePage.propTypes = {
-  portfolioLink: PropTypes.string,
-  portfolioName: PropTypes.string
+  nameArray: PropTypes.string
 }
 
 HomePage.defaultProps = {
-  portfolioLink: "",
-  portfolioName: ""
+  nameArray: []
 }
 
 // If you want to start measuring performance in your app, pass a function
