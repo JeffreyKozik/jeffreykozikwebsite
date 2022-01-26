@@ -7,6 +7,8 @@ import Seo from "../../../components/seo"
 import HomePage from "../../../components/homepage"
 import Header from "../../../components/header"
 
+import * as homepage from "../../../components/homepage.module.css"
+
 // const IndexPage = () => (
 //   <Layout>
 //     <Seo title="Home" />
@@ -35,6 +37,7 @@ const IndexPage = () => (
     <>
         <Seo title="Home" />
         <Header/>
+        <h1 id={homepage.jeffrey_kozik}>Jeffrey Kozik: Podmark Portfolio</h1>
         <HomePage/>
     </>
 )
