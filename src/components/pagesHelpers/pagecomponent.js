@@ -1,8 +1,11 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import {Helmet} from "react-helmet";
-import ArticleComponent from "./articlecomponent"
+import MediaQuery from 'react-responsive'
+import Header from "../header"
 import Seo from "../seo"
+
+import * as pages from "../../page_styling/pages.module.css"
 
 function PageComponent({ seoName, pageInnerComponent }) {
     return (
@@ -12,7 +15,18 @@ function PageComponent({ seoName, pageInnerComponent }) {
             </Helmet>
             <body>
                 <Seo title={seoName} />
-                <ArticleComponent articleInnerComponent={pageInnerComponent}/>
+                <MediaQuery minWidth={821}>
+                    <div className={pages.page_container}>
+                        <Header/>
+                        <>{pageInnerComponent}</>
+                    </div>
+                </MediaQuery>
+                <MediaQuery maxWidth={820}>
+                    <div className={pages.page_container_phone}>
+                        <Header/>
+                        <>{pageInnerComponent}</>
+                    </div>
+                </MediaQuery>
             </body>
         </>
     )
