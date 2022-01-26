@@ -1,7 +1,7 @@
 {
   "name": "Jeffrey-Kozik-Website",
   "private": true,
-  "description": "Portfolio website I coded with React and Gatsby and a number of react packages including material-ui and react-select.",
+  "description": "Portfolio website I coded with React and Gatsby and Bootstrap and a number of react packages including material-ui and react-responsive.",
   "version": "0.1.0",
   "author": "Jeffrey Kozik <jeffreykozik@protonmail.com>",
   "dependencies": {
@@ -26,19 +26,15 @@
     "gatsby-plugin-sharp": "^4.4.0",
     "gatsby-source-filesystem": "^4.4.0",
     "gatsby-transformer-sharp": "^4.4.0",
-    "jquery": "^3.6.0",
     "lodash": "^4.17.21",
     "prop-types": "^15.8.1",
     "react": "^17.0.2",
     "react-animations": "^1.0.0",
-    "react-bootstrap": "^2.1.1",
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
     "react-responsive": "^9.0.0-beta.6",
-    "react-script-tag": "^1.1.2",
     "react-select": "^5.2.1",
     "redux": "^4.1.2",
-    "video-react": "^0.14.1",
     "xtypejs": "^0.7.1"
   },
   "devDependencies": {
@@ -62,7 +58,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/JeffreyKozik/jeffreykozikwebsite"
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"

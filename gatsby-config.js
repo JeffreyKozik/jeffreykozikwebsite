@@ -1,43 +1,24 @@
 module.exports = {
   siteMetadata: {
     title: `Jeffrey Kozik`,
-    description: `Portfolio website I coded with React and Gatsby and a number of react packages including
-    material-ui, react-select, font-awesome, lodash, simple analytics, and matomo analytics.`,
+    description: `Portfolio website I coded with React and Gatsby and Bootstrap a number of react packages including
+    material-ui, react-responsive, react-select, font-awesome, lodash, simple analytics, and matomo analytics.`,
     author: `Jeffrey Kozik`,
     siteUrl: `https://jeffreykozik.com`,
   },
   plugins: [
-    `react-animations`,
-    `aphrodite`,
-    `react-responsive`,
-    `jquery`,
     `@babel/eslint-parser`,
-    `bootstrap`,
-    `react-bootstrap`,
-    `prop-types`,
-    `lodash`,
-    `dangerously-set-html-content`,
-    `react-script-tag`,
-    `xtypejs`,
+    `@emotion/react`,
+    `@emotion/styled`,
     `@fortawesome/fontawesome-svg-core`,
     `@fortawesome/free-solid-svg-icons`,
     `@fortawesome/react-fontawesome`,
-    `@emotion/react`,
-    `@emotion/styled`,
     `@mui/material`,
-    `redux`,
-    `react-select`,
+    `aphrodite`,
+    `bootstrap`,
+    `dangerously-set-html-content`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
-      {
-        resolve: "gatsby-plugin-simple-analytics",
-        options: {
-          trackPageViews: true,
-          events: true,
-          eventsGlobal: "sa_event",
-          ignorePages: ["pathname"],
-        },
-      },
     {
     resolve: 'gatsby-plugin-matomo',
         options: {
@@ -45,6 +26,15 @@ module.exports = {
             matomoUrl: 'https://jeffreykozik.matomo.cloud',
             siteUrl: 'https://jeffreykozik.com'
         }
+    },
+    {
+      resolve: "gatsby-plugin-simple-analytics",
+      options: {
+        trackPageViews: true,
+        events: true,
+        eventsGlobal: "sa_event",
+        ignorePages: ["pathname"],
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -72,5 +62,12 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+    `lodash`,
+    `prop-types`,
+    `react-animations`,
+    `react-responsive`,
+    `react-select`,
+    `redux`,
+    `xtypejs`,
   ],
 }

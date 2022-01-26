@@ -25,20 +25,6 @@ body {
     justify-content: center;
 }
 
-.image_column{
-    width: 50%;
-}
-
-.words_column{
-    width: 50%;
-}
-
-.itemList{
-    margin: 5%;
-    /* display: flex;
-    flex-wrap: wrap; */
-}
-
 #rubikFont1{
     font-family: 'Rubik', sans-serif !important;
 }

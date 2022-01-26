@@ -1,13 +1,7 @@
-#one_world_table_container{
-    /* margin-right: auto;
-    margin-left: auto; */
-}
-
 #one_world_table{
     align-self: center;
     width: 100%;
     font-family: 'Rubik', sans-serif;
-    /* overflow-x: auto; */
 }
 
 #one_world_add_row_button{
@@ -43,11 +37,6 @@
 }
 .one_world_deleteTable{
     width: 6%;
-}
-
-#one_world_delete_row_button{
-    /* width: 50%;
-    height: 50%; */
 }
 
 .one_world_select{

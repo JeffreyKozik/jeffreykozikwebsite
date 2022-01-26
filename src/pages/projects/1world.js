@@ -29,22 +29,9 @@ import {Helmet} from "react-helmet";
 
 import {getEmissionsArray} from "../../data/emissions.js"
 
-import $ from "jquery";
-
 import MediaQuery from 'react-responsive'
 
 import Header from "../../components/header"
-
-// import Table from 'react-bootstrap/Table';
-
-// import {useMediaQuery} from '../hooks/useMediaQuery';
-//
-// const styles = {
-//   page_container: isIPAD => ({
-//     marginLeft: isIPAD ? '2%' : '25%',
-//     marginRight: isIPAD ? '2%' : '25%',
-//   })
-// };
 
 class OneWorld extends React.Component {
     createData = (name, cost, submit_text, consumption, supply_chain, co2, offset_cost, row_num) => {
