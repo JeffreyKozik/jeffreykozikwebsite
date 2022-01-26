@@ -33,7 +33,7 @@ function PageComponent({ seoName, pageInnerComponent }) {
 }
 
 PageComponent.propTypes = {
-  pageInnerComponent: PropTypes.element,
+  pageInnerComponent: PropTypes.node,
   seoName: PropTypes.string
 }
 
