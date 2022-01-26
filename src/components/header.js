@@ -4,28 +4,28 @@ import * as homepage from "./homepage.module.css"
 
 class Header extends React.Component {
     // generateLink = () => {
-    //     let referrer = document.referrer;
-    //     console.log("referrer: " + referrer);
+    //     let referer = document.referer;
+    //     console.log("referer: " + referer);
     //     // "jeffreykozik.com/portfolios"
-    //     // if (referrer.search("portfolios") != -1){
-    //         return referrer;
+    //     // if (referer.search("portfolios") != -1){
+    //         return referer;
     //     // }
     //     // else {
     //     //     return "";
     //     // }
     // }
     // generateName = () => {
-    //     let referrer = document.referrer;
-    //     console.log("referrer: " + referrer);
+    //     let referer = document.referer;
+    //     console.log("referer: " + referer);
     //     let portfolioName = "";
     //     // "jeffreykozik.com/portfolios"
-    //     // if (referrer.search("portfolios") != -1){
-    //         let portfolioStart = referrer.indexOf("portfolios");
+    //     // if (referer.search("portfolios") != -1){
+    //         let portfolioStart = referer.indexOf("portfolios");
     //         console.log("portfolioStart: " + portfolioStart);
     //         let portfolioNameStart = portfolioStart + 11;
     //         console.log("portfolioNameStart: " + portfolioNameStart);
-    //         while ((referrer[portfolioNameStart] != "/") && (portfolioNameStart < referrer.length)){
-    //             portfolioName += referrer[portfolioNameStart];
+    //         while ((referer[portfolioNameStart] != "/") && (portfolioNameStart < referer.length)){
+    //             portfolioName += referer[portfolioNameStart];
     //             console.log("portfolioName: " + portfolioName);
     //             portfolioNameStart++;
     //         }
@@ -36,7 +36,7 @@ class Header extends React.Component {
         return(
             <div style={{textAlign: "left"}}>
               <h2 id={homepage.rubikFont1}><a href="https://jeffreykozik.com">Homepage</a></h2>
-              <h2 id={homepage.rubikFont2} style={{float: "right"}}><a href={document.referrer}>Portfolio</a></h2>
+              <h2 id={homepage.rubikFont2} style={{float: "right"}}><a href={document.referer}>Portfolio</a></h2>
             </div>
         )
     }
