@@ -103,14 +103,14 @@ function ProjectComponent({ name, link, tags, startDate, endDate, imagePath, des
       <MediaQuery maxWidth={540}>
           <div>
             <div className={bootstrap.card, bootstrap.mb3} style={{maxWidth: "540px"}}>
-                <div className={bootstrap.row}>
+                <div className={bootstrap.row, bootstrap.g0}>
                     <div className={bootstrap.col4}>
-                      <img src={imageArray[imagePath]} className={bootstrap.imgfluid, bootstrap.roundedstart} alt="..."/>
+                      <img src={imageArray[imagePath]} className={bootstrap.img, bootstrap.imgfluid, bootstrap.roundedstart} alt="..."/>
                     </div>
                     <div className={bootstrap.col8}>
                       <div className={bootstrap.cardbody}>
-                        <h5 className={bootstrap.cardtitle}><a href={link}>{name}</a></h5>
-                        <p className={bootstrap.cardtext}><small className={bootstrap.textmuted}>{startDate}</small></p>
+                        <h5 className={bootstrap.h5, bootstrap.cardtitle}><a href={link}>{name}</a></h5>
+                        <p className={bootstrap.p, bootstrap.cardtext}><small className={bootstrap.textmuted}>{startDate}</small></p>
                       </div>
                     </div>
                 </div>
@@ -120,15 +120,15 @@ function ProjectComponent({ name, link, tags, startDate, endDate, imagePath, des
       <MediaQuery minWidth={541}>
           <div>
             <div className={bootstrap.card, bootstrap.mb3} style={{maxWidth: "540px"}}>
-                <div className={bootstrap.row}>
+                <div className={bootstrap.row, bootstrap.g0}>
                     <div className={bootstrap.col4}>
-                      <img src={imageArray[imagePath]} className={bootstrap.imgfluid, bootstrap.roundedstart} alt="..."/>
+                      <img src={imageArray[imagePath]} className={bootstrap.img, bootstrap.imgfluid, bootstrap.roundedstart} alt="..."/>
                     </div>
                     <div className={bootstrap.col8}>
                       <div className={bootstrap.cardbody}>
-                        <h5 className={bootstrap.cardtitle}><a href={link}>{name}</a></h5>
-                        <p className={bootstrap.cardtext}>{description}</p>
-                        <p className={bootstrap.cardtext}><small className={bootstrap.textmuted}>{startDate}</small></p>
+                        <h5 className={bootstrap.h5, bootstrap.cardtitle}><a href={link}>{name}</a></h5>
+                        <p className={bootstrap.p, bootstrap.cardtext}>{description}</p>
+                        <p className={bootstrap.p, bootstrap.cardtext}><small className={bootstrap.textmuted}>{startDate}</small></p>
                       </div>
                     </div>
                 </div>
