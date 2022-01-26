@@ -2,8 +2,8 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import * as homepage from "./homepage.module.css"
 
-function Header() {
-    function generateLink(){
+class Header extends React.Component {
+    generateLink = () => {
         let referrer = document.referrer;
         console.log("referrer: " + referrer);
         // "jeffreykozik.com/portfolios"
@@ -14,7 +14,7 @@ function Header() {
         //     return "";
         // }
     }
-    function generateName(){
+    generateName = () => {
         let referrer = document.referrer;
         console.log("referrer: " + referrer);
         let portfolioName = "";
@@ -32,12 +32,14 @@ function Header() {
         // }
         return portfolioName;
     }
-    return(
-        <header style={{textAlign: "left"}}>
-          <h2 id={homepage.rubikFont1}><a href="https://jeffreykozik.com">Homepage</a></h2>
-          <h2 id={homepage.rubikFont2} style={{float: "right"}}><a href={generateLink}>{generateName}</a></h2>
-        </header>
-    )
+    render(){
+        return(
+            <div style={{textAlign: "left"}}>
+              <h2 id={homepage.rubikFont1}><a href="https://jeffreykozik.com">Homepage</a></h2>
+              <h2 id={homepage.rubikFont2} style={{float: "right"}}><a href={this.generateLink}>{this.generateName}</a></h2>
+            </div>
+        )
+    }
 }
 
 export default Header
