@@ -215,7 +215,7 @@ function HomePage ({nameArray}){
         let listItems = []
         for(let i = 0; i <  projectsArray.length; i++){
             if((nameArrayParam.length == 0) || (nameArrayParam.includes(projectsArray[i].name))){
-                listItems.append(<div key={i}><ProjectComponent style={bounceInDownStyles.bounceInDown} name={projectsArray[i].name} link={projectsArray[i].link} tags={projectsArray[i].tags} startDate={projectsArray[i].startDate} endDate={projectsArray[i].endDate} imagePath={projectsArray[i].imagePath} description={projectsArray[i].description}/></div>)
+                listItems.push(<div key={i}><ProjectComponent style={bounceInDownStyles.bounceInDown} name={projectsArray[i].name} link={projectsArray[i].link} tags={projectsArray[i].tags} startDate={projectsArray[i].startDate} endDate={projectsArray[i].endDate} imagePath={projectsArray[i].imagePath} description={projectsArray[i].description}/></div>)
             }
         }
         return listItems
