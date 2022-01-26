@@ -18,13 +18,13 @@ function PageComponent({ seoName, pageInnerComponent }) {
                 <MediaQuery minWidth={821}>
                     <div className={pages.page_container}>
                         <Header/>
-                        <>{pageInnerComponent}</>
+                        {pageInnerComponent}
                     </div>
                 </MediaQuery>
                 <MediaQuery maxWidth={820}>
                     <div className={pages.page_container_phone}>
                         <Header/>
-                        <>{pageInnerComponent}</>
+                        {pageInnerComponent}
                     </div>
                 </MediaQuery>
             </body>
@@ -33,8 +33,13 @@ function PageComponent({ seoName, pageInnerComponent }) {
 }
 
 PageComponent.propTypes = {
-  pageInnerComponent: PropTypes.node,
+  pageInnerComponent: PropTypes.any,
   seoName: PropTypes.string
+}
+
+PageComponent.defaultProps = {
+    pageInnerComponent: <div>Site under construction.</div>,
+    seoName: "Site under construction"
 }
 
 export default PageComponent
