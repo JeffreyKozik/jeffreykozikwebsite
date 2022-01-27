@@ -39,7 +39,7 @@ function ProjectComponent({ name, link, tags, startDate, endDate, imagePath, des
                     </div>
                     <div className="col-8">
                       <div className="card-body">
-                        <h5 className="card-title h5"><Link className="a" to={link}  state={{portName: [portfolioNameParam]}}}>{name}</Link></h5>
+                        <h5 className="card-title h5"><Link className="a" to={link}  state={{portName: [portfolioNameParam]}}>{name}</Link></h5>
                         <p className="card-text p"><small className="text-muted small">{startDate}</small></p>
                       </div>
                     </div>
