@@ -1,6 +1,8 @@
+import { StyleSheet, css } from 'aphrodite';
 import { Link } from "gatsby"
 import PropTypes from 'prop-types';
 import React from 'react'
+import { bounceInDown } from 'react-animations';
 import MediaQuery from 'react-responsive'
 
 import './bootstrap.css'
@@ -16,13 +18,20 @@ import totalcostScreenshot from "../images/homepage_squares/totalcostscreenshot.
 import multitabsearchScreenshot from "../images/homepage_squares/multitabscreenshot.png"
 import seobrowserextensionScreenshot from "../images/homepage_squares/seoscreenshot.png"
 
+const styles = StyleSheet.create({
+  bounceInDown: {
+    animationName: bounceInDown,
+    animationDuration: '2s'
+  }
+})
+
 let imageArray = [sciquelScreenshot, urbanearthScreenshot, jeffreykozikScreenshot, oneworldbrowserextensionScreenshot, smrtnrllbrowserextensionScreenshot, searchengineutilitybeltScreenshot, totalcostScreenshot, multitabsearchScreenshot, seobrowserextensionScreenshot]
 
 function ProjectComponent({ name, link, tags, startDate, endDate, imagePath, description }) {
   return(
       <>
       <MediaQuery maxWidth={540}>
-          <div>
+          <div className={css(styles.bounceInDown)}>
             <div className="card mb-3" style={{maxWidth: "540px"}}>
                 <div className="row g-0">
                     <div className="col-4">
@@ -39,7 +48,7 @@ function ProjectComponent({ name, link, tags, startDate, endDate, imagePath, des
          </div>
       </MediaQuery>
       <MediaQuery minWidth={541}>
-          <div>
+          <div className={css(styles.bounceInDown)}>
             <div className="card mb-3" style={{maxWidth: "540px"}}>
                 <div className="row g-0">
                     <div className="col-4">

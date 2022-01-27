@@ -1,7 +1,5 @@
-import { StyleSheet, css } from 'aphrodite';
 import PropTypes from "prop-types"
 import React from 'react'
-import { bounceInDown } from 'react-animations';
 import Select from 'react-select'
 
 import makeAnimated from 'react-select/animated'
@@ -11,13 +9,6 @@ import ProjectComponent from "./projectcomponent.js"
 
 import * as homepage from './homepage.module.css';
 
-
-const styles = StyleSheet.create({
-  bounceInDown: {
-    animationName: bounceInDown,
-    animationDuration: '2s'
-  }
-})
 
 let categoryArray = [];
 class Category{
