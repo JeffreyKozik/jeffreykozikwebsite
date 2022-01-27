@@ -10,7 +10,7 @@ import * as homepage from "../../../components/homepage.module.css"
 
 function IndexPage() {
     const [portfolioName, setPortfolioName] = useSessionStorage('name', "");
-    setPortfolioName("Podmark");
+    () => {setPortfolioName("Podmark")};
     return (
         <>
             <Seo title="Podmark Portfolio" />
