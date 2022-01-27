@@ -2,7 +2,7 @@ import * as React from "react"
 import { connect } from 'react-redux';
 import Header from "../../../components/header"
 import HomePage from "../../../components/homepage"
-import { togglePortfolioName } from '../state/app';
+import { togglePortfolioName } from '../../../state/app';
 import Seo from "../../../components/seo"
 
 import * as homepage from "../../../components/homepage.module.css"
