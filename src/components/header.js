@@ -1,9 +1,8 @@
+import PropTypes from "prop-types"
 import * as React from "react"
-import { useSelector } from 'react-redux';
-import { togglePortfolioName } from '../state/app';
+import { connect } from "react-redux"
 
-function Header() {
-    const portfolioName = useSelector(togglePortfolioName);
+function Header({portfolioName, nothing}) {
     return (
         <>
             <header>{portfolioName}</header>
@@ -11,7 +10,18 @@ function Header() {
     )
 }
 
-export default Header
+Header.propTypes = {
+  portfolioName: PropTypes.string.isRequired,
+  nothing: PropTypes.any.isRequired
+}
+
+const mapStateToProps = ({ portfolioName }) => {
+    return { portfolioName }
+}
+
+const ConnectedHeader = connect(mapStateToProps, null)(Header)
+
+export default ConnectedHeader
 
 // import * as React from "react"
 // import PropTypes from "prop-types"
