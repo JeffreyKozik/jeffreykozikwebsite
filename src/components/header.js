@@ -1,13 +1,14 @@
-import PropTypes from "prop-types"
 import * as React from "react"
-import * as homepage from "./homepage.module.css"
+import { useSelector } from 'react-redux';
+import { togglePortfolioName } from '../state/app';
 
-class Header extends React.Component {
-    render(){
-        return(
-            <></>
-        )
-    }
+function Header() {
+    const portfolioName = useSelector(togglePortfolioName);
+    return (
+        <>
+            <header>{portfolioName}</header>
+        </>
+    )
 }
 
 export default Header
