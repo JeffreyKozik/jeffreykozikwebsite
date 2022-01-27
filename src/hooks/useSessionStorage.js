@@ -1,11 +1,15 @@
 import { useState, useEffect } from 'react';
 
 function getSessionStorageOrDefault(key, defaultValue) {
-  const stored = sessionStorage.getItem(key);
-  if (!stored) {
-    return defaultValue;
+  if (typeof window !== 'undefined') {
+      const stored = window.sessionStorage.getItem(key);
+      if (!stored) {
+        return defaultValue;
+      }
+      return JSON.parse(stored);
+  } else {
+      return "";
   }
-  return JSON.parse(stored);
 }
 
 export function useSessionStorage(key, defaultValue) {
