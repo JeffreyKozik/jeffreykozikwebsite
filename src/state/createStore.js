@@ -14,10 +14,12 @@ const initialState = { portfolioName: "" }
 
 // const createStore = () => reduxCreateStore(reducer, initialState)
 
-const reduxCreateStore = createStore(reducer, initialState,
+const reduxCreateStore = () => createStore(reducer, initialState,
     composeWithDevTools(
         applyMiddleware()
     )
 );
+
+// const reduxCreateStore = createStore(reducer, initialState);
 
 export default reduxCreateStore
