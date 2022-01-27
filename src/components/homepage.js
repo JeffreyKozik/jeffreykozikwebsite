@@ -164,7 +164,7 @@ let collegeSenior = new Tag("College Senior", "", "Time Period");
 //    <div key={index}><ProjectComponent style={bounceInDownStyles.bounceInDown} name={projectElement.name} link={projectElement.link} tags={projectElement.tags} startDate={projectElement.startDate} endDate={projectElement.endDate} imagePath={projectElement.imagePath} description={projectElement.description}/></div>
 //  );
 
-function HomePage ({nameArray}){
+function HomePage ({nameArray, portfolioName}){
     let projectsArray = [];
     class Project{
       constructor(name, link, tags, startDate, endDate, imagePath, description){
@@ -204,7 +204,7 @@ function HomePage ({nameArray}){
         let listItems = []
         for(let i = 0; i <  projectsArray.length; i++){
             if((nameArrayParam.length == 0) || (nameArrayParam.includes(projectsArray[i].name))){
-                listItems.push(<div key={i}><ProjectComponent name={projectsArray[i].name} link={projectsArray[i].link} tags={projectsArray[i].tags} startDate={projectsArray[i].startDate} endDate={projectsArray[i].endDate} imagePath={projectsArray[i].imagePath} description={projectsArray[i].description}/></div>)
+                listItems.push(<div key={i}><ProjectComponent name={projectsArray[i].name} link={projectsArray[i].link} tags={projectsArray[i].tags} startDate={projectsArray[i].startDate} endDate={projectsArray[i].endDate} imagePath={projectsArray[i].imagePath} description={projectsArray[i].description} portfolioNameParam={portfolioName}/></div>)
             }
         }
         return listItems
@@ -219,11 +219,13 @@ function HomePage ({nameArray}){
 }
 
 HomePage.propTypes = {
-  nameArray: PropTypes.string
+  nameArray: PropTypes.string,
+  portfolioName: PropTypes.string
 }
 
 HomePage.defaultProps = {
-  nameArray: []
+  nameArray: [],
+  portfolioName: ""
 }
 
 // If you want to start measuring performance in your app, pass a function

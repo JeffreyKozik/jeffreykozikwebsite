@@ -1,17 +1,49 @@
 // import PropTypes from "prop-types"
 import * as React from "react"
 // import { connect } from "react-redux"
-import { useSessionStorage } from '../hooks/useSessionStorage'
+// import { useSessionStorage } from '../hooks/useSessionStorage'
 
 function Header() {
-    const [portfolioName, setPortfolioName] = useSessionStorage('name', "");
-    console.log("header portfolioName: " + portfolioName);
+    // const [portfolioName, setPortfolioName] = useSessionStorage('name', "");
+    // console.log("header portfolioName: " + portfolioName);
+    // componentDidMount(){
+        let windowHistoryState = "";
+        let portName = "";
+        if (typeof window !== 'undefined') {
+            windowHistoryState = window.history.state;
+            console.log("windowHistoryState: " + windowHistoryState);
+            portName = window.history.state.portName;
+            console.log("portName: " + portName);
+        }
+    // }
     return (
         <>
-            <header>{portfolioName}</header>
+            <header>{portName}</header>
         </>
     )
 }
+
+// class Header extends React.Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {date: new Date()};
+//   }
+//
+//   componentDidMount() {
+//   }
+//
+//   componentWillUnmount() {
+//   }
+//
+//   render() {
+//     return (
+//       <div>
+//         <h1>Hello, world!</h1>
+//         <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
+//       </div>
+//     );
+//   }
+// }
 
 export default Header;
 // Header.propTypes = {
