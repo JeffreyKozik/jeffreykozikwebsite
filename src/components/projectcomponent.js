@@ -26,6 +26,7 @@ const styles = StyleSheet.create({
 })
 
 let imageArray = [sciquelScreenshot, urbanearthScreenshot, jeffreykozikScreenshot, oneworldbrowserextensionScreenshot, smrtnrllbrowserextensionScreenshot, searchengineutilitybeltScreenshot, totalcostScreenshot, multitabsearchScreenshot, seobrowserextensionScreenshot]
+// state={{portName: [portfolioNameParam]}}
 
 function ProjectComponent({ name, link, tags, startDate, endDate, imagePath, description, portfolioNameParam }) {
   return(
@@ -39,7 +40,7 @@ function ProjectComponent({ name, link, tags, startDate, endDate, imagePath, des
                     </div>
                     <div className="col-8">
                       <div className="card-body">
-                        <h5 className="card-title h5"><Link className="a" to={link}  state={{portName: [portfolioNameParam]}}>{name}</Link></h5>
+                        <h5 className="card-title h5"><Link className="a" to={link}>{name}</Link></h5>
                         <p className="card-text p"><small className="text-muted small">{startDate}</small></p>
                       </div>
                     </div>
@@ -56,7 +57,7 @@ function ProjectComponent({ name, link, tags, startDate, endDate, imagePath, des
                     </div>
                     <div className="col-8">
                       <div className="card-body">
-                        <h5 className="card-title h5"><Link className="a" to={link} state={{portName: [portfolioNameParam]}}>{name}</Link></h5>
+                        <h5 className="card-title h5"><Link className="a" to={link}>{name}</Link></h5>
                         <p className="card-text p">{description}</p>
                         <p className="card-text p"><small className="text-muted small">{startDate}</small></p>
                       </div>

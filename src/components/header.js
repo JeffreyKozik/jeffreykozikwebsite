@@ -7,18 +7,18 @@ function Header() {
     // const [portfolioName, setPortfolioName] = useSessionStorage('name', "");
     // console.log("header portfolioName: " + portfolioName);
     // componentDidMount(){
-        let windowHistoryState = "";
-        let portName = "";
-        if (typeof window !== 'undefined') {
-            windowHistoryState = window.history.state;
-            console.log("windowHistoryState: " + windowHistoryState);
-            portName = window.history.state.portName;
-            console.log("portName: " + portName);
-        }
+        // let windowHistoryState = "";
+        // let portName = "";
+        // if (typeof window !== 'undefined') {
+        //     windowHistoryState = window.history.state;
+        //     console.log("windowHistoryState: " + windowHistoryState);
+        //     portName = window.history.state.portName;
+        //     console.log("portName: " + portName);
+        // }
     // }
     return (
         <>
-            <header>{portName}</header>
+            <header></header>
         </>
     )
 }
