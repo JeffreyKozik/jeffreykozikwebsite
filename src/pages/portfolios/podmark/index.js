@@ -4,11 +4,13 @@ import * as React from "react"
 import Header from "../../../components/header"
 import HomePage from "../../../components/homepage"
 import Seo from "../../../components/seo"
+import { useSessionStorage } from '../../../hooks/useSessionStorage'
 
 import * as homepage from "../../../components/homepage.module.css"
 
 function IndexPage() {
-    window.sessionStorage.setItem('portfolioName', 'Podmark');
+    const [portfolioName, setPortfolioName] = useSessionStorage('name', "");
+    setPortfolioName("Podmark");
     return (
         <>
             <Seo title="Podmark Portfolio" />

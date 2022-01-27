@@ -1,9 +1,10 @@
 // import PropTypes from "prop-types"
 import * as React from "react"
 // import { connect } from "react-redux"
+import { useSessionStorage } from '../hooks/useSessionStorage'
 
 function Header() {
-    let portfolioName = window.sessionStorage.getItem("portfolioName")
+    const [portfolioName, setPortfolioName] = useSessionStorage('name', "");
     return (
         <>
             <header>{portfolioName}</header>
