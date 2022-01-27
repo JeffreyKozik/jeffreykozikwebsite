@@ -2719,7 +2719,7 @@
   "resolved" "https://registry.npmjs.org/arrify/-/arrify-2.0.1.tgz"
   "version" "2.0.1"
 
-"asap@^2.0.3":
+"asap@^2.0.3", "asap@^2.0.6":
   "integrity" "sha1-5QNHYR1+aQlDIIu9r+vLwvuGbUY="
   "resolved" "https://registry.npmjs.org/asap/-/asap-2.0.6.tgz"
   "version" "2.0.6"
@@ -5050,6 +5050,11 @@
     "signal-exit" "^3.0.3"
     "strip-final-newline" "^2.0.0"
 
+"exenv@^1.2.2":
+  "integrity" "sha1-KueOhdmJQVhnCwPUe+wfA72Ru50="
+  "resolved" "https://registry.npmjs.org/exenv/-/exenv-1.2.2.tgz"
+  "version" "1.2.2"
+
 "exif-parser@^0.1.12":
   "integrity" "sha1-WKnS1ywCwfbwKg70qRZicrd2CSI="
   "resolved" "https://registry.npmjs.org/exif-parser/-/exif-parser-0.1.12.tgz"
@@ -6436,12 +6441,25 @@
   "resolved" "https://registry.npmjs.org/highlight.js/-/highlight.js-10.7.3.tgz"
   "version" "10.7.3"
 
+"hoist-non-react-statics@^2.3.1":
+  "integrity" "sha512-rqcy4pJo55FTTLWt+bU8ukscqHeE/e9KWvsOW2b/a3afxQZhwkQdT1rPPCJ0rYXdj4vNcasY8zHTH+jF/qStxw=="
+  "resolved" "https://registry.npmjs.org/hoist-non-react-statics/-/hoist-non-react-statics-2.5.5.tgz"
+  "version" "2.5.5"
+
 "hoist-non-react-statics@^3.3.0", "hoist-non-react-statics@^3.3.1", "hoist-non-react-statics@^3.3.2":
   "integrity" "sha512-/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw=="
   "resolved" "https://registry.npmjs.org/hoist-non-react-statics/-/hoist-non-react-statics-3.3.2.tgz"
   "version" "3.3.2"
   dependencies:
     "react-is" "^16.7.0"
+
+"hoist-react-statics@^1.0.2":
+  "integrity" "sha512-tAUX5aT4aKq+D1E1hVnf+veWZPDCOZFaPZri+T38XNs1SueTDQWVwcVy0pEkjV6tCq0Xl6HMyTgzJjs7W2w92w=="
+  "resolved" "https://registry.npmjs.org/hoist-react-statics/-/hoist-react-statics-1.0.2.tgz"
+  "version" "1.0.2"
+  dependencies:
+    "hoist-non-react-statics" "^2.3.1"
+    "react-display-name" "^0.2.3"
 
 "hosted-git-info@^3.0.8":
   "integrity" "sha512-aXpmwoOhRBrw6X3j0h5RloK4x1OzsxMPyxqIHyNfSe2pypkVTZFpEiRoSipPEPlMrh0HW/XsjkJ5WgnCirpNUw=="
@@ -6660,6 +6678,13 @@
   "integrity" "sha512-PYUF+94gDfhy+LsQxM0g3d6Hge4l1pAqOSOiZuHWzMvQEGsbRQ/ck2WioLqrY2ZkHyPgVUXxn+hrkF7D6QUGbA=="
   "resolved" "https://registry.npmjs.org/inline-style-prefixer/-/inline-style-prefixer-5.1.2.tgz"
   "version" "5.1.2"
+  dependencies:
+    "css-in-js-utils" "^2.0.0"
+
+"inline-style-prefixer@^6.0.1":
+  "integrity" "sha512-AsqazZ8KcRzJ9YPN1wMH2aNM7lkWQ8tSPrW5uDk1ziYwiAPWSZnUsC7lfZq+BDqLqz0B4Pho5wscWcJzVvRzDQ=="
+  "resolved" "https://registry.npmjs.org/inline-style-prefixer/-/inline-style-prefixer-6.0.1.tgz"
+  "version" "6.0.1"
   dependencies:
     "css-in-js-utils" "^2.0.0"
 
@@ -9362,6 +9387,11 @@
     "strip-ansi" "6.0.0"
     "text-table" "0.2.0"
 
+"react-display-name@^0.2.3":
+  "integrity" "sha512-I+vcaK9t4+kypiSgaiVWAipqHRXYmZIuAiS8vzFvXHHXVigg/sMKwlRgLy6LH2i3rmP+0Vzfl5lFsFRwF1r3pg=="
+  "resolved" "https://registry.npmjs.org/react-display-name/-/react-display-name-0.2.5.tgz"
+  "version" "0.2.5"
+
 "react-dom@^15.0.0 || ^16.0.0 || ^17.0.0", "react-dom@^16.8.0 || ^17.0.0", "react-dom@^16.9.0 || ^17.0.0", "react-dom@^17.0.2", "react-dom@>=16.6.0", "react-dom@>=16.8", "react-dom@15.x || 16.x || 17.x":
   "integrity" "sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA=="
   "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-17.0.2.tgz"
@@ -9541,11 +9571,6 @@
   "version" "2.2.2"
   dependencies:
     "minimatch" "3.0.4"
-
-"redux-devtools-extension@^2.13.9":
-  "integrity" "sha512-cNJ8Q/EtjhQaZ71c8I9+BPySIBVEKssbPpskBfsXqb8HJ002A3KRVHfeRzwRo6mGPqsm7XuHTqNSNeS1Khig0A=="
-  "resolved" "https://registry.npmjs.org/redux-devtools-extension/-/redux-devtools-extension-2.13.9.tgz"
-  "version" "2.13.9"
 
 "redux-thunk@^2.4.0":
   "integrity" "sha512-OOYGNY5Jy2TWvTL1KgAlVy6dcx3siPJ1wTq741EPyUKfn6W6nChdICjZwCd0p8AZBs5kWpZlbkXW2nE/zjUa+Q=="

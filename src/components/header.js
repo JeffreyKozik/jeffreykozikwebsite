@@ -1,27 +1,28 @@
-import PropTypes from "prop-types"
+// import PropTypes from "prop-types"
 import * as React from "react"
-import { connect } from "react-redux"
+// import { connect } from "react-redux"
 
-function Header({portfolioName, nothing}) {
+function Header() {
     return (
         <>
-            <header>{portfolioName}</header>
+            <header>{sessionStorage.getItem("portfolioName")}</header>
         </>
     )
 }
 
-Header.propTypes = {
-  portfolioName: PropTypes.string.isRequired,
-  nothing: PropTypes.any.isRequired
-}
+export default Header;
+// Header.propTypes = {
+//   portfolioName: PropTypes.string.isRequired,
+//   nothing: PropTypes.any.isRequired
+// }
 
-const mapStateToProps = ({ portfolioName }) => {
-    return { portfolioName }
-}
-
-const ConnectedHeader = connect(mapStateToProps, null)(Header)
-
-export default ConnectedHeader
+// const mapStateToProps = ({ portfolioName }) => {
+//     return { portfolioName }
+// }
+//
+// const ConnectedHeader = connect(mapStateToProps, null)(Header)
+//
+// export default ConnectedHeader
 
 // import * as React from "react"
 // import PropTypes from "prop-types"
