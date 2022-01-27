@@ -8,7 +8,7 @@ import Seo from "../../../components/seo"
 import * as homepage from "../../../components/homepage.module.css"
 
 function IndexPage() {
-    sessionStorage.setItem('portfolioName', 'Podmark');
+    window.sessionStorage.setItem('portfolioName', 'Podmark');
     return (
         <>
             <Seo title="Podmark Portfolio" />

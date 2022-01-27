@@ -3,9 +3,10 @@ import * as React from "react"
 // import { connect } from "react-redux"
 
 function Header() {
+    let portfolioName = window.sessionStorage.getItem("portfolioName")
     return (
         <>
-            <header>{sessionStorage.getItem("portfolioName")}</header>
+            <header>{portfolioName}</header>
         </>
     )
 }
