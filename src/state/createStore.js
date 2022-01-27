@@ -1,4 +1,5 @@
-import { createStore as reduxCreateStore } from "redux"
+import { createStore as reduxCreateStore, applyMiddleware } from "redux"
+import { composeWithDevTools } from '@redux-devtools/extension';
 
 const reducer = (state, action) => {
   if (action.type === `CHANGE`) {
@@ -11,5 +12,12 @@ const reducer = (state, action) => {
 
 const initialState = { portfolioName: "" }
 
-const createStore = () => reduxCreateStore(reducer, initialState)
+// const createStore = () => reduxCreateStore(reducer, initialState)
+
+const createStore = reduxCreateStore(reducer, initialState,
+    composeWithDevTools(
+        applyMiddleware()
+    )
+);
+
 export default createStore

@@ -14,6 +14,7 @@ module.exports = {
     `@fortawesome/free-solid-svg-icons`,
     `@fortawesome/react-fontawesome`,
     `@mui/material`,
+    `@redux-devtools/extension`,
     `aphrodite`,
     `bootstrap`,
     `dangerously-set-html-content`,
