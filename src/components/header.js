@@ -5,6 +5,7 @@ import { useSessionStorage } from '../hooks/useSessionStorage'
 
 function Header() {
     const [portfolioName, setPortfolioName] = useSessionStorage('name', "");
+    console.log("header portfolioName: " + portfolioName);
     return (
         <>
             <header>{portfolioName}</header>

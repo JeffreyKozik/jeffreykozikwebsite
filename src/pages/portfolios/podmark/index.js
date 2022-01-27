@@ -11,6 +11,7 @@ import * as homepage from "../../../components/homepage.module.css"
 function IndexPage() {
     const [portfolioName, setPortfolioName] = useSessionStorage('name', "");
     () => {setPortfolioName("Podmark")};
+    console.log("index portfolioName: " + portfolioName);
     return (
         <>
             <Seo title="Podmark Portfolio" />
