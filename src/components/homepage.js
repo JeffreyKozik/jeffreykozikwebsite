@@ -117,11 +117,7 @@ let collegeSenior = new Tag("College Senior", "", "Time Period");
 // let aiProject5 = new Project("AI Project 5", "", "", "", "", "");
 // let aiProject6 = new Project("AI Project 6", "", "", "", "", "");
 // let automatedResourceCollection = new Project("Automated Resource Collection", "", "", "", "", "");
-// let smoothNumbers = new Project("Smooth Numbers", "", "", "", "", "");
-// let rsa = new Project("RSA", "", "", "", "", "");
 // let inline = new Project("inLine", "", "", "", "", "");
-// let walksatDPLL = new Project("WalkSAT and DPLL", "", "", "", "", "");
-// let shampooColorMixModel = new Project("Shampoo Color Mix Model", "", "", "", "", "");
 // let pgAutomationBrowserExtension = new Project("P&G Automation Browser Extension", "", "", "", "", "");
 // let pgSplittingCSVAutomation = new Project("P&G Splitting CSV Automation", "", "", "", "", "");
 // let pgSortingCSVAutomation = new Project("P&G Sorting CSV Automation", "", "", "", "", "");
@@ -133,17 +129,9 @@ let collegeSenior = new Tag("College Senior", "", "Time Period");
 // let taskTimeRecorder = new Project("Task Time Recorder", "", "", "", "", "");
 // let pingPongRallyTracker = new Project("Ping Pong Rally Tracker", "", "", "", "", "");
 // let trickOrTag = new Project("Trick or Tag", "", "", "", "", "");
-// let squarePOSHackathon = new Project("Square Build What's POS-sible Hackathon", "", "", "", "", "");
 // let tedXCwru = new Project("TEDxCWRU", "", "", "", "", "");
 // let designForAmerica = new Project("Design For America", "", "", "", "", "");
-// let fixingSeleniumTaxScript = new Project("Fixing Selenium Tax Script", "", "", "", "", "");
-// let germanImmigrationAutomation = new Project("German Immigration Automation", "", "", "", "", "");
-// let circumvent2FASelenium = new Project("Circumvent 2FA Selenium", "", "", "", "", "");
-// let automatingUsernameCheckProcessIreland = new Project("Automating Username Check Process Ireland", "", "", "", "", "");
-// let automatedWayToGetJSErrors = new Project("Automated Way to Get JS Errors", "", "", "", "", "");
-// let autopayHealthcare = new Project("Autopay Healthcare", "", "", "", "", "");
 // let iosExtensionUnicart = new Project("iOS Extension Unicart", "", "", "", "", "");
-// let tradingViewGraphAutomation = new Project("Trading View Graph Automation", "", "", "", "", "");
 
 // function generateOptions(selectId, array){
 //     let options = []
@@ -199,6 +187,18 @@ function HomePage ({nameArray, portfolioName}){
     let totalCostBrowserExtensionIRSLogics = new Project("Total Cost Browser Extension", "https://jeffreykozik.com/projects/totalcostbrowserextension", "", "Oct - Nov 2021", "", 6, <>Custom browser extension I coded so that payment information across 12 tabs could be displayed in a single location.</>);
     let multitabSearchBrowserExtensionIRSLogics = new Project("Multitab Search Browser Extension", "https://jeffreykozik.com/projects/multitabsearch", "", "Oct 2021", "", 7, <>Custom browser extension I coded so that 12 different tabs could be searched across simultaneously.</>);
     let seoBrowserExtension = new Project("SEO Browser Extension", "https://jeffreykozik.com/projects/seobrowserextension", "", "Nov 2021", "", 8, <>Browser extension I coded for the owner of <a href="site-checker.org">site-checker.org</a> to easily get SEO tips for any website.</>);
+    let squarePOSHackathon = new Project("Square Build What's POS-sible Hackathon", "https://jeffreykozik.com/projects/squareposhackathon", "", "Oct - Dec 2021", "", 9, <>I came up with the idea of a browser extension for Square Businesses and won the "Best Feedback" (on Square API) award.</>);
+    let automatedWayToGetJSErrors = new Project("Automated Way to Get JS Errors", "https://jeffreykozik.com/projects/automatedwaytogetjserrors", "", "Oct 2021", "", 10, <>Selenium script I wrote with Python to automatically retrieve javascript errors from a list of urls in a text file.</>);
+    let automatingUsernameCheckProcess = new Project("Automating Username Check Process", "https://jeffreykozik.com/projects/automatingusernamecheckprocess", "", "Oct 2021", "", 11, <>Desktop GUI I created using Python, tkinter, Selenium, and openpyxl that automatically filled out an excel sheet.</>);
+    let shampooColorMixModel = new Project("Shampoo Color Mix Model", "https://jeffreykozik.com/projects/shampooColorMixModel", "", "Jun - Aug 2021", "", 12, <>Machine learning model I created why interning at P&G in R&D that predicted whether or not two shampoos would mix succesfully.</>);
+    let autopayHealthcare = new Project("Autopay Healthcare", "https://jeffreykozik.com/projects/autopayHealthcare", "", "Oct 2021", "", 13, <>I coded a Selenium script with Python to automatically pay a healthcare bill for someone whose website didn't have an autopay option.</>);
+    let circumvent2FASelenium = new Project("Circumvent 2FA Selenium", "https://jeffreykozik.com/projects/circumvent2FASelenium", "", "Sep 2021", "", 14, <>Selenium script I wrote with Python utilizing pickle and cookies to allow automation of websites with 2FA.</>);
+    let fixingSeleniumTaxScript = new Project("Fixing Selenium Tax Script", "https://jeffreykozik.com/projects/fixingSeleniumTaxScript", "", "Sep 2021", "", 15, <>First freelancing gig I did which was fixing a selenium script with WebDriverWait and tweaking a portion using Beautiful Soup.</>);
+    let germanImmigrationAutomation = new Project("German Immigration Automation", "https://jeffreykozik.com/projects/germanImmigrationAutomation", "", "Sep 2021", "", 16, <>Selenium script I coded with Python and the Gmail API to automatically get client an appointment with Immigration office.</>);
+    let rsa = new Project("RSA", "https://jeffreykozik.com/projects/rsa", "", "Nov - Dec 2021", "", 17, <>RSA implementation I coded in Python using Miller-Rabin and rendered on a webpage using Flask and HTML.</>);
+    let smoothNumbers = new Project("Smooth Numbers", "https://jeffreykozik.com/projects/smoothnumbers", "", "Nov 2021", "", 18, <>Python script I wrote to solve problems in computational number theory.</>);
+    let walksatDPLL = new Project("WalkSAT and DPLL", "https://jeffreykozik.com/projects/walksatdpll", "", "Sep - Oct 2021", "", 19, <>Java program I coded with two classmates to test both the WalkSAT and DPLL algorithms of determining satisfiability.</>);
+    let tradingViewGraphAutomation = new Project("TradingView Graph Automation", "https://jeffreykozik.com/projects/tradingViewGraphAutomation", "", "Oct 2021", "", 20, <>Selenium script and GUI I wrote with python, openpyxl, tkinter, PIL, and Screenshot to screenshot market activity.</>);
 
     function listItemsFunction(nameArrayParam) {
         let listItems = []

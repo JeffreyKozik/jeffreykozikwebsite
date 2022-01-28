@@ -68,6 +68,7 @@ module.exports = {
     `lodash`,
     `prop-types`,
     `react-animations`,
+    `react-gist`,
     `react-redux`,
     `react-responsive`,
     `react-select`,

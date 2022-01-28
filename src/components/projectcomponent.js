@@ -17,6 +17,18 @@ import searchengineutilitybeltScreenshot from "../images/homepage_squares/search
 import totalcostScreenshot from "../images/homepage_squares/totalcostscreenshot.png"
 import multitabsearchScreenshot from "../images/homepage_squares/multitabscreenshot.png"
 import seobrowserextensionScreenshot from "../images/homepage_squares/seoscreenshot.png"
+import squarePOS from "../images/homepage_squares/squarepos.png"
+import automatedWayToGetJSErrors from "../images/homepage_squares/automatedWayToGetJSErrors.png"
+import automatingUsernameCheckProcess from "../images/homepage_squares/automatingUsernameCheckProcess.png"
+import shampooColorMixModel from "../images/homepage_squares/redblueshampoo.jpeg"
+import autopayHealthcare from "../images/homepage_squares/autopayHealthcare.png"
+import circumvent2FASelenium from "../images/homepage_squares/circumvent2FASelenium.png"
+import fixingSeleniumTaxScript from "../images/homepage_squares/beautifulsoup.jpeg"
+import germanImmigrationAutomation from "../images/homepage_squares/germanImmigrationAutomation.png"
+import rsa from "../images/homepage_squares/rsashield.jpeg"
+import smoothNumbers from "../images/homepage_squares/smoothnumbers.jpeg"
+import walksatdpll from "../images/homepage_squares/walksatdpll.jpeg"
+import tradingViewGraphAutomation from "../images/homepage_squares/tradingviewgraphautomation.png"
 
 const styles = StyleSheet.create({
   bounceInDown: {
@@ -25,7 +37,11 @@ const styles = StyleSheet.create({
   }
 })
 
-let imageArray = [sciquelScreenshot, urbanearthScreenshot, jeffreykozikScreenshot, oneworldbrowserextensionScreenshot, smrtnrllbrowserextensionScreenshot, searchengineutilitybeltScreenshot, totalcostScreenshot, multitabsearchScreenshot, seobrowserextensionScreenshot]
+let imageArray = [sciquelScreenshot, urbanearthScreenshot, jeffreykozikScreenshot,
+    oneworldbrowserextensionScreenshot, smrtnrllbrowserextensionScreenshot, searchengineutilitybeltScreenshot,
+    totalcostScreenshot, multitabsearchScreenshot, seobrowserextensionScreenshot, squarePOS, automatedWayToGetJSErrors, automatingUsernameCheckProcess,
+    shampooColorMixModel, autopayHealthcare, circumvent2FASelenium, fixingSeleniumTaxScript, germanImmigrationAutomation, rsa,
+    smoothNumbers, walksatdpll, tradingViewGraphAutomation]
 // state={{portName: [portfolioNameParam]}}
 
 function ProjectComponent({ name, link, tags, startDate, endDate, imagePath, description, portfolioNameParam }) {
@@ -36,7 +52,7 @@ function ProjectComponent({ name, link, tags, startDate, endDate, imagePath, des
             <div className="card mb-3" style={{maxWidth: "540px"}}>
                 <div className="row g-0">
                     <div className="col-4">
-                      <img src={imageArray[imagePath]} className="img img-fluid rounded-start" alt="..."/>
+                      <img src={imageArray[imagePath]} className="img img-fluid rounded-start" alt="homepage screenshot"/>
                     </div>
                     <div className="col-8">
                       <div className="card-body">
@@ -53,7 +69,7 @@ function ProjectComponent({ name, link, tags, startDate, endDate, imagePath, des
             <div className="card mb-3" style={{maxWidth: "540px"}}>
                 <div className="row g-0">
                     <div className="col-4">
-                      <img src={imageArray[imagePath]} className="img img-fluid rounded-start" alt="..."/>
+                      <img src={imageArray[imagePath]} className="img img-fluid rounded-start" alt="homepage screenshot"/>
                     </div>
                     <div className="col-8">
                       <div className="card-body">
