@@ -14,6 +14,8 @@ module.exports = {
     `@fortawesome/free-solid-svg-icons`,
     `@fortawesome/react-fontawesome`,
     `@mui/material`,
+    `@redux-devtools/extension`,
+    `asap`,
     `aphrodite`,
     `bootstrap`,
     `dangerously-set-html-content`,
@@ -62,12 +64,16 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+    `inline-style-prefixer`,
     `lodash`,
     `prop-types`,
     `react-animations`,
+    `react-gist`,
+    `react-redux`,
     `react-responsive`,
     `react-select`,
     `redux`,
+    `string-hash`,
     `xtypejs`,
   ],
 }
