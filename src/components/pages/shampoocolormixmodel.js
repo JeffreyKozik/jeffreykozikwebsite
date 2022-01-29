@@ -1,5 +1,5 @@
 import * as React from "react"
-import shampooPic from "../../images/redblueshampoo.png"
+import shampooPic from "../../images/redblueshampoo.jpeg"
 import * as pages from "../../page_styling/pages.module.css"
 
 const ShampooColorMixModelComponent = () => (

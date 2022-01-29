@@ -11,7 +11,7 @@ const Circumvent2FASeleniumComponent = () => (
             websites with 2FA.
         </h3>
         <video controls preload="auto" className={pages.page_video}>
-            <source src={gemini2FA} type="video/mp4"></source>
+            <source src={gemini2FA}></source>
         </video>
         <p className={pages.page_description}>
             Let's say there's some task you want to automate on a website and you need the script to

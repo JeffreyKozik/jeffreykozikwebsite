@@ -1,5 +1,5 @@
 import * as React from "react"
-import walksatGraph from "../../images/walksatGraph.png"
+import walksatGraph from "../../images/walksatgraph.png"
 import walksatdplledited from "../../images/walksatdplledited.mp4"
 import * as pages from "../../page_styling/pages.module.css"
 

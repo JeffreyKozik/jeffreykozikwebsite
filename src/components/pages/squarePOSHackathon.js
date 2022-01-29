@@ -1,6 +1,6 @@
 import * as React from "react"
 import squareFeedback from "../../images/squarefeedback.png"
-import * as pages from "../page_styling/pages.module.css"
+import * as pages from "../../page_styling/pages.module.css"
 
 const SquarePOSHackathonComponent = () => (
     <>
