@@ -1,6 +1,6 @@
 import * as React from "react"
 import Gist from "react-gist"
-import gemini2FA from "../../images/gemini2FA.MOV"
+import gemini2FA from "../../images/gemini2FA.mp4"
 import * as pages from "../../page_styling/pages.module.css"
 
 const Circumvent2FASeleniumComponent = () => (
@@ -11,7 +11,7 @@ const Circumvent2FASeleniumComponent = () => (
             websites with 2FA.
         </h3>
         <video controls preload="auto" className={pages.page_video}>
-            <source src={gemini2FA}></source>
+            <source src={gemini2FA} type="video/mp4"></source>
         </video>
         <p className={pages.page_description}>
             Let's say there's some task you want to automate on a website and you need the script to
