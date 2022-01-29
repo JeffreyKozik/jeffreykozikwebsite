@@ -152,7 +152,7 @@ let collegeSenior = new Tag("College Senior", "", "Time Period");
 //    <div key={index}><ProjectComponent style={bounceInDownStyles.bounceInDown} name={projectElement.name} link={projectElement.link} tags={projectElement.tags} startDate={projectElement.startDate} endDate={projectElement.endDate} imagePath={projectElement.imagePath} description={projectElement.description}/></div>
 //  );
 
-function HomePage ({nameArray, portfolioName}){
+function HomePage ({nameArray}){
     let projectsArray = [];
     class Project{
       constructor(name, link, tags, startDate, endDate, imagePath, description){
@@ -187,24 +187,27 @@ function HomePage ({nameArray, portfolioName}){
     let totalCostBrowserExtensionIRSLogics = new Project("Total Cost Browser Extension", "https://jeffreykozik.com/projects/totalcostbrowserextension", "", "Oct - Nov 2021", "", 6, <>Custom browser extension I coded so that payment information across 12 tabs could be displayed in a single location.</>);
     let multitabSearchBrowserExtensionIRSLogics = new Project("Multitab Search Browser Extension", "https://jeffreykozik.com/projects/multitabsearch", "", "Oct 2021", "", 7, <>Custom browser extension I coded so that 12 different tabs could be searched across simultaneously.</>);
     let seoBrowserExtension = new Project("SEO Browser Extension", "https://jeffreykozik.com/projects/seobrowserextension", "", "Nov 2021", "", 8, <>Browser extension I coded for the owner of <a href="site-checker.org">site-checker.org</a> to easily get SEO tips for any website.</>);
-    let squarePOSHackathon = new Project("Square Build What's POS-sible Hackathon", "https://jeffreykozik.com/projects/squareposhackathon", "", "Oct - Dec 2021", "", 9, <>I came up with the idea of a browser extension for Square Businesses and won the "Best Feedback" (on Square API) award.</>);
+    let squarePOSHackathon = new Project("Square Build What's POS-sible Hackathon", "https://jeffreykozik.com/projects/squarePOSHackathon", "", "Oct - Dec 2021", "", 9, <>I came up with the idea of a browser extension for Square Businesses and won the "Best Feedback" (on Square API) award.</>);
     let automatedWayToGetJSErrors = new Project("Automated Way to Get JS Errors", "https://jeffreykozik.com/projects/automatedwaytogetjserrors", "", "Oct 2021", "", 10, <>Selenium script I wrote with Python to automatically retrieve javascript errors from a list of urls in a text file.</>);
     let automatingUsernameCheckProcess = new Project("Automating Username Check Process", "https://jeffreykozik.com/projects/automatingusernamecheckprocess", "", "Oct 2021", "", 11, <>Desktop GUI I created using Python, tkinter, Selenium, and openpyxl that automatically filled out an excel sheet.</>);
-    let shampooColorMixModel = new Project("Shampoo Color Mix Model", "https://jeffreykozik.com/projects/shampooColorMixModel", "", "Jun - Aug 2021", "", 12, <>Machine learning model I created why interning at P&G in R&D that predicted whether or not two shampoos would mix succesfully.</>);
+    let shampooColorMixModel = new Project("Shampoo Color Mix Model", "https://jeffreykozik.com/projects/shampoocolormixmodel", "", "Jun - Aug 2021", "", 12, <>Machine learning model I created why interning at P&G in R&D that predicted whether or not two shampoos would mix succesfully.</>);
     let autopayHealthcare = new Project("Autopay Healthcare", "https://jeffreykozik.com/projects/autopayHealthcare", "", "Oct 2021", "", 13, <>I coded a Selenium script with Python to automatically pay a healthcare bill for someone whose website didn't have an autopay option.</>);
-    let circumvent2FASelenium = new Project("Circumvent 2FA Selenium", "https://jeffreykozik.com/projects/circumvent2FASelenium", "", "Sep 2021", "", 14, <>Selenium script I wrote with Python utilizing pickle and cookies to allow automation of websites with 2FA.</>);
-    let fixingSeleniumTaxScript = new Project("Fixing Selenium Tax Script", "https://jeffreykozik.com/projects/fixingSeleniumTaxScript", "", "Sep 2021", "", 15, <>First freelancing gig I did which was fixing a selenium script with WebDriverWait and tweaking a portion using Beautiful Soup.</>);
-    let germanImmigrationAutomation = new Project("German Immigration Automation", "https://jeffreykozik.com/projects/germanImmigrationAutomation", "", "Sep 2021", "", 16, <>Selenium script I coded with Python and the Gmail API to automatically get client an appointment with Immigration office.</>);
+    let circumvent2FASelenium = new Project("Circumvent 2FA Selenium", "https://jeffreykozik.com/projects/circumvent2FAselenium", "", "Sep 2021", "", 14, <>Selenium script I wrote with Python utilizing pickle and cookies to allow automation of websites with 2FA.</>);
+    let fixingSeleniumTaxScript = new Project("Fixing Selenium Tax Script", "https://jeffreykozik.com/projects/fixingseleniumtaxscript", "", "Sep 2021", "", 15, <>First freelancing gig I did which was fixing a selenium script with WebDriverWait and tweaking a portion using Beautiful Soup.</>);
+    let germanImmigrationAutomation = new Project("German Immigration Automation", "https://jeffreykozik.com/projects/germanimmigrationautomation", "", "Sep 2021", "", 16, <>Selenium script I coded with Python and the Gmail API to automatically get client an appointment with Immigration office.</>);
     let rsa = new Project("RSA", "https://jeffreykozik.com/projects/rsa", "", "Nov - Dec 2021", "", 17, <>RSA implementation I coded in Python using Miller-Rabin and rendered on a webpage using Flask and HTML.</>);
     let smoothNumbers = new Project("Smooth Numbers", "https://jeffreykozik.com/projects/smoothnumbers", "", "Nov 2021", "", 18, <>Python script I wrote to solve problems in computational number theory.</>);
     let walksatDPLL = new Project("WalkSAT and DPLL", "https://jeffreykozik.com/projects/walksatdpll", "", "Sep - Oct 2021", "", 19, <>Java program I coded with two classmates to test both the WalkSAT and DPLL algorithms of determining satisfiability.</>);
-    let tradingViewGraphAutomation = new Project("TradingView Graph Automation", "https://jeffreykozik.com/projects/tradingViewGraphAutomation", "", "Oct 2021", "", 20, <>Selenium script and GUI I wrote with python, openpyxl, tkinter, PIL, and Screenshot to screenshot market activity.</>);
+    let tradingViewGraphAutomation = new Project("TradingView Graph Automation", "https://jeffreykozik.com/projects/tradingviewgraphautomation", "", "Oct 2021", "", 20, <>Selenium script and GUI I wrote with python, openpyxl, tkinter, PIL, and Screenshot to screenshot market activity.</>);
 
     function listItemsFunction(nameArrayParam) {
         let listItems = []
+        for(let i=0; i < projectsArray.length; i++){
+            listItems.push("");
+        }
         for(let i = 0; i <  projectsArray.length; i++){
             if((nameArrayParam.length == 0) || (nameArrayParam.includes(projectsArray[i].name))){
-                listItems.push(<div key={i}><ProjectComponent name={projectsArray[i].name} link={projectsArray[i].link} tags={projectsArray[i].tags} startDate={projectsArray[i].startDate} endDate={projectsArray[i].endDate} imagePath={projectsArray[i].imagePath} description={projectsArray[i].description} portfolioNameParam={portfolioName}/></div>)
+                listItems[nameArrayParam.indexOf(projectsArray[i].name)] = <div key={i}><ProjectComponent name={projectsArray[i].name} link={projectsArray[i].link} tags={projectsArray[i].tags} startDate={projectsArray[i].startDate} endDate={projectsArray[i].endDate} imagePath={projectsArray[i].imagePath} description={projectsArray[i].description}/></div>
             }
         }
         return listItems
@@ -219,13 +222,11 @@ function HomePage ({nameArray, portfolioName}){
 }
 
 HomePage.propTypes = {
-  nameArray: PropTypes.string,
-  portfolioName: PropTypes.string
+  nameArray: PropTypes.string
 }
 
 HomePage.defaultProps = {
-  nameArray: [],
-  portfolioName: ""
+  nameArray: []
 }
 
 // If you want to start measuring performance in your app, pass a function

@@ -16,9 +16,6 @@ const SquarePOSHackathonComponent = () => (
             Below is my feedback on the Square API:
         </p>
         <p className={pages.page_description}>
-            Below is my feedback on the Square API:
-        </p>
-        <p className={pages.page_description}>
             The goal of my project was to create a browser extension that would automatically add a column onto a merchant's inventory table for "CO2 Offsets" and this row would show which inventory items the merchant had offset the CO2 of. The merchant could click a button which would automatically calculate how much CO2 the inventory item emitted and the merchant could click a button to offset it. I wanted to use the Invoices API as a way to store information about which inventory items the user had offset. Obviously I could've just displayed this in the browser extension, but then when the user used a different browser their info would no longer be showed. Furthermore, even if I made them sign up for an account so that their CO2 emission data could be synced across a number of devices and platforms, if they were checking their inventory on a square device that didn't have a browser such as the higher end Square POS devices, they wouldn't be able to manage their CO2 offsets there. So, by storing this information in invoices they could see the information from anywhere. So, I saw the value of this API and its current feature set as being able to store information about invoices that the MERCHANT had to pay/had paid as opposed to simply information about which customers had paid them. Perhaps there is another better way to store this information, but this is what I saw in the value of the invoice API.
         </p>
         <p className={pages.page_description}>

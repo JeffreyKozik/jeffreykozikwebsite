@@ -9,7 +9,7 @@ const ShampooColorMixModelComponent = () => (
             Machine learning model I created why interning at Procter & Gamble in R&D that predicted whether or not two
             shampoos would mix succesfully or unsuccesfully.
         </h3>
-        <img className={pages.page_video} src={jeffreykozikScreenshot} alt="jeffreykozik.com screenshot"/>
+        <img className={pages.page_video} src={shampooPic} alt="shampoo red blue screenshot"/>
         <p className={pages.page_description}>
             Let's say a factory creates a red shampoo then once that's finished they manufacture a blue shampoo. One question
             that must be answered in this process is if the pipes need to be washed out with water in between making the red and

@@ -9,7 +9,7 @@ body {
 #jeffrey_kozik {
   font-family: 'Rubik', sans-serif !important;
   text-align: center;
-  width: 540px;
+  max-width: 540px;
 }
 
 .homepage_container{

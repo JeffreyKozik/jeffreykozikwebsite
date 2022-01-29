@@ -44,7 +44,7 @@ let imageArray = [sciquelScreenshot, urbanearthScreenshot, jeffreykozikScreensho
     smoothNumbers, walksatdpll, tradingViewGraphAutomation]
 // state={{portName: [portfolioNameParam]}}
 
-function ProjectComponent({ name, link, tags, startDate, endDate, imagePath, description, portfolioNameParam }) {
+function ProjectComponent({ name, link, tags, startDate, endDate, imagePath, description }) {
   return(
       <>
       <MediaQuery maxWidth={540}>
@@ -94,7 +94,6 @@ ProjectComponent.propTypes = {
   endDate: PropTypes.string.isRequired,
   imagePath: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  portfolioNameParam: PropTypes.string.isRequired
 }
 
 export default ProjectComponent;
