@@ -1,6 +1,6 @@
 import * as React from "react"
 import Gist from "react-gist"
-import gemini2FA from "../../images/gemini2FA.mov"
+import gemini2FA from "../../images/gemini2FA.MOV"
 import * as pages from "../../page_styling/pages.module.css"
 
 const Circumvent2FASeleniumComponent = () => (
