@@ -34,7 +34,7 @@ import airCharger from "../images/homepage_squares/aircharger2.png"
 import welcomeBackHack from "../images/homepage_squares/welcomebackhack.png"
 import giveBackHack from "../images/homepage_squares/givebackhack.png"
 import pathfindingaiproject from "../images/homepage_squares/astar.jpeg"
-import inline from "../images/homepage_square/inline.jpeg"
+import inline from "../images/homepage_squares/inline.jpeg"
 
 const styles = StyleSheet.create({
   bounceInDown: {
