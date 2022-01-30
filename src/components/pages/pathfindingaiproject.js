@@ -1,5 +1,5 @@
 import * as React from "react"
-import aiprojectpathfinding from "../../images/aiprojectpathfinding.mp4"
+import aiprojectpathfinding from "../../images/aiprojectpathfindingedited.mp4"
 import * as pages from "../../page_styling/pages.module.css"
 
 const PathfindingAIProjectComponent = () => (
@@ -16,7 +16,7 @@ const PathfindingAIProjectComponent = () => (
         </video>
         <p className={pages.page_description}>
             The Github repository for this project can be found at this <a href="https://github.com/JeffreyKozik/AIProjects">link</a> in the
-            P2agents subdirectory. Note that it says only a few commits in the Github but that's just because for the project 
+            P2agents subdirectory. Note that it says only a few commits in the Github but that's just because for the project
             my group used a version control system that the University built that I wasn't able to import into Github, so I just uploaded the code
             to a new Github repo on my account.
         </p>
