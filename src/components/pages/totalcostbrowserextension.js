@@ -20,6 +20,10 @@ const TotalCostBrowserExtensionComponent = () => (
             by either refreshing the "Options" page or pressing the "REFRESH ALL" button. If the user wishes to only refresh information for one
             tab they can press the "REFRESH" button in that row.
         </p>
+        <p className={pages.page_description}>
+            UPDATE: I created a new feature where you can enter in the names of your subdomains in a text box (which saves your preferences
+            automatically) instead of having to have the tabs open.
+        </p>
     </>
 )
 

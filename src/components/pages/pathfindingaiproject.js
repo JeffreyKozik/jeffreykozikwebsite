@@ -1,23 +1,30 @@
-// import * as React from "react"
-// import jeffreykozikScreenshot from "../../images/jeffreykozikwebsitescreenshot.png"
-// import * as pages from "../../page_styling/pages.module.css"
-//
-// const JeffreyKozikWebsiteComponent = () => (
-//     <>
-//         <h1 className={pages.page_title}> AI Project: Pathfinding </h1>
-//         <h3 className={pages.page_subtitle}>
-//             Portfolio website I coded with React and Gatsby and a number of react packages including
-//             material-ui, react-select, font-awesome, lodash, simple analytics, and matomo analytics.
-//         </h3>
-//         <img className={pages.page_video} src={jeffreykozikScreenshot} alt="jeffreykozik.com screenshot"/>
-//         <p className={pages.page_description}>
-//             I first created this website using a VanillaJS framework with CSS and HTML. However, I decided to switch
-//             to React because it's faster, has better SEO, has a big community with lots of packages, and the code is easier to maintain
-//             using components with jsx. At first I used create-react-app, but then I wanted to make it multiple pages, and while there
-//             exists a way to do it with create-react-app and react-router, it isn't as optimal as doing it with Gatsby. I switched to Gatsby
-//             specifically because this is a largely static site and the DOM isn't changed frequently by the user.
-//         </p>
-//     </>
-// )
-//
-// export default JeffreyKozikWebsiteComponent
+import * as React from "react"
+import aiprojectpathfinding from "../../images/aiprojectpathfinding.mp4"
+import * as pages from "../../page_styling/pages.module.css"
+
+const PathfindingAIProjectComponent = () => (
+    <>
+        <h1 className={pages.page_title}> AI Project: Pathfinding </h1>
+        <h3 className={pages.page_subtitle}>
+            Java program I wrote with two teammates that navigated an AI bot through a maze
+            using A* search both with an "enemy agent" blocking the path and without. Uses
+            <a href="http://engr.case.edu/ray_soumya/sepia/html/">SEPIA</a>, a game framework
+            created by Computer Science students at CWRU for the Java GUI frontend.
+        </h3>
+        <video controls preload="auto" className={pages.page_video}>
+            <source src={aiprojectpathfinding} type="video/mp4"></source>
+        </video>
+        <p className={pages.page_description}>
+            The Github repository for this project can be found at this <a href="https://github.com/JeffreyKozik/AIProjects">link</a> in the
+            P2agents subdirectory. Note that it says only a few commits in the Github but that's just because for the project 
+            my group used a version control system that the University built that I wasn't able to import into Github, so I just uploaded the code
+            to a new Github repo on my account.
+        </p>
+        <p className={pages.page_description}>
+            Note: this program is written based off a template my professor created. However, myself and my two
+            teammates created the "AI" logic for A* search in this program.
+        </p>
+    </>
+)
+
+export default PathfindingAIProjectComponent

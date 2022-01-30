@@ -102,7 +102,6 @@ let collegeFreshman = new Tag("College Freshman", "", "Time Period");
 let sophomoreJunior = new Tag("College Sophomore/Junior", "", "Time Period");
 let collegeSenior = new Tag("College Senior", "", "Time Period");
 
-// let giveBackHackVol = new Project("GiveBackHack Vol & Tell", "/givebackhackvol", "", "", "", "../images/volhtml.png");
 // let harryPotterGame = new Project("Harry Potter Game", "", "", "", "", "");
 // let thomasRobertMalthusPresentation = new Project("Thomas Robert Malthus Presentation", "", "", "", "", "");
 // let basketballGameSimulator = new Project("Basktball Game Simulator", "", "", "", "", "");
@@ -113,7 +112,6 @@ let collegeSenior = new Tag("College Senior", "", "Time Period");
 // let hashtable = new Project("Hashtable", "", "", "", "", "");
 // let huffmanEncoder = new Project("Huffman Encoder", "", "", "", "", "");
 // let imperativeInterpreter = new Project("Imperative Interpreter", "", "", "", "", "");
-// let aiProject2 = new Project("AI Project 2", "", "", "", "", "");
 // let aiProject5 = new Project("AI Project 5", "", "", "", "", "");
 // let aiProject6 = new Project("AI Project 6", "", "", "", "", "");
 // let automatedResourceCollection = new Project("Automated Resource Collection", "", "", "", "", "");
@@ -121,11 +119,8 @@ let collegeSenior = new Tag("College Senior", "", "Time Period");
 // let pgAutomationBrowserExtension = new Project("P&G Automation Browser Extension", "", "", "", "", "");
 // let pgSplittingCSVAutomation = new Project("P&G Splitting CSV Automation", "", "", "", "", "");
 // let pgSortingCSVAutomation = new Project("P&G Sorting CSV Automation", "", "", "", "", "");
-// let pgFixing3DPrinter = new Project("P&G Fixing 3D Printer", "", "", "", "", "");
 // let computerVisionToMeasureRinsability = new Project("Computer Vision to Measure Rinsability", "", "", "", "", "");
 // let smrtnrllSelenium = new Project("smrtnrll Selenium", "", "", "", "", "");
-// let airCharger = new Project("Air Charger", "", "", "", "", "");
-// let welcomeBackHack = new Project("Welcome Back Hack", "", "", "", "", "");
 // let taskTimeRecorder = new Project("Task Time Recorder", "", "", "", "", "");
 // let pingPongRallyTracker = new Project("Ping Pong Rally Tracker", "", "", "", "", "");
 // let trickOrTag = new Project("Trick or Tag", "", "", "", "", "");
@@ -186,12 +181,12 @@ function HomePage ({nameArray}){
     let bingUtilityBelt = new Project("Bing Utility Belt", "https://jeffreykozik.com/projects/bingutilitybelt", "", "Nov 2021 - Jan 2022", "", 5, <>Browser extension I created to show how pervasive ads are in search engines by highlighting ads on Bing.</>);
     let totalCostBrowserExtensionIRSLogics = new Project("Total Cost Browser Extension", "https://jeffreykozik.com/projects/totalcostbrowserextension", "", "Oct - Nov 2021", "", 6, <>Custom browser extension I coded so that payment information across 12 tabs could be displayed in a single location.</>);
     let multitabSearchBrowserExtensionIRSLogics = new Project("Multitab Search Browser Extension", "https://jeffreykozik.com/projects/multitabsearch", "", "Oct 2021", "", 7, <>Custom browser extension I coded so that 12 different tabs could be searched across simultaneously.</>);
-    let seoBrowserExtension = new Project("SEO Browser Extension", "https://jeffreykozik.com/projects/seobrowserextension", "", "Nov 2021", "", 8, <>Browser extension I coded for the owner of <a href="site-checker.org">site-checker.org</a> to easily get SEO tips for any website.</>);
+    let seoBrowserExtension = new Project("Site Checker Browser Extension", "https://jeffreykozik.com/projects/seobrowserextension", "", "Nov 2021", "", 8, <>Browser extension I coded for the owner of <a href="site-checker.org">site-checker.org</a> to easily get SEO tips for any website.</>);
     let squarePOSHackathon = new Project("Square Build What's POS-sible Hackathon", "https://jeffreykozik.com/projects/squarePOSHackathon", "", "Oct - Dec 2021", "", 9, <>I came up with the idea of a browser extension for Square Businesses and won the "Best Feedback" (on Square API) award.</>);
     let automatedWayToGetJSErrors = new Project("Automated Way to Get JS Errors", "https://jeffreykozik.com/projects/automatedwaytogetjserrors", "", "Oct 2021", "", 10, <>Selenium script I wrote with Python to automatically retrieve javascript errors from a list of urls in a text file.</>);
     let automatingUsernameCheckProcess = new Project("Automating Username Check Process", "https://jeffreykozik.com/projects/automatingusernamecheckprocess", "", "Oct 2021", "", 11, <>Desktop GUI I created using Python, tkinter, Selenium, and openpyxl that automatically filled out an excel sheet.</>);
     let shampooColorMixModel = new Project("Shampoo Color Mix Model", "https://jeffreykozik.com/projects/shampoocolormixmodel", "", "Jun - Aug 2021", "", 12, <>Machine learning model I created why interning at P&G in R&D that predicted whether or not two shampoos would mix succesfully.</>);
-    let autopayHealthcare = new Project("Autopay Healthcare", "https://jeffreykozik.com/projects/autopayHealthcare", "", "Oct 2021", "", 13, <>I coded a Selenium script with Python to automatically pay a healthcare bill for someone whose website didn't have an autopay option.</>);
+    let autopayHealthcare = new Project("Autopay Healthcare", "https://jeffreykozik.com/projects/autopayhealthcare", "", "Oct 2021", "", 13, <>I coded a Selenium script with Python to automatically pay a healthcare bill for someone whose website didn't have an autopay option.</>);
     let circumvent2FASelenium = new Project("Circumvent 2FA Selenium", "https://jeffreykozik.com/projects/circumvent2FAselenium", "", "Sep 2021", "", 14, <>Selenium script I wrote with Python utilizing pickle and cookies to allow automation of websites with 2FA.</>);
     let fixingSeleniumTaxScript = new Project("Fixing Selenium Tax Script", "https://jeffreykozik.com/projects/fixingseleniumtaxscript", "", "Sep 2021", "", 15, <>First freelancing gig I did which was fixing a selenium script with WebDriverWait and tweaking a portion using Beautiful Soup.</>);
     let germanImmigrationAutomation = new Project("German Immigration Automation", "https://jeffreykozik.com/projects/germanimmigrationautomation", "", "Sep 2021", "", 16, <>Selenium script I coded with Python and the Gmail API to automatically get client an appointment with Immigration office.</>);
@@ -199,6 +194,12 @@ function HomePage ({nameArray}){
     let smoothNumbers = new Project("Smooth Numbers", "https://jeffreykozik.com/projects/smoothnumbers", "", "Nov 2021", "", 18, <>Python script I wrote to solve problems in computational number theory.</>);
     let walksatDPLL = new Project("WalkSAT and DPLL", "https://jeffreykozik.com/projects/walksatdpll", "", "Sep - Oct 2021", "", 19, <>Java program I coded with two classmates to test both the WalkSAT and DPLL algorithms of determining satisfiability.</>);
     let tradingViewGraphAutomation = new Project("TradingView Graph Automation", "https://jeffreykozik.com/projects/tradingviewgraphautomation", "", "Oct 2021", "", 20, <>Selenium script and GUI I wrote with python, openpyxl, tkinter, PIL, and Screenshot to screenshot market activity.</>);
+    let pgFixing3DPrinter = new Project("P&G Fixing 3D Printer", "https://jeffreykozik.com/projects/pgfixing3dprinter", "", "May - July 2020", "", 20, <>During my first internship with P&G, I worked at fixing a novel 3D printer using <a href="https://marlinfw.org/">Marlin firmware</a> and <a href="https://www.pronterface.com/">Pronterface</a>.</>);
+    let airCharger = new Project("Air Charger", "https://jeffreykozik.com/projects/aircharger", "", "Feb - July 2021", "", 21, <>Prototype for small, sleek iPhone magsafe battery pack.</>);
+    let welcomeBackHack = new Project("Welcome Back Hack", "https://jeffreykozik.com/projects/welcomebackhack", "", "Aug 2019", "", 22, <>Myself along with a few teammates won "Best in Creativity" at the 12-hour WelcomeBackHack Hackthon at CWRU.</>);
+    let giveBackHackVol = new Project("GiveBackHack Vol & Tell", "https://jeffreykozik.com/projects/givebackhackvol", "", "Sep 2019", "", 23, <>Myself along with a team of developers and businesspeople created a business model and a prototype for a volunteering website.</>);
+    let pathfindingaiproject = new Project("Pathfinding AI Project", "https://jeffreykozik.com/projects/pathfindingaiproject", "", "Apr 2021", "", 24, <>Java program I wrote with two teammates that navigated an AI bot through a maze with an enemy using A* search.</>);
+
 
     function listItemsFunction(nameArrayParam) {
         let listItems = []

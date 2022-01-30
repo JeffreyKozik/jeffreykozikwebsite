@@ -29,6 +29,11 @@ import rsa from "../images/homepage_squares/rsashield.jpeg"
 import smoothNumbers from "../images/homepage_squares/smoothnumbers.jpeg"
 import walksatdpll from "../images/homepage_squares/walksatdpll.jpeg"
 import tradingViewGraphAutomation from "../images/homepage_squares/tradingviewgraphautomation.png"
+import pgfixing3dprinter from "../images/homepage_squares/3dprinter.jpg"
+import airCharger from "../images/homepage_squares/aircharger2.png"
+import welcomeBackHack from "../images/homepage_squares/welcomebackhack.png"
+import giveBackHack from "../images/homepage_squares/givebackhack.png"
+import pathfindingaiproject from "../images/homepage_squares/astar.jpeg"
 
 const styles = StyleSheet.create({
   bounceInDown: {
@@ -41,7 +46,7 @@ let imageArray = [sciquelScreenshot, urbanearthScreenshot, jeffreykozikScreensho
     oneworldbrowserextensionScreenshot, smrtnrllbrowserextensionScreenshot, searchengineutilitybeltScreenshot,
     totalcostScreenshot, multitabsearchScreenshot, seobrowserextensionScreenshot, squarePOS, automatedWayToGetJSErrors, automatingUsernameCheckProcess,
     shampooColorMixModel, autopayHealthcare, circumvent2FASelenium, fixingSeleniumTaxScript, germanImmigrationAutomation, rsa,
-    smoothNumbers, walksatdpll, tradingViewGraphAutomation]
+    smoothNumbers, walksatdpll, tradingViewGraphAutomation, pgfixing3dprinter, airCharger, welcomeBackHack, giveBackHack, pathfindingaiproject]
 // state={{portName: [portfolioNameParam]}}
 
 function ProjectComponent({ name, link, tags, startDate, endDate, imagePath, description }) {
