@@ -115,7 +115,6 @@ let collegeSenior = new Tag("College Senior", "", "Time Period");
 // let aiProject5 = new Project("AI Project 5", "", "", "", "", "");
 // let aiProject6 = new Project("AI Project 6", "", "", "", "", "");
 // let automatedResourceCollection = new Project("Automated Resource Collection", "", "", "", "", "");
-// let inline = new Project("inLine", "", "", "", "", "");
 // let pgAutomationBrowserExtension = new Project("P&G Automation Browser Extension", "", "", "", "", "");
 // let pgSplittingCSVAutomation = new Project("P&G Splitting CSV Automation", "", "", "", "", "");
 // let pgSortingCSVAutomation = new Project("P&G Sorting CSV Automation", "", "", "", "", "");
@@ -194,12 +193,12 @@ function HomePage ({nameArray}){
     let smoothNumbers = new Project("Smooth Numbers", "https://jeffreykozik.com/projects/smoothnumbers", "", "Nov 2021", "", 18, <>Python script I wrote to solve problems in computational number theory.</>);
     let walksatDPLL = new Project("WalkSAT and DPLL", "https://jeffreykozik.com/projects/walksatdpll", "", "Sep - Oct 2021", "", 19, <>Java program I coded with two classmates to test both the WalkSAT and DPLL algorithms of determining satisfiability.</>);
     let tradingViewGraphAutomation = new Project("TradingView Graph Automation", "https://jeffreykozik.com/projects/tradingviewgraphautomation", "", "Oct 2021", "", 20, <>Selenium script and GUI I wrote with python, openpyxl, tkinter, PIL, and Screenshot to screenshot market activity.</>);
-    let pgFixing3DPrinter = new Project("P&G Fixing 3D Printer", "https://jeffreykozik.com/projects/pgfixing3dprinter", "", "May - July 2020", "", 20, <>During my first internship with P&G, I worked at fixing a novel 3D printer using <a href="https://marlinfw.org/">Marlin firmware</a> and <a href="https://www.pronterface.com/">Pronterface</a>.</>);
-    let airCharger = new Project("Air Charger", "https://jeffreykozik.com/projects/aircharger", "", "Feb - July 2021", "", 21, <>Prototype for small, sleek iPhone magsafe battery pack.</>);
-    let welcomeBackHack = new Project("Welcome Back Hack", "https://jeffreykozik.com/projects/welcomebackhack", "", "Aug 2019", "", 22, <>Myself along with a few teammates won "Best in Creativity" at the 12-hour WelcomeBackHack Hackthon at CWRU.</>);
-    let giveBackHackVol = new Project("GiveBackHack Vol & Tell", "https://jeffreykozik.com/projects/givebackhackvol", "", "Sep 2019", "", 23, <>Myself along with a team of developers and businesspeople created a business model and a prototype for a volunteering website.</>);
-    let pathfindingaiproject = new Project("Pathfinding AI Project", "https://jeffreykozik.com/projects/pathfindingaiproject", "", "Apr 2021", "", 24, <>Java program I wrote with two teammates that navigated an AI bot through a maze with an enemy using A* search.</>);
-
+    let pgFixing3DPrinter = new Project("P&G Fixing 3D Printer", "https://jeffreykozik.com/projects/pgfixing3dprinter", "", "May - July 2020", "", 21, <>During my first internship with P&G, I worked at fixing a novel 3D printer using <a href="https://marlinfw.org/">Marlin firmware</a> and <a href="https://www.pronterface.com/">Pronterface</a>.</>);
+    let airCharger = new Project("Air Charger", "https://jeffreykozik.com/projects/aircharger", "", "Feb - July 2021", "", 22, <>Prototype for small, sleek iPhone magsafe battery pack.</>);
+    let welcomeBackHack = new Project("Welcome Back Hack", "https://jeffreykozik.com/projects/welcomebackhack", "", "Aug 2019", "", 23, <>Myself along with a few teammates won "Best in Creativity" at the 12-hour WelcomeBackHack Hackthon at CWRU.</>);
+    let giveBackHackVol = new Project("GiveBackHack Vol & Tell", "https://jeffreykozik.com/projects/givebackhackvol", "", "Sep 2019", "", 24, <>Myself along with a team of developers and businesspeople created a business model and a prototype for a volunteering website.</>);
+    let pathfindingaiproject = new Project("Pathfinding AI Project", "https://jeffreykozik.com/projects/pathfindingaiproject", "", "Apr 2021", "", 25, <>Java program I wrote with two teammates that navigated an AI bot through a maze with an enemy using A* search.</>);
+    let inline = new Project("inLine", "https://jeffreykozik.com/projects/inline", "", "Nov - Dec 2021", "", 26, <>Myself and one other person created the inLine database to help businesses manage waitlists.</>);
 
     function listItemsFunction(nameArrayParam) {
         let listItems = []

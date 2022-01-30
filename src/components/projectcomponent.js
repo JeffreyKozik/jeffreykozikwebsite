@@ -34,6 +34,7 @@ import airCharger from "../images/homepage_squares/aircharger2.png"
 import welcomeBackHack from "../images/homepage_squares/welcomebackhack.png"
 import giveBackHack from "../images/homepage_squares/givebackhack.png"
 import pathfindingaiproject from "../images/homepage_squares/astar.jpeg"
+import inline from "../images/homepage_square/inline.jpeg"
 
 const styles = StyleSheet.create({
   bounceInDown: {
@@ -46,7 +47,7 @@ let imageArray = [sciquelScreenshot, urbanearthScreenshot, jeffreykozikScreensho
     oneworldbrowserextensionScreenshot, smrtnrllbrowserextensionScreenshot, searchengineutilitybeltScreenshot,
     totalcostScreenshot, multitabsearchScreenshot, seobrowserextensionScreenshot, squarePOS, automatedWayToGetJSErrors, automatingUsernameCheckProcess,
     shampooColorMixModel, autopayHealthcare, circumvent2FASelenium, fixingSeleniumTaxScript, germanImmigrationAutomation, rsa,
-    smoothNumbers, walksatdpll, tradingViewGraphAutomation, pgfixing3dprinter, airCharger, welcomeBackHack, giveBackHack, pathfindingaiproject]
+    smoothNumbers, walksatdpll, tradingViewGraphAutomation, pgfixing3dprinter, airCharger, welcomeBackHack, giveBackHack, pathfindingaiproject, inline]
 // state={{portName: [portfolioNameParam]}}
 
 function ProjectComponent({ name, link, tags, startDate, endDate, imagePath, description }) {
