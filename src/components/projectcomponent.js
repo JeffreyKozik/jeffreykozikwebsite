@@ -35,6 +35,15 @@ import welcomeBackHack from "../images/homepage_squares/welcomebackhack.png"
 import giveBackHack from "../images/homepage_squares/givebackhack.png"
 import pathfindingaiproject from "../images/homepage_squares/astar.jpeg"
 import inline from "../images/homepage_squares/inline.jpeg"
+import automatedresourcecollection from "../images/homepage_squares/goldbars.jpeg"
+import enhancedautomatedresourcecollection from "../images/homepage_squares/enhanced.png"
+import automatedtacticalbattles from "../images/homepage_squares/automatedtacticalbattles.png"
+import iosextensionunicart from "../images/homepage_squares/iosextensionunicart.png"
+import smrtnrllselenium from "../images/homepage_squares/smrtnrllselenium.png"
+import pgautomation from "../images/homepage_squares/pgautomation.jpeg"
+import pgrinse from "../images/homepage_squares/shampoo_rinse.jpeg"
+import tasktimerecorder from "../images/homepage_squares/tasktimerecorderfirstpage.png"
+import imperativeinterpreter from "../images/homepage_squares/imperativeinterpreter.png"
 
 const styles = StyleSheet.create({
   bounceInDown: {
@@ -47,7 +56,9 @@ let imageArray = [sciquelScreenshot, urbanearthScreenshot, jeffreykozikScreensho
     oneworldbrowserextensionScreenshot, smrtnrllbrowserextensionScreenshot, searchengineutilitybeltScreenshot,
     totalcostScreenshot, multitabsearchScreenshot, seobrowserextensionScreenshot, squarePOS, automatedWayToGetJSErrors, automatingUsernameCheckProcess,
     shampooColorMixModel, autopayHealthcare, circumvent2FASelenium, fixingSeleniumTaxScript, germanImmigrationAutomation, rsa,
-    smoothNumbers, walksatdpll, tradingViewGraphAutomation, pgfixing3dprinter, airCharger, welcomeBackHack, giveBackHack, pathfindingaiproject, inline]
+    smoothNumbers, walksatdpll, tradingViewGraphAutomation, pgfixing3dprinter, airCharger, welcomeBackHack, giveBackHack, pathfindingaiproject,
+    inline, automatedresourcecollection, enhancedautomatedresourcecollection, automatedtacticalbattles,
+    iosextensionunicart, smrtnrllselenium, pgautomation, pgrinse, tasktimerecorder, imperativeinterpreter]
 // state={{portName: [portfolioNameParam]}}
 
 function ProjectComponent({ name, link, tags, startDate, endDate, imagePath, description }) {

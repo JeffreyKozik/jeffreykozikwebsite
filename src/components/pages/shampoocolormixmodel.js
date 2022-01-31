@@ -42,6 +42,11 @@ const ShampooColorMixModelComponent = () => (
             isn't accurate enough for a commercial scale. However, it showed the power of machine learning to the team and hopefully inspires work in this
             direction in the future.
         </p>
+        <p className={pages.page_description}>
+            Some more detail: I also tried using a Naive Bayes model and Support Vector Machine model but they weren't
+            very accurate in my case. Also, I used scipy, sklearn, and numpy for the ML model.
+            I also used IBM LSF to run models faster.
+        </p>
     </>
 )
 
