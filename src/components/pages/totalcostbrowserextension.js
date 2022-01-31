@@ -4,7 +4,7 @@ import * as pages from "../../page_styling/pages.module.css"
 
 const TotalCostBrowserExtensionComponent = () => (
     <>
-        <h1 className={pages.page_title}> Search Multiple Tabs Browser Extension </h1>
+        <h1 className={pages.page_title}> Total Cost Browser Extension </h1>
         <h3 className={pages.page_subtitle}>
             Custom browser extension I coded so that payment information across 12 tabs could be displayed in a single location.
         </h3>

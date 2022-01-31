@@ -196,7 +196,7 @@ function HomePage ({nameArray}){
     let pgAutomation = new Project("P&G Automation", "/projects/pgautomation", "", "May - Jul 2020, Jun - Aug 2021", "", 32, <>Throughout my two internships at P&G I did work beyond my assigned work by automating two of my coworkers excel spreasheets and more.</>);
     let computerVisionToMeasureRinsability = new Project("Computer Vision to Measure Rinsability", "/projects/pgshampoorinsability", "", "May - Jul 2020", "", 33, <>I measured rinsability of shampoos using computer vision and used various tools such as Python, Trackpy, and TracTrac.</>);
     let taskTimeRecorder = new Project("Task Time Recorder", "/projects/tasktimerecorder", "", "Sep - Dec 2020", "", 34, <>Google Sheet I created to track how I spent my time and how efficient I was at accomplishing tasks using Google Apps Script.</>);
-    let imperativeInterpreter = new Project("Imperative Interpreter", "/projects/tasktimerecorder", "", "Apr 2021", "", 35, <>Coded a C-like programming language with two teammates in Racket that could handle functions among other things.</>);
+    let imperativeInterpreter = new Project("Imperative Interpreter", "/projects/imperativeinterpreter", "", "Apr 2021", "", 35, <>Coded a C-like programming language with two teammates in Racket that could handle functions among other things.</>);
 
     function listItemsFunction(nameArrayParam) {
         let listItems = []
