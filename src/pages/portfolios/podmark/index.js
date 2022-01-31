@@ -6,6 +6,7 @@ import HomePage from "../../../components/homepage"
 import Seo from "../../../components/seo"
 // import { useSessionStorage } from '../../../hooks/useSessionStorage'
 
+import '../../../components/bootstrap.css'
 import * as homepage from "../../../components/homepage.module.css"
 
 function IndexPage() {
@@ -16,7 +17,7 @@ function IndexPage() {
         <>
             <Seo title="Podmark Portfolio" />
             <Header/>
-            <h1 id={homepage.jeffrey_kozik}>Jeffrey Kozik: Podmark Portfolio</h1>
+            <h1 className="m-3" id={homepage.jeffrey_kozik}>Jeffrey Kozik: Podmark Portfolio</h1>
             <HomePage nameArray={["Sciquel", "Urban Earth", "Jeffrey Kozik Website",
              "1World Browser Extension", "smrtnrll Browser Extension", "Bing Utility Belt",
              "Total Cost Browser Extension", "Multitab Search Browser Extension", "Site Checker Browser Extension"]}/>

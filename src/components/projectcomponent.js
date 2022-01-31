@@ -64,14 +64,14 @@ let imageArray = [sciquelScreenshot, urbanearthScreenshot, jeffreykozikScreensho
 function ProjectComponent({ name, link, tags, startDate, endDate, imagePath, description }) {
   return(
       <>
-      <MediaQuery maxWidth={540}>
+      <MediaQuery maxWidth={360}>
           <div>
-            <div className="card mb-3" style={{maxWidth: "540px"}}>
+            <div className="card m-3" style={{maxWidth: "360px"}}>
                 <div className="row g-0">
-                    <div className="col-4">
+                    <div className="col-6">
                       <img src={imageArray[imagePath]} className="img img-fluid rounded-start" alt="homepage screenshot"/>
                     </div>
-                    <div className="col-8">
+                    <div className="col-6">
                       <div className="card-body">
                         <h5 className="card-title h5"><Link className="a" to={link}>{name}</Link></h5>
                         <p className="card-text p"><small className="text-muted small">{startDate}</small></p>
@@ -81,14 +81,14 @@ function ProjectComponent({ name, link, tags, startDate, endDate, imagePath, des
             </div>
          </div>
       </MediaQuery>
-      <MediaQuery minWidth={541}>
+      <MediaQuery minWidth={361}>
           <div>
-            <div className="card mb-3" style={{maxWidth: "540px"}}>
+            <div className="card m-3" style={{maxWidth: "360px"}}>
                 <div className="row g-0">
-                    <div className="col-4">
+                    <div className="col-6">
                       <img src={imageArray[imagePath]} className="img img-fluid rounded-start" alt="homepage screenshot"/>
                     </div>
-                    <div className="col-8">
+                    <div className="col-6">
                       <div className="card-body">
                         <h5 className="card-title h5"><Link className="a" to={link}>{name}</Link></h5>
                         <p className="card-text p">{description}</p>
