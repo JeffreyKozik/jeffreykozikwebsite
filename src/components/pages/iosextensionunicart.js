@@ -1,5 +1,5 @@
 import * as React from "react"
-import unicartscreenshot from "../../images/unicartscreenshot.png"
+import unicartscreenshot from "../../images/unicartscreen.png"
 import * as pages from "../../page_styling/pages.module.css"
 
 const IosExtensionUnicartComponent = () => (
