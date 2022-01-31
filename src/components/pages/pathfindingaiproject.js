@@ -9,7 +9,7 @@ const PathfindingAIProjectComponent = () => (
         <h3 className={pages.page_subtitle}>
             Java program I wrote with two teammates that navigated an AI bot through a maze
             using A* search both with an "enemy agent" blocking the path and without. Uses
-            <a href="http://engr.case.edu/ray_soumya/sepia/html/" target="_blank" rel="noreferrer">SEPIA</a>, a game framework
+            <a href="http://engr.case.edu/ray_soumya/sepia/html/" target="_blank" rel="noreferrer"> SEPIA</a>, a game framework
             created by Computer Science students at CWRU for the Java GUI frontend.
         </h3>
         <video controls preload="auto" className={pages.page_video}>

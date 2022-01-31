@@ -10,7 +10,7 @@ const AutomatedResourceCollectionComponent = () => (
             Java program I wrote with two teammates that determined optimal route for AI bot to
             take to harvest 1000 wood and 1000 gold from "forests" and "gold mines" with limited resources
             with a forward state space planner using A* Search and STRIPS-like language. Uses
-            <a href="http://engr.case.edu/ray_soumya/sepia/html/" target="_blank" rel="noreferrer">SEPIA</a>, a game framework
+            <a href="http://engr.case.edu/ray_soumya/sepia/html/" target="_blank" rel="noreferrer"> SEPIA</a>, a game framework
             created by Computer Science students at CWRU for the Java GUI frontend.
         </h3>
         <video controls preload="auto" className={pages.page_video}>
@@ -19,7 +19,7 @@ const AutomatedResourceCollectionComponent = () => (
         <p className={pages.page_description}>
             See the "enhance" version (ai bot can build other ai bots) at this <Link to="/projects/enhancedautomatedresourcecollection">link</Link>.
             See more projects using SEPIA at the following links: the "Automated Tactial Battles AI Project" at this
-            <Link to="/projects/automatedtacticalbattles">link</Link> and the "Pathfinding AI Project" at this <Link to="/projects/pathfindingaiproject">link</Link>.
+            <Link to="/projects/automatedtacticalbattles"> link</Link> and the "Pathfinding AI Project" at this <Link to="/projects/pathfindingaiproject">link</Link>.
         </p>
         <p className={pages.page_description}>
             The Github repository for this project can be found at this <a href="https://github.com/JeffreyKozik/AIProjects" target="_blank" rel="noreferrer">link</a> in the
