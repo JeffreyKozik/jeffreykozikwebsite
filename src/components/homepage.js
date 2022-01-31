@@ -7,6 +7,7 @@ const animatedComponents = makeAnimated();
 
 import ProjectComponent from "./projectcomponent.js"
 
+import './bootstrap.css'
 import * as homepage from './homepage.module.css';
 
 
@@ -135,7 +136,7 @@ let collegeSenior = new Tag("College Senior", "", "Time Period");
 //    <div key={index}><ProjectComponent style={bounceInDownStyles.bounceInDown} name={projectElement.name} link={projectElement.link} tags={projectElement.tags} startDate={projectElement.startDate} endDate={projectElement.endDate} imagePath={projectElement.imagePath} description={projectElement.description}/></div>
 //  );
 
-function HomePage ({nameArray}){
+function HomePage ({nameArray, titleName}){
     let projectsArray = [];
     class Project{
       constructor(name, link, tags, startDate, endDate, imagePath, description){
@@ -160,13 +161,13 @@ function HomePage ({nameArray}){
     // totalcostbrowserextensionirslogics
     // multitabsearchbrowserextensionirslogics
     // seobrowserextension
-    // 99 - 126 characters
+    // 99 - 126 characters,
     // 12 characters for titles,
     // 40 characters for descriptions
-    let sciquel = new Project("Sciquel", "/projects/sciquel", "", "Dec 2021 - Jan 2022", "", 0, <>Makes science more accessible</>);
-    let urbanEarth = new Project("Urban Earth", "/projects/urbanearth", "", "Oct - Dec 2021", "", 1, <>Tracks & encourages sustainable travel</>);
-    let jeffreykozikwebsite = new Project("This Website", "/projects/jeffreykozikwebsite", "", "Dec 2021 - Jan 2022", "", 2, <>Portfolio website with React and Gatsby</>);
-    let oneWorldBrowserExtension = new Project("1World", "/projects/1world", "", "Nov 2021 - Jan 2022", "", 3, <>Helps small businesses easily offset CO2</>);
+    let sciquel = new Project("Sciquel", "/projects/sciquel", ["Website", "Bootstrap", "HTML", "CSS"], "Dec 2021 - Jan 2022", "", 0, <>Makes science more accessible</>);
+    let urbanEarth = new Project("Urban Earth", "/projects/urbanearth", ["iOS App", "Firebase", "Swift", "XCode"], "Oct - Dec 2021", "", 1, <>Tracks & encourages sustainable travel</>);
+    let jeffreykozikwebsite = new Project("This Website", "/projects/jeffreykozikwebsite", ["Website", "React", "Gatsby", "Bootstrap", "MUI", "JS", "CSS"], "Dec 2021 - Jan 2022", "", 2, <>Portfolio website with React and Gatsby</>);
+    let oneWorldBrowserExtension = new Project("1World", "/projects/1world", ["Extension"], "Nov 2021 - Jan 2022", "", 3, <>Helps small businesses easily offset CO2</>);
     let smrtnrllBrowserExtension = new Project("smrtnrll 2.0", "/projects/smrtnrllbrowserextension", "", "Dec 2020 - Oct 2021", "", 4, <>Auto-enrolls students in full classes</>);
     let bingUtilityBelt = new Project("BingAdFinder", "/projects/bingutilitybelt", "", "Nov 2021 - Jan 2022", "", 5, <>Highlights and counts ads on Bing</>);
     let totalCostBrowserExtensionIRSLogics = new Project("Total Cost", "/projects/totalcostbrowserextension", "", "Oct - Nov 2021", "", 6, <>Displays 12 sites' cost info in 1 place</>);
@@ -187,7 +188,7 @@ function HomePage ({nameArray}){
     let pgFixing3DPrinter = new Project("3D Print Fix", "/projects/pgfixing3dprinter", "", "May - July 2020", "", 21, <>Investigated with <a href="https://marlinfw.org/">Marlin</a>,<a href="https://www.pronterface.com/">Pronterface</a>.</>);
     let airCharger = new Project("Air Charger", "/projects/aircharger", "", "Feb - July 2021", "", 22, <>Prototyped sleek magsafe battery pack</>);
     let welcomeBackHack = new Project("LCSC", "/projects/welcomebackhack", "", "Aug 2019", "", 23, <>Won "Best in Creativity" WelcomeBackHack</>);
-    let giveBackHackVol = new Project("GiveBackHack", "/projects/givebackhackvol", "", "Sep 2019", "", 24, <>Prototyped volunteer crowdsource website</>);
+    let giveBackHackVol = new Project("GiveBackHack", "/projects/givebackhackvol", "", "Sep 2019", "", 24, <>Prototyped volunteer website</>);
     let pathfindingaiproject = new Project("PathfindAI", "/projects/pathfindingaiproject", "", "Apr 2021", "", 25, <>Navigated bot through a maze with enemy</>);
     let inline = new Project("inLine", "/projects/inline", "", "Nov - Dec 2021", "", 26, <>Helps businesses manage waitlists</>);
     let automatedResourceCollection = new Project("CollectAI", "/projects/automatedresourcecollection", "", "Apr 2021", "", 27, <>Determines optimal route to collect</>);
@@ -214,7 +215,8 @@ function HomePage ({nameArray}){
     }
     return(
         <>
-            <div class={homepage.homepage_container}>
+            <h1 className="m-3" id={homepage.jeffrey_kozik}>{titleName}</h1>
+            <div className={homepage.projects_container}>
                 {listItemsFunction(nameArray)}
             </div>
         </>
@@ -222,11 +224,13 @@ function HomePage ({nameArray}){
 }
 
 HomePage.propTypes = {
-  nameArray: PropTypes.string
+  nameArray: PropTypes.string,
+  titleName: PropTypes.string
 }
 
 HomePage.defaultProps = {
-  nameArray: []
+  nameArray: [],
+  titleName: "Jeffrey Kozik"
 }
 
 // If you want to start measuring performance in your app, pass a function

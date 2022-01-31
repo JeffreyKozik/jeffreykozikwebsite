@@ -62,6 +62,10 @@
   font-family: 'Rubik', sans-serif !important;
 }
 
+.pt2imgopacity {
+    opacity: 0.2;
+}
+
 *,
 *::before,
 *::after {
@@ -152,7 +156,7 @@ hr:not([size]) {
 
 .p {
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 abbr[title],

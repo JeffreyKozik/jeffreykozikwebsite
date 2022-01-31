@@ -3,14 +3,12 @@ import HomePage from "../components/homepage"
 import Header from "../components/header"
 import Seo from "../components/seo"
 
-import '../components/bootstrap.css'
 import * as homepage from "../components/homepage.module.css"
 
 const IndexPage = () => (
     <>
         <Seo title="Home" />
         <Header/>
-        <h1 className="m-3" id={homepage.jeffrey_kozik}>Jeffrey Kozik</h1>
         <HomePage nameArray={["1World",
                               "Urban Earth",
                               "Sciquel",
@@ -45,7 +43,8 @@ const IndexPage = () => (
                               "iOS Unicart",
                               "smrtnrll 1.0",
                               "Tax Script",
-                              "Site Checker"]}/>
+                              "Site Checker"]}
+                              titleName="Jeffrey Kozik"/>
     </>
 )
 

@@ -64,29 +64,24 @@ let imageArray = [sciquelScreenshot, urbanearthScreenshot, jeffreykozikScreensho
 function ProjectComponent({ name, link, tags, startDate, endDate, imagePath, description }) {
   return(
       <>
-      <MediaQuery maxWidth={360}>
+      <MediaQuery maxWidth={1191}>
           <div>
-            <div className="card m-3" style={{maxWidth: "360px"}}>
-                <div className="row g-0">
-                    <div className="col-6">
-                      <img src={imageArray[imagePath]} className="img img-fluid rounded-start" alt="homepage screenshot"/>
-                    </div>
-                    <div className="col-6">
-                      <div className="card-body">
-                        <h5 className="card-title h5"><Link className="a" to={link}>{name}</Link></h5>
-                        <p className="card-text p"><small className="text-muted small">{startDate}</small></p>
-                      </div>
-                    </div>
+            <div className="card bg-dark text-white" style={{maxWidth: "180px"}}>
+                <img src={imageArray[imagePath]} className="img card-img" alt="homepage screenshot"/>
+                <div className="card-img-overlay">
+                    <h5 className="card-title h5"><Link className="a" to={link}>{name}</Link></h5>
+                    <p className="card-text p">{description}</p>
+                    <p className="card-text p"><small className="text-muted small">{startDate}</small></p>
                 </div>
             </div>
          </div>
       </MediaQuery>
-      <MediaQuery minWidth={361}>
+      <MediaQuery minWidth={1192}>
           <div>
             <div className="card m-3" style={{maxWidth: "360px"}}>
                 <div className="row g-0">
                     <div className="col-6">
-                      <img src={imageArray[imagePath]} className="img img-fluid rounded-start" alt="homepage screenshot"/>
+                      <img src={imageArray[imagePath]} className="img img-fluid rounded-start pt2imgopacity" alt="homepage screenshot"/>
                     </div>
                     <div className="col-6">
                       <div className="card-body">
