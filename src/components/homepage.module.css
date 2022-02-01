@@ -24,6 +24,17 @@ body {
     justify-content: center;
 }
 
+.select_div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tag_div{
+    display: flex;
+    overflow-x: scroll;
+}
+
 /* .homepage_container{
     display: flex;
     flex-wrap:

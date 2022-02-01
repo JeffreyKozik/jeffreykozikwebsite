@@ -1,6 +1,7 @@
-import MediaQuery from 'react-responsive'
+import _ from 'lodash'
 import PropTypes from "prop-types"
 import React from 'react'
+import MediaQuery from 'react-responsive'
 import Select from 'react-select'
 import makeAnimated from 'react-select/animated'
 
@@ -11,29 +12,134 @@ import * as homepage from './homepage.module.css';
 
 class HomePage extends React.Component {
     handleTypeChange = (selectedOptions) => {
+        let oldArray = Array.from(this.state.originalProjectsArray);
+        let oldArrayClone = _.cloneDeep(oldArray);
+        for(let i = 0; i < oldArrayClone.length; i++){
+            let inSelection = false;
+            for (let j = 0; j < selectedOptions.length; j++){
+                if(oldArrayClone[i].tags.include(selectedOptions[j].value)){
+                    inSelection = true;
+                    break;
+                }
+            }
+            if(!inSelection){
+                for (let k = 0; k < this.state.toolValueState.length; k++){
+                    if(oldArrayClone[i].tags.include(this.state.toolValueState[k].value)){
+                        inSelection = true;
+                        break;
+                    }
+                }
+                if(!inSelection){
+                    for (let k = 0; k < this.state.occasionValueState.length; k++){
+                        if(oldArrayClone[i].tags.include(this.state.occasionValueState[k].value)){
+                            inSelection = true;
+                            break;
+                        }
+                    }
+                    if(!inSelection){
+                        oldArrayClone.splice(i, 1);
+                    }
+                }
+            }
+        }
+
+        this.setState({
+            typeValueState: selectedOptions,
+            currentProjectsArrayState: Array.from(oldArrayClone)
+        });
     }
 
     handleToolChange = (selectedOptions) => {
+        let oldArray = Array.from(this.state.originalProjectsArray);
+        let oldArrayClone = _.cloneDeep(oldArray);
+        for(let i = 0; i < oldArrayClone.length; i++){
+            let inSelection = false;
+            for (let j = 0; j < selectedOptions.length; j++){
+                if(oldArrayClone[i].tags.include(selectedOptions[j].value)){
+                    inSelection = true;
+                    break;
+                }
+            }
+            if(!inSelection){
+                for (let k = 0; k < this.state.typeValueState.length; k++){
+                    if(oldArrayClone[i].tags.include(this.state.typeValueState[k].value)){
+                        inSelection = true;
+                        break;
+                    }
+                }
+                if(!inSelection){
+                    for (let k = 0; k < this.state.occasionValueState.length; k++){
+                        if(oldArrayClone[i].tags.include(this.state.occasionValueState[k].value)){
+                            inSelection = true;
+                            break;
+                        }
+                    }
+                    if(!inSelection){
+                        oldArrayClone.splice(i, 1);
+                    }
+                }
+            }
+        }
+
+        this.setState({
+            toolValueState: selectedOptions,
+            currentProjectsArrayState: Array.from(oldArrayClone)
+        });
     }
 
     handleOccasionChanges = (selectedOptions) => {
+        let oldArray = Array.from(this.state.originalProjectsArray);
+        let oldArrayClone = _.cloneDeep(oldArray);
+        for(let i = 0; i < oldArrayClone.length; i++){
+            let inSelection = false;
+            for (let j = 0; j < selectedOptions.length; j++){
+                if(oldArrayClone[i].tags.include(selectedOptions[j].value)){
+                    inSelection = true;
+                    break;
+                }
+            }
+            if(!inSelection){
+                for (let k = 0; k < this.state.typeValueState.length; k++){
+                    if(oldArrayClone[i].tags.include(this.state.typeValueState[k].value)){
+                        inSelection = true;
+                        break;
+                    }
+                }
+                if(!inSelection){
+                    for (let k = 0; k < this.state.toolValueState.length; k++){
+                        if(oldArrayClone[i].tags.include(this.state.toolValueState[k].value)){
+                            inSelection = true;
+                            break;
+                        }
+                    }
+                    if(!inSelection){
+                        oldArrayClone.splice(i, 1);
+                    }
+                }
+            }
+        }
+
+        this.setState({
+            occasionValueState: selectedOptions,
+            currentProjectsArrayState: Array.from(oldArrayClone)
+        });
     }
 
     listItemsFunction = (nameArrayParam) => {
         let listItems = []
-        for(let i=0; i < this.state.projectsArrayState.length; i++){
+        for(let i=0; i < this.state.currentProjectsArrayState.length; i++){
             listItems.push("");
         }
-        for(let i = 0; i <  this.state.projectsArrayState.length; i++){
-            if((nameArrayParam.length == 0) || (nameArrayParam.includes( this.state.projectsArrayState[i].name))){
-                listItems[nameArrayParam.indexOf( this.state.projectsArrayState[i].name)] =
-                    <div key={i}><ProjectComponent name={ this.state.projectsArrayState[i].name}
-                                                   link={ this.state.projectsArrayState[i].link}
-                                                   tags={ this.state.projectsArrayState[i].tags}
-                                                   startDate={ this.state.projectsArrayState[i].startDate}
-                                                   endDate={ this.state.projectsArrayState[i].endDate}
-                                                   imagePath={ this.state.projectsArrayState[i].imagePath}
-                                                   description={ this.state.projectsArrayState[i].description}/>
+        for(let i = 0; i <  this.state.currentProjectsArrayState.length; i++){
+            if((nameArrayParam.length == 0) || (nameArrayParam.includes( this.state.currentProjectsArrayState[i].name))){
+                listItems[nameArrayParam.indexOf( this.state.currentProjectsArrayState[i].name)] =
+                    <div key={i}><ProjectComponent name={ this.state.currentProjectsArrayState[i].name}
+                                                   link={ this.state.currentProjectsArrayState[i].link}
+                                                   tags={ this.state.currentProjectsArrayState[i].tags}
+                                                   startDate={ this.state.currentProjectsArrayState[i].startDate}
+                                                   endDate={ this.state.currentProjectsArrayState[i].endDate}
+                                                   imagePath={ this.state.currentProjectsArrayState[i].imagePath}
+                                                   description={ this.state.currentProjectsArrayState[i].description}/>
                    </div>
             }
         }
@@ -41,7 +147,7 @@ class HomePage extends React.Component {
     }
 
     constructor(props){
-        let projectsArray = [];
+        let originalProjectsArray = [];
 
         class Project{
           constructor(name, link, tags, startDate, endDate, imagePath, description){
@@ -52,7 +158,7 @@ class HomePage extends React.Component {
             this.endDate = endDate;
             this.imagePath = imagePath;
             this.description = description;
-            projectsArray.push(this);
+            originalProjectsArray.push(this);
           }
         }
 
@@ -195,8 +301,11 @@ class HomePage extends React.Component {
         let toolValue = [];
         let occasionValue = [];
 
+        let currentProjectsArray = _.cloneDeep(originalProjectsArray);
+
         this.state = {
-            projectArrayState: projectsArray,
+            originalProjectsArrayState: originalProjectsArray,
+            currentProjectsArrayState: currentProjectsArray,
             nameArrayState: nameArray,
             titleNameState: titleName,
             typeOptionsState: typeOptions,
@@ -211,24 +320,45 @@ class HomePage extends React.Component {
         }
     }
 
+    // make is so that all selects are on same line (flexbox stuff)
     render(){
         return(
             <>
                 <MediaQuery maxWidth={651}>
                     <body className={homepage.bodyClass}>
                         <h1 className="m-3" id={homepage.jeffrey_kozik}>{this.state.titleNameState}</h1>
-                        <Select closeMenuOnSelect={false} components={this.state.animatedComponentsTypeState} isMulti options={this.state.typeOptionsState} multiple value={this.state.typeValue} onChange={(selectedOption) => this.handleTypeChange(selectedOption)}/>
-                        <Select closeMenuOnSelect={false} components={this.state.animatedComponentsToolState} isMulti options={this.state.toolOptionsState} multiple value={this.state.toolValue} onChange={(selectedOption) => this.handleToolChange(selectedOption)}/>
-                        <Select closeMenuOnSelect={false} components={this.state.animatedComponentsOccasionState} isMulti options={this.state.occasionOptionsState} multiple value={this.state.occasionValue}  onChange={(selectedOption) => this.handleOccasionChange(selectedOption)}/>
+                        <div className={homepage.select_div}>
+                            <a href="mailto: jeffreykozik@protonmail.com">Email</a>
+                            <a href="https://github.com/JeffreyKozik" target="_blank" rel="noreferrer">Github</a>
+                            <a href="https://fiverr.com/JeffreyKozik" target="_blank" rel="noreferrer">Fiverr</a>
+                            <a href="https://stackoverflow.com/users/16913644/jeffrey-kozik" target="_blank" rel="noreferrer">Stack Overflow</a>
+                            <a href="https://jeff2.eth.link" target="_blank" rel="noreferrer">jeff2.eth</a>
+                            <a href="https://linkedin.com/kozik" target="_blank" rel="noreferrer">LinkedIn</a>
+                        </div>
+                        <div className={homepage.select_div}>
+                            <Select closeMenuOnSelect={false} components={this.state.animatedComponentsTypeState} isMulti options={this.state.typeOptionsState} multiple value={this.state.typeValueState} onChange={(selectedOption) => this.handleTypeChange(selectedOption)}/>
+                            <Select closeMenuOnSelect={false} components={this.state.animatedComponentsToolState} isMulti options={this.state.toolOptionsState} multiple value={this.state.toolValueState} onChange={(selectedOption) => this.handleToolChange(selectedOption)}/>
+                            <Select closeMenuOnSelect={false} components={this.state.animatedComponentsOccasionState} isMulti options={this.state.occasionOptionsState} multiple value={this.state.occasionValueState}  onChange={(selectedOption) => this.handleOccasionChange(selectedOption)}/>
+                        </div>
                         {this.listItemsFunction(this.state.nameArrayState)}
                     </body>
                 </MediaQuery>
                 <MediaQuery minWidth={652}>
                     <>
                         <h1 className="m-3" id={homepage.jeffrey_kozik}>{this.state.titleNameState}</h1>
-                        <Select closeMenuOnSelect={false} components={this.state.animatedComponentsTypeState} isMulti options={this.state.typeOptionsState} multiple value={this.state.typeValue} onChange={(selectedOption) => this.handleTypeChange(selectedOption)}/>
-                        <Select closeMenuOnSelect={false} components={this.state.animatedComponentsToolState} isMulti options={this.state.toolOptionsState} multiple value={this.state.toolValue} onChange={(selectedOption) => this.handleToolChange(selectedOption)}/>
-                        <Select closeMenuOnSelect={false} components={this.state.animatedComponentsOccasionState} isMulti options={this.state.occasionOptionsState} multiple value={this.state.occasionValue}  onChange={(selectedOption) => this.handleOccasionChange(selectedOption)}/>
+                        <div className={homepage.select_div}>
+                            <a href="mailto: jeffreykozik@protonmail.com">Email</a>
+                            <a href="https://github.com/JeffreyKozik" target="_blank" rel="noreferrer">Github</a>
+                            <a href="https://fiverr.com/JeffreyKozik" target="_blank" rel="noreferrer">Fiverr</a>
+                            <a href="https://stackoverflow.com/users/16913644/jeffrey-kozik" target="_blank" rel="noreferrer">Stack Overflow</a>
+                            <a href="https://jeff2.eth.link" target="_blank" rel="noreferrer">jeff2.eth</a>
+                            <a href="https://linkedin.com/kozik" target="_blank" rel="noreferrer">LinkedIn</a>
+                        </div>
+                        <div className={homepage.select_div}>
+                            <Select closeMenuOnSelect={false} components={this.state.animatedComponentsTypeState} isMulti options={this.state.typeOptionsState} multiple value={this.state.typeValueState} onChange={(selectedOption) => this.handleTypeChange(selectedOption)}/>
+                            <Select closeMenuOnSelect={false} components={this.state.animatedComponentsToolState} isMulti options={this.state.toolOptionsState} multiple value={this.state.toolValueState} onChange={(selectedOption) => this.handleToolChange(selectedOption)}/>
+                            <Select closeMenuOnSelect={false} components={this.state.animatedComponentsOccasionState} isMulti options={this.state.occasionOptionsState} multiple value={this.state.occasionValueState}  onChange={(selectedOption) => this.handleOccasionChange(selectedOption)}/>
+                        </div>
                         {this.listItemsFunction(this.state.nameArrayState)}
                     </>
                 </MediaQuery>
