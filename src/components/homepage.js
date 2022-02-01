@@ -17,21 +17,21 @@ class HomePage extends React.Component {
         for(let i = 0; i < oldArrayClone.length; i++){
             let inSelection = false;
             for (let j = 0; j < selectedOptions.length; j++){
-                if(oldArrayClone[i].tags.include(selectedOptions[j].value)){
+                if(oldArrayClone[i].tags.includes(selectedOptions[j].value)){
                     inSelection = true;
                     break;
                 }
             }
             if(!inSelection){
                 for (let k = 0; k < this.state.toolValueState.length; k++){
-                    if(oldArrayClone[i].tags.include(this.state.toolValueState[k].value)){
+                    if(oldArrayClone[i].tags.includes(this.state.toolValueState[k].value)){
                         inSelection = true;
                         break;
                     }
                 }
                 if(!inSelection){
                     for (let k = 0; k < this.state.occasionValueState.length; k++){
-                        if(oldArrayClone[i].tags.include(this.state.occasionValueState[k].value)){
+                        if(oldArrayClone[i].tags.includes(this.state.occasionValueState[k].value)){
                             inSelection = true;
                             break;
                         }
@@ -55,21 +55,21 @@ class HomePage extends React.Component {
         for(let i = 0; i < oldArrayClone.length; i++){
             let inSelection = false;
             for (let j = 0; j < selectedOptions.length; j++){
-                if(oldArrayClone[i].tags.include(selectedOptions[j].value)){
+                if(oldArrayClone[i].tags.includes(selectedOptions[j].value)){
                     inSelection = true;
                     break;
                 }
             }
             if(!inSelection){
                 for (let k = 0; k < this.state.typeValueState.length; k++){
-                    if(oldArrayClone[i].tags.include(this.state.typeValueState[k].value)){
+                    if(oldArrayClone[i].tags.includes(this.state.typeValueState[k].value)){
                         inSelection = true;
                         break;
                     }
                 }
                 if(!inSelection){
                     for (let k = 0; k < this.state.occasionValueState.length; k++){
-                        if(oldArrayClone[i].tags.include(this.state.occasionValueState[k].value)){
+                        if(oldArrayClone[i].tags.includes(this.state.occasionValueState[k].value)){
                             inSelection = true;
                             break;
                         }
@@ -93,21 +93,21 @@ class HomePage extends React.Component {
         for(let i = 0; i < oldArrayClone.length; i++){
             let inSelection = false;
             for (let j = 0; j < selectedOptions.length; j++){
-                if(oldArrayClone[i].tags.include(selectedOptions[j].value)){
+                if(oldArrayClone[i].tags.includes(selectedOptions[j].value)){
                     inSelection = true;
                     break;
                 }
             }
             if(!inSelection){
                 for (let k = 0; k < this.state.typeValueState.length; k++){
-                    if(oldArrayClone[i].tags.include(this.state.typeValueState[k].value)){
+                    if(oldArrayClone[i].tags.includes(this.state.typeValueState[k].value)){
                         inSelection = true;
                         break;
                     }
                 }
                 if(!inSelection){
                     for (let k = 0; k < this.state.toolValueState.length; k++){
-                        if(oldArrayClone[i].tags.include(this.state.toolValueState[k].value)){
+                        if(oldArrayClone[i].tags.includes(this.state.toolValueState[k].value)){
                             inSelection = true;
                             break;
                         }
@@ -336,9 +336,9 @@ class HomePage extends React.Component {
                             <a className={homepage.mobile_portfolio_link} href="https://linkedin.com/in/kozik" target="_blank" rel="noreferrer">LinkedIn</a>
                         </div>
                         <div className={homepage.select_div}>
-                            <Select className={homepage.mobile_portfolio_link} closeMenuOnSelect={false} components={this.state.animatedComponentsTypeState} isMulti options={this.state.typeOptionsState} multiple value={this.state.typeValueState} onChange={(selectedOption) => this.handleTypeChange(selectedOption)}/>
-                            <Select className={homepage.mobile_portfolio_link} closeMenuOnSelect={false} components={this.state.animatedComponentsToolState} isMulti options={this.state.toolOptionsState} multiple value={this.state.toolValueState} onChange={(selectedOption) => this.handleToolChange(selectedOption)}/>
-                            <Select className={homepage.mobile_portfolio_link} closeMenuOnSelect={false} components={this.state.animatedComponentsOccasionState} isMulti options={this.state.occasionOptionsState} multiple value={this.state.occasionValueState}  onChange={(selectedOption) => this.handleOccasionChange(selectedOption)}/>
+                            <Select  closeMenuOnSelect={false} components={this.state.animatedComponentsTypeState} isMulti options={this.state.typeOptionsState} multiple value={this.state.typeValueState} onChange={(selectedOption) => this.handleTypeChange(selectedOption)}/>
+                            <Select closeMenuOnSelect={false} components={this.state.animatedComponentsToolState} isMulti options={this.state.toolOptionsState} multiple value={this.state.toolValueState} onChange={(selectedOption) => this.handleToolChange(selectedOption)}/>
+                            <Select closeMenuOnSelect={false} components={this.state.animatedComponentsOccasionState} isMulti options={this.state.occasionOptionsState} multiple value={this.state.occasionValueState}  onChange={(selectedOption) => this.handleOccasionChange(selectedOption)}/>
                         </div>
                         <div className={homepage.projects_container}>
                             {this.listItemsFunction(this.state.nameArrayState)}
@@ -352,14 +352,14 @@ class HomePage extends React.Component {
                             <div className={homepage.portfolio_link}>jeffreykozik@protonmail.com</div>
                             <a className={homepage.portfolio_link} href="https://github.com/JeffreyKozik" target="_blank" rel="noreferrer">Github</a>
                             <a className={homepage.portfolio_link} href="https://fiverr.com/JeffreyKozik" target="_blank" rel="noreferrer">Fiverr</a>
-                            <a className={homepage.portfolio_link} href="https://stackoverflow.com/users/16913644/jeffrey-kozik" target="_blank" rel="noreferrer">Stack Overflow</a>
+                            <a className={homepage.portfolio_link} href="https://stackoverflow.com/users/16913644/jeffrey-kozik" target="_blank" rel="noreferrer">SO</a>
                             <a className={homepage.portfolio_link} href="https://jeff2.eth.link" target="_blank" rel="noreferrer">jeff2.eth</a>
                             <a className={homepage.portfolio_link} href="https://linkedin.com/in/kozik" target="_blank" rel="noreferrer">LinkedIn</a>
                         </div>
                         <div className={homepage.select_div}>
-                            <Select className={homepage.portfolio_link} closeMenuOnSelect={false} components={this.state.animatedComponentsTypeState} isMulti options={this.state.typeOptionsState} multiple value={this.state.typeValueState} onChange={(selectedOption) => this.handleTypeChange(selectedOption)}/>
-                            <Select className={homepage.portfolio_link} closeMenuOnSelect={false} components={this.state.animatedComponentsToolState} isMulti options={this.state.toolOptionsState} multiple value={this.state.toolValueState} onChange={(selectedOption) => this.handleToolChange(selectedOption)}/>
-                            <Select className={homepage.portfolio_link} closeMenuOnSelect={false} components={this.state.animatedComponentsOccasionState} isMulti options={this.state.occasionOptionsState} multiple value={this.state.occasionValueState}  onChange={(selectedOption) => this.handleOccasionChange(selectedOption)}/>
+                            <Select closeMenuOnSelect={false} components={this.state.animatedComponentsTypeState} isMulti options={this.state.typeOptionsState} multiple value={this.state.typeValueState} onChange={(selectedOption) => this.handleTypeChange(selectedOption)}/>
+                            <Select  closeMenuOnSelect={false} components={this.state.animatedComponentsToolState} isMulti options={this.state.toolOptionsState} multiple value={this.state.toolValueState} onChange={(selectedOption) => this.handleToolChange(selectedOption)}/>
+                            <Select  closeMenuOnSelect={false} components={this.state.animatedComponentsOccasionState} isMulti options={this.state.occasionOptionsState} multiple value={this.state.occasionValueState}  onChange={(selectedOption) => this.handleOccasionChange(selectedOption)}/>
                         </div>
                         <div className={homepage.projects_container}>
                             {this.listItemsFunction(this.state.nameArrayState)}

@@ -13,6 +13,7 @@ body {
 #jeffrey_kozik {
   font-family: 'Rubik', sans-serif !important;
   text-align: center;
+  margin-bottom: 0 !important;
   /* max-width: 360px; */
 }
 
@@ -28,6 +29,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 0.5rem !important;
 }
 
 .tagDiv{
@@ -36,7 +38,7 @@ body {
 }
 
 .portfolio_link{
-    margin-right: 5%
+    margin-right: 1%
 }
 
 .mobile_portfolio_link{

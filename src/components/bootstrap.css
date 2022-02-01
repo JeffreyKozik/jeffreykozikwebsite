@@ -66,6 +66,11 @@
     opacity: 0.2;
 }
 
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
 *,
 *::before,
 *::after {
