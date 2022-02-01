@@ -15,31 +15,41 @@ class HomePage extends React.Component {
         let oldArray = Array.from(this.state.originalProjectsArrayState);
         let oldArrayClone = _.cloneDeep(oldArray);
         for(let i = 0; i < oldArrayClone.length; i++){
-            let inSelection = false;
-            for (let j = 0; j < selectedOptions.length; j++){
-                if(oldArrayClone[i].tags.includes(selectedOptions[j].value)){
-                    inSelection = true;
-                    break;
-                }
-            }
-            if(!inSelection){
-                for (let k = 0; k < this.state.toolValueState.length; k++){
-                    if(oldArrayClone[i].tags.includes(this.state.toolValueState[k].value)){
-                        inSelection = true;
+            let inSelection1 = false;
+            if(selectedOptions.length == 0){
+                inSelection1 = true;
+            }else{
+                for (let j = 0; j < selectedOptions.length; j++){
+                    if(oldArrayClone[i].tags.includes(selectedOptions[j].value)){
+                        inSelection1 = true;
                         break;
                     }
                 }
-                if(!inSelection){
-                    for (let k = 0; k < this.state.occasionValueState.length; k++){
-                        if(oldArrayClone[i].tags.includes(this.state.occasionValueState[k].value)){
-                            inSelection = true;
-                            break;
-                        }
-                    }
-                    if(!inSelection){
-                        oldArrayClone.splice(i, 1);
+            }
+            let inSelection2 = false;
+            if(this.state.toolValueState.length == 0){
+                inSelection2 = true;
+            } else {
+                for (let k = 0; k < this.state.toolValueState.length; k++){
+                    if(oldArrayClone[i].tags.includes(this.state.toolValueState[k].value)){
+                        inSelection2 = true;
+                        break;
                     }
                 }
+            }
+            let inSelection3 = false;
+            if(this.state.occasionValueState.length == 0){
+                inSelection3 = true;
+            } else {
+                for (let k = 0; k < this.state.occasionValueState.length; k++){
+                    if(oldArrayClone[i].tags.includes(this.state.occasionValueState[k].value)){
+                        inSelection3 = true;
+                        break;
+                    }
+                }
+            }
+            if (!inSelection1 || !inSelection2 || !inSelection3){
+                oldArrayClone.splice(i, 1);
             }
         }
 
@@ -53,31 +63,41 @@ class HomePage extends React.Component {
         let oldArray = Array.from(this.state.originalProjectsArrayState);
         let oldArrayClone = _.cloneDeep(oldArray);
         for(let i = 0; i < oldArrayClone.length; i++){
-            let inSelection = false;
-            for (let j = 0; j < selectedOptions.length; j++){
-                if(oldArrayClone[i].tags.includes(selectedOptions[j].value)){
-                    inSelection = true;
-                    break;
-                }
-            }
-            if(!inSelection){
-                for (let k = 0; k < this.state.typeValueState.length; k++){
-                    if(oldArrayClone[i].tags.includes(this.state.typeValueState[k].value)){
-                        inSelection = true;
+            let inSelection1 = false;
+            if(selectedOptions.length == 0){
+                inSelection1 = true;
+            }else{
+                for (let j = 0; j < selectedOptions.length; j++){
+                    if(oldArrayClone[i].tags.includes(selectedOptions[j].value)){
+                        inSelection1 = true;
                         break;
                     }
                 }
-                if(!inSelection){
-                    for (let k = 0; k < this.state.occasionValueState.length; k++){
-                        if(oldArrayClone[i].tags.includes(this.state.occasionValueState[k].value)){
-                            inSelection = true;
-                            break;
-                        }
-                    }
-                    if(!inSelection){
-                        oldArrayClone.splice(i, 1);
+            }
+            let inSelection2 = false;
+            if(this.state.typeValueState.length == 0){
+                inSelection2 = true;
+            } else {
+                for (let k = 0; k < this.state.typeValueState.length; k++){
+                    if(oldArrayClone[i].tags.includes(this.state.typeValueState[k].value)){
+                        inSelection2 = true;
+                        break;
                     }
                 }
+            }
+            let inSelection3 = false;
+            if(this.state.occasionValueState.length == 0){
+                inSelection3 = true;
+            } else {
+                for (let k = 0; k < this.state.occasionValueState.length; k++){
+                    if(oldArrayClone[i].tags.includes(this.state.occasionValueState[k].value)){
+                        inSelection3 = true;
+                        break;
+                    }
+                }
+            }
+            if (!inSelection1 || !inSelection2 || !inSelection3){
+                oldArrayClone.splice(i, 1);
             }
         }
 
@@ -91,31 +111,41 @@ class HomePage extends React.Component {
         let oldArray = Array.from(this.state.originalProjectsArrayState);
         let oldArrayClone = _.cloneDeep(oldArray);
         for(let i = 0; i < oldArrayClone.length; i++){
-            let inSelection = false;
-            for (let j = 0; j < selectedOptions.length; j++){
-                if(oldArrayClone[i].tags.includes(selectedOptions[j].value)){
-                    inSelection = true;
-                    break;
-                }
-            }
-            if(!inSelection){
-                for (let k = 0; k < this.state.typeValueState.length; k++){
-                    if(oldArrayClone[i].tags.includes(this.state.typeValueState[k].value)){
-                        inSelection = true;
+            let inSelection1 = false;
+            if(selectedOptions.length == 0){
+                inSelection1 = true;
+            }else{
+                for (let j = 0; j < selectedOptions.length; j++){
+                    if(oldArrayClone[i].tags.includes(selectedOptions[j].value)){
+                        inSelection1 = true;
                         break;
                     }
                 }
-                if(!inSelection){
-                    for (let k = 0; k < this.state.toolValueState.length; k++){
-                        if(oldArrayClone[i].tags.includes(this.state.toolValueState[k].value)){
-                            inSelection = true;
-                            break;
-                        }
-                    }
-                    if(!inSelection){
-                        oldArrayClone.splice(i, 1);
+            }
+            let inSelection2 = false;
+            if(this.state.typeValueState.length == 0){
+                inSelection2 = true;
+            } else {
+                for (let k = 0; k < this.state.typeValueState.length; k++){
+                    if(oldArrayClone[i].tags.includes(this.state.typeValueState[k].value)){
+                        inSelection2 = true;
+                        break;
                     }
                 }
+            }
+            let inSelection3 = false;
+            if(this.state.toolValueState.length == 0){
+                inSelection3 = true;
+            } else {
+                for (let k = 0; k < this.state.toolValueState.length; k++){
+                    if(oldArrayClone[i].tags.includes(this.state.toolValueState[k].value)){
+                        inSelection3 = true;
+                        break;
+                    }
+                }
+            }
+            if (!inSelection1 || !inSelection2 || !inSelection3){
+                oldArrayClone.splice(i, 1);
             }
         }
 

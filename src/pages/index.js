@@ -48,7 +48,7 @@ const IndexPage = () => (
 
                               "Task Time",
 
-                              "Huffman Encoder",
+                              "HuffEncode",
 
                               "RinseCV",
                               "P&G Automate",
