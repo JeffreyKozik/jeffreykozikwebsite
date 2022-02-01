@@ -87,7 +87,7 @@ class HomePage extends React.Component {
         });
     }
 
-    handleOccasionChanges = (selectedOptions) => {
+    handleOccasionChange = (selectedOptions) => {
         let oldArray = Array.from(this.state.originalProjectsArrayState);
         let oldArrayClone = _.cloneDeep(oldArray);
         for(let i = 0; i < oldArrayClone.length; i++){
