@@ -43,7 +43,8 @@ const IndexPage = () => (
                               "Tax Script",
                               "Site Checker",
                               "CollectAI",
-                              "PathfindAI",]}
+                              "PathfindAI",
+                              "Huffman Encoder"]}
                               titleName="Jeffrey Kozik"/>
     </>
 )

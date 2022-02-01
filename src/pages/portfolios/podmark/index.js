@@ -18,13 +18,13 @@ function IndexPage() {
             <Header/>
             <HomePage nameArray={["Sciquel",
                                   "Urban Earth",
-                                  "Jeffrey Kozik Website",
-                                  "1World Browser Extension",
-                                  "smrtnrll Browser Extension",
-                                  "Bing Utility Belt",
-                                  "Total Cost Browser Extension",
-                                  "Multitab Search Browser Extension",
-                                  "Site Checker Browser Extension"]}
+                                  "This Website",
+                                  "1World",
+                                  "smrtnrll 2.0",
+                                  "BingAdFinder",
+                                  "Total Cost",
+                                  "MultiSearch",
+                                  "Site Checker"]}
                                   titleName="Jeffrey Kozik: Podmark Portfolio"/>
         </>
     )

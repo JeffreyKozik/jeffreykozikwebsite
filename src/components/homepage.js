@@ -12,7 +12,7 @@ import * as homepage from './homepage.module.css';
 
 class HomePage extends React.Component {
     handleTypeChange = (selectedOptions) => {
-        let oldArray = Array.from(this.state.originalProjectsArray);
+        let oldArray = Array.from(this.state.originalProjectsArrayState);
         let oldArrayClone = _.cloneDeep(oldArray);
         for(let i = 0; i < oldArrayClone.length; i++){
             let inSelection = false;
@@ -50,7 +50,7 @@ class HomePage extends React.Component {
     }
 
     handleToolChange = (selectedOptions) => {
-        let oldArray = Array.from(this.state.originalProjectsArray);
+        let oldArray = Array.from(this.state.originalProjectsArrayState);
         let oldArrayClone = _.cloneDeep(oldArray);
         for(let i = 0; i < oldArrayClone.length; i++){
             let inSelection = false;
@@ -88,7 +88,7 @@ class HomePage extends React.Component {
     }
 
     handleOccasionChanges = (selectedOptions) => {
-        let oldArray = Array.from(this.state.originalProjectsArray);
+        let oldArray = Array.from(this.state.originalProjectsArrayState);
         let oldArrayClone = _.cloneDeep(oldArray);
         for(let i = 0; i < oldArrayClone.length; i++){
             let inSelection = false;
@@ -170,7 +170,6 @@ class HomePage extends React.Component {
         // let stringAndArrayManipulation = new Project("String and Array Manipulation", "", "", "", "", "");
         // let sorting = new Project("Sorting", "", "", "", "", "");
         // let hashtable = new Project("Hashtable", "", "", "", "", "");
-        // let huffmanEncoder = new Project("Huffman Encoder", "", "", "", "", "");
         // let pingPongRallyTracker = new Project("Ping Pong Rally Tracker", "", "", "", "", "");
         // let trickOrTag = new Project("Trick or Tag", "", "", "", "", "");
         // let tedXCwru = new Project("TEDxCWRU", "", "", "", "", "");
@@ -214,6 +213,7 @@ class HomePage extends React.Component {
         let computerVisionToMeasureRinsability = new Project("RinseCV", "/projects/pgshampoorinsability", ["CMDLine", "Computer Vision", "Python", "Internship", "AI"], "May - Jul 2020", "", 33, <>Measured rinsability w/ computer vision</>);
         let taskTimeRecorder = new Project("Task Time", "/projects/tasktimerecorder", ["Macro", "Apps Script", "Personal", "Automation"], "Sep - Dec 2020", "", 34, <>Tracked time, efficiency w/ Apps Script</>);
         let imperativeInterpreter = new Project("Interpeter", "/projects/imperativeinterpreter", ["CMDLine", "Racket", "School"], "Apr 2021", "", 35, <>Created C-like prog language w/ Racket</>);
+        let huffmanEncoder = new Project("Huffman Encoder", "/projects/huffmanencoder", ["CMDLine", "Java", "School"], "Mar - Apr 2020", "", 36, <>Encoded, decoded file to save 58% space</>);
 
         super(props);
 
@@ -328,38 +328,42 @@ class HomePage extends React.Component {
                     <body className={homepage.bodyClass}>
                         <h1 className="m-3" id={homepage.jeffrey_kozik}>{this.state.titleNameState}</h1>
                         <div className={homepage.select_div}>
-                            <a href="mailto: jeffreykozik@protonmail.com">Email</a>
-                            <a href="https://github.com/JeffreyKozik" target="_blank" rel="noreferrer">Github</a>
-                            <a href="https://fiverr.com/JeffreyKozik" target="_blank" rel="noreferrer">Fiverr</a>
-                            <a href="https://stackoverflow.com/users/16913644/jeffrey-kozik" target="_blank" rel="noreferrer">Stack Overflow</a>
-                            <a href="https://jeff2.eth.link" target="_blank" rel="noreferrer">jeff2.eth</a>
-                            <a href="https://linkedin.com/kozik" target="_blank" rel="noreferrer">LinkedIn</a>
+                            <div className={homepage.mobile_portfolio_link}>jeffreykozik@protonmail.com</div>
+                            <a className={homepage.mobile_portfolio_link} href="https://github.com/JeffreyKozik" target="_blank" rel="noreferrer">Github</a>
+                            <a className={homepage.mobile_portfolio_link} href="https://fiverr.com/JeffreyKozik" target="_blank" rel="noreferrer">Fiverr</a>
+                            <a className={homepage.mobile_portfolio_link} href="https://stackoverflow.com/users/16913644/jeffrey-kozik" target="_blank" rel="noreferrer">SO</a>
+                            <a className={homepage.mobile_portfolio_link} href="https://jeff2.eth.link" target="_blank" rel="noreferrer">jeff2.eth</a>
+                            <a className={homepage.mobile_portfolio_link} href="https://linkedin.com/in/kozik" target="_blank" rel="noreferrer">LinkedIn</a>
                         </div>
                         <div className={homepage.select_div}>
-                            <Select closeMenuOnSelect={false} components={this.state.animatedComponentsTypeState} isMulti options={this.state.typeOptionsState} multiple value={this.state.typeValueState} onChange={(selectedOption) => this.handleTypeChange(selectedOption)}/>
-                            <Select closeMenuOnSelect={false} components={this.state.animatedComponentsToolState} isMulti options={this.state.toolOptionsState} multiple value={this.state.toolValueState} onChange={(selectedOption) => this.handleToolChange(selectedOption)}/>
-                            <Select closeMenuOnSelect={false} components={this.state.animatedComponentsOccasionState} isMulti options={this.state.occasionOptionsState} multiple value={this.state.occasionValueState}  onChange={(selectedOption) => this.handleOccasionChange(selectedOption)}/>
+                            <Select className={homepage.mobile_portfolio_link} closeMenuOnSelect={false} components={this.state.animatedComponentsTypeState} isMulti options={this.state.typeOptionsState} multiple value={this.state.typeValueState} onChange={(selectedOption) => this.handleTypeChange(selectedOption)}/>
+                            <Select className={homepage.mobile_portfolio_link} closeMenuOnSelect={false} components={this.state.animatedComponentsToolState} isMulti options={this.state.toolOptionsState} multiple value={this.state.toolValueState} onChange={(selectedOption) => this.handleToolChange(selectedOption)}/>
+                            <Select className={homepage.mobile_portfolio_link} closeMenuOnSelect={false} components={this.state.animatedComponentsOccasionState} isMulti options={this.state.occasionOptionsState} multiple value={this.state.occasionValueState}  onChange={(selectedOption) => this.handleOccasionChange(selectedOption)}/>
                         </div>
-                        {this.listItemsFunction(this.state.nameArrayState)}
+                        <div className={homepage.projects_container}>
+                            {this.listItemsFunction(this.state.nameArrayState)}
+                        </div>
                     </body>
                 </MediaQuery>
                 <MediaQuery minWidth={652}>
                     <>
                         <h1 className="m-3" id={homepage.jeffrey_kozik}>{this.state.titleNameState}</h1>
                         <div className={homepage.select_div}>
-                            <a href="mailto: jeffreykozik@protonmail.com">Email</a>
-                            <a href="https://github.com/JeffreyKozik" target="_blank" rel="noreferrer">Github</a>
-                            <a href="https://fiverr.com/JeffreyKozik" target="_blank" rel="noreferrer">Fiverr</a>
-                            <a href="https://stackoverflow.com/users/16913644/jeffrey-kozik" target="_blank" rel="noreferrer">Stack Overflow</a>
-                            <a href="https://jeff2.eth.link" target="_blank" rel="noreferrer">jeff2.eth</a>
-                            <a href="https://linkedin.com/kozik" target="_blank" rel="noreferrer">LinkedIn</a>
+                            <div className={homepage.portfolio_link}>jeffreykozik@protonmail.com</div>
+                            <a className={homepage.portfolio_link} href="https://github.com/JeffreyKozik" target="_blank" rel="noreferrer">Github</a>
+                            <a className={homepage.portfolio_link} href="https://fiverr.com/JeffreyKozik" target="_blank" rel="noreferrer">Fiverr</a>
+                            <a className={homepage.portfolio_link} href="https://stackoverflow.com/users/16913644/jeffrey-kozik" target="_blank" rel="noreferrer">Stack Overflow</a>
+                            <a className={homepage.portfolio_link} href="https://jeff2.eth.link" target="_blank" rel="noreferrer">jeff2.eth</a>
+                            <a className={homepage.portfolio_link} href="https://linkedin.com/in/kozik" target="_blank" rel="noreferrer">LinkedIn</a>
                         </div>
                         <div className={homepage.select_div}>
-                            <Select closeMenuOnSelect={false} components={this.state.animatedComponentsTypeState} isMulti options={this.state.typeOptionsState} multiple value={this.state.typeValueState} onChange={(selectedOption) => this.handleTypeChange(selectedOption)}/>
-                            <Select closeMenuOnSelect={false} components={this.state.animatedComponentsToolState} isMulti options={this.state.toolOptionsState} multiple value={this.state.toolValueState} onChange={(selectedOption) => this.handleToolChange(selectedOption)}/>
-                            <Select closeMenuOnSelect={false} components={this.state.animatedComponentsOccasionState} isMulti options={this.state.occasionOptionsState} multiple value={this.state.occasionValueState}  onChange={(selectedOption) => this.handleOccasionChange(selectedOption)}/>
+                            <Select className={homepage.portfolio_link} closeMenuOnSelect={false} components={this.state.animatedComponentsTypeState} isMulti options={this.state.typeOptionsState} multiple value={this.state.typeValueState} onChange={(selectedOption) => this.handleTypeChange(selectedOption)}/>
+                            <Select className={homepage.portfolio_link} closeMenuOnSelect={false} components={this.state.animatedComponentsToolState} isMulti options={this.state.toolOptionsState} multiple value={this.state.toolValueState} onChange={(selectedOption) => this.handleToolChange(selectedOption)}/>
+                            <Select className={homepage.portfolio_link} closeMenuOnSelect={false} components={this.state.animatedComponentsOccasionState} isMulti options={this.state.occasionOptionsState} multiple value={this.state.occasionValueState}  onChange={(selectedOption) => this.handleOccasionChange(selectedOption)}/>
                         </div>
-                        {this.listItemsFunction(this.state.nameArrayState)}
+                        <div className={homepage.projects_container}>
+                            {this.listItemsFunction(this.state.nameArrayState)}
+                        </div>
                     </>
                 </MediaQuery>
             </>

@@ -1,23 +1,25 @@
-// import * as React from "react"
-// import hashtableVideo from "../../images/jeffreykozikwebsitescreenshot.png"
-// import * as pages from "../../page_styling/pages.module.css"
-//
-// const HuffmanEncoderComponent = () => (
-//     <>
-//         <h1 className={pages.page_title}> Jeffrey Kozik Website </h1>
-//         <h3 className={pages.page_subtitle}>
-//             Portfolio website I coded with React and Gatsby and a number of react packages including
-//             material-ui, react-select, font-awesome, lodash, simple analytics, and matomo analytics.
-//         </h3>
-//         <img className={pages.page_video} src={jeffreykozikScreenshot} alt="jeffreykozik.com screenshot"/>
-//         <p className={pages.page_description}>
-//             I first created this website using a VanillaJS framework with CSS and HTML. However, I decided to switch
-//             to React because it's faster, has better SEO, has a big community with lots of packages, and the code is easier to maintain
-//             using components with jsx. At first I used create-react-app, but then I wanted to make it multiple pages, and while there
-//             exists a way to do it with create-react-app and react-router, it isn't as optimal as doing it with Gatsby. I switched to Gatsby
-//             specifically because this is a largely static site and the DOM isn't changed frequently by the user.
-//         </p>
-//     </>
-// )
-//
-// export default HuffmanEncoderComponent
+import * as React from "react"
+import huffman_edited from "../../images/huffman_edited.mp4"
+import * as pages from "../../page_styling/pages.module.css"
+
+const HuffmanEncoderComponent = () => (
+    <>
+        <h1 className={pages.page_title}> Huffman Encoder and Decoder </h1>
+        <h3 className={pages.page_subtitle}>
+            Java program to compress file by 58%. Input file read, HashMap stores char frequencies, ArrayList encapsulates
+            data which is turned into Huffman Tree, encodes the characters.
+        </h3>
+        <video controls preload="auto" className={pages.page_video}>
+            <source src={huffman_edited} type="video/mp4"></source>
+        </video>
+        <p className={pages.page_description}>
+            To expand a little bit on the subtitle of this page, the gist of what this program does is count frequencies of characters
+            in a document and optimize encoding based upon that. In basic encoding, each character is represented by a fixed amount
+            of 1s and 0s. However, this means that a really uncommon character like a q or a z takes up as much space as a frequently
+            used character like an e or a t. So with this Huffman Encoder, encodings are changed so that es and ts are represented
+            by less 1s and 0s and qs and zs are represented by more which saves overall storage.
+        </p>
+    </>
+)
+
+export default HuffmanEncoderComponent

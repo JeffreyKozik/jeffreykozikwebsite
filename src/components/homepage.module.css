@@ -30,9 +30,24 @@ body {
     justify-content: center;
 }
 
-.tag_div{
+.tagDiv{
     display: flex;
     overflow-x: scroll;
+}
+
+.portfolio_link{
+    margin-right: 5%
+}
+
+.mobile_portfolio_link{
+    margin-right: 1%
+}
+
+.tagStyling{
+    margin-right: 2%;
+    border-radius: 10%;
+    background-color: lightgray;
+    white-space: nowrap;
 }
 
 /* .homepage_container{

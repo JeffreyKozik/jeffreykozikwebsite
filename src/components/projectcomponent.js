@@ -65,61 +65,55 @@ function ProjectComponent({ name, link, tags, startDate, endDate, imagePath, des
   return(
       <>
       <MediaQuery maxWidth={651}>
-            <div className={homepage.projects_container}>
-                <div className="card" style={{maxWidth: "180px"}}>
-                    <img src={imageArray[imagePath]} className="img card-img pt2imgopacity" alt="homepage screenshot"/>
-                    <div className="card-img-overlay">
-                        <h5 className="card-title h5"><Link className="a" to={link}>{name}</Link></h5>
-                        <p className="card-text p">{description}</p>
-                        <p className="card-text p"><small className="text-muted small">{startDate}</small></p>
-                        <div className={homepage.tagDiv}>
-                            {tags.map((tag) =>
-                                <div>{tag}</div>
-                            )}
-                        </div>
+            <div className="card" style={{maxWidth: "180px"}}>
+                <img src={imageArray[imagePath]} className="img card-img pt2imgopacity" alt="homepage screenshot"/>
+                <div className="card-img-overlay">
+                    <h5 className="card-title h5"><Link className="a" to={link}>{name}</Link></h5>
+                    <p className="card-text p">{description}</p>
+                    <p className="card-text p"><small className="text-muted small">{startDate}</small></p>
+                    <div className={homepage.tagDiv}>
+                        {tags.map((tag) =>
+                            <div className={homepage.tagStyling}>{tag}</div>
+                        )}
                     </div>
                 </div>
-             </div>
+            </div>
       </MediaQuery>
       <MediaQuery minWidth={652} maxWidth={1191}>
-            <div className={homepage.projects_container}>
-                <div className="card m-3" style={{maxWidth: "180px"}}>
-                    <img src={imageArray[imagePath]} className="img card-img pt2imgopacity" alt="homepage screenshot"/>
-                    <div className="card-img-overlay">
+            <div className="card m-3" style={{maxWidth: "180px"}}>
+                <img src={imageArray[imagePath]} className="img card-img pt2imgopacity" alt="homepage screenshot"/>
+                <div className="card-img-overlay">
+                    <h5 className="card-title h5"><Link className="a" to={link}>{name}</Link></h5>
+                    <p className="card-text p">{description}</p>
+                    <p className="card-text p"><small className="text-muted small">{startDate}</small></p>
+                    <div className={homepage.tagDiv}>
+                        {tags.map((tag) =>
+                            <div className={homepage.tagStyling}>{tag}</div>
+                        )}
+                    </div>
+                </div>
+            </div>
+      </MediaQuery>
+      <MediaQuery minWidth={1192}>
+            <div className="card m-3" style={{maxWidth: "360px"}}>
+                <div className="row g-0">
+                    <div className="col-6">
+                      <img src={imageArray[imagePath]} className="img img-fluid rounded-start" alt="homepage screenshot"/>
+                    </div>
+                    <div className="col-6">
+                      <div className="card-body">
                         <h5 className="card-title h5"><Link className="a" to={link}>{name}</Link></h5>
                         <p className="card-text p">{description}</p>
                         <p className="card-text p"><small className="text-muted small">{startDate}</small></p>
                         <div className={homepage.tagDiv}>
                             {tags.map((tag) =>
-                                <div>{tag}</div>
+                                <div className={homepage.tagStyling}>{tag}</div>
                             )}
                         </div>
+                      </div>
                     </div>
                 </div>
-             </div>
-      </MediaQuery>
-      <MediaQuery minWidth={1192}>
-            <div className={homepage.projects_container}>
-                <div className="card m-3" style={{maxWidth: "360px"}}>
-                    <div className="row g-0">
-                        <div className="col-6">
-                          <img src={imageArray[imagePath]} className="img img-fluid rounded-start" alt="homepage screenshot"/>
-                        </div>
-                        <div className="col-6">
-                          <div className="card-body">
-                            <h5 className="card-title h5"><Link className="a" to={link}>{name}</Link></h5>
-                            <p className="card-text p">{description}</p>
-                            <p className="card-text p"><small className="text-muted small">{startDate}</small></p>
-                            <div className={homepage.tagDiv}>
-                                {tags.map((tag) =>
-                                    <div>{tag}</div>
-                                )}
-                            </div>
-                          </div>
-                        </div>
-                    </div>
-                </div>
-             </div>
+            </div>
       </MediaQuery>
       </>
   )
