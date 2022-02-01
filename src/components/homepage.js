@@ -216,9 +216,7 @@ function HomePage ({nameArray, titleName}){
     return(
         <>
             <h1 className="m-3" id={homepage.jeffrey_kozik}>{titleName}</h1>
-            <div className={homepage.projects_container}>
-                {listItemsFunction(nameArray)}
-            </div>
+            {listItemsFunction(nameArray)}
         </>
     )
 }

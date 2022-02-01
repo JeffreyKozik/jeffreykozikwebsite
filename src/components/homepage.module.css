@@ -6,6 +6,10 @@ body {
     /* justify-content: center; */
 }
 
+.bodyClass {
+    margin: 0 !important;
+}
+
 #jeffrey_kozik {
   font-family: 'Rubik', sans-serif !important;
   text-align: center;
