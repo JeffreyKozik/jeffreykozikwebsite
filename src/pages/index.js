@@ -15,36 +15,47 @@ const IndexPage = () => (
                               "This Website",
                               "CollectAI+",
                               "smrtnrll 2.0",
-                              "Task Time",
-                              "BingAdFinder",
                               "Color Model",
                               "AutoCheck",
-                              "TradingView",
-                              "Auto Appt",
-                              "RSA",
-                              "Smooth Nums",
                               "Interpreter",
-                              "WalkSAT DPLL",
-                              "TactialAI",
-                              "Avoid 2FA",
+
                               "Square Hacks",
-                              "Air Charger",
+
+                              "inLine",
+                              "Smooth Nums",
+                              "RSA",
+                              "WalkSAT DPLL",
+
+                              "BingAdFinder",
+                              "TradingView",
+                              "Avoid 2FA",
                               "Total Cost",
                               "MultiSearch",
+                              "Auto Appt",
+                              "Autopay",
+                              "AutoLint JS",
+                              "Site Checker",
+                              "iOS Unicart",
+                              "Tax Script",
+
+                              "CollectAI",
+                              "PathfindAI",
+                              "TactialAI",
+
+                              "Air Charger",
+
+                              "smrtnrll 1.0",
+
+                              "Task Time",
+
+                              "Huffman Encoder",
+
                               "RinseCV",
                               "P&G Automate",
                               "3D Print Fix",
                               "GiveBackHack",
-                              "LCSC",
-                              "AutoLint JS",
-                              "Autopay",
-                              "iOS Unicart",
-                              "smrtnrll 1.0",
-                              "Tax Script",
-                              "Site Checker",
-                              "CollectAI",
-                              "PathfindAI",
-                              "Huffman Encoder"]}
+                              "LCSC"
+                              ]}
                               titleName="Jeffrey Kozik"/>
     </>
 )
