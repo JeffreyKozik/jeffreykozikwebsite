@@ -65,7 +65,6 @@ function ProjectComponent({ name, link, tags, startDate, endDate, imagePath, des
   return(
       <>
       <MediaQuery maxWidth={651}>
-        <body className={homepage.bodyClass}>
             <div className={homepage.projects_container}>
                 <div className="card" style={{maxWidth: "180px"}}>
                     <img src={imageArray[imagePath]} className="img card-img pt2imgopacity" alt="homepage screenshot"/>
@@ -76,10 +75,8 @@ function ProjectComponent({ name, link, tags, startDate, endDate, imagePath, des
                     </div>
                 </div>
              </div>
-         </body>
       </MediaQuery>
       <MediaQuery minWidth={652} maxWidth={1191}>
-          <body className={homepage.bodyClass}>
             <div className={homepage.projects_container}>
                 <div className="card m-3" style={{maxWidth: "180px"}}>
                     <img src={imageArray[imagePath]} className="img card-img pt2imgopacity" alt="homepage screenshot"/>
@@ -90,10 +87,8 @@ function ProjectComponent({ name, link, tags, startDate, endDate, imagePath, des
                     </div>
                 </div>
              </div>
-          </body>
       </MediaQuery>
       <MediaQuery minWidth={1192}>
-        <body className={homepage.bodyClass}>
             <div className={homepage.projects_container}>
                 <div className="card m-3" style={{maxWidth: "360px"}}>
                     <div className="row g-0">
@@ -110,7 +105,6 @@ function ProjectComponent({ name, link, tags, startDate, endDate, imagePath, des
                     </div>
                 </div>
              </div>
-         </body>
       </MediaQuery>
       </>
   )

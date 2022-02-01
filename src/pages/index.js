@@ -14,8 +14,6 @@ const IndexPage = () => (
                               "Sciquel",
                               "This Website",
                               "CollectAI+",
-                              "CollectAI",
-                              "PathfindAI",
                               "smrtnrll 2.0",
                               "Task Time",
                               "BingAdFinder",
@@ -43,7 +41,9 @@ const IndexPage = () => (
                               "iOS Unicart",
                               "smrtnrll 1.0",
                               "Tax Script",
-                              "Site Checker"]}
+                              "Site Checker",
+                              "CollectAI",
+                              "PathfindAI",]}
                               titleName="Jeffrey Kozik"/>
     </>
 )
