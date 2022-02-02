@@ -301,9 +301,12 @@ class HomePage extends React.Component {
         let huffmanEncoder = new Project("HuffEncode", "/projects/huffmanencoder", ["CMDLine", "Java", "School"], "Mar - Apr 2020", "", 36, <>Encoded, decoded file to save 58% space</>);
         let hashtable = new Project("Hashtable", "/projects/hashtable", ["CMDLine", "Java", "School"], "Apr 2020", "", 37, <>Coded hashtable to count word frequency</>);
         let mergeSort = new Project("Merge Sort", "/projects/mergesort", ["CMDLine", "Java", "School"], "Apr 2020", "", 38, <>Programmed merge sort, tested runtime</>);
-        let pingPongRallyTracker = new Project("RallyTracker", "/projects/rallytracker", ["CMDLine", "Computer Vision", "numpy", "Python", "Personal", "AI"], "", 39, <>Tracks table tennis rally count using CV</>);
-        let gomoku = new Project("Gomoku",  "/projects/gomoku", ["CMDLine", "JUnit", "Java", "AI", "School"], "", 40, <>Coded Gomoku game for PvP and PvAI</>);
-        let basketball = new Project("BasketbalSim", "/projects/basketballgamesimulator", ["CMDLine", "JS", "Personal"], "", 41, <>Simulate basketball game w/ player stats</>)
+        let pingPongRallyTracker = new Project("RallyTracker", "/projects/rallytracker", ["CMDLine", "Computer Vision", "numpy", "Python", "Personal", "AI"], "Apr 2020", "", 39, <>Tracks table tennis rally count using CV</>);
+        let gomoku = new Project("Gomoku",  "/projects/gomoku", ["CMDLine", "JUnit", "Java", "AI", "School"], "Dec 2019", "", 40, <>Coded Gomoku game for PvP and PvAI</>);
+        let basketball = new Project("BasketbalSim", "/projects/basketballgamesimulator", ["CMDLine", "JS", "Personal"], "2016", "", 41, <>Simulate basketball game w/ player stats</>);
+        let railyard = new Project("RailyardSort", "/projects/railyard", ["CMDLine", "JUnit", "Java", "School"], "Nov 2019", "", 42, <>Sorts arrays using railyard metaphor</>);
+        let stringArray = new Project("String&Array", "/projects/stringandarraymanipulation", ["CMDLine", "Java", "School"], "Oct 2019", "", 43, <>String and array manipulation algorithms</>);
+        let trickOrTag = new Project("Trick or Tag", "/projects/trickortag", ["CMDLine", "Python", "Personal"], "Oct 2019", "", 44, <>Created Halloween pygame with 2 friends</>);
 
         let typeArray = ["Website", "Extension", "iOS App", "Desktop App", "CMDLine", "Hardware", "Macro", "Article/Podcast", "Organization"]
         let toolArray = ["JS",

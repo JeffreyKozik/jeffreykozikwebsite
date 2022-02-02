@@ -58,6 +58,8 @@ const IndexPage = () => (
                               "RallyTracker",
 
                               "Gomoku",
+                              "RailyardSort",
+                              "String&Array",
 
                               "GiveBackHack",
                               "LCSC",
