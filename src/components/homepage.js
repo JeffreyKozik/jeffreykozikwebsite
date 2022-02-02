@@ -177,7 +177,14 @@ class HomePage extends React.Component {
     }
 
     constructor(props){
+        super(props);
+        const nameArray = this.props.nameArray;
+        const titleName = this.props.titleName;
+
         let originalProjectsArray = [];
+        for(let i=0; i < nameArray.length; i++){
+            originalProjectsArray.push("");
+        }
 
         class Project{
           constructor(name, link, tags, startDate, endDate, imagePath, description){
@@ -188,7 +195,9 @@ class HomePage extends React.Component {
             this.endDate = endDate;
             this.imagePath = imagePath;
             this.description = description;
-            originalProjectsArray.push(this);
+            if(nameArray.includes(name)){
+                originalProjectsArray[nameArray.indexOf(name)] = name;
+            }
           }
         }
 
@@ -244,11 +253,6 @@ class HomePage extends React.Component {
         let taskTimeRecorder = new Project("Task Time", "/projects/tasktimerecorder", ["Macro", "Apps Script", "Personal", "Automation"], "Sep - Dec 2020", "", 34, <>Tracked time, efficiency w/ Apps Script</>);
         let imperativeInterpreter = new Project("Interpreter", "/projects/imperativeinterpreter", ["CMDLine", "Racket", "School"], "Apr 2021", "", 35, <>Created C-like prog language w/ Racket</>);
         let huffmanEncoder = new Project("HuffEncode", "/projects/huffmanencoder", ["CMDLine", "Java", "School"], "Mar - Apr 2020", "", 36, <>Encoded, decoded file to save 58% space</>);
-
-        super(props);
-
-        const nameArray = this.props.nameArray;
-        const titleName = this.props.titleName;
 
         let typeArray = ["Website", "Extension", "iOS App", "Desktop App", "CMDLine", "Hardware", "Macro", "Article"]
         let toolArray = ["JS",
@@ -331,20 +335,10 @@ class HomePage extends React.Component {
         let toolValue = [];
         let occasionValue = [];
 
-        let realOriginalProjectsArray = []
-        for(let i=0; i < nameArray.length; i++){
-            realOriginalProjectsArray.push("");
-        }
-        for(let i = 0; i < originalProjectsArray.length; i++){
-            if(nameArray.includes( originalProjectsArray[i].name)){
-                realOriginalProjectsArray[nameArray.indexOf( originalProjectsArray[i].name)] = originalProjectsArray[i].name
-            }
-        }
-
-        let currentProjectsArray = _.cloneDeep(realOriginalProjectsArray);
+        let currentProjectsArray = _.cloneDeep(originalProjectsArray);
 
         this.state = {
-            originalProjectsArrayState: realOriginalProjectsArray,
+            originalProjectsArrayState: originalProjectsArray,
             currentProjectsArrayState: currentProjectsArray,
             nameArrayState: nameArray,
             titleNameState: titleName,
