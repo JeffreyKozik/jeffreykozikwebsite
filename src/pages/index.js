@@ -48,8 +48,9 @@ const IndexPage = () => (
 
                               "Task Time",
 
-                              "Hashtable",
                               "HuffEncode",
+                              "Hashtable",
+                              "Merge Sort",
 
                               "RinseCV",
                               "P&G Automate",

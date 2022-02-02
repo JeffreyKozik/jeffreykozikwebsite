@@ -14,6 +14,7 @@ const HashtableComponent = () => (
             <source src={hashtableDemo} type="video/mp4"></source>
         </video>
         <p className={pages.page_description}>
+            You can browse the code at the Github repository located <a href="https://github.com/JeffreyKozik/HashTable">here</a>.
         </p>
     </>
 )

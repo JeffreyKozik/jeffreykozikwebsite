@@ -144,7 +144,7 @@ class HomePage extends React.Component {
         console.log("Selected Options: " + selectedOptions);
         console.log("typeValueState: " +this.state.typeValueState);
         console.log("toolValueState: " +this.state.toolValueState);
-        console.log("occasionValueState: " +this.state.occasionValueState);        
+        console.log("occasionValueState: " +this.state.occasionValueState);
         let oldArray = Array.from(this.state.originalProjectsArrayState);
         let oldArrayClone = _.cloneDeep(oldArray);
         let oldArrayClone2 = _.cloneDeep(oldArray);
@@ -272,7 +272,7 @@ class HomePage extends React.Component {
         let bingUtilityBelt = new Project("BingAdFinder", "/projects/bingutilitybelt", ["Extension", "JS", "HTML", "CSS", "Personal"], "Nov 2021 - Jan 2022", "", 5, <>Highlights and counts ads on Bing</>);
         let totalCostBrowserExtensionIRSLogics = new Project("Total Cost", "/projects/totalcostbrowserextension", ["Extension", "JS", "HTML, CSS", "Freelance", "Automation"], "Oct - Nov 2021", "", 6, <>Displays 12 sites' cost info in 1 place</>);
         let multitabSearchBrowserExtensionIRSLogics = new Project("MultiSearch", "/projects/multitabsearch", ["Extension", "JS", "HTML, CSS", "Freelance", "Automation"], "Oct 2021", "", 7, <>Searches all open tabs simulatenously</>);
-        let seoBrowserExtension = new Project("Site Checker", "/projects/seobrowserextension", ["Extension", "JS", "HTML, CSS", "Personal"], "Nov 2021", "", 8, <>Shows SEO tips using <a href="site-checker.org">site-checker.org</a></>);
+        let seoBrowserExtension = new Project("Site Checker", "/projects/seobrowserextension", ["Extension", "JS", "HTML, CSS", "Freelance"], "Nov 2021", "", 8, <>Shows SEO tips using <a href="site-checker.org">site-checker.org</a></>);
         let squarePOSHackathon = new Project("Square Hacks", "/projects/squarePOSHackathon", ["Article", "Hackathon"], "Oct - Dec 2021", "", 9, <>Won "Best Feedback" at Square Hackathon</>);
         let automatedWayToGetJSErrors = new Project("AutoLint JS", "/projects/automatedwaytogetjserrors", ["CMDLine", "Python", "Selenium", "Freelance", "Automation"], "Oct 2021", "", 10, <>Auto-retrieves JS errors from url list</>);
         let automatingUsernameCheckProcess = new Project("AutoCheck", "/projects/automatingusernamecheckprocess", ["Desktop App", "tkinter", "openpyxl", "Python", "Selenium", "Freelance", "Automation"], "Oct 2021", "", 11, <>Auto fills out excel sheet via GUI</>);
@@ -302,6 +302,7 @@ class HomePage extends React.Component {
         let imperativeInterpreter = new Project("Interpreter", "/projects/imperativeinterpreter", ["CMDLine", "Racket", "School"], "Apr 2021", "", 35, <>Created C-like prog language w/ Racket</>);
         let huffmanEncoder = new Project("HuffEncode", "/projects/huffmanencoder", ["CMDLine", "Java", "School"], "Mar - Apr 2020", "", 36, <>Encoded, decoded file to save 58% space</>);
         let hashtable = new Project("Hashtable", "/projects/hashtable", ["CMDLine", "Java", "School"], "Apr 2020", "", 37, <>Coded hashtable to count word frequency</>);
+        let mergeSort = new Project("Merge Sort", "/projects/mergesort", ["CMDLine", "Java", "School"], "Apr 2020", "", 38, <>Programmed merge sort, tested runtime</>
 
         let typeArray = ["Website", "Extension", "iOS App", "Desktop App", "CMDLine", "Hardware", "Macro", "Article"]
         let toolArray = ["JS",
