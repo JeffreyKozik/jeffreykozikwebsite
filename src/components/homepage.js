@@ -253,11 +253,9 @@ class HomePage extends React.Component {
         // let harryPotterGame = new Project("Harry Potter Game", "", "", "", "", "");
         // let thomasRobertMalthusPresentation = new Project("Thomas Robert Malthus Presentation", "", "", "", "", "");
         // let basketballGameSimulator = new Project("Basktball Game Simulator", "", "", "", "", "");
-        // let gomoku = new Project("Gomoku", "", "", "", "", "");
         // let railyard = new Project("Railyard", "", "", "", "", "");
         // let stringAndArrayManipulation = new Project("String and Array Manipulation", "", "", "", "", "");
         // let sorting = new Project("Sorting", "", "", "", "", "");
-        // let pingPongRallyTracker = new Project("Ping Pong Rally Tracker", "", "", "", "", "");
         // let trickOrTag = new Project("Trick or Tag", "", "", "", "", "");
         // let tedXCwru = new Project("TEDxCWRU", "", "", "", "", "");
         // let designForAmerica = new Project("Design For America", "", "", "", "", "");
@@ -273,7 +271,7 @@ class HomePage extends React.Component {
         let totalCostBrowserExtensionIRSLogics = new Project("Total Cost", "/projects/totalcostbrowserextension", ["Extension", "JS", "HTML, CSS", "Freelance", "Automation"], "Oct - Nov 2021", "", 6, <>Displays 12 sites' cost info in 1 place</>);
         let multitabSearchBrowserExtensionIRSLogics = new Project("MultiSearch", "/projects/multitabsearch", ["Extension", "JS", "HTML, CSS", "Freelance", "Automation"], "Oct 2021", "", 7, <>Searches all open tabs simulatenously</>);
         let seoBrowserExtension = new Project("Site Checker", "/projects/seobrowserextension", ["Extension", "JS", "HTML, CSS", "Freelance"], "Nov 2021", "", 8, <>Shows SEO tips using <a href="site-checker.org">site-checker.org</a></>);
-        let squarePOSHackathon = new Project("Square Hacks", "/projects/squarePOSHackathon", ["Article", "Hackathon"], "Oct - Dec 2021", "", 9, <>Won "Best Feedback" at Square Hackathon</>);
+        let squarePOSHackathon = new Project("Square Hacks", "/projects/squarePOSHackathon", ["Article/Podcast", "Hackathon"], "Oct - Dec 2021", "", 9, <>Won "Best Feedback" at Square Hackathon</>);
         let automatedWayToGetJSErrors = new Project("AutoLint JS", "/projects/automatedwaytogetjserrors", ["CMDLine", "Python", "Selenium", "Freelance", "Automation"], "Oct 2021", "", 10, <>Auto-retrieves JS errors from url list</>);
         let automatingUsernameCheckProcess = new Project("AutoCheck", "/projects/automatingusernamecheckprocess", ["Desktop App", "tkinter", "openpyxl", "Python", "Selenium", "Freelance", "Automation"], "Oct 2021", "", 11, <>Auto fills out excel sheet via GUI</>);
         let shampooColorMixModel = new Project("Color Model", "/projects/shampoocolormixmodel", ["CMDLine", "Python", "scipy", "sklearn", "numpy", "IBM LSF", "Internship", "AI"], "Jun - Aug 2021", "", 12, <>Predicts shampoo color cross with ML</>);
@@ -302,9 +300,11 @@ class HomePage extends React.Component {
         let imperativeInterpreter = new Project("Interpreter", "/projects/imperativeinterpreter", ["CMDLine", "Racket", "School"], "Apr 2021", "", 35, <>Created C-like prog language w/ Racket</>);
         let huffmanEncoder = new Project("HuffEncode", "/projects/huffmanencoder", ["CMDLine", "Java", "School"], "Mar - Apr 2020", "", 36, <>Encoded, decoded file to save 58% space</>);
         let hashtable = new Project("Hashtable", "/projects/hashtable", ["CMDLine", "Java", "School"], "Apr 2020", "", 37, <>Coded hashtable to count word frequency</>);
-        let mergeSort = new Project("Merge Sort", "/projects/mergesort", ["CMDLine", "Java", "School"], "Apr 2020", "", 38, <>Programmed merge sort, tested runtime</>
+        let mergeSort = new Project("Merge Sort", "/projects/mergesort", ["CMDLine", "Java", "School"], "Apr 2020", "", 38, <>Programmed merge sort, tested runtime</>);
+        let pingPongRallyTracker = new Project("RallyTracker", "/projects/rallytracker", ["CMDLine", "Computer Vision", "numpy", "Python", "Personal", "AI"], "", 39, <>Tracks table tennis rally count using CV</>);
+        let gomoku = new Project("Gomoku",  "/projects/gomoku", ["CMDLine", "JUnit", "Java", "AI", "School"], "", 40, <>Coded Gomoku game for PvP and PvAI</>);
 
-        let typeArray = ["Website", "Extension", "iOS App", "Desktop App", "CMDLine", "Hardware", "Macro", "Article"]
+        let typeArray = ["Website", "Extension", "iOS App", "Desktop App", "CMDLine", "Hardware", "Macro", "Article/Podcast", "Organization"]
         let toolArray = ["JS",
                         "React",
                         "Gatsby",
@@ -326,6 +326,7 @@ class HomePage extends React.Component {
                         "PIL",
 
                         "Java",
+                        "JUnit",
 
                         "Swift",
                         "XCode",

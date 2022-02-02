@@ -47,6 +47,8 @@ import imperativeinterpreter from "../images/homepage_squares/imperativeinterpre
 import huffmantree from "../images/homepage_squares/huffmantree.png"
 import hashtable_collisions from "../images/homepage_squares/hashtable_collisions.png"
 import sorting from "../images/homepage_squares/sorting.png"
+import rallyTracker from "../images/homepage_squares/rallytracker.png"
+import gomoku from "../images/homepage_squares/gomoku.png"
 
 const styles = StyleSheet.create({
   bounceInDown: {
@@ -62,7 +64,7 @@ let imageArray = [sciquelScreenshot, urbanearthScreenshot, jeffreykozikScreensho
     smoothNumbers, walksatdpll, tradingViewGraphAutomation, pgfixing3dprinter, airCharger, welcomeBackHack, giveBackHack, pathfindingaiproject,
     inline, automatedresourcecollection, enhancedautomatedresourcecollection, automatedtacticalbattles,
     iosextensionunicart, smrtnrllselenium, pgautomation, pgrinse, tasktimerecorder, imperativeinterpreter,
-    huffmantree, hashtable_collisions, sorting]
+    huffmantree, hashtable_collisions, sorting, rallyTracker, gomoku]
 // state={{portName: [portfolioNameParam]}}
 
 function ProjectComponent({ name, link, tags, startDate, endDate, imagePath, description }) {

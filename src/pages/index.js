@@ -48,15 +48,24 @@ const IndexPage = () => (
 
                               "Task Time",
 
-                              "HuffEncode",
-                              "Hashtable",
-                              "Merge Sort",
-
                               "RinseCV",
                               "P&G Automate",
                               "3D Print Fix",
+
+                              "HuffEncode",
+                              "Hashtable",
+                              "Merge Sort",
+                              "RallyTracker",
+
+                              "Gomoku",
+
                               "GiveBackHack",
-                              "LCSC"
+                              "LCSC",
+
+                              "Publish0x",
+                              "DFA",
+                              "ElephantPod",
+                              "IntentPod"
                               ]}
                               titleName="Jeffrey Kozik"/>
     </>
