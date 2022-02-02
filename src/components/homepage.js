@@ -196,7 +196,7 @@ class HomePage extends React.Component {
             this.imagePath = imagePath;
             this.description = description;
             if(nameArray.includes(name)){
-                originalProjectsArray[nameArray.indexOf(name)] = name;
+                originalProjectsArray[nameArray.indexOf(name)] = this;
             }
           }
         }
