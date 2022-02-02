@@ -53,6 +53,16 @@ class HomePage extends React.Component {
             }
         }
 
+        console.log("originalProjectsArray: ")
+        for(let i = 0; i < this.state.originalProjectsArray.length; i++){
+            console.log(this.state.originalProjectsArray[i]);
+        }
+        console.log(" ")
+        console.log("currentProjectsArray: ")
+        for(let i = 0; i < this.state.currentProjectsArray.length; i++){
+            console.log(this.state.currentProjectsArray[i]);
+        }
+
         this.setState({
             typeValueState: selectedOptions,
             currentProjectsArrayState: Array.from(oldArrayClone)
@@ -101,6 +111,16 @@ class HomePage extends React.Component {
             }
         }
 
+        console.log("originalProjectsArray: ")
+        for(let i = 0; i < this.state.originalProjectsArray.length; i++){
+            console.log(this.state.originalProjectsArray[i]);
+        }
+        console.log(" ")
+        console.log("currentProjectsArray: ")
+        for(let i = 0; i < this.state.currentProjectsArray.length; i++){
+            console.log(this.state.currentProjectsArray[i]);
+        }
+
         this.setState({
             toolValueState: selectedOptions,
             currentProjectsArrayState: Array.from(oldArrayClone)
@@ -147,6 +167,16 @@ class HomePage extends React.Component {
             if (!inSelection1 || !inSelection2 || !inSelection3){
                 oldArrayClone.splice(i, 1);
             }
+        }
+
+        console.log("originalProjectsArray: ")
+        for(let i = 0; i < this.state.originalProjectsArray.length; i++){
+            console.log(this.state.originalProjectsArray[i]);
+        }
+        console.log(" ")
+        console.log("currentProjectsArray: ")
+        for(let i = 0; i < this.state.currentProjectsArray.length; i++){
+            console.log(this.state.currentProjectsArray[i]);
         }
 
         this.setState({
@@ -336,6 +366,16 @@ class HomePage extends React.Component {
         let occasionValue = [];
 
         let currentProjectsArray = _.cloneDeep(originalProjectsArray);
+
+        console.log("originalProjectsArray: ")
+        for(let i = 0; i < originalProjectsArray.length; i++){
+            console.log(originalProjectsArray[i]);
+        }
+        console.log(" ")
+        console.log("currentProjectsArray: ")
+        for(let i = 0; i < currentProjectsArray.length; i++){
+            console.log(currentProjectsArray[i]);
+        }
 
         this.state = {
             originalProjectsArrayState: originalProjectsArray,
