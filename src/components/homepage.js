@@ -54,13 +54,13 @@ class HomePage extends React.Component {
         }
 
         console.log("originalProjectsArray: ")
-        for(let i = 0; i < this.state.originalProjectsArray.length; i++){
-            console.log(this.state.originalProjectsArray[i]);
+        for(let i = 0; i < this.state.originalProjectsArrayState.length; i++){
+            console.log(this.state.originalProjectsArrayState[i]);
         }
         console.log(" ")
         console.log("currentProjectsArray: ")
-        for(let i = 0; i < this.state.currentProjectsArray.length; i++){
-            console.log(this.state.currentProjectsArray[i]);
+        for(let i = 0; i < this.state.currentProjectsArrayState.length; i++){
+            console.log(this.state.currentProjectsArrayState[i]);
         }
 
         this.setState({
@@ -112,13 +112,13 @@ class HomePage extends React.Component {
         }
 
         console.log("originalProjectsArray: ")
-        for(let i = 0; i < this.state.originalProjectsArray.length; i++){
-            console.log(this.state.originalProjectsArray[i]);
+        for(let i = 0; i < this.state.originalProjectsArrayState.length; i++){
+            console.log(this.state.originalProjectsArrayState[i]);
         }
         console.log(" ")
         console.log("currentProjectsArray: ")
-        for(let i = 0; i < this.state.currentProjectsArray.length; i++){
-            console.log(this.state.currentProjectsArray[i]);
+        for(let i = 0; i < this.state.currentProjectsArrayState.length; i++){
+            console.log(this.state.currentProjectsArrayState[i]);
         }
 
         this.setState({
@@ -170,13 +170,13 @@ class HomePage extends React.Component {
         }
 
         console.log("originalProjectsArray: ")
-        for(let i = 0; i < this.state.originalProjectsArray.length; i++){
-            console.log(this.state.originalProjectsArray[i]);
+        for(let i = 0; i < this.state.originalProjectsArrayState.length; i++){
+            console.log(this.state.originalProjectsArrayState[i]);
         }
         console.log(" ")
         console.log("currentProjectsArray: ")
-        for(let i = 0; i < this.state.currentProjectsArray.length; i++){
-            console.log(this.state.currentProjectsArray[i]);
+        for(let i = 0; i < this.state.currentProjectsArrayState.length; i++){
+            console.log(this.state.currentProjectsArrayState[i]);
         }
 
         this.setState({
