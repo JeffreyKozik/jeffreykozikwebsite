@@ -359,7 +359,7 @@ class HomePage extends React.Component {
         return(
             <>
                 <MediaQuery maxWidth={651}>
-                    <body className={homepage.bodyClass}>
+                    <>
                         <h1 className="m-3" id={homepage.jeffrey_kozik}>{this.state.titleNameState}</h1>
                         <div className={homepage.select_div}>
                             <a className={homepage.mobile_portfolio_link} href="mailto:jeffreykozik@protonmail.com">jeffreykozik@pm.me</a>
@@ -377,10 +377,10 @@ class HomePage extends React.Component {
                         <div className={homepage.projects_container}>
                             {this.listItemsFunction(this.state.nameArrayState)}
                         </div>
-                    </body>
+                    </>
                 </MediaQuery>
                 <MediaQuery minWidth={652}>
-                    <>
+                    <body className={homepage.bodyClass}>
                         <h1 className="m-3" id={homepage.jeffrey_kozik}>{this.state.titleNameState}</h1>
                         <div className={homepage.select_div}>
                             <a className={homepage.mobile_portfolio_link} href="mailto:jeffreykozik@protonmail.com">jeffreykozik@pm.me</a>
@@ -398,7 +398,7 @@ class HomePage extends React.Component {
                         <div className={homepage.projects_container}>
                             {this.listItemsFunction(this.state.nameArrayState)}
                         </div>
-                    </>
+                    </body>
                 </MediaQuery>
             </>
         )
