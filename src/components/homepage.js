@@ -303,6 +303,7 @@ class HomePage extends React.Component {
         let mergeSort = new Project("Merge Sort", "/projects/mergesort", ["CMDLine", "Java", "School"], "Apr 2020", "", 38, <>Programmed merge sort, tested runtime</>);
         let pingPongRallyTracker = new Project("RallyTracker", "/projects/rallytracker", ["CMDLine", "Computer Vision", "numpy", "Python", "Personal", "AI"], "", 39, <>Tracks table tennis rally count using CV</>);
         let gomoku = new Project("Gomoku",  "/projects/gomoku", ["CMDLine", "JUnit", "Java", "AI", "School"], "", 40, <>Coded Gomoku game for PvP and PvAI</>);
+        let basketball = new Project("BasketbalSim", "/projects/basketballgamesimulator", ["CMDLine", "JS", "Personal"], "", 41, <>Simulate basketball game w/ player stats</>)
 
         let typeArray = ["Website", "Extension", "iOS App", "Desktop App", "CMDLine", "Hardware", "Macro", "Article/Podcast", "Organization"]
         let toolArray = ["JS",

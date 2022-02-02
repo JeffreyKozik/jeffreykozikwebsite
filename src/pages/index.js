@@ -62,10 +62,7 @@ const IndexPage = () => (
                               "GiveBackHack",
                               "LCSC",
 
-                              "Publish0x",
-                              "DFA",
-                              "ElephantPod",
-                              "IntentPod"
+                              "BasketbalSim"
                               ]}
                               titleName="Jeffrey Kozik"/>
     </>
