@@ -45,6 +45,7 @@ import pgrinse from "../images/homepage_squares/shampoo_rinse.jpeg"
 import tasktimerecorder from "../images/homepage_squares/tasktimerecorderfirstpage.png"
 import imperativeinterpreter from "../images/homepage_squares/imperativeinterpreter.png"
 import huffmantree from "../images/homepage_squares/huffmantree.png"
+import hashtable_collisions from "../images/homepage_squares/hashtable_collisions.png"
 
 const styles = StyleSheet.create({
   bounceInDown: {
@@ -59,7 +60,8 @@ let imageArray = [sciquelScreenshot, urbanearthScreenshot, jeffreykozikScreensho
     shampooColorMixModel, autopayHealthcare, circumvent2FASelenium, fixingSeleniumTaxScript, germanImmigrationAutomation, rsa,
     smoothNumbers, walksatdpll, tradingViewGraphAutomation, pgfixing3dprinter, airCharger, welcomeBackHack, giveBackHack, pathfindingaiproject,
     inline, automatedresourcecollection, enhancedautomatedresourcecollection, automatedtacticalbattles,
-    iosextensionunicart, smrtnrllselenium, pgautomation, pgrinse, tasktimerecorder, imperativeinterpreter, huffmantree]
+    iosextensionunicart, smrtnrllselenium, pgautomation, pgrinse, tasktimerecorder, imperativeinterpreter,
+    huffmantree, hashtable_collisions]
 // state={{portName: [portfolioNameParam]}}
 
 function ProjectComponent({ name, link, tags, startDate, endDate, imagePath, description }) {

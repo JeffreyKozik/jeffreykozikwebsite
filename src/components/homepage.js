@@ -256,7 +256,6 @@ class HomePage extends React.Component {
         // let railyard = new Project("Railyard", "", "", "", "", "");
         // let stringAndArrayManipulation = new Project("String and Array Manipulation", "", "", "", "", "");
         // let sorting = new Project("Sorting", "", "", "", "", "");
-        // let hashtable = new Project("Hashtable", "", "", "", "", "");
         // let pingPongRallyTracker = new Project("Ping Pong Rally Tracker", "", "", "", "", "");
         // let trickOrTag = new Project("Trick or Tag", "", "", "", "", "");
         // let tedXCwru = new Project("TEDxCWRU", "", "", "", "", "");
@@ -301,6 +300,7 @@ class HomePage extends React.Component {
         let taskTimeRecorder = new Project("Task Time", "/projects/tasktimerecorder", ["Macro", "Apps Script", "Personal", "Automation"], "Sep - Dec 2020", "", 34, <>Tracked time, efficiency w/ Apps Script</>);
         let imperativeInterpreter = new Project("Interpreter", "/projects/imperativeinterpreter", ["CMDLine", "Racket", "School"], "Apr 2021", "", 35, <>Created C-like prog language w/ Racket</>);
         let huffmanEncoder = new Project("HuffEncode", "/projects/huffmanencoder", ["CMDLine", "Java", "School"], "Mar - Apr 2020", "", 36, <>Encoded, decoded file to save 58% space</>);
+        let hashtable = new Project("Hashtable", "/projects/hashtable", ["CMDLine", "Java", "School"], "Apr 2020", "", 37, <>Coded hashtable to count word frequency</>);
 
         let typeArray = ["Website", "Extension", "iOS App", "Desktop App", "CMDLine", "Hardware", "Macro", "Article"]
         let toolArray = ["JS",
