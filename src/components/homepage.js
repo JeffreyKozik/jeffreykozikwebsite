@@ -14,6 +14,7 @@ class HomePage extends React.Component {
     handleTypeChange = (selectedOptions) => {
         let oldArray = Array.from(this.state.originalProjectsArrayState);
         let oldArrayClone = _.cloneDeep(oldArray);
+        let oldArrayClone2 = _.cloneDeep(oldArray);
         for(let i = 0; i < oldArrayClone.length; i++){
             let inSelection1 = false;
             if(selectedOptions.length == 0){
@@ -49,7 +50,7 @@ class HomePage extends React.Component {
                 }
             }
             if (!inSelection1 || !inSelection2 || !inSelection3){
-                oldArrayClone.splice(i, 1);
+                oldArrayClone2.splice(i, 1);
             }
         }
 
@@ -65,13 +66,14 @@ class HomePage extends React.Component {
 
         this.setState({
             typeValueState: selectedOptions,
-            currentProjectsArrayState: Array.from(oldArrayClone)
+            currentProjectsArrayState: Array.from(oldArrayClone2)
         });
     }
 
     handleToolChange = (selectedOptions) => {
         let oldArray = Array.from(this.state.originalProjectsArrayState);
         let oldArrayClone = _.cloneDeep(oldArray);
+        let oldArrayClone2 = _.cloneDeep(oldArray);
         for(let i = 0; i < oldArrayClone.length; i++){
             let inSelection1 = false;
             if(selectedOptions.length == 0){
@@ -107,7 +109,7 @@ class HomePage extends React.Component {
                 }
             }
             if (!inSelection1 || !inSelection2 || !inSelection3){
-                oldArrayClone.splice(i, 1);
+                oldArrayClone2.splice(i, 1);
             }
         }
 
@@ -123,13 +125,14 @@ class HomePage extends React.Component {
 
         this.setState({
             toolValueState: selectedOptions,
-            currentProjectsArrayState: Array.from(oldArrayClone)
+            currentProjectsArrayState: Array.from(oldArrayClone2)
         });
     }
 
     handleOccasionChange = (selectedOptions) => {
         let oldArray = Array.from(this.state.originalProjectsArrayState);
         let oldArrayClone = _.cloneDeep(oldArray);
+        let oldArrayClone2 = _.cloneDeep(oldArray);
         for(let i = 0; i < oldArrayClone.length; i++){
             let inSelection1 = false;
             if(selectedOptions.length == 0){
@@ -165,7 +168,7 @@ class HomePage extends React.Component {
                 }
             }
             if (!inSelection1 || !inSelection2 || !inSelection3){
-                oldArrayClone.splice(i, 1);
+                oldArrayClone2.splice(i, 1);
             }
         }
 
@@ -181,7 +184,7 @@ class HomePage extends React.Component {
 
         this.setState({
             occasionValueState: selectedOptions,
-            currentProjectsArrayState: Array.from(oldArrayClone)
+            currentProjectsArrayState: Array.from(oldArrayClone2)
         });
     }
 
