@@ -332,20 +332,12 @@ class HomePage extends React.Component {
         let occasionValue = [];
 
         let realOriginalProjectsArray = []
-        for(let i=0; i < originalProjectsArray.length; i++){
+        for(let i=0; i < nameArray.length; i++){
             realOriginalProjectsArray.push("");
         }
-        for(let i = 0; i < realOriginalProjectsArray.length; i++){
-            if((nameArray.length == 0) || (nameArray.includes( originalProjectsArray[i].name))){
-                realOriginalProjectsArray[nameArray.indexOf( originalProjectsArray[i].name)] =
-                    <div key={i}><ProjectComponent name={ originalProjectsArray[i].name}
-                                                   link={ originalProjectsArray[i].link}
-                                                   tags={ originalProjectsArray[i].tags}
-                                                   startDate={ originalProjectsArray[i].startDate}
-                                                   endDate={ originalProjectsArray[i].endDate}
-                                                   imagePath={ originalProjectsArray[i].imagePath}
-                                                   description={ originalProjectsArray[i].description}/>
-                   </div>
+        for(let i = 0; i < originalProjectsArray.length; i++){
+            if(nameArray.includes( originalProjectsArray[i].name)){
+                realOriginalProjectsArray[nameArray.indexOf( originalProjectsArray[i].name)] = originalProjectsArray[i].name
             }
         }
 
