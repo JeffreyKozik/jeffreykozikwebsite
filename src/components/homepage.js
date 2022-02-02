@@ -12,10 +12,10 @@ import * as homepage from './homepage.module.css';
 
 class HomePage extends React.Component {
     handleTypeChange = (selectedOptions) => {
-        console.log("Selected Options: " + selectedOptions)
-        console.log("typeValueState: " +this.state.typeValueState)
-        console.log("toolValueState: " +this.state.toolValueState)
-        console.log("occasionValueState: " +this.state.occasionValueState)
+        console.log("Selected Options: " + selectedOptions);
+        console.log("typeValueState: " +this.state.typeValueState);
+        console.log("toolValueState: " +this.state.toolValueState);
+        console.log("occasionValueState: " +this.state.occasionValueState);
 
         let oldArray = Array.from(this.state.originalProjectsArrayState);
         let oldArrayClone = _.cloneDeep(oldArray);
@@ -77,10 +77,10 @@ class HomePage extends React.Component {
     }
 
     handleToolChange = (selectedOptions) => {
-        console.log("Selected Options: " + selectedOptions)
-        console.log("typeValueState: " +this.state.typeValueState)
-        console.log("toolValueState: " +this.state.toolValueState)
-        console.log("occasionValueState: " +this.state.occasionValueState)
+        console.log("Selected Options: " + selectedOptions);
+        console.log("typeValueState: " +this.state.typeValueState);
+        console.log("toolValueState: " +this.state.toolValueState);
+        console.log("occasionValueState: " +this.state.occasionValueState);
         let oldArray = Array.from(this.state.originalProjectsArrayState);
         let oldArrayClone = _.cloneDeep(oldArray);
         let oldArrayClone2 = _.cloneDeep(oldArray);
@@ -141,10 +141,11 @@ class HomePage extends React.Component {
     }
 
     handleOccasionChange = (selectedOptions) => {
-        console.log("Selected Options: " + selectedOptions)
-        console.log("typeValueState: " +this.state.typeValueState)
-        console.log("toolValueState: " +this.state.toolValueState)
-        console.log("occasionValueState: " +this.state.occasionValueState)        let oldArray = Array.from(this.state.originalProjectsArrayState);
+        console.log("Selected Options: " + selectedOptions);
+        console.log("typeValueState: " +this.state.typeValueState);
+        console.log("toolValueState: " +this.state.toolValueState);
+        console.log("occasionValueState: " +this.state.occasionValueState);        
+        let oldArray = Array.from(this.state.originalProjectsArrayState);
         let oldArrayClone = _.cloneDeep(oldArray);
         let oldArrayClone2 = _.cloneDeep(oldArray);
         for(let i = 0; i < oldArrayClone.length; i++){
