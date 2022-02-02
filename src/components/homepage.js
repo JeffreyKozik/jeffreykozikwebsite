@@ -331,10 +331,28 @@ class HomePage extends React.Component {
         let toolValue = [];
         let occasionValue = [];
 
-        let currentProjectsArray = _.cloneDeep(originalProjectsArray);
+        let realOriginalProjectsArray = []
+        for(let i=0; i < originalProjectsArray.length; i++){
+            realOriginalProjectsArray.push("");
+        }
+        for(let i = 0; i < realOriginalProjectsArray.length; i++){
+            if((nameArray.length == 0) || (nameArray.includes( originalProjectsArray[i].name))){
+                realOriginalProjectsArray[nameArray.indexOf( originalProjectsArray[i].name)] =
+                    <div key={i}><ProjectComponent name={ originalProjectsArray[i].name}
+                                                   link={ originalProjectsArray[i].link}
+                                                   tags={ originalProjectsArray[i].tags}
+                                                   startDate={ originalProjectsArray[i].startDate}
+                                                   endDate={ originalProjectsArray[i].endDate}
+                                                   imagePath={ originalProjectsArray[i].imagePath}
+                                                   description={ originalProjectsArray[i].description}/>
+                   </div>
+            }
+        }
+
+        let currentProjectsArray = _.cloneDeep(realOriginalProjectsArray);
 
         this.state = {
-            originalProjectsArrayState: originalProjectsArray,
+            originalProjectsArrayState: realOriginalProjectsArray,
             currentProjectsArrayState: currentProjectsArray,
             nameArrayState: nameArray,
             titleNameState: titleName,
