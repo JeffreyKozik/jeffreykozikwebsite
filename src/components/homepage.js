@@ -242,8 +242,8 @@ class HomePage extends React.Component {
         let pgAutomation = new Project("P&G Automate", "/projects/pgautomation", ["CMDLine", "openpyxl", "VBA", "Python", "Internship", "Automation"], "May - Jul 2020, Jun - Aug 2021", "", 32, <>Automated 2 coworkers excel sheets, more</>);
         let computerVisionToMeasureRinsability = new Project("RinseCV", "/projects/pgshampoorinsability", ["CMDLine", "Computer Vision", "Python", "Internship", "AI"], "May - Jul 2020", "", 33, <>Measured rinsability w/ computer vision</>);
         let taskTimeRecorder = new Project("Task Time", "/projects/tasktimerecorder", ["Macro", "Apps Script", "Personal", "Automation"], "Sep - Dec 2020", "", 34, <>Tracked time, efficiency w/ Apps Script</>);
-        let imperativeInterpreter = new Project("Interpeter", "/projects/imperativeinterpreter", ["CMDLine", "Racket", "School"], "Apr 2021", "", 35, <>Created C-like prog language w/ Racket</>);
-        let huffmanEncoder = new Project("Huffman Encoder", "/projects/huffmanencoder", ["CMDLine", "Java", "School"], "Mar - Apr 2020", "", 36, <>Encoded, decoded file to save 58% space</>);
+        let imperativeInterpreter = new Project("Interpreter", "/projects/imperativeinterpreter", ["CMDLine", "Racket", "School"], "Apr 2021", "", 35, <>Created C-like prog language w/ Racket</>);
+        let huffmanEncoder = new Project("HuffEncode", "/projects/huffmanencoder", ["CMDLine", "Java", "School"], "Mar - Apr 2020", "", 36, <>Encoded, decoded file to save 58% space</>);
 
         super(props);
 
@@ -358,7 +358,7 @@ class HomePage extends React.Component {
                     <body className={homepage.bodyClass}>
                         <h1 className="m-3" id={homepage.jeffrey_kozik}>{this.state.titleNameState}</h1>
                         <div className={homepage.select_div}>
-                            <div className={homepage.mobile_portfolio_link}>jeffreykozik@protonmail.com</div>
+                            <a className={homepage.mobile_portfolio_link} href="mailto:jeffreykozik@protonmail.com">jeffreykozik@pm.me</a>
                             <a className={homepage.mobile_portfolio_link} href="https://github.com/JeffreyKozik" target="_blank" rel="noreferrer">Github</a>
                             <a className={homepage.mobile_portfolio_link} href="https://fiverr.com/JeffreyKozik" target="_blank" rel="noreferrer">Fiverr</a>
                             <a className={homepage.mobile_portfolio_link} href="https://stackoverflow.com/users/16913644/jeffrey-kozik" target="_blank" rel="noreferrer">SO</a>
@@ -379,7 +379,7 @@ class HomePage extends React.Component {
                     <>
                         <h1 className="m-3" id={homepage.jeffrey_kozik}>{this.state.titleNameState}</h1>
                         <div className={homepage.select_div}>
-                            <div className={homepage.portfolio_link}>jeffreykozik@protonmail.com</div>
+                            <a className={homepage.mobile_portfolio_link} href="mailto:jeffreykozik@protonmail.com">jeffreykozik@pm.me</a>
                             <a className={homepage.portfolio_link} href="https://github.com/JeffreyKozik" target="_blank" rel="noreferrer">Github</a>
                             <a className={homepage.portfolio_link} href="https://fiverr.com/JeffreyKozik" target="_blank" rel="noreferrer">Fiverr</a>
                             <a className={homepage.portfolio_link} href="https://stackoverflow.com/users/16913644/jeffrey-kozik" target="_blank" rel="noreferrer">SO</a>

@@ -40,7 +40,7 @@ const IndexPage = () => (
 
                               "CollectAI",
                               "PathfindAI",
-                              "TactialAI",
+                              "TacticalAI",
 
                               "Air Charger",
 
