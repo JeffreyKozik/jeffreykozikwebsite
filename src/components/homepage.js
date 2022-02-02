@@ -12,6 +12,11 @@ import * as homepage from './homepage.module.css';
 
 class HomePage extends React.Component {
     handleTypeChange = (selectedOptions) => {
+        console.log("Selected Options: " + selectedOptions)
+        console.log("typeValueState: " +this.state.typeValueState)
+        console.log("toolValueState: " +this.state.toolValueState)
+        console.log("occasionValueState: " +this.state.occasionValueState)
+
         let oldArray = Array.from(this.state.originalProjectsArrayState);
         let oldArrayClone = _.cloneDeep(oldArray);
         let oldArrayClone2 = _.cloneDeep(oldArray);
@@ -50,7 +55,8 @@ class HomePage extends React.Component {
                 }
             }
             if (!inSelection1 || !inSelection2 || !inSelection3){
-                oldArrayClone2.splice(i, 1);
+                // oldArrayClone2.splice(i, 1);
+                oldArrayClone2[i] = "";
             }
         }
 
@@ -71,6 +77,10 @@ class HomePage extends React.Component {
     }
 
     handleToolChange = (selectedOptions) => {
+        console.log("Selected Options: " + selectedOptions)
+        console.log("typeValueState: " +this.state.typeValueState)
+        console.log("toolValueState: " +this.state.toolValueState)
+        console.log("occasionValueState: " +this.state.occasionValueState)
         let oldArray = Array.from(this.state.originalProjectsArrayState);
         let oldArrayClone = _.cloneDeep(oldArray);
         let oldArrayClone2 = _.cloneDeep(oldArray);
@@ -109,7 +119,8 @@ class HomePage extends React.Component {
                 }
             }
             if (!inSelection1 || !inSelection2 || !inSelection3){
-                oldArrayClone2.splice(i, 1);
+                // oldArrayClone2.splice(i, 1);
+                oldArrayClone2[i] = "";
             }
         }
 
@@ -130,7 +141,10 @@ class HomePage extends React.Component {
     }
 
     handleOccasionChange = (selectedOptions) => {
-        let oldArray = Array.from(this.state.originalProjectsArrayState);
+        console.log("Selected Options: " + selectedOptions)
+        console.log("typeValueState: " +this.state.typeValueState)
+        console.log("toolValueState: " +this.state.toolValueState)
+        console.log("occasionValueState: " +this.state.occasionValueState)        let oldArray = Array.from(this.state.originalProjectsArrayState);
         let oldArrayClone = _.cloneDeep(oldArray);
         let oldArrayClone2 = _.cloneDeep(oldArray);
         for(let i = 0; i < oldArrayClone.length; i++){
@@ -168,7 +182,8 @@ class HomePage extends React.Component {
                 }
             }
             if (!inSelection1 || !inSelection2 || !inSelection3){
-                oldArrayClone2.splice(i, 1);
+                // oldArrayClone2.splice(i, 1);
+                oldArrayClone2[i] = "";
             }
         }
 
@@ -194,7 +209,7 @@ class HomePage extends React.Component {
             listItems.push("");
         }
         for(let i = 0; i <  this.state.currentProjectsArrayState.length; i++){
-            if((nameArrayParam.length == 0) || (nameArrayParam.includes( this.state.currentProjectsArrayState[i].name))){
+            if(this.state.currentProjectsArrayState[i] != "" && nameArrayParam.includes( this.state.currentProjectsArrayState[i].name)){
                 listItems[nameArrayParam.indexOf( this.state.currentProjectsArrayState[i].name)] =
                     <div key={i}><ProjectComponent name={ this.state.currentProjectsArrayState[i].name}
                                                    link={ this.state.currentProjectsArrayState[i].link}
