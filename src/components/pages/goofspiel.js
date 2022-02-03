@@ -10,7 +10,9 @@ const GoofspielComponent = () => (
         </h3>
         <a href="https://www.khanacademy.org/computer-programming/goofspiel/5055435377475584" target="_blank" rel="noreferrer">
             <img className={pages.page_video} src={goofspiel} alt="goofspiel screenshot"/>
-        </a>
+        </a><p className={pages.page_description}>
+            View the Github repo <a href="https://github.com/JeffreyKozik/Goofspiel">here</a>.
+        </p>
         <p className={pages.page_description}>
             Click on link <a href="https://www.khanacademy.org/computer-programming/goofspiel/5055435377475584" target="_blank" rel="noreferrer">here</a>
             to go to the game page. To play, click a value from the bar on the top 1-13 (you can only use each value once). A good strategy

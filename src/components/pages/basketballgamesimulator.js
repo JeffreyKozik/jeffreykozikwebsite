@@ -25,6 +25,9 @@ const BasketballComponent = () => (
             entirely in JavaScript. It also includes the NBA team with the longest streak without losing
             (Seattle Supersonics).
         </p>
+        <p className={pages.page_description}>
+            Can view Github repo <a href="https://github.com/JeffreyKozik/BasketballGameSimulator">here</a>.
+        </p>
     </>
 )
 

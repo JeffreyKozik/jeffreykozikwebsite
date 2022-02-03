@@ -17,6 +17,9 @@ const MultiTabSearchComponent = () => (
             change their names to their corresponding subdomain so it's easier to tell what tab corresponds to what. In the video only 2
             tabs are shown, but the browser extension can be used with as many tabs as needed, in this case 12 were used by the client.
         </p>
+        <p className={pages.page_description}>
+            View Github repo <a href="https://github.com/JeffreyKozik/MultiSearch">here</a>.
+        </p>
     </>
 )
 

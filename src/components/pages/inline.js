@@ -1,6 +1,6 @@
 import * as React from "react"
 import * as pages from "../../page_styling/pages.module.css"
-import sqlDemo from "../../images/inline_demo_shorter.mp4";
+import sqlDemo from "../../images/inline_muted.mp4";
 import flaskDemo from "../../images/inline_flask_demo_edited.mp4"
 
 const InLineComponent = () => (

@@ -13,6 +13,9 @@ const BingUtilityBeltComponent = () => (
             <source src={searchenginedemo} type="video/mp4"></source>
         </video>
         <p className={pages.page_description}>
+            Browse the code at the Github repo <a href="https://github.com/JeffreyKozik/BingUtilityBelt">here</a>.
+        </p>
+        <p className={pages.page_description}>
             When using this browser extension, whenever you search on Bing, all of the ads will get red backgrounds to make it more clear that they are ads, and the number of ads
             displayed on a Bing tab will be included in the name of the tab. Also, "in 2021" will be appended to whatever you search to ensure the results are recent (this extension
             was created in 2021). For example, if you search "cars" it will change the search to "cars in 2021" automatically and the name of the tab will be "2 ads cars in 2021".
