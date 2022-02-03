@@ -17,6 +17,10 @@ const JeffreyKozikWebsiteComponent = () => (
             exists a way to do it with create-react-app and react-router, it isn't as optimal as doing it with Gatsby. I switched to Gatsby
             specifically because this is a largely static site and the DOM isn't changed frequently by the user.
         </p>
+        <p className={pages.page_description}>
+            This website is also hosted on IPFS at jeff2.eth or jeff2.eth.link. I used Fleek
+            for the hosting process.
+        </p>
     </>
 )
 

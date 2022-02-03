@@ -36,6 +36,9 @@ const GiveBackHackVolComponent = () => (
             Myself and one or two other team members coded the front end of the website using Boostrap (this was my first
             time using Boostrap) and two other team members worked on getting the login flow to work thorugh Firebase Authentication.
         </p>
+        <p className={pages.page_description}>
+            Browse the code on the Github repo <a href="https://github.com/JeffreyKozik/gbh">here</a>.
+        </p>
     </>
 )
 

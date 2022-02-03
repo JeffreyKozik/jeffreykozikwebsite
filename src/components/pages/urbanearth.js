@@ -18,6 +18,9 @@ const UrbanEarthComponent  = () => (
         <video controls preload="auto" className={pages.page_video}>
             <source src={urbanEarthDemoVideo} type="video/mp4"></source>
         </video>
+        <p classname={pages.page_description}>
+            You can view the Github repo <a href="https://github.com/nikiwangvc/UE/tree/Main2">here.</a>
+        </p>
         <p className={pages.page_description}>
             Below are the first two pages of the app, the login and sign up pages. My partner did most of the work on these pages and used
             Storyboard for the frontend, Swift for the in-app logic, and Firebase Authentication for the backend storing of users.

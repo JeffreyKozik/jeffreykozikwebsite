@@ -2885,7 +2885,7 @@ class OneWorld extends React.Component {
                 <Helmet>
                     <meta name="viewport" content="initial-scale=1, width=device-width"/>
                 </Helmet>
-                <body>
+                <div className={oneworld.bodyClass}>
                     <Seo title="One World Browser Extension" />
                     <MediaQuery minWidth={601}>
                         <div className={pages.page_container}>
@@ -3020,7 +3020,7 @@ class OneWorld extends React.Component {
                         </p>
                     </div>
                     </MediaQuery>
-                </body>
+                </div>
             </>
         );
     }

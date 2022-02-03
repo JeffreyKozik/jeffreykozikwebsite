@@ -6,7 +6,7 @@ const WelcomeBackHackComponent = () => (
     <>
         <h1 className={pages.page_title}> Lexigraphic Correlatory Stagnation Combatant (LCSC) </h1>
         <h3 className={pages.page_subtitle}>
-            Myself along with two core teammates won "Best in Creativity" at the 12-hour WelcomeBackHack Hackthon at
+            Myself along with a few teammates won "Best in Creativity" at the 12-hour WelcomeBackHack Hackthon at
             Case Western Reserve University during the Fall of 2019.
         </h3>
         <img className={pages.page_video} src={socrates} alt="Team has lots of his own canine."/>

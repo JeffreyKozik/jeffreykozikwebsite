@@ -9,10 +9,104 @@ const IndexPage = () => (
     <>
         <Seo title="Home" />
         <Header/>
-        <h1 id={homepage.jeffrey_kozik}>Jeffrey Kozik</h1>
-        <HomePage nameArray={["Sciquel", "Urban Earth", "Jeffrey Kozik Website",
-         "1World Browser Extension", "smrtnrll Browser Extension", "Bing Utility Belt"]}/>
+        <HomePage nameArray={["1World",
+                              "Urban Earth",
+                              "Sciquel",
+                              "This Website",
+                              "CollectAI+",
+                              "smrtnrll 2.0",
+                              "Color Model",
+                              "AutoCheck",
+                              "Interpreter",
+
+                              "Square Hacks",
+
+                              "inLine",
+                              "Smooth Nums",
+                              "RSA",
+                              "WalkSAT DPLL",
+
+                              "BingAdFinder",
+                              "TradingView",
+                              "Avoid 2FA",
+                              "Total Cost",
+                              "MultiSearch",
+                              "Auto Appt",
+                              "Autopay",
+                              "AutoLint JS",
+                              "Site Checker",
+                              "iOS Unicart",
+                              "Tax Script",
+
+                              "CollectAI",
+                              "PathfindAI",
+                              "TacticalAI",
+
+                              "Air Charger",
+
+                              "smrtnrll 1.0",
+
+                              "Task Time",
+
+                              "RinseCV",
+                              "P&G Automate",
+                              "3D Print Fix",
+
+                              "HuffEncode",
+                              "Hashtable",
+                              "Merge Sort",
+                              "RallyTracker",
+
+                              "Gomoku",
+                              "RailyardSort",
+                              "String&Array",
+
+                              "GiveBackHack",
+                              "LCSC",
+
+                              "BasketbalSim",
+                              "Goofspiel",
+                              "Tom Malthus"
+                              ]}
+                              titleName="Jeffrey Kozik"/>
     </>
 )
 
 export default IndexPage
+
+// <HomePage nameArray={["1World Browser Extension",
+//                       "Urban Earth",
+//                       "Sciquel",
+//                       "Jeffrey Kozik Website",
+//                       "Enhanced Automated Resource Collection",
+//                       "Automated Resource Collection",
+//                       "Pathfinding AI Project",
+//                       "smrtnrll Browser Extension",
+//                       "Task Time Recorder",
+//                       "Bing Utility Belt",
+//                       "Shampoo Color Mix Model",
+//                       "Automating Username Check Process",
+//                       "TradingView Graph Automation",
+//                       "German Immigration Automation",
+//                       "RSA",
+//                       "Smooth Numbers",
+//                       "Imperative Interpreter",
+//                       "WalkSAT and DPLL",
+//                       "Automated Tactical Battles",
+//                       "Circumvent 2FA Selenium",
+//                       "Square Build What's POS-sible Hackathon",
+//                       "Air Charger",
+//                       "Total Cost Browser Extension",
+//                       "Multitab Search Browser Extension",
+//                       "Computer Vision to Measure Rinsability",
+//                       "P&G Automation",
+//                       "P&G Fixing 3D Printer",
+//                       "GiveBackHack Vol & Tell",
+//                       "Welcome Back Hack",
+//                       "Automated Way to Get JS Errors",
+//                       "Autopay Healthcare",
+//                       "iOS Extension Unicart",
+//                       "smrtnrll Selenium",
+//                       "Fixing Selenium Tax Script",
+//                       "Site Checker Browser Extension"]}/>
+//
