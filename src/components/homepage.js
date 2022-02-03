@@ -297,8 +297,8 @@ class HomePage extends React.Component {
         let railyard = new Project("RailyardSort", "/projects/railyard", ["CMDLine", "JUnit", "Java", "School"], "Nov 2019", "", 42, <>Sorts arrays using railyard metaphor</>);
         let stringArray = new Project("String&Array", "/projects/stringandarraymanipulation", ["CMDLine", "Java", "School"], "Oct 2019", "", 43, <>String and array manipulation algorithms</>);
         let trickOrTag = new Project("Trick or Tag", "/projects/trickortag", ["CMDLine", "Python", "Personal"], "Oct 2019", "", 44, <>Created Halloween pygame with 2 friends</>);
-        let thomasRobertMalthusPresentation = new Project("Tom Malthus", ["CMDLine", "JS", "School"], "2016", "", 45, <>Overpopulation presentation coded in JS</>);
-        let goofspiel = new Project("Goofspiel", ["CMDLine", "JS", "Personal"], "2016", "", 46, <>Strategy card game play vs computer</>);
+        let thomasRobertMalthusPresentation = new Project("Tom Malthus", "/projects/thomasrobertmalthus", ["CMDLine", "JS", "School"], "2016", "", 45, <>Overpopulation presentation coded in JS</>);
+        let goofspiel = new Project("Goofspiel", "/projects/goofspiel", ["CMDLine", "JS", "Personal"], "2016", "", 46, <>Strategy card game play vs computer</>);
 
         let typeArray = ["Website", "Extension", "iOS App", "Desktop App", "CMDLine", "Hardware", "Macro", "Article/Podcast", "Organization"]
         let toolArray = ["JS",
