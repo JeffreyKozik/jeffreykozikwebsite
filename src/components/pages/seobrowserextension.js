@@ -16,6 +16,9 @@ const SeoBrowserExtensionComponent = () => (
             store yet. However, the video above gives a good idea of what the browser extension does. To be clear, I did not code any of <a href="site-checker.org">site-checker.org</a>
               I coded the browser extension which easily opens a new tab analyzing the current website's SEO.
         </p>
+        <p className={pages.page_description}>
+            You can view the Github repo <a href="https://github.com/JeffreyKozik/Site-Checker" target="_blank" rel="noreferrer">here</a>.
+        </p>
     </>
 )
 
