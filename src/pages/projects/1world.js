@@ -307,7 +307,6 @@ class OneWorld extends React.Component {
         let total_co2 = 0
         let total_offset = 0
         const api_url = process.env.AZURE_FUNCTION_URL;
-        console.log(process.env.AZURE_FUNCTION_URL);
         fetch(api_url, {
             method: 'POST',
             body: JSON.stringify({
