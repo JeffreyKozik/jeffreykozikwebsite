@@ -6,6 +6,7 @@ module.exports = {
     author: `Jeffrey Kozik`,
     siteUrl: `https://jeffreykozik.com`,
   },
+  pathPrefix: '__GATSBY_IPFS_PATH_PREFIX__',
   plugins: [
     `@babel/eslint-parser`,
     `@emotion/react`,
@@ -67,6 +68,7 @@ module.exports = {
         allowList: ["AZURE_FUNCTION_URL"]
       },
     },
+    'gatsby-plugin-ipfs',
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
