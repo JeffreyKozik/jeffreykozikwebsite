@@ -13,6 +13,10 @@ const TrickOrTagComponent = () => (
             <source src={trickortag_edited} type="video/mp4"></source>
         </video>
         <p className={pages.page_description}>
+            There are 2 players that alternate between who is the chaser and who is being chased.
+            If the person being chased gets caught in 10 seconds they lose a life. Both players
+            start with 3 lives and whoever dies first loses. There are also pumpkins that if you
+            run into give you a temporary speed boost.
         </p>
         <p className={pages.page_description}>
             You can browse the code at the Github repository located <a href="https://github.com/JeffreyKozik/TrickOrTag">here</a>.

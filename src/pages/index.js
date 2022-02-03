@@ -64,7 +64,9 @@ const IndexPage = () => (
                               "GiveBackHack",
                               "LCSC",
 
-                              "BasketbalSim"
+                              "BasketbalSim",
+                              "Goofspiel",
+                              "Tom Malthus"
                               ]}
                               titleName="Jeffrey Kozik"/>
     </>

@@ -250,16 +250,6 @@ class HomePage extends React.Component {
           }
         }
 
-        // let harryPotterGame = new Project("Harry Potter Game", "", "", "", "", "");
-        // let thomasRobertMalthusPresentation = new Project("Thomas Robert Malthus Presentation", "", "", "", "", "");
-        // let basketballGameSimulator = new Project("Basktball Game Simulator", "", "", "", "", "");
-        // let railyard = new Project("Railyard", "", "", "", "", "");
-        // let stringAndArrayManipulation = new Project("String and Array Manipulation", "", "", "", "", "");
-        // let sorting = new Project("Sorting", "", "", "", "", "");
-        // let trickOrTag = new Project("Trick or Tag", "", "", "", "", "");
-        // let tedXCwru = new Project("TEDxCWRU", "", "", "", "", "");
-        // let designForAmerica = new Project("Design For America", "", "", "", "", "");
-
         // 12 characters for titles,
         // 40 characters for descriptions
         let sciquel = new Project("Sciquel", "/projects/sciquel", ["Website", "Bootstrap", "HTML, CSS", "Personal"], "Dec 2021 - Jan 2022", "", 0, <>Makes science more accessible</>);
@@ -307,6 +297,8 @@ class HomePage extends React.Component {
         let railyard = new Project("RailyardSort", "/projects/railyard", ["CMDLine", "JUnit", "Java", "School"], "Nov 2019", "", 42, <>Sorts arrays using railyard metaphor</>);
         let stringArray = new Project("String&Array", "/projects/stringandarraymanipulation", ["CMDLine", "Java", "School"], "Oct 2019", "", 43, <>String and array manipulation algorithms</>);
         let trickOrTag = new Project("Trick or Tag", "/projects/trickortag", ["CMDLine", "Python", "Personal"], "Oct 2019", "", 44, <>Created Halloween pygame with 2 friends</>);
+        let thomasRobertMalthusPresentation = new Project("Tom Malthus", ["CMDLine", "JS", "School"], "2016", "", 45, <>Overpopulation presentation coded in JS</>);
+        let goofspiel = new Project("Goofspiel", ["CMDLine", "JS", "Personal"], "2016", "", 46, <>Strategy card game play vs computer</>);
 
         let typeArray = ["Website", "Extension", "iOS App", "Desktop App", "CMDLine", "Hardware", "Macro", "Article/Podcast", "Organization"]
         let toolArray = ["JS",

@@ -53,6 +53,8 @@ import basketball from "../images/homepage_squares/basketball.png"
 import railyard from "../images/homepage_squares/railyard.png"
 import stringShot from "../images/homepage_squares/stringshot.png"
 import trickOrTag from "../images/homepage_squares/trickortag.png"
+import thomasRobertMalthusPresentation from "../images/homepage_squares/malthus.png"
+import goofspiel from "../images/homepage_squares/goofspiel.png"
 
 const styles = StyleSheet.create({
   bounceInDown: {
@@ -68,7 +70,8 @@ let imageArray = [sciquelScreenshot, urbanearthScreenshot, jeffreykozikScreensho
     smoothNumbers, walksatdpll, tradingViewGraphAutomation, pgfixing3dprinter, airCharger, welcomeBackHack, giveBackHack, pathfindingaiproject,
     inline, automatedresourcecollection, enhancedautomatedresourcecollection, automatedtacticalbattles,
     iosextensionunicart, smrtnrllselenium, pgautomation, pgrinse, tasktimerecorder, imperativeinterpreter,
-    huffmantree, hashtable_collisions, sorting, rallyTracker, gomoku, basketball, railyard, stringShot, trickOrTag]
+    huffmantree, hashtable_collisions, sorting, rallyTracker, gomoku, basketball, railyard, stringShot,
+    trickOrTag, thomasRobertMalthusPresentation, goofspiel]
 // state={{portName: [portfolioNameParam]}}
 
 function ProjectComponent({ name, link, tags, startDate, endDate, imagePath, description }) {
