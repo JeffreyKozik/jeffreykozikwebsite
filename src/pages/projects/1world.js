@@ -306,7 +306,7 @@ class OneWorld extends React.Component {
         let supply_chain_category = ""
         let total_co2 = 0
         let total_offset = 0
-        const api_url = 'https://oneworldsquareextensionfunctionapp.azurewebsites.net/api/OneWorldSquareExtensionFunction/?code=/tw7J4uFrU4tRm9HcP1pMI2kiUaoou8ZT0GjMWljPZIv3zoGRle8uQ==';
+        const api_url = process.env.AZURE_FUNCTION_URL;
         fetch(api_url, {
             method: 'POST',
             body: JSON.stringify({
