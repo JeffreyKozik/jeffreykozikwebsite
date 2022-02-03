@@ -1,3 +1,4 @@
+import { Link } from "gatsby"
 import * as React from "react"
 import demoVideo from "../../images/smrtnrlldemo.mp4";
 // import demoPoster from "../images/smrtnrllbrowserextensionpic.png"
@@ -13,7 +14,8 @@ const SmrtnrllBrowserExtensionComponent = () => (
         <iframe className={pages.page_video} src="https://www.youtube-nocookie.com/embed/59Mph03CJZU" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
         <p className={pages.page_description}>
             The way it works is by continually refreshing the page and clicking enroll until someone drops the class at which case
-            you are enrolled. I've used this to succesfully get into 3 classes and others have used it to varying levels of success.
+            you are enrolled. Combined between this and the original <Link to="/projects/smrtnrllselenium">Python Selenium version</Link> I've succesfully gotten into
+            3 classes and others have used it to varying levels of success.
         </p>
     </>
 )

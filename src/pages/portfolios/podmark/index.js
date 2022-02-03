@@ -16,10 +16,16 @@ function IndexPage() {
         <>
             <Seo title="Podmark Portfolio" />
             <Header/>
-            <h1 id={homepage.jeffrey_kozik}>Jeffrey Kozik: Podmark Portfolio</h1>
-            <HomePage nameArray={["Sciquel", "Urban Earth", "Jeffrey Kozik Website",
-             "1World Browser Extension", "smrtnrll Browser Extension", "Bing Utility Belt",
-             "Total Cost Browser Extension", "Multitab Search Browser Extension", "SEO Browser Extension"]}/>
+            <HomePage nameArray={["Sciquel",
+                                  "Urban Earth",
+                                  "This Website",
+                                  "1World",
+                                  "smrtnrll 2.0",
+                                  "BingAdFinder",
+                                  "Total Cost",
+                                  "MultiSearch",
+                                  "Site Checker"]}
+                                  titleName="Jeffrey Kozik: Podmark Portfolio"/>
         </>
     )
 }

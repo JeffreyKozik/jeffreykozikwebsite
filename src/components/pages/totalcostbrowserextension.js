@@ -4,7 +4,7 @@ import * as pages from "../../page_styling/pages.module.css"
 
 const TotalCostBrowserExtensionComponent = () => (
     <>
-        <h1 className={pages.page_title}> Search Multiple Tabs Browser Extension </h1>
+        <h1 className={pages.page_title}> Total Cost Browser Extension </h1>
         <h3 className={pages.page_subtitle}>
             Custom browser extension I coded so that payment information across 12 tabs could be displayed in a single location.
         </h3>
@@ -19,6 +19,10 @@ const TotalCostBrowserExtensionComponent = () => (
             sends custom HTTP requests to retrieve the information from each tab. This increased the speed 5x. The payment info can be updated
             by either refreshing the "Options" page or pressing the "REFRESH ALL" button. If the user wishes to only refresh information for one
             tab they can press the "REFRESH" button in that row.
+        </p>
+        <p className={pages.page_description}>
+            UPDATE: I created a new feature where you can enter in the names of your subdomains in a text box (which saves your preferences
+            automatically) instead of having to have the tabs open.
         </p>
     </>
 )
