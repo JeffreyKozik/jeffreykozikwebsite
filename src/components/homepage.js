@@ -419,7 +419,7 @@ class HomePage extends React.Component {
                     <>
                         <h1 className="m-3" id={homepage.jeffrey_kozik}>{this.state.titleNameState}</h1>
                         <div className={homepage.select_div}>
-                            <a className={homepage.mobile_portfolio_link} href="mailto:jeffreykozik@protonmail.com">jeffreykozik@pm.me</a>
+                            <a className={homepage.mobile_portfolio_link} href="mailto:jeffreykozik@protonmail.com" target="_blank" rel="noreferrer">jeffreykozik@pm.me</a>
                             <a className={homepage.mobile_portfolio_link} href="https://github.com/JeffreyKozik" target="_blank" rel="noreferrer">Github</a>
                             <a className={homepage.mobile_portfolio_link} href="https://fiverr.com/JeffreyKozik" target="_blank" rel="noreferrer">Fiverr</a>
                             <a className={homepage.mobile_portfolio_link} href="https://stackoverflow.com/users/16913644/jeffrey-kozik" target="_blank" rel="noreferrer">SO</a>
@@ -440,7 +440,7 @@ class HomePage extends React.Component {
                     <body className={homepage.bodyClass}>
                         <h1 className="m-3" id={homepage.jeffrey_kozik}>{this.state.titleNameState}</h1>
                         <div className={homepage.select_div}>
-                            <a className={homepage.mobile_portfolio_link} href="mailto:jeffreykozik@protonmail.com">jeffreykozik@pm.me</a>
+                            <a className={homepage.mobile_portfolio_link} href="mailto:jeffreykozik@protonmail.com" target="_blank" rel="noreferrer">jeffreykozik@pm.me</a>
                             <a className={homepage.portfolio_link} href="https://github.com/JeffreyKozik" target="_blank" rel="noreferrer">Github</a>
                             <a className={homepage.portfolio_link} href="https://fiverr.com/JeffreyKozik" target="_blank" rel="noreferrer">Fiverr</a>
                             <a className={homepage.portfolio_link} href="https://stackoverflow.com/users/16913644/jeffrey-kozik" target="_blank" rel="noreferrer">SO</a>
