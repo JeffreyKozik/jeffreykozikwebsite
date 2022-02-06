@@ -3018,6 +3018,9 @@ class OneWorld extends React.Component {
                             Note 2: in the second video, the total cost to offset has more than 2 digits after the decimal point, however this has been fixed so the total
                             should always only display two digits after the decimal point.
                         </p>
+                        <p className={pages.page_description}>
+                            Note 3: you will not be able try out this program if you are using ipfs only if you are using http or https
+                        </p>
                     </div>
                     </MediaQuery>
                 </div>

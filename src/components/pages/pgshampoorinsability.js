@@ -1,3 +1,4 @@
+import { Link } from "gatsby"
 import * as React from "react"
 import pgshampoo from "../../images/shampoo_rinse.jpeg"
 import * as pages from "../../page_styling/pages.module.css"
@@ -11,6 +12,10 @@ const PgShampooRinsabilityComponent = () => (
             Jupyter notebooks, Anaconda prompt, pandas, matplotlib, OpenCV, MATLAB, TensorFlow & PyTorch.
          </h3>
         <img className={pages.page_video} src={pgshampoo} alt="pgshampoo rinsability"/>
+        <p className={pages.page_description}>
+            At my P&G internship I've also done <Link to="projects/shapoocolormixmodel">machine learning work</Link>,
+            <Link to="projects/pgautomation">automation work</Link>, and <Link to="projects/pgfixing3dprinter">3D printer work</Link>.
+        </p>
         <p className={pages.page_description}>
             It's important to know how easily shampoos rinse because if they don't rinse very easily they could
             get stuck in someone's eyes. What's traditionally done to make sure that shampoo is "rinsable" enough

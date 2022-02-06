@@ -1,3 +1,4 @@
+import { Link } from "gatsby"
 import * as React from "react"
 import shampooPic from "../../images/redblueshampoo.jpeg"
 import * as pages from "../../page_styling/pages.module.css"
@@ -10,6 +11,10 @@ const ShampooColorMixModelComponent = () => (
             shampoos would mix succesfully or unsuccesfully.
         </h3>
         <img className={pages.page_video} src={shampooPic} alt="shampoo red blue screenshot"/>
+        <p className={pages.page_description}>
+            At my P&G internship I've also done <Link to="projects/pgshampoorinsability">computer vision work</Link>,
+            <Link to="projects/pgautomation">automation work</Link>, and <Link to="projects/pgfixing3dprinter">3D printer work</Link>.
+        </p>
         <p className={pages.page_description}>
             Let's say a factory creates a red shampoo then once that's finished they manufacture a blue shampoo. One question
             that must be answered in this process is if the pipes need to be washed out with water in between making the red and

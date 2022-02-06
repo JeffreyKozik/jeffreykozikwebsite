@@ -1,3 +1,4 @@
+import { Link } from "gatsby"
 import * as React from "react"
 import pgautomation from "../../images/pgautomation.jpeg"
 import * as pages from "../../page_styling/pages.module.css"
@@ -11,6 +12,10 @@ const PgAutomationComponent = () => (
             through a custom browser extension.
         </h3>
         <img className={pages.page_video} src={pgautomation} alt="pg automation"/>
+        <p className={pages.page_description}>
+            At my P&G internship I've also done <Link to="projects/shapoocolormixmodel">machine learning work</Link>, 
+            <Link to="projects/pgautomation">automation work</Link>, and <Link to="projects/pgfixing3dprinter">3D printer work</Link>.
+        </p>
         <p className={pages.page_description}>
             My coworker had a gigantic excel spreadsheet he had to split into many different smaller spreadsheets
             based on various criteria and he had to have special different headers for each of these spreadsheets and
