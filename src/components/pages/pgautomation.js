@@ -1,3 +1,4 @@
+import { Link } from "gatsby"
 import * as React from "react"
 import pgautomation from "../../images/pgautomation.jpeg"
 import * as pages from "../../page_styling/pages.module.css"
@@ -6,11 +7,15 @@ const PgAutomationComponent = () => (
     <>
         <h1 className={pages.page_title}> Automation Work at P&G </h1>
         <h3 className={pages.page_subtitle}>
-            Throughout my two internships at P&G I did work beyond my assigned work by automating two
+            Throughout my two summers at P&G I did work beyond my assigned work by automating two
             of my coworkers excel spreasheets with python and VBA and I began automation of a manual entry task
             through a custom browser extension.
         </h3>
         <img className={pages.page_video} src={pgautomation} alt="pg automation"/>
+        <p className={pages.page_description}>
+            At P&G I've also done <Link to="projects/shapoocolormixmodel">machine learning work</Link>,
+            <Link to="projects/pgautomation">automation work</Link>, and <Link to="projects/pgfixing3dprinter">3D printer work</Link>.
+        </p>
         <p className={pages.page_description}>
             My coworker had a gigantic excel spreadsheet he had to split into many different smaller spreadsheets
             based on various criteria and he had to have special different headers for each of these spreadsheets and
@@ -23,7 +28,7 @@ const PgAutomationComponent = () => (
             to do this task for him.
         </p>
         <p className={pages.page_description}>
-            Those two excel automations above were in my first internship at P&G. In my second internship, I had used
+            Those two excel automations above were in my first summer at P&G. In my second summer, I had used
             selenium to automate a data retrieval task related to my main project which you can read about more at this
             link. One of my coworkers saw this and connected me with someone who was interested in speeding up a process
             that was very tedious to do manually. I began the creation of a browser extension to do that (this was the first

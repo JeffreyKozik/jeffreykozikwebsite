@@ -254,26 +254,26 @@ class HomePage extends React.Component {
         // 40 characters for descriptions
         let sciquel = new Project("Sciquel", "/projects/sciquel", ["Website", "Bootstrap", "HTML, CSS", "Personal"], "Dec 2021 - Jan 2022", "", 0, <>Makes science more accessible</>);
         let urbanEarth = new Project("Urban Earth", "/projects/urbanearth", ["iOS App", "Firebase", "Swift", "XCode", "School"], "Oct - Dec 2021", "", 1, <>Tracks & encourages sustainable travel</>);
-        let jeffreykozikwebsite = new Project("This Website", "/projects/jeffreykozikwebsite", ["Website", "React", "Gatsby", "Bootstrap", "MUI", "JS", "HTML, CSS", "Personal"], "Dec 2021 - Jan 2022", "", 2, <>Portfolio website with React and Gatsby</>);
+        let jeffreykozikwebsite = new Project("This Website", "/projects/jeffreykozikwebsite", ["Website", "React", "Gatsby", "Bootstrap", "MUI", "JS", "HTML, CSS", "Personal"], "Dec 2021 - Feb 2022", "", 2, <>Portfolio website with React and Gatsby</>);
         let oneWorldBrowserExtension = new Project("1World", "/projects/1world", ["Extension", "Website", "Azure Functions", "Bing API", "nltk", "sklearn", "React", "Gatsby", "MUI", "JS", "HTML, CSS", "Google Cloud Functions", "Google Cloud Run", "Docker", "Google Custom Search Engine", "VADER", "Microsoft Azure", "Google Cloud Platform", "Hackathon", "AI"], "Nov 2021 - Jan 2022", "", 3, <>Helps small businesses easily offset CO2</>);
         let smrtnrllBrowserExtension = new Project("smrtnrll 2.0", "/projects/smrtnrllbrowserextension", ["Extension", "JS", "HTML, CSS", "Personal", "Automation"], "Dec 2020 - Oct 2021", "", 4, <>Auto-enrolls students in full classes</>);
         let bingUtilityBelt = new Project("BingAdFinder", "/projects/bingutilitybelt", ["Extension", "JS", "HTML", "CSS", "Personal"], "Nov 2021 - Jan 2022", "", 5, <>Highlights and counts ads on Bing</>);
-        let totalCostBrowserExtensionIRSLogics = new Project("Total Cost", "/projects/totalcostbrowserextension", ["Extension", "JS", "HTML, CSS", "Freelance", "Automation"], "Oct - Nov 2021", "", 6, <>Displays 12 sites' cost info in 1 place</>);
-        let multitabSearchBrowserExtensionIRSLogics = new Project("MultiSearch", "/projects/multitabsearch", ["Extension", "JS", "HTML, CSS", "Freelance", "Automation"], "Oct 2021", "", 7, <>Searches all open tabs simulatenously</>);
-        let seoBrowserExtension = new Project("Site Checker", "/projects/seobrowserextension", ["Extension", "JS", "HTML, CSS", "Freelance"], "Nov 2021", "", 8, <>Shows SEO tips using <a href="site-checker.org">site-checker.org</a></>);
+        let totalCostBrowserExtensionIRSLogics = new Project("Total Cost", "/projects/totalcostbrowserextension", ["Extension", "JS", "HTML, CSS", "Fiverr", "Automation"], "Oct 2021 - Feb 2022", "", 6, <>Displays 12 sites' cost info in 1 place</>);
+        let multitabSearchBrowserExtensionIRSLogics = new Project("MultiSearch", "/projects/multitabsearch", ["Extension", "JS", "HTML, CSS", "Fiverr", "Automation"], "Oct 2021", "", 7, <>Searches all open tabs simulatenously</>);
+        let seoBrowserExtension = new Project("Site Checker", "/projects/seobrowserextension", ["Extension", "JS", "HTML, CSS", "Fiverr"], "Nov 2021", "", 8, <>Shows SEO tips using <a href="site-checker.org">site-checker.org</a></>);
         let squarePOSHackathon = new Project("Square Hacks", "/projects/squarePOSHackathon", ["Article/Podcast", "Hackathon"], "Oct - Dec 2021", "", 9, <>Won "Best Feedback" at Square Hackathon</>);
-        let automatedWayToGetJSErrors = new Project("AutoLint JS", "/projects/automatedwaytogetjserrors", ["CMDLine", "Python", "Selenium", "Freelance", "Automation"], "Oct 2021", "", 10, <>Auto-retrieves JS errors from url list</>);
-        let automatingUsernameCheckProcess = new Project("AutoCheck", "/projects/automatingusernamecheckprocess", ["Desktop App", "tkinter", "openpyxl", "Python", "Selenium", "Freelance", "Automation"], "Oct 2021", "", 11, <>Auto fills out excel sheet via GUI</>);
-        let shampooColorMixModel = new Project("Color Model", "/projects/shampoocolormixmodel", ["CMDLine", "Python", "scipy", "sklearn", "numpy", "IBM LSF", "Internship", "AI"], "Jun - Aug 2021", "", 12, <>Predicts shampoo color cross with ML</>);
-        let autopayHealthcare = new Project("Autopay", "/projects/autopayhealthcare", ["CMDLine", "Python", "Selenium", "Freelance", "Automation"], "Oct 2021", "", 13, <>Autopays healthcare bill</>);
-        let circumvent2FASelenium = new Project("Avoid 2FA", "/projects/circumvent2FAselenium", ["CMDLine", "Python", "Selenium", "Freelance", "Automation"], "Sep 2021", "", 14, <>Saves 2FA cookie for Selenium scripts</>);
-        let fixingSeleniumTaxScript = new Project("Tax Script", "/projects/fixingseleniumtaxscript", ["CMDLine", "Python", "Selenium", "Beautiful Soup", "Freelance", "Automation"], "Sep 2021", "", 15, <>Fixed script with WebDriverWait and BS4</>);
-        let germanImmigrationAutomation = new Project("Auto Appt", "/projects/germanimmigrationautomation", ["CMDLine", "Gmail API", "Python", "Selenium", "Google Cloud Platform", "Freelance", "Automation"], "Sep 2021", "", 16, <>Auto-finds appt and alerts via Gmail API</>);
+        let automatedWayToGetJSErrors = new Project("AutoLint JS", "/projects/automatedwaytogetjserrors", ["CMDLine", "Python", "Selenium", "Fiverr", "Automation"], "Oct 2021", "", 10, <>Auto-retrieves JS errors from url list</>);
+        let automatingUsernameCheckProcess = new Project("AutoCheck", "/projects/automatingusernamecheckprocess", ["Desktop App", "tkinter", "openpyxl", "Python", "Selenium", "Fiverr", "Automation"], "Oct 2021", "", 11, <>Auto fills out excel sheet via GUI</>);
+        let shampooColorMixModel = new Project("Color Model", "/projects/shampoocolormixmodel", ["CMDLine", "Python", "scipy", "sklearn", "numpy", "IBM LSF", "P&G", "AI"], "Jun - Aug 2021", "", 12, <>Predicts shampoo color cross with ML</>);
+        let autopayHealthcare = new Project("Autopay", "/projects/autopayhealthcare", ["CMDLine", "Python", "Selenium", "Fiverr", "Automation"], "Oct 2021", "", 13, <>Autopays healthcare bill</>);
+        let circumvent2FASelenium = new Project("Avoid 2FA", "/projects/circumvent2FAselenium", ["CMDLine", "Python", "Selenium", "Fiverr", "Automation"], "Sep 2021", "", 14, <>Saves 2FA cookie for Selenium scripts</>);
+        let fixingSeleniumTaxScript = new Project("Tax Script", "/projects/fixingseleniumtaxscript", ["CMDLine", "Python", "Selenium", "Beautiful Soup", "Fiverr", "Automation"], "Sep 2021", "", 15, <>Fixed script with WebDriverWait and BS4</>);
+        let germanImmigrationAutomation = new Project("Auto Appt", "/projects/germanimmigrationautomation", ["CMDLine", "Gmail API", "Python", "Selenium", "Google Cloud Platform", "Fiverr", "Automation"], "Sep 2021", "", 16, <>Auto-finds appt and alerts via Gmail API</>);
         let rsa = new Project("RSA", "/projects/rsa", ["Website", "Flask", "Python", "HTML, CSS", "School"], "Nov - Dec 2021", "", 17, <>Implements RSA on webpage with Flask</>);
         let smoothNumbers = new Project("Smooth Nums", "/projects/smoothnumbers", ["CMDLine", "Python", "School"], "Nov 2021", "", 18, <>Solves comp number theory problems</>);
         let walksatDPLL = new Project("WalkSAT DPLL", "/projects/walksatdpll", ["CMDLine", "Java", "School", "AI"], "Sep - Oct 2021", "", 19, <>Tests WalkSAT, DPLL satisfiability algs</>);
-        let tradingViewGraphAutomation = new Project("TradingView", "/projects/tradingviewgraphautomation", ["Desktop App", "PIL", "tkinter", "openpyxl", "Python", "Selenium", "Freelance", "Automation"], "Oct 2021", "", 20, <>Auto-screenshots market activity</>);
-        let pgFixing3DPrinter = new Project("3D Print Fix", "/projects/pgfixing3dprinter", ["Hardware", "3D Print", "Marlin", "Pronterface", "Internship"], "May - July 2020", "", 21, <>Investigated with <a href="https://marlinfw.org/">Marlin</a>,<a href="https://www.pronterface.com/">Pronterface</a>.</>);
+        let tradingViewGraphAutomation = new Project("TradingView", "/projects/tradingviewgraphautomation", ["Desktop App", "PIL", "tkinter", "openpyxl", "Python", "Selenium", "Fiverr", "Automation"], "Oct 2021", "", 20, <>Auto-screenshots market activity</>);
+        let pgFixing3DPrinter = new Project("3D Print Fix", "/projects/pgfixing3dprinter", ["Hardware", "3D Print", "Marlin", "Pronterface", "P&G"], "May - July 2020", "", 21, <>Investigated with <a href="https://marlinfw.org/">Marlin</a>,<a href="https://www.pronterface.com/">Pronterface</a>.</>);
         let airCharger = new Project("Air Charger", "/projects/aircharger", ["Hardware", "Circuits", "3DPrint", "Personal"], "Feb - July 2021", "", 22, <>Prototyped sleek magsafe battery pack</>);
         let welcomeBackHack = new Project("LCSC", "/projects/welcomebackhack", ["CMDLine", "Python", "Beautiful Soup", "Hackathon"], "Aug 2019", "", 23, <>Won "Best in Creativity" WelcomeBackHack</>);
         let giveBackHackVol = new Project("GiveBackHack", "/projects/givebackhackvol", ["Website", "Bootstrap", "HTML, CSS", "Hackathon"], "Sep 2019", "", 24, <>Prototyped volunteer website</>);
@@ -282,10 +282,10 @@ class HomePage extends React.Component {
         let automatedResourceCollection = new Project("CollectAI", "/projects/automatedresourcecollection", ["CMDLine", "Java", "School", "AI"], "Apr 2021", "", 27, <>Determines optimal route to collect</>);
         let enhancedAutomatedResourceCollection = new Project("CollectAI+", "/projects/enhancedautomatedresourcecollection", ["CMDLine", "Java", "School", "AI"], "Apr 2021", "", 28, <>CollectAI + bot can create new bots</>);
         let automatedTacticalBattles = new Project("TacticalAI", "/projects/automatedtacticalbattles", ["CMDLine", "Java", "School", "AI"], "May 2021", "", 29, <>Trained our bots w/ RL to fight enemies</>);
-        let iosExtensionUnicart = new Project("iOS Unicart", "/projects/iosextensionunicart", ["iOS App", "Extension", "Freelance"], "Nov 2021", "", 30, <>Turned Chrome extension to iOS extension</>);
+        let iosExtensionUnicart = new Project("iOS Unicart", "/projects/iosextensionunicart", ["iOS App", "Extension", "Fiverr"], "Nov 2021", "", 30, <>Turned Chrome extension to iOS extension</>);
         let smrtnrllSelenium = new Project("smrtnrll 1.0", "/projects/smrtnrllselenium", ["CMDLine", "Python", "Selenium", "Personal"], "Dec 2020 - Feb 2021", "", 31, <>smrtnrll 2.0 w/ selenium not extension</>);
-        let pgAutomation = new Project("P&G Automate", "/projects/pgautomation", ["CMDLine", "openpyxl", "VBA", "Python", "Internship", "Automation"], "May - Jul 2020, Jun - Aug 2021", "", 32, <>Automated 2 coworkers excel sheets, more</>);
-        let computerVisionToMeasureRinsability = new Project("RinseCV", "/projects/pgshampoorinsability", ["CMDLine", "Computer Vision", "Python", "Internship", "AI"], "May - Jul 2020", "", 33, <>Measured rinsability w/ computer vision</>);
+        let pgAutomation = new Project("P&G Automate", "/projects/pgautomation", ["CMDLine", "openpyxl", "VBA", "Python", "P&G", "Automation"], "May - Jul 2020, Jun - Aug 2021", "", 32, <>Automated 2 coworkers excel sheets, more</>);
+        let computerVisionToMeasureRinsability = new Project("RinseCV", "/projects/pgshampoorinsability", ["CMDLine", "Computer Vision", "Python", "P&G", "AI"], "May - Jul 2020", "", 33, <>Measured rinsability w/ computer vision</>);
         let taskTimeRecorder = new Project("Task Time", "/projects/tasktimerecorder", ["Macro", "Apps Script", "Personal", "Automation"], "Sep - Dec 2020", "", 34, <>Tracked time, efficiency w/ Apps Script</>);
         let imperativeInterpreter = new Project("Interpreter", "/projects/imperativeinterpreter", ["CMDLine", "Racket", "School"], "Apr 2021", "", 35, <>Created C-like prog language w/ Racket</>);
         let huffmanEncoder = new Project("HuffEncode", "/projects/huffmanencoder", ["CMDLine", "Java", "School"], "Mar - Apr 2020", "", 36, <>Encoded, decoded file to save 58% space</>);
@@ -357,7 +357,7 @@ class HomePage extends React.Component {
                         "AI",
                         "Computer Vision"
                         ]
-        let occasionArray = ["Personal", "Hackathon", "Freelance", "School", "Internship"]
+        let occasionArray = ["Personal", "Hackathon", "Fiverr", "School", "P&G"]
 
         let typeOptions = []
         for(let i = 0; i < typeArray.length; i++){
@@ -609,7 +609,7 @@ export default HomePage;
 // let pgInternships = new Tag("P&G Internships", "", "Reason");
 // let personalProject = new Tag("Personal Project", "", "Reason");
 // let hackathon = new Tag("Hackathon", "", "Reason");
-// let freelance = new Tag("Freelance", "", "Reason");
+// let Fiverr = new Tag("Fiverr", "", "Reason");
 // let club = new Tag("Club", "", "Reason");
 // // purple - Time Period
 // let highSchool = new Tag("High School", "", "Time Period");

@@ -1,3 +1,4 @@
+import { Link } from "gatsby"
 import * as React from "react"
 import threedprinter from "../../images/3dprinter.jpg"
 import * as pages from "../../page_styling/pages.module.css"
@@ -6,10 +7,14 @@ const PgFixing3DPrinterComponent = () => (
     <>
         <h1 className={pages.page_title}> P&G: Fixing 3D Printer </h1>
         <h3 className={pages.page_subtitle}>
-            During my first internship with P&G, I worked at fixing a 3D printer P&G acquired from
+            During my first summer with P&G, I worked at fixing a 3D printer P&G acquired from
             a startup that no longer exists. I used <a href="https://marlinfw.org/">Marlin firmware</a> and <a href="https://www.pronterface.com/">Pronterface</a>.
         </h3>
         <img className={pages.page_video} src={threedprinter} alt="3d printer"/>
+        <p className={pages.page_description}>
+            At P&G I've also done <Link to="projects/shapoocolormixmodel">machine learning work</Link>,
+            <Link to="projects/pgfixing3dprinter">computer vision work</Link>, and <Link to="projects/pgautomation">automation work</Link>.
+        </p>
         <p className={pages.page_description}>
             I was working remotely during the summer so I remote desktop controlled the 3D printer and viewed what I was doing
             via an external camera. The 3D printer nozzle was having trouble knowing where the print bed was and as a result

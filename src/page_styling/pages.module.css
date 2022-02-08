@@ -14,8 +14,8 @@
     display: flex;
     flex-direction: column;
     font-family: 'Rubik', sans-serif !important;
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
 }
 
 .page_title {
