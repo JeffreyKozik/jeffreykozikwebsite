@@ -7,7 +7,7 @@ const ShampooColorMixModelComponent = () => (
     <>
         <h1 className={pages.page_title}> P&G: Shampoo Color Mix Model </h1>
         <h3 className={pages.page_subtitle}>
-            Machine learning model I created why interning at Procter & Gamble in R&D that predicted whether or not two
+            Machine learning model I created while at Procter & Gamble in R&D that predicted whether or not two
             shampoos would mix succesfully or unsuccesfully.
         </h3>
         <img className={pages.page_video} src={shampooPic} alt="shampoo red blue screenshot"/>
