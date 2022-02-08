@@ -7,12 +7,12 @@ const PgFixing3DPrinterComponent = () => (
     <>
         <h1 className={pages.page_title}> P&G: Fixing 3D Printer </h1>
         <h3 className={pages.page_subtitle}>
-            During my first internship with P&G, I worked at fixing a 3D printer P&G acquired from
+            During my first summer with P&G, I worked at fixing a 3D printer P&G acquired from
             a startup that no longer exists. I used <a href="https://marlinfw.org/">Marlin firmware</a> and <a href="https://www.pronterface.com/">Pronterface</a>.
         </h3>
         <img className={pages.page_video} src={threedprinter} alt="3d printer"/>
         <p className={pages.page_description}>
-            At my P&G internship I've also done <Link to="projects/shapoocolormixmodel">machine learning work</Link>,
+            At P&G I've also done <Link to="projects/shapoocolormixmodel">machine learning work</Link>,
             <Link to="projects/pgfixing3dprinter">computer vision work</Link>, and <Link to="projects/pgautomation">automation work</Link>.
         </p>
         <p className={pages.page_description}>

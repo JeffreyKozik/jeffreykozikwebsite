@@ -13,7 +13,7 @@ const PgShampooRinsabilityComponent = () => (
          </h3>
         <img className={pages.page_video} src={pgshampoo} alt="pgshampoo rinsability"/>
         <p className={pages.page_description}>
-            At my P&G internship I've also done <Link to="projects/shapoocolormixmodel">machine learning work</Link>,
+            At P&G I've also done <Link to="projects/shapoocolormixmodel">machine learning work</Link>,
             <Link to="projects/pgautomation">automation work</Link>, and <Link to="projects/pgfixing3dprinter">3D printer work</Link>.
         </p>
         <p className={pages.page_description}>
@@ -29,14 +29,14 @@ const PgShampooRinsabilityComponent = () => (
             explore alternative or supplemental options to the ICE test.
         </p>
         <p className={pages.page_description}>
-            The first half of the internship I was remote and so was my boss so I was mostly testing out various computer vision technologies
+            The first half of the summer I was remote and so was my boss so I was mostly testing out various computer vision technologies
             using BB pellets and a marble maze. I used Trackpy and wrote a Python program to measure the speed of these pellets as they went
             through the marble maze. I also explored other options such as using some of OpenCV's technologies, a tool that was a MATLAB app,
             as well as TensorFlow & PyTorch. However, I found that once the in lab tests came back, TracTrac was the most interesting at tracking
             small particles.
         </p>
         <p className={pages.page_description}>
-            I was unable to develop a full fledged model by the end of my summer internship, however I was able to give the reccomendations around
+            I was unable to develop a full fledged model by the end of the summer, however I was able to give the reccomendations around
             the particle tracking technologies and provide documentation and presentations so that my coworkers could carry the work forward.
         </p>
     </>

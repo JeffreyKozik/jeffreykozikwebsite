@@ -5,14 +5,14 @@ import * as pages from "../../page_styling/pages.module.css"
 
 const ShampooColorMixModelComponent = () => (
     <>
-        <h1 className={pages.page_title}> Shampoo Color Mix Model </h1>
+        <h1 className={pages.page_title}> P&G: Shampoo Color Mix Model </h1>
         <h3 className={pages.page_subtitle}>
             Machine learning model I created why interning at Procter & Gamble in R&D that predicted whether or not two
             shampoos would mix succesfully or unsuccesfully.
         </h3>
         <img className={pages.page_video} src={shampooPic} alt="shampoo red blue screenshot"/>
         <p className={pages.page_description}>
-            At my P&G internship I've also done <Link to="projects/pgshampoorinsability">computer vision work</Link>,
+            At P&G I've also done <Link to="projects/pgshampoorinsability">computer vision work</Link>,
             <Link to="projects/pgautomation">automation work</Link>, and <Link to="projects/pgfixing3dprinter">3D printer work</Link>.
         </p>
         <p className={pages.page_description}>
@@ -43,7 +43,7 @@ const ShampooColorMixModelComponent = () => (
             The data it took was the dye concentrations of the two shampoos being crossed. At first I used a K Nearest Neighbors model, and it gave my 95%
             accuracy (saying they crossed every time would give 90% accuracy) when I trained on a couple hundred thousand data points , but it was too slow,
             taking days to run on all data points. So, I switched to an XGBoost model which gave over 99% accuracy and completed in less than a few minutes.
-            Unfortunately, I never had the time in my 12 week internship to transition the entire shampoo color mix excel sheet to this model as even above 99% accuracy
+            Unfortunately, I never had the time in my 12 week summer to transition the entire shampoo color mix excel sheet to this model as even above 99% accuracy
             isn't accurate enough for a commercial scale. However, it showed the power of machine learning to the team and hopefully inspires work in this
             direction in the future.
         </p>
